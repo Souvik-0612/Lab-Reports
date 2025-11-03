@@ -1,0 +1,12 @@
+\contentsline {section}{\numberline {1}Objective}{1}{section.1}%
+\contentsline {section}{\numberline {2}Apparatus}{1}{section.2}%
+\contentsline {section}{\numberline {3}Theory}{3}{section.3}%
+\contentsline {section}{\numberline {4}Observation and Calculations}{6}{section.4}%
+\contentsline {subsection}{\numberline {4.1}For Central Axis Dose Rate Measurement}{6}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}For Dose Calibration and Chemical Yield Measurement}{8}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}For Transit Dose Measurement}{10}{subsection.4.3}%
+\contentsline {section}{\numberline {5}Applications}{10}{section.5}%
+\contentsline {section}{\numberline {6}Precautions}{10}{section.6}%
+\contentsline {section}{\numberline {7}Conclusion}{11}{section.7}%
+\contentsline {section}{\numberline {8}References}{11}{section.8}%
+\contentsfinish 

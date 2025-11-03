@@ -1,0 +1,22 @@
+\contentsline {section}{\numberline {1}Objective}{1}{section.1}%
+\contentsline {section}{\numberline {2}Apparatus}{1}{section.2}%
+\contentsline {section}{\numberline {3}Verification of inverse square law}{4}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Theory}{4}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Observation}{5}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Applications}{5}{subsection.3.3}%
+\contentsline {section}{\numberline {4}Determination of beta particle range and maximum energy}{6}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Theory}{6}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Observation}{7}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Calculation}{8}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Applications}{9}{subsection.4.4}%
+\contentsline {section}{\numberline {5}Study the back-scattering of beta particles}{9}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Theory}{9}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Observation}{11}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Applications}{11}{subsection.5.3}%
+\contentsline {section}{\numberline {6}Production and attenuation of Bremsstrahlung}{11}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Theory}{11}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Observation}{12}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Applications}{13}{subsection.6.3}%
+\contentsline {section}{\numberline {7}Conclusion}{13}{section.7}%
+\contentsline {section}{\numberline {8}References}{14}{section.8}%
+\contentsfinish 

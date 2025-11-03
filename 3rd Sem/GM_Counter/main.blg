@@ -1,0 +1,49 @@
+This is BibTeX, Version 0.99d (TeX Live 2025)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+The style file: plain.bst
+Database file #1: General/References.bib
+Warning--entry type for "lnhb_laraweb_2022" isn't style-file defined
+--line 27 of file General/References.bib
+You've used 4 entries,
+            2118 wiz_defined-function locations,
+            520 strings with 4543 characters,
+and the built_in function-call counts, 810 in all, are:
+= -- 79
+> -- 22
+< -- 0
++ -- 10
+- -- 6
+* -- 34
+:= -- 140
+add.period$ -- 12
+call.type$ -- 4
+change.case$ -- 14
+chr.to.int$ -- 0
+cite$ -- 4
+duplicate$ -- 36
+empty$ -- 82
+format.name$ -- 6
+if$ -- 174
+int.to.chr$ -- 0
+int.to.str$ -- 4
+missing$ -- 2
+newline$ -- 23
+num.names$ -- 6
+pop$ -- 22
+preamble$ -- 1
+purify$ -- 12
+quote$ -- 0
+skip$ -- 23
+stack$ -- 0
+substring$ -- 20
+swap$ -- 5
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 14
+warning$ -- 0
+while$ -- 6
+width$ -- 5
+write$ -- 44
+(There was 1 warning)

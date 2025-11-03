@@ -1,0 +1,23 @@
+\begin{thebibliography}{1}
+
+\bibitem{Lab}
+{\em Lab Report, CMRP, NISER}.
+
+\bibitem{knoll_radiation_2010}
+Glenn~F. Knoll.
+\newblock {\em Radiation Detection and Measurement}.
+\newblock John Wiley \& Sons, Hoboken, NJ, USA, 4 edition, 2010.
+
+\bibitem{lnhb_laraweb_2022}
+{Laboratoire National Henri Becquerel}.
+\newblock Nucléide-lara: Decay data for alpha and gamma spectrometry.
+\newblock \url{http://www.lnhb.fr/Laraweb/}, 2022.
+\newblock Accessed: 2025-10-08.
+
+\bibitem{nucleonix_gc602a_2015}
+{Nucleonix Systems Pvt. Ltd.}
+\newblock {\em GC602A Instruction Manual: G.M Counting System}.
+\newblock Nucleonix Systems Pvt. Ltd., Plot No. 162 A \& B, Phase II, I.D.A. Cherlapally, Hyderabad - 500 051, India, 2015.
+\newblock Version VER\_20170626.
+
+\end{thebibliography}

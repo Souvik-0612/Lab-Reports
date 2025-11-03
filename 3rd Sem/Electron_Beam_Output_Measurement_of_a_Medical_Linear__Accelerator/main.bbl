@@ -1,0 +1,15 @@
+\begin{thebibliography}{1}
+
+\bibitem{colab2025example}
+Souvik Das.
+\newblock Numerical solution for pulsed radiation using newton raphson method in python.
+\newblock \url{https://colab.research.google.com/drive/1v28pI4fMtCMZGqr_qRu5STyYaFO_76bO?usp=sharing}, 2025.
+\newblock Accessed: 2025-10-20.
+
+\bibitem{iaeaTRS398}
+{International Atomic Energy Agency}.
+\newblock Absorbed dose determination in external beam radiotherapy: An international code of practice for dosimetry based on standards of absorbed dose to water.
+\newblock Technical Report Technical Reports Series No. 398, IAEA, 2024.
+\newblock Accessed: 2025-10-20.
+
+\end{thebibliography}

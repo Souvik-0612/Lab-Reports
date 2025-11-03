@@ -1,0 +1,33 @@
+\begin{thebibliography}{1}
+
+\bibitem{ahmed2015radiation}
+Syed~Naeem Ahmed.
+\newblock {\em Physics and Engineering of Radiation Detection}.
+\newblock Elsevier, Amsterdam, Netherlands, 2nd edition, 2015.
+
+\bibitem{berkeleynai2025}
+{Berkeley Nucleonics Corporation}.
+\newblock {NaI(Tl) Sodium Iodide Scintillation Detectors}.
+\newblock \url{https://www.berkeleynucleonics.com/nai-sodium-iodide}, 2025.
+\newblock Accessed: 2025-08-19.
+
+\bibitem{Lab}
+{\em Lab Report, CMRP, NISER}.
+
+\bibitem{gibbons2019khan}
+John~P. Gibbons.
+\newblock {\em Khan's The Physics of Radiation Therapy}.
+\newblock Wolters Kluwer Health/Lippincott Williams \& Wilkins, Philadelphia, 6 edition, 2019.
+
+\bibitem{lnhb_laraweb}
+{Laboratoire National Henri Becquerel}.
+\newblock Laraweb: Database of radioactive nuclides.
+\newblock \url{http://www.lnhb.fr/Laraweb/}.
+
+\bibitem{ortec2025gamma}
+{ORTEC}.
+\newblock {\em Gamma-Ray Spectroscopy Using NaI(Tl)}.
+\newblock AMETEK ORTEC, third edition, 2025.
+\newblock Experiment 3 from the ORTEC Educational Series.
+
+\end{thebibliography}
