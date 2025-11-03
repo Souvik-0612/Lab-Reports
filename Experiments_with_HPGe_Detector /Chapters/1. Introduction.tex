@@ -11,12 +11,12 @@ High Purity Germanium (HPGe) detectors are semiconductor detectors widely
 used in gamma spectroscopy due to their superior energy resolution compared to 
 other detector types like NaI(Tl) scintillation detectors. They are particularly 
 effective for identifying and quantifying gamma-emitting radionuclides in various
-samples, including environmental samples. \vspace{2 mm}
+samples, including environmental samples.\vspace{2 mm}
 
 Due to higher atomic number (Z=32), Ge has a much larger linear attenuation
 coefficient for gamma rays than Si (Z=14). Which leads to a shorter mean free path
 for gamma rays in Ge than in Si. This property makes Ge detectors more efficient
-at detecting gamma rays, especially at higher energies. \vspace{2 mm}
+at detecting gamma rays, especially at higher energies.\vspace{2 mm}
 
 The HPGe detectors must be operate at cryogenic temperatures (typically around 77 K,
 the boiling point of liquid nitrogen) to reduce thermal noise and improve their
@@ -29,20 +29,20 @@ When a gamma ray interacts with the germanium crystal in the HPGe detector,
 it can undergo several types of interactions, including the photoelectric effect,
 Compton scattering, and pair production. These interactions result in the creation
 of electron-hole pairs within the crystal. \textbf{The number of electron-hole pairs generated
-is proportional to the energy of the incoming gamma ray}. \vspace{2 mm}
+is proportional to the energy of the incoming gamma ray}\vspace{2 mm}
 
 An electric field is applied across the germanium crystal, causing the electrons
 and holes to drift towards their respective electrodes. This movement of charge carriers
 generates a current pulse, which is then amplified and processed by the detector's electronics.
 The amplitude of the pulse is directly proportional to the energy of the incident gamma ray,
-allowing for precise energy measurements. \vspace{2 mm}
+allowing for precise energy measurements.\vspace{2 mm}
 
 \subsection{Construction and Cryostatic colling}
 The HPGe detector consists of a high-purity germanium crystal, typically in the form
 of a cylindrical or coaxial shape. The crystal is housed in a vacuum-sealed cryostat
 to maintain the low temperatures required for operation. The cryostat is often cooled
 using liquid nitrogen, which is circulated around the detector to keep it at the
-desired temperature. \vspace{2 mm}
+desired temperature.\vspace{2 mm}
 
 The main components of the system are the cooling rod (usually made of copper), the Dewar
 container (for storage of liquid nitrogen), and the fill collar (for refilling the Dewar). The
@@ -50,12 +50,12 @@ cryostatic cooling systems provide the following features: cooling of the detect
 operating temperatures; high quality vacuum in the cryostat to avoid adsorption of contaminants
 on the detector surface and provides thermal insulation; suppression of heat transfer between
 cool inner parts and warm outer surface of the cryostat; mounting for the electrical contacts; and
-isolation from external vibration to avoid system noise interference. \vspace{2 mm}
+isolation from external vibration to avoid system noise interference.\vspace{2 mm}
 
 The Shielding involves an outer jacket of 10 mm carbon steel, an inner shield of 100-mm-thick
 Lead and a graded liner of tin and copper. Such graded shielding minimizes the background
 noise that has a very high probability of interference with measurement data. It is manufactured
-for use with a detector in a vertical configuration. \vspace{2 mm}
+for use with a detector in a vertical configuration.\vspace{2 mm}
 
 \begin{table}
     \centering
@@ -70,9 +70,25 @@ for use with a detector in a vertical configuration. \vspace{2 mm}
     \caption{Specifications of the HPGe Detector System}
 \end{table}
 
+%Adding 4 images in a 2x2 grid
+\begin{figure}[h!]
+    \centering
+    \begin{tabular}{cc}
+        \includegraphics[width=0.4\textwidth]{/Users/souvikpc/Desktop/Lab-Reports/Experiments_with_HPGe_Detector /Figures/Apparatus/Schematic.png} &
+        \includegraphics[width=0.4\textwidth]{/Users/souvikpc/Desktop/Lab-Reports/Experiments_with_HPGe_Detector /Figures/Apparatus/ Detector unit.png} \\
+        (a) Schematic Diagram of HPGe Detector & (b) HPGe Detector unit in CMRP\\
+        \includegraphics[width=0.4\textwidth]{/Users/souvikpc/Desktop/Lab-Reports/Experiments_with_HPGe_Detector /Figures/Apparatus/Upper view of Detector.png} &
+        \includegraphics[width=0.4\textwidth]{/Users/souvikpc/Desktop/Lab-Reports/Experiments_with_HPGe_Detector /Figures/Apparatus/Electronics part.png} \\
+        (c) Upper view of Detector with graded shielding.  & (d) Electronics part of HPGe Detector
+ \\
+    \end{tabular}
+    \caption{Images of the HPGe Detector System}
+\end{figure}
+
 \begin{table}
     \centering
-    \begin{tabular}{l|l} \hline
+    \begin{tabular}{l|l} 
+        \hline
         \textbf{Component} & \textbf{Specification} \\ \hline
         Diameter of crystal & 61.7 mm \\
         Length of crystal & 40 mm \\
@@ -89,12 +105,36 @@ The HPGe detector system is complemented by a suite of electronic components
 that facilitate signal processing, amplification, and data acquisition. Key components include:
 
 \begin{itemize}
-    \item \textbf{Pre-amplifier:} Located close to the detector, it amplifies the small current pulses generated by the detector.
-    \item \textbf{Shaper:} This circuit shapes the pulse from the pre-amplifier into a more usable form for further processing.
-    \item \textbf{Analog-to-Digital Converter (ADC):} Converts the shaped analog signal into a digital signal for analysis.
-    \item \textbf{Data Acquisition System (DAQ):} Collects and stores the digital data for analysis.
+    \item \textbf{Pre-amplifier:} High-purity Ge detectors are usually fitted with a charge-sensitive 
+    preamplifier, which acts as an interface between the detector crystal and the pulse-processing and 
+    analysis electronics further along the gamma-spectrometric system. The preamplifier is often assembled as an integral part
+    of the detector housing itself. It takes the charge produced from the detector (by the gamma
+    radiation from the sample) and integrates and amplifies this to produce a step-function pulse. The
+    amplitude of pulse is proportional to the total charge. The first stage usually includes a Field
+    Effect Transistor (FET) circuit, which is located inside, or adjacent to the cryostat and is also
+    cooled to reduce background-noise interference.
+    \item \textbf{Amplifier:} The amplifier primarily takes the pulse
+    signal from the preamplifier and considerably magnifies it. It also filters and shapes the incoming
+    pulse to enhance the signal-to-noise ratio. This improves the resolution and shortens the response
+    time to prevent overlap between pulses. Count rates for radionuclides in environmental samples
+    are generally less than 100 counts per second, thus the amplifier needs to perform best in this
+    range.
+    \item \textbf{Analog-to-Digital Converter (ADC):} The analogue signal produced by the detector and shaped by the amplifier needs to be converted
+    to a digital signal prior to registering in the MCA. This is undertaken using an analogue to digital
+    converter (ADC), which effectively converts the analogue signal from the amplifier to a digital
+    value.The pulses that emerge from the ADC are then registered in one of the channels of the
+    multi-channel analyzer (MCA). The MCA is often hardwired into the computer system (via an
+    electronic circuit inserted into the motherboard). The MCA provides the means by which the
+    counts from the detector are stored according to the energy that produced them. It performs a
+    number of tasks including collecting and sorting the input pulses, storing those data in a
+    spectrum, providing a format to display the data on the computer screen, and performing some
+    analysis of the data.
+    \item \textbf{Data Acquisition System (DAQ):} Collects and stores the digital data for analysis in the software.
 \end{itemize}
 
+
+
 \section{Theory}
+
 \section{Observation}
 \section{Conclusion}

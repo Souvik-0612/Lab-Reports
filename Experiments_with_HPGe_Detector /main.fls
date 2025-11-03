@@ -415,10 +415,35 @@ INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/mlmodern/rm-mlmss12.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/mlmodern/rm-mlmssbx10.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
+INPUT /Users/souvikpc/Desktop/Lab-Reports/Experiments_with_HPGe_Detector /Figures/Apparatus/Schematic.png
+INPUT /Users/souvikpc/Desktop/Lab-Reports/Experiments_with_HPGe_Detector /Figures/Apparatus/Schematic.png
+INPUT /Users/souvikpc/Desktop/Lab-Reports/Experiments_with_HPGe_Detector /Figures/Apparatus/Schematic.png
+INPUT /Users/souvikpc/Desktop/Lab-Reports/Experiments_with_HPGe_Detector /Figures/Apparatus/Schematic.png
+INPUT /Users/souvikpc/Desktop/Lab-Reports/Experiments_with_HPGe_Detector /Figures/Apparatus/Schematic.png
+INPUT /Users/souvikpc/Desktop/Lab-Reports/Experiments_with_HPGe_Detector /Figures/Apparatus/ Detector unit.png
+INPUT /Users/souvikpc/Desktop/Lab-Reports/Experiments_with_HPGe_Detector /Figures/Apparatus/ Detector unit.png
+INPUT /Users/souvikpc/Desktop/Lab-Reports/Experiments_with_HPGe_Detector /Figures/Apparatus/ Detector unit.png
+INPUT /Users/souvikpc/Desktop/Lab-Reports/Experiments_with_HPGe_Detector /Figures/Apparatus/ Detector unit.png
+INPUT /Users/souvikpc/Desktop/Lab-Reports/Experiments_with_HPGe_Detector /Figures/Apparatus/ Detector unit.png
+INPUT /Users/souvikpc/Desktop/Lab-Reports/Experiments_with_HPGe_Detector /Figures/Apparatus/Upper view of Detector.png
+INPUT /Users/souvikpc/Desktop/Lab-Reports/Experiments_with_HPGe_Detector /Figures/Apparatus/Upper view of Detector.png
+INPUT /Users/souvikpc/Desktop/Lab-Reports/Experiments_with_HPGe_Detector /Figures/Apparatus/Upper view of Detector.png
+INPUT /Users/souvikpc/Desktop/Lab-Reports/Experiments_with_HPGe_Detector /Figures/Apparatus/Upper view of Detector.png
+INPUT /Users/souvikpc/Desktop/Lab-Reports/Experiments_with_HPGe_Detector /Figures/Apparatus/Upper view of Detector.png
+INPUT /Users/souvikpc/Desktop/Lab-Reports/Experiments_with_HPGe_Detector /Figures/Apparatus/Electronics part.png
+INPUT /Users/souvikpc/Desktop/Lab-Reports/Experiments_with_HPGe_Detector /Figures/Apparatus/Electronics part.png
+INPUT /Users/souvikpc/Desktop/Lab-Reports/Experiments_with_HPGe_Detector /Figures/Apparatus/Electronics part.png
+INPUT /Users/souvikpc/Desktop/Lab-Reports/Experiments_with_HPGe_Detector /Figures/Apparatus/Electronics part.png
+INPUT /Users/souvikpc/Desktop/Lab-Reports/Experiments_with_HPGe_Detector /Figures/Apparatus/Electronics part.png
 INPUT ./Figures/Logos/NISER.jpg
 INPUT ./Figures/Logos/NISER.jpg
 INPUT ./Figures/Logos/NISER.jpg
 INPUT ./Figures/Logos/NISER.jpg
+INPUT ./Figures/Logos/NISER.jpg
+INPUT ./Figures/Logos/NISER.jpg
+INPUT ./Figures/Logos/NISER.jpg
+INPUT ./Figures/Logos/NISER.jpg
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc
 INPUT ./main.bbl
 INPUT ./main.bbl
 INPUT main.bbl
@@ -426,7 +451,6 @@ INPUT ./Figures/Logos/NISER.jpg
 INPUT ./Figures/Logos/NISER.jpg
 INPUT ./Figures/Logos/NISER.jpg
 INPUT ./Figures/Logos/NISER.jpg
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc
 INPUT main.aux
 INPUT ./main.out
 INPUT ./main.out
