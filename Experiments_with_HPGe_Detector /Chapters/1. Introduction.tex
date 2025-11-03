@@ -1,0 +1,100 @@
+\section{Objective}
+\begin{itemize}
+    \item Energy calibration of HPGe detector
+    \item Absolute efficiency calibration of HPGe detector
+    \item Identification of radionuclides and measurement of their activity 
+    concentration present in environmental soil sample and tap water sample.
+\end{itemize}
+\section{Apparatus}
+\subsection{Introduction}
+High Purity Germanium (HPGe) detectors are semiconductor detectors widely 
+used in gamma spectroscopy due to their superior energy resolution compared to 
+other detector types like NaI(Tl) scintillation detectors. They are particularly 
+effective for identifying and quantifying gamma-emitting radionuclides in various
+samples, including environmental samples. \vspace{2 mm}
+
+Due to higher atomic number (Z=32), Ge has a much larger linear attenuation
+coefficient for gamma rays than Si (Z=14). Which leads to a shorter mean free path
+for gamma rays in Ge than in Si. This property makes Ge detectors more efficient
+at detecting gamma rays, especially at higher energies. \vspace{2 mm}
+
+The HPGe detectors must be operate at cryogenic temperatures (typically around 77 K,
+the boiling point of liquid nitrogen) to reduce thermal noise and improve their
+performance. This cooling is necessary because germanium has a relatively small bandgap,
+and at room temperature, thermal energy can excite electrons across the bandgap,
+leading to increased noise and reduced energy resolution.
+
+\subsection{Principle of operation}
+When a gamma ray interacts with the germanium crystal in the HPGe detector,
+it can undergo several types of interactions, including the photoelectric effect,
+Compton scattering, and pair production. These interactions result in the creation
+of electron-hole pairs within the crystal. \textbf{The number of electron-hole pairs generated
+is proportional to the energy of the incoming gamma ray}. \vspace{2 mm}
+
+An electric field is applied across the germanium crystal, causing the electrons
+and holes to drift towards their respective electrodes. This movement of charge carriers
+generates a current pulse, which is then amplified and processed by the detector's electronics.
+The amplitude of the pulse is directly proportional to the energy of the incident gamma ray,
+allowing for precise energy measurements. \vspace{2 mm}
+
+\subsection{Construction and Cryostatic colling}
+The HPGe detector consists of a high-purity germanium crystal, typically in the form
+of a cylindrical or coaxial shape. The crystal is housed in a vacuum-sealed cryostat
+to maintain the low temperatures required for operation. The cryostat is often cooled
+using liquid nitrogen, which is circulated around the detector to keep it at the
+desired temperature. \vspace{2 mm}
+
+The main components of the system are the cooling rod (usually made of copper), the Dewar
+container (for storage of liquid nitrogen), and the fill collar (for refilling the Dewar). The
+cryostatic cooling systems provide the following features: cooling of the detector to obtain stable
+operating temperatures; high quality vacuum in the cryostat to avoid adsorption of contaminants
+on the detector surface and provides thermal insulation; suppression of heat transfer between
+cool inner parts and warm outer surface of the cryostat; mounting for the electrical contacts; and
+isolation from external vibration to avoid system noise interference. \vspace{2 mm}
+
+The Shielding involves an outer jacket of 10 mm carbon steel, an inner shield of 100-mm-thick
+Lead and a graded liner of tin and copper. Such graded shielding minimizes the background
+noise that has a very high probability of interference with measurement data. It is manufactured
+for use with a detector in a vertical configuration. \vspace{2 mm}
+
+\begin{table}
+    \centering
+    \begin{tabular}{l|l} \hline
+        \textbf{Component} & \textbf{Specification} \\ \hline
+        Detector model & GC3018 \\
+        Relative efficiency & $\geq$ 30\% relative to NaI(Tl) \\
+        Energy resolution & $\leq$ 1.8 keV at 1.33 MeV (Co-60) \\
+        Depletion voltage & $+$ 2400 Vdc \\
+        Recommended operating voltage & $+$ 2900 Vdc \\ \hline
+    \end{tabular}
+    \caption{Specifications of the HPGe Detector System}
+\end{table}
+
+\begin{table}
+    \centering
+    \begin{tabular}{l|l}\hline
+        \textbf{Component} & \textbf{Specification} \\ \hline
+        Diameter of crystal & 61.7 mm \\
+        Length of crystal & 40 mm \\
+        Distance from crystal to front face & 4.9 mm \\
+        Window material & 1.5 mm thick Aluminum \\
+        Active volume & $\sim$ 113 cm$^{3}$ \\
+        End cap & 3.00 inch diameter $\times$ 5.25 inch length \\\hline
+    \end{tabular}
+    \caption{Physical Characteristics of the HPGe Detector System}
+\end{table}
+
+\subsection{Electronics components associated}
+The HPGe detector system is complemented by a suite of electronic components
+that facilitate signal processing, amplification, and data acquisition. Key components include:
+
+\begin{itemize}
+    \item \textbf{Pre-amplifier:} Located close to the detector, it amplifies the small current pulses generated by the detector.
+    \item \textbf{Shaper:} This circuit shapes the pulse from the pre-amplifier into a more usable form for further processing.
+    \item \textbf{Analog-to-Digital Converter (ADC):} Converts the shaped analog signal into a digital signal for analysis.
+    \item \textbf{Data Acquisition System (DAQ):} Collects and stores the digital data for analysis.
+\end{itemize}
+
+\section{Theory}
+\section{Observation}
+\section{Conclusion}

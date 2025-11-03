@@ -1,8 +1,8 @@
-PWD /Users/souvikpc/Desktop/Lab-Reports/Experiments_with_HPGe_Detector
+PWD /Users/souvikpc/Desktop/Lab-Reports/Lab_draft
 INPUT /usr/local/texlive/2025/texmf.cnf
 INPUT /usr/local/texlive/2025/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/souvikpc/Desktop/Lab-Reports/Experiments_with_HPGe_Detector/main.tex
+INPUT /Users/souvikpc/Desktop/Lab-Reports/Lab_draft/main.tex
 OUTPUT main.log
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/base/article.cls
