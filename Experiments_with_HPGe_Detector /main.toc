@@ -5,7 +5,10 @@
 \contentsline {subsection}{\numberline {2.3}Construction and Cryostatic colling}{1}{subsection.2.3}%
 \contentsline {subsection}{\numberline {2.4}Electronics components associated}{2}{subsection.2.4}%
 \contentsline {section}{\numberline {3}Theory}{3}{section.3}%
-\contentsline {section}{\numberline {4}Observation}{3}{section.4}%
-\contentsline {section}{\numberline {5}Conclusion}{3}{section.5}%
-\contentsline {section}{\numberline {6}References}{3}{section.6}%
+\contentsline {subsection}{\numberline {3.1}Energy calibration of HPGe detector}{3}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Absolute efficiency calibration of HPGe detector}{4}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Indentification of radionuclides and measurment of their activity concentration present in environmental sample}{4}{subsection.3.3}%
+\contentsline {section}{\numberline {4}Observation}{4}{section.4}%
+\contentsline {section}{\numberline {5}Conclusion}{4}{section.5}%
+\contentsline {section}{\numberline {6}References}{4}{section.6}%
 \contentsfinish 

@@ -82,7 +82,7 @@ for use with a detector in a vertical configuration.\vspace{2 mm}
         (c) Upper view of Detector with graded shielding.  & (d) Electronics part of HPGe Detector
  \\
     \end{tabular}
-    \caption{Images of the HPGe Detector System}
+    \caption{Images of the HPGe Detector System\cite{Lab}}
 \end{figure}
 
 \begin{table}
@@ -132,9 +132,68 @@ that facilitate signal processing, amplification, and data acquisition. Key comp
     \item \textbf{Data Acquisition System (DAQ):} Collects and stores the digital data for analysis in the software.
 \end{itemize}
 
-
-
 \section{Theory}
+\subsection{Energy calibration of HPGe detector}
+Energy calibration is the process of establishing a relationship between the channel
+number in the multichannel analyzer (MCA) and the corresponding gamma-ray energy. This is
+typically done using known gamma-ray sources with well-defined energies. The calibration
+process involves the following steps:\vspace{2 mm}
+\begin{itemize}
+    \item \textbf{Selection of Calibration Sources:} Choose gamma-ray sources with known
+    energies that cover the energy range of interest. Common calibration sources include
+    Cs-137, Co-60, and Na-22.
+    \item \textbf{Data Acquisition:} Place the calibration sources in front of the
+    HPGe detector and acquire spectra for a sufficient duration to obtain clear peaks.
+    \item \textbf{Peak Identification:} Identify the peaks in the acquired spectra
+    corresponding to the known gamma-ray energies of the calibration sources.
+    \item \textbf{Calibration Curve:} Plot the channel numbers of the identified peaks
+    against their known energies. Fit a linear or polynomial function to the data points
+    to establish the calibration curve.
+    \item \textbf{Verification:} Verify the calibration by measuring additional known
+    sources and checking if the measured energies match the expected values.
+\end{itemize}
 
+\subsection{Absolute efficiency calibration of HPGe detector}\
+Absolute efficiency calibration involves determining the efficiency of the HPGe
+detector for detecting gamma rays at different energies. This is essential for
+quantifying the activity of radionuclides in samples. The calibration process includes
+the following steps:\vspace{2 mm}
+\begin{itemize}
+    \item \textbf{Selection of Calibration Sources:} Use gamma-ray sources with known
+    activities and energies.
+    \item \textbf{Data Acquisition:} Place the calibration sources in front of the
+    HPGe detector and acquire spectra for a known duration.
+    \item \textbf{Peak Area Calculation:} Identify the peaks in the spectra and
+    calculate the area under each peak, which corresponds to the number of counts
+    detected for that energy.
+    \item \textbf{Efficiency Calculation:} Calculate the absolute efficiency
+    using the formula:
+    \[ \epsilon(E) = \frac{N(E)}{A \cdot P(E) \cdot t} \]
+    where \( \epsilon(E) \) is the absolute efficiency at energy \( E \), \( N(E) \)
+    is the net peak area, \( A \) is the activity of the source, \( P(E) \) is the
+    emission probability for the gamma ray at energy \( E \), and \( t \) is the counting time.
+    \item \textbf{Efficiency Curve:} Plot the efficiency values against the corresponding
+    energies and fit a suitable function to obtain the efficiency curve.
+\end{itemize}
+
+\subsection{Indentification of radionuclides and measurment of their activity concentration present in environmental sample}
+To identify radionuclides and measure their activity concentration in environmental
+samples using the calibrated HPGe detector, follow these steps:\vspace{2 mm}
+\begin{itemize}
+    \item \textbf{Sample Preparation:} Collect and prepare environmental samples
+    (soil, water, etc.) ensuring they are in a suitable form for gamma spectroscopy.
+    \item \textbf{Data Acquisition:} Place the prepared samples in front of the
+    HPGe detector and acquire spectra for a sufficient duration to obtain clear peaks.
+    \item \textbf{Peak Identification:} Analyze the acquired spectra to identify
+    peaks corresponding to different radionuclides using the energy calibration curve.
+    \item \textbf{Activity Calculation:} Calculate the activity concentration of
+    each identified radionuclide using the formula:
+    \[ C = \frac{N(E)}{\epsilon(E) \cdot P(E) \cdot t \cdot V} \]
+    where \( C \) is the activity concentration, \( N(E) \) is the net peak area,
+    \( \epsilon(E) \) is the absolute efficiency, \( P(E) \) is the emission probability,
+    \( t \) is the counting time, and \( V \) is the volume of the sample.  
+\end{itemize}
 \section{Observation}
+
+
 \section{Conclusion}

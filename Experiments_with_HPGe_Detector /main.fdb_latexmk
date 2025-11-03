@@ -1,14 +1,15 @@
 # Fdb version 4
-["bibtex main"] 1762197930.78293 "main.aux" "main.bbl" "main" 1762198070.55467 0
+["bibtex main"] 1762198625.75428 "main.aux" "main.bbl" "main" 1762198640.807 0
   "./General/References.bib" 1762194747.73249 74 1c95f03d303db184999381e1335841f1 ""
   "/usr/local/texlive/2025/texmf-dist/bibtex/bst/base/plain.bst" 1292289607 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "main.aux" 1762198070.35796 1962 0e63e8bc70853a0c856e253640c30488 "pdflatex"
+  "main.aux" 1762198640.60396 2536 b0370b4c9b3aeef0cb99c5566da403c3 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1762198069.4225 "/Users/souvikpc/Desktop/Lab-Reports/Experiments_with_HPGe_Detector /main.tex" "main.pdf" "main" 1762198070.55476 0
+["pdflatex"] 1762198639.66597 "/Users/souvikpc/Desktop/Lab-Reports/Experiments_with_HPGe_Detector /main.tex" "main.pdf" "main" 1762198640.8071 0
   "/Users/souvikpc/Desktop/Lab-Reports/Experiments_with_HPGe_Detector /main.tex" 1762194747.73554 667 99476f49be0c2a2a54e2713a3ebd5c8a ""
+  "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1202520719 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc" 1202520719 2840 216e6e45ad352e2456e1149f28885bee ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc" 1202520719 2327 9d6df24f9c4f7368395224341a95523a ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -33,6 +34,7 @@
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/mlmodern/rm-mlmr17.tfm" 1610486596 11948 e7c719484abf394c8848da8be6be88c4 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/mlmodern/rm-mlmr5.tfm" 1610486596 11804 86a913f88e8fb5b4c2f89453890f7802 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/mlmodern/rm-mlmr7.tfm" 1610486596 11852 40a59c04560532efc18f8324c302b077 ""
+  "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/mlmodern/rm-mlmri10.tfm" 1610486596 16968 b1b2f746e979e6c4fe6198e2d18bf38c ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/mlmodern/rm-mlmss10.tfm" 1610486596 10976 76a18c6c9b9fc2d6361251156c27afd4 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/mlmodern/rm-mlmss12.tfm" 1610486596 11024 8643fe883fa49f84984d20e3e98c2719 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/public/mlmodern/rm-mlmssbx10.tfm" 1610486596 10956 bc52ab61ae0f4d9e9441bf2894124f74 ""
@@ -40,8 +42,10 @@
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb" 1248133631 33366 60462f3d16c3d0f024f1f856e64b09cd ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmbx10.pfb" 1611007856 103329 5823ad03dcb65d1bef2853897a6049e5 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmbx12.pfb" 1611007856 104746 105a37cbbd6ee7981d78627cfb5199ef ""
+  "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmmi10.pfb" 1611007856 37975 23583c489eb4c0d6d5955f3ac52c3404 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmr10.pfb" 1611007856 106226 6dee4fd24207a52fc3883da20d15ef79 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmr7.pfb" 1611007856 106309 680f8a7872e0be2ca28b969985773548 ""
+  "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmri10.pfb" 1611007856 109120 07498f6bd0125d43c3eba377249d094c ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmss10.pfb" 1611007856 84973 53083fd89a782884cf7b7b4bf0233d1b ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmssbx10.pfb" 1611007856 85660 b7e8f8b2b64bbe75a6e567a9ccb278ec ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmsy10.pfb" 1611007856 33568 1229f51de832265c06b3cbc7c344e81f ""
@@ -222,7 +226,7 @@
   "/usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1741450574 3345740 46b66fdb0378f7bf5921b5eabf1762b8 ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
   "Chapters/0. Frontpage.tex" 1762194747.73098 550 21b289cff27c95db1228f558a3057e58 ""
-  "Chapters/1. Introduction.tex" 1762198069.25353 8377 f6dac9499c7187ade27e466c3213db7c ""
+  "Chapters/1. Introduction.tex" 1762198639.58355 12373 fe9f5b5572336ac7d93db7525a10944d ""
   "Figures/Apparatus/ Detector unit.png" 1762197634.34237 420212 be0ecbfcb5a43318464097c9520b3c68 ""
   "Figures/Apparatus/Electronics part.png" 1762197692.35828 454999 5f8f26028f20538c88ea9062d9d87e0e ""
   "Figures/Apparatus/Schematic.png" 1762197596.23151 242626 983fbc822b3c3bfd2acb2ed3c2a9d464 ""
@@ -231,11 +235,11 @@
   "Figures/Logos/cmrp.jpg" 1762194747.73224 234564 9949f65f716b920bc34fc5f28cbe49c8 ""
   "General/Preamble.tex" 1762194747.7324 3712 3293c2c702d6ac275dc44585dc2a8019 ""
   "General/Settings.tex" 1762194747.73258 3255 2a73cc111576b8f5fc9dc59f001ab9ee ""
-  "main.aux" 1762198070.35796 1962 0e63e8bc70853a0c856e253640c30488 "pdflatex"
-  "main.bbl" 1762197930.85567 49 0eba253fc001332e731e8aba3f23127b "bibtex main"
-  "main.out" 1762198070.35851 1293 071c0de5e7cb2f1b2c0d7c2be04341c7 "pdflatex"
+  "main.aux" 1762198640.60396 2536 b0370b4c9b3aeef0cb99c5566da403c3 "pdflatex"
+  "main.bbl" 1762198625.82733 96 8838869a2549dcb475bc8c95050ca131 "bibtex main"
+  "main.out" 1762198640.60447 2500 c67cdd20d2eac52e6e75b01595ddff97 "pdflatex"
   "main.tex" 1762194747.73554 667 99476f49be0c2a2a54e2713a3ebd5c8a ""
-  "main.toc" 1762198070.35869 774 40ee23ab9e8d45ceb45a21920c8667c0 "pdflatex"
+  "main.toc" 1762198640.60463 1166 c9b056925c4c558d4690f0ddca86cb3d "pdflatex"
   (generated)
   "main.aux"
   "main.log"
