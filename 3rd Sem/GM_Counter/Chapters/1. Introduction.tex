@@ -1,0 +1,585 @@
+\section{Objective}
+\begin{enumerate}
+    \item Verify the inverse square law
+    \item Determination of beta particle range and maximum energy
+    \item Study the back-scattering of beta particles
+    \item Production and attenuation of Bremsstrahlung 
+\end{enumerate}
+\section{Apparatus}
+\begin{itemize}
+    \item G.M Counting System (GC602A)
+    \item G.M detector stands for G.M detector. Sliding bench for G.M Experiments
+    \item Radioactive source kit
+    \item Aluminum, copper \& lead Absorber Set 
+\end{itemize}
+
+\subsection*{Principle of Operation of GM counter}
+The GM counter operates based on the principle of gas ionization and avalanche multiplication. When an ionizing particle enters the detector, it ionizes the gas molecules, producing primary ion pairs (electrons and positive ions). 
+
+Under a strong electric field:
+\begin{itemize}
+    \item The liberated electrons accelerate toward the anode and cause secondary ionizations, forming \textit{Townsend avalanches}.
+    \item At sufficiently high voltage, these avalanches propagate throughout the gas due to ultraviolet photons emitted during de-excitation, leading to a self-sustained discharge.
+\end{itemize}
+
+This \textbf{Geiger discharge} produces a large output pulse that is independent of the initial ionization energy. Thus, the GM counter is a \textit{counting device only} and does not provide energy information about the radiation.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{Figures/Geiger's discharge.png}
+    \caption{The mechanism by which additional avalanches are  triggered in a Geiger discharge. \cite{knoll_radiation_2010}}
+\end{figure}
+
+\subsubsection*{Construction}
+A typical GM tube consists of:
+\begin{itemize}
+    \item \textbf{Cathode:} A cylindrical metal or glass tube coated with a conducting layer.
+    \item \textbf{Anode:} A fine central wire (approximately 0.1~mm in diameter).
+    \item \textbf{Fill Gas:} An inert gas such as argon or neon at low pressure (0.1--1~atm).
+    \item \textbf{Quenching Gas:} A small amount (5--10\%) of an organic vapor or halogen gas to stop continuous discharge.
+    \item \textbf{End Window (optional):} Thin mica or plastic window for detecting low-energy alpha and beta particles.
+\end{itemize}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{Figures/Construction of GM.png}
+    \caption{A cross section of a typical end window Geiger tube \cite{knoll_radiation_2010}}
+\end{figure}
+
+\subsubsection*{Quenching Mechanism}
+After the initiation of a Geiger discharge, it is essential to stop it quickly to restore the tube for subsequent detections. Two quenching methods are employed:
+
+\subsubsection*{(a) External Quenching}
+A large series resistor (typically $10^8~\Omega$) limits the current and drops the voltage below the sustaining level immediately after each pulse. This method is simple but limits the counting rate.
+
+\subsubsection*{(b) Internal Quenching}
+The use of a quenching gas prevents continuous discharge. 
+\begin{itemize}
+    \item \textbf{Organic Quench Gases} (e.g., alcohol vapors) absorb energy through molecular dissociation, but they degrade over time.
+    \item \textbf{Halogen Quench Gases} (e.g., chlorine or bromine) recombine after dissociation, giving long life and stable operation. 
+\end{itemize}
+
+\subsubsection*{Dead Time and Recovery}
+After each discharge, a cloud of positive ions around the anode temporarily reduces the electric field strength, making the tube insensitive to further events. This period is known as the \textbf{dead time} (typically 50--100$\mu$s. The \textbf{recovery time} follows, during which the detector gradually regains full sensitivity. At high counting rates, dead-time corrections become necessary.
+
+\subsubsection*{The Geiger Plateau}
+When the applied voltage is gradually increased:
+\begin{enumerate}
+    \item The counting rate initially increases rapidly.
+    \item It then reaches a nearly constant region called the \textbf{Geiger plateau}.
+\end{enumerate}
+The plateau should be as flat as possible (slope $< 3\%$ per 100~V) for stable operation. The \textbf{operating voltage} is chosen approximately at the midpoint of this plateau.
+\subsection*{GC602A G.M. Counting System Summary}
+\subsubsection*{Overview}
+The GC602A is a microcontroller-based integral counting system designed by Nucleonix Systems for beta radiation detection and sample counting. It integrates high-voltage generation, pulse shaping, data acquisition, and display functionalities.
+\newpage
+\subsubsection*{Key Features}
+\begin{itemize}
+  \item Microcontroller: AT89S52, 8-bit architecture
+  \item Display: 20×2 alphanumeric LCD for counts, elapsed time, and EHT
+  \item EHT Range: 0–1500V @ 1mA (limited to 800V for safety)
+  \item Count Capacity: Up to 999999 events
+  \item Preset Time: 0–9999 seconds
+  \item Data Storage: Up to 6665 readings in EEPROM
+  \item Interfaces: USB serial port and parallel printer port
+  \item Programmable Labels: BG (Background), ST (Standard), SP (Sample)
+\end{itemize}
+
+\subsubsection*{System Architecture}
+\begin{itemize}
+  \item \textbf{High Voltage (HV) PCB}: DC–DC converter with oscillator, RF transformer, voltage doubler, filter, and regulator
+  \item \textbf{Low Voltage (LV) PCB}: Supplies +5V and +12V for system operation
+  \item \textbf{Pulse Shaper Circuit}: Converts GM tube's negative tail pulse to TTL-compatible signal
+  \item \textbf{Microcontroller Functions}:
+    \begin{itemize}
+      \item Reads counter data every second
+      \item Displays real-time values on LCD
+      \item Stores and recalls data from EEPROM
+      \item Handles keypad interrupts for acquisition control
+    \end{itemize}
+\end{itemize}
+
+\subsubsection*{Operation Notes}
+\begin{itemize}
+  \item Ensure GM tube is properly connected before powering on
+  \item Adjust EHT using front-panel knob; monitor via LCD
+  \item Use intelligent keypad for programming acquisition modes, preset time, and data storage
+  \item Acquisition modes include preset time, CPS, and CPM
+  \item Data can be stored with or without EHT values
+\end{itemize}
+
+\subsubsection*{Applications}
+\begin{itemize}
+  \item Beta sample counting in health physics labs
+  \item Radiation experiments in academic institutions
+  \item Monitoring in nuclear facilities: reactors, reprocessing plants, enrichment units
+\end{itemize}
+\newpage
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\linewidth]{Figures/Block Diagram of GM counting system.png}
+    \caption{Block Diagram of GM counting system \cite{nucleonix_gc602a_2015}}
+\end{figure}
+
+\section{Verification of inverse square law}
+\subsection{Theory}
+The Inverse Square Law states that the intensity of radiation from a point source decreases proportionally to the square of the distance from the source. Mathematically: $$I \propto \frac{1}{d^2}$$
+Where:
+\begin{itemize}
+    \item $I$ is the intensity (or count rate) of gamma radiation
+    \item $d$ is the distance between the source and the detector
+\end{itemize}
+
+This relationship arises because gamma rays propagate isotopically in three-dimensional space. As the distance increases, the same quantity of radiation spreads over a larger spherical surface area.\\
+
+To verify the inverse square law experimentally:
+\begin{itemize}
+    \item Measure the net count rate $R$ at various distances $d$ from the source.
+    \item Subtract background radiation to isolate the contribution from the gamma source.
+    \item Plot $R$ vs $d$, and alternatively $R$ vs $\frac{1}{d^2}$.
+\end{itemize}
+If the law holds, the product $Rd^2$ should remain approximately constant across measurements. Additionally, a plot of $R$ vs $\frac{1}{d^2}$ should yield a straight line through the origin, confirming the theoretical model.\\
+To further validate the power-law relationship, a log-log plot of 
+log(R) vs log(d) is constructed. The slope of this line should be approximately -2, consistent with the inverse square dependence:
+$$\log(R) = \log(k) - 2\log(d)$$
+Where $k$ is a proportionality constant.
+\subsubsection*{Assumptions and Limitations}
+\begin{itemize}
+    \item The source is treated as a point emitter.
+    \item The GM tube has uniform detection efficiency across distances.
+    \item Air attenuation and scattering are negligible over the measured range.
+    \item Background radiation is stable and accurately subtracted.
+\end{itemize}
+\subsection{Observation}
+We have used Cs-137 as a gamma source. The average background in 60 sec is = 58. Net Count = Total count - avr bkg count.
+\begin{table}[H]
+\centering
+\caption{Variation of count rate with distance}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+\textbf{Distance (cm)} & \textbf{Counts in 60 s} & \textbf{Net Count Rate} & \textbf{$1/d^2$ (m$^{-2}$)} & \textbf{Log d} & \textbf{Log R} & \textbf{R.d$^2$} \\
+\hline
+2 & 18121 & 301.05 & 2500.00 & 0.301 & 2.479 & 1204.200 \\
+3 & 8020  & 132.70 & 1111.11 & 0.477 & 2.123 & 1194.300 \\
+4 & 4602  & 75.73  & 625.00  & 0.602 & 1.879 & 1211.733 \\
+5 & 3013  & 49.25  & 400.00  & 0.699 & 1.692 & 1231.250 \\
+6 & 2105  & 34.12  & 277.78  & 0.778 & 1.533 & 1228.200 \\
+7 & 1687  & 27.15  & 204.08  & 0.845 & 1.434 & 1330.350 \\
+8 & 1262  & 20.07  & 156.25  & 0.903 & 1.302 & 1284.267 \\
+9 & 1045  & 16.45  & 123.46  & 0.954 & 1.216 & 1332.450 \\
+10 & 842  & 13.07  & 100.00  & 1.000 & 1.116 & 1306.667 \\
+11 & 653  & 9.92   & 82.64   & 1.041 & 0.996 & 1199.917 \\
+12 & 593  & 8.92   & 69.44   & 1.079 & 0.950 & 1284.000 \\
+13 & 490  & 7.20   & 59.17   & 1.114 & 0.857 & 1216.800 \\
+14 & 430  & 6.20   & 51.02   & 1.146 & 0.792 & 1215.200 \\
+15 & 387  & 5.48   & 44.44   & 1.176 & 0.739 & 1233.750 \\
+16 & 360  & 5.03   & 39.06   & 1.204 & 0.702 & 1288.533 \\
+17 & 318  & 4.33   & 34.60   & 1.230 & 0.637 & 1252.333 \\
+\hline
+\end{tabular}
+\end{table}
+
+% Figure with three images
+\begin{figure}[H]
+     \centering
+     \caption{Verification of Inverse Square Law}
+     \begin{subfigure}[b]{0.31\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{Figures/Inverse Square Law/ISL1.pdf}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.31\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{Figures/Inverse Square Law/ISL2.pdf}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.31\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{Figures/Inverse Square Law/ISL-3.pdf}
+     \end{subfigure}
+\end{figure}
+
+\subsection{Applications}
+In this experiment, a Geiger-Müller (GM) tube is used to detect gamma radiation emitted from a radioactive source. The GM tube operates in the Geiger region, where each ionizing event produces a uniform output pulse, allowing for reliable count rate measurements.
+
+Gamma rays, being highly penetrating electromagnetic radiation, are minimally attenuated by air over short distances. Thus, the observed variation in count rate with distance is predominantly due to geometric spreading, validating the inverse square law.
+
+\section{Determination of beta particle range and maximum energy}
+\subsection{Theory}
+Beta particles are high-energy, high-speed electrons ($\beta^-$) or positrons ($\beta^+$) emitted during the radioactive decay of certain isotopes. Unlike alpha particles, beta particles exhibit a continuous energy spectrum ranging from zero up to a characteristic maximum energy $E_0$, which is unique to each radionuclide.
+
+As beta particles traverse matter, they lose energy primarily through:
+\begin{itemize}
+    \item Ionization and excitation of atoms in the absorber
+    \item Radiative losses (Bremsstrahlung), especially at higher energies
+    \item Elastic scattering, causing deflections and path length variations
+\end{itemize}
+Due to these interactions, beta particles have a finite range in a given material, defined as the maximum thickness they can penetrate before being completely absorbed. The range $R$ of beta particles in an absorber (e.g., aluminum) is the thickness at which the particle flux effectively drops to zero. However, experimentally, we determine the half-thickness $t_{1/2}$ the absorber thickness that reduces the net count rate to half its initial value.
+
+This method provides a practical way to estimate the maximum energy $E_0$ of beta particles using empirical relationships.
+For beta particles in aluminum, the range $R$ in g/cm² is related to the maximum energy $E_0$(in MeV) by the empirical formula:
+$$R = 0.543 E_0 - 0.133$$
+Where: 
+\begin{itemize}
+    \item $R$ is the extrapolated range of beta particles
+    \item $E_0$ is the endpoint energy of the beta spectrum
+\end{itemize}
+By measuring $t_{1/2}$ for different sources and comparing their ratios, the range and, hence, the maximum energy of an unknown beta emitter can be deduced.
+
+\subsubsection*{Comparative Method}
+For two beta sources (e.g., Tl-204 and Sr-90), the ratio of their half-thicknesses relates directly to the ratio of their ranges:
+$$\frac{(t_{1/2})_1}{(t_{1/2})_2}= \frac{R_1}{R_2}$$
+Using this, the unknown range $R_2$ and the corresponding energy $E_0$ can be determined.
+\subsubsection*{Assumptions}
+\begin{itemize}
+    \item The beta source emits isotropically.
+    \item The absorber is homogeneous and of known density.
+    \item The GM tube has consistent detection efficiency across measurements.
+\end{itemize}
+\newpage
+\subsection{Observation}
+\textbf{Counting Time:} 120 s \hspace{4 cm}
+\textbf{Background Count:} 123 \\
+\textbf{Absorber:} Aluminium \hspace{4.1 cm}
+\textbf{Source:} Tl-204
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|>{\centering\arraybackslash}p{0.24\linewidth}|>{\centering\arraybackslash}p{0.24\linewidth}|>{\centering\arraybackslash}p{0.15\linewidth}|>{\centering\arraybackslash}p{0.18\linewidth}|}
+\hline
+\textbf{Absorber Thickness (mm)} & \textbf{Absorber Thickness (mg/cm$^2$)} & \textbf{Counts} & \textbf{Net Counts (Counts - BG)} \\
+\hline
+0 & 0 & 12635 & 12512 \\
+0.06 & 16.26 & 10392 & 10269 \\
+0.12 & 32.52 & 8205 & 8082 \\
+0.18 & 48.78 & 6305 & 6182 \\
+0.24 & 65.04 & 4709 & 4586 \\
+0.30 & 81.30 & 3488 & 3365 \\
+0.36 & 97.56 & 2435 & 2312 \\
+0.42 & 113.82 & 1824 & 1701 \\
+0.48 & 130.08 & 1279 & 1156 \\
+0.54 & 146.34 & 950 & 827 \\
+\hline
+\end{tabular}
+\caption{Absorption of beta particles in Aluminium (Source: Tl-204)}
+\end{table}
+
+\textbf{Counting Time:} 120 s \hspace{4 cm}
+\textbf{Background Count:} 123 \\
+\textbf{Absorber:} Aluminium \hspace{4.1 cm}
+\textbf{Source:} Sr-90
+\begin{table}[H]
+\centering
+\caption{Absorption of beta particles in Aluminium (Source: Sr-90)}
+\begin{tabular}{|>{\centering\arraybackslash}p{0.24\linewidth}|>{\centering\arraybackslash}p{0.24\linewidth}|>{\centering\arraybackslash}p{0.15\linewidth}|>{\centering\arraybackslash}p{0.18\linewidth}|}
+\hline
+\textbf{Absorber Thickness (mm)} & \textbf{Absorber Thickness (mg/cm$^2$)} & \textbf{Counts} & \textbf{Net Counts (Counts - BG)} \\
+\hline
+0 & 0.000 & 19949 & 19826 \\
+0.06 & 16.260 & 16549 & 16426 \\
+0.12 & 32.520 & 14885 & 14762 \\
+0.18 & 48.780 & 13255 & 13132 \\
+0.24 & 65.040 & 11923 & 11800 \\
+0.30 & 81.300 & 10855 & 10732 \\
+0.36 & 97.560 & 10059 & 9936 \\
+0.42 & 113.820 & 9400 & 9277 \\
+0.48 & 130.080 & 8916 & 8793 \\
+0.54 & 146.340 & 8166 & 8043 \\
+\hline
+\end{tabular}
+\end{table}
+\newpage
+% Figure with three images
+\begin{figure}[H]
+     \centering
+     \begin{subfigure}[b]{0.4 \textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{Figures/Beta particle range/Tl-204.pdf}
+         \caption{The half thickness $ t_1= \frac{\ln2}{0.0176} = 39.38 $ mg/cm$^2$}
+     \end{subfigure}
+     \hspace{1.5 cm}
+     \begin{subfigure}[b]{0.4 \textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{Figures/Beta particle range/Sr-90.pdf}
+         \caption{The half thickness $ t_2= \frac{\ln2}{0.0061} = 113.63 $ mg/cm$^2$}
+     \end{subfigure}
+        \caption{}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{Figures/Beta particle range/Sr-Y Decay scheme.pdf}
+    \caption{Sr-90 being purely beta radiation source of 0.546 MeV and half-life of about 29 years decays into Y-90 of half-life 64 hours. This decay results in a stable substance called Zirconium (Zr-90) \cite{lnhb_laraweb_2022}}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{Figures/Beta particle range/Tl-204 Decay Scheme.pdf}
+    \caption{Tl-204, with a half life of 3.78 years, decays into Pb-204 and Hg-204  by  $\beta^-$ decay and electron capture respectively. \cite{lnhb_laraweb_2022}}
+\end{figure}
+
+\subsection{Calculation}
+The range $R$ of beta particles in a material (in g/cm\textsuperscript{2}) is empirically related to their endpoint energy $E_m$ (in MeV) by:
+
+\begin{equation}
+R = 0.543E_m - 0.133
+\end{equation}
+
+To compare two beta sources, the ratio of absorber thicknesses required to reduce their count rates by half is proportional to the ratio of their ranges:
+
+\begin{equation}
+\frac{t_2}{t_1} = \frac{R_2}{R_1}
+\end{equation}
+
+Where:
+\begin{itemize}
+    \item $t_1$ and $t_2$ are the \textbf{half-thicknesses} for Tl-204 and Sr-90 respectively
+    \item $R_1$ and $R_2$ are the corresponding ranges
+\end{itemize}
+
+\newpage
+\textbf{For Tl-204:}
+
+\begin{align*}
+E_m &= 0.764 \text{ MeV} \\
+R_1 &= 0.543 \times 0.764 - 0.133 \\
+    &= 0.282 \text{ g/cm}^2
+\end{align*}
+
+\textbf{Given:}
+\begin{itemize}
+    \item $t_1 = 39.38$ mg/cm\textsuperscript{2}
+    \item $t_2 = 113.63$ mg/cm\textsuperscript{2}
+\end{itemize}
+
+Convert to g/cm\textsuperscript{2}:
+\begin{align*}
+t_1 &= 0.03938 \text{ g/cm}^2 \\
+t_2 &= 0.11363 \text{ g/cm}^2
+\end{align*}
+
+\textbf{Calculate $R_2$:}
+\begin{align*}
+R_2 &= \frac{t_2}{t_1} \times R_1 \\
+    &= \frac{0.11363}{0.03938} \times 0.282 \\
+    &= 0.813 \text{ g/cm}^2
+\end{align*}
+
+\textbf{Determine $E_m$ for Sr-90:}
+\begin{align*}
+R &= 0.543E_m - 0.133 \\
+0.813 &= 0.543E_m - 0.133 \\
+E_m &= \frac{0.813 + 0.133}{0.543} \\
+    &= 1.74 \text{ MeV}
+\end{align*}
+
+\subsubsection*{Result}
+The endpoint energy of beta particles from Sr-90 is approximately \textbf{1.74 MeV}.
+
+\subsection{Applications}
+\begin{itemize}
+    \item \textbf{Radiation Shielding Design}: Understanding beta particle range helps in selecting appropriate absorber materials (e.g., aluminum, plastic) for shielding in medical, industrial, and nuclear environments.
+    \item \textbf{Dosimetry and Safety Assessment}: Estimating maximum beta energy aids in calculating dose rates and penetration depths, critical for personnel safety and regulatory compliance in radiation labs.
+    \item \textbf{Medical Physics Applications}: Beta-emitting isotopes (e.g., Sr-90, P-32) are used in therapeutic procedures. Knowing their energy and range ensures precise targeting and minimal collateral exposure.
+\end{itemize}
+
+
+\section{Study the back-scattering of beta particles}
+\subsection{Theory}
+
+\subsubsection*{Nature of Beta Backscattering}
+Backscattering refers to the phenomenon where beta particles, upon striking a dense material, are deflected back toward the direction of their origin due to elastic and inelastic collisions with atomic nuclei and electrons. This effect is prominent when beta particles interact with high atomic number (\( Z \)) materials such as aluminum, lead, or copper.
+
+Beta particles are charged and relatively light, making them highly susceptible to scattering. When a beta particle enters a material, it undergoes:
+\begin{itemize}
+    \item \textbf{Elastic scattering} with nuclei, altering its trajectory without significant energy loss.
+    \item \textbf{Inelastic collisions} with electrons, causing ionization and excitation.
+    \item \textbf{Backscattering}, where cumulative interactions redirect the particle outward from the material surface.
+\end{itemize}
+
+\subsubsection*{Experimental Principle}
+In this experiment, a lead shield is placed between the beta source and the GM detector to block direct radiation. A scatterer (e.g., aluminum foil) is positioned such that beta particles from the source strike it and are backscattered toward the detector.
+
+The GM tube records only the backscattered beta particles. By varying the scatterer thickness, the dependence of backscattering intensity on material thickness is studied.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{Figures/Backscattering experimental setup.png}
+    \caption{Experimental setup \cite{Lab}}
+\end{figure}
+\subsubsection*{Observational Trends}
+\begin{itemize}
+    \item \textbf{Initial Increase:} As scatterer thickness increases, more beta particles interact, increasing backscattered counts.
+    \item \textbf{Saturation:} Beyond a certain thickness, additional layers do not significantly increase backscattering.
+    \item \textbf{Material Dependence:} Higher-\( Z \) materials produce more backscattering due to stronger Coulomb interactions.
+\end{itemize}
+
+\subsubsection*{Quantitative Considerations}
+The backscattered count rate \( R_b \) depends on:
+\begin{itemize}
+    \item Incident beta energy \( E \)
+    \item Atomic number \( Z \) and density \( \rho \) of the scatterer
+    \item Scatterer thickness \( t \)
+\end{itemize}
+
+
+\subsubsection*{Assumptions}
+\begin{itemize}
+    \item The GM detector is shielded from direct beta radiation.
+    \item Background radiation is stable and subtracted accurately.
+    \item The scatterer is homogeneous and uniformly placed.
+    \item The beta source emits isotropically.
+\end{itemize}
+\newpage
+\subsection{Observation}
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{Thickness (mm)} & \textbf{Count 1} & \textbf{Count 2} & \textbf{Avr Count} & \textbf{Net count} \\
+\hline
+0      & 228 & 228 & 228   & 0     \\
+0.05   & 246 & 241 & 243.5 & 15.5  \\
+0.1    & 258 & 260 & 259   & 31    \\
+0.15   & 267 & 263 & 265   & 37    \\
+0.2    & 280 & 281 & 280.5 & 52.5  \\
+0.25   & 293 & 297 & 295   & 67    \\
+0.3    & 305 & 306 & 305.5 & 77.5  \\
+0.35   & 315 & 318 & 316.5 & 88.5  \\
+0.4    & 321 & 323 & 322   & 94    \\
+0.45   & 335 & 332 & 333.5 & 105.5 \\
+0.5    & 341 & 345 & 343   & 115   \\
+\hline
+\end{tabular}
+\caption{Experimental Data: Counts vs Thickness}
+\end{table}
+It can be seen that beyond a certain thickness, additional layers do not significantly increase backscattering.
+\subsection{Applications}
+ Understanding backscattering helps in designing protective shields and barriers in hospitals and
+nuclear medicine departments, where $\beta$ emitters are used. Backscattered electrons can increase
+surface dose if not properly accounted for.
+
+\section{Production and attenuation of Bremsstrahlung}
+\subsection{Theory}
+\subsubsection*{Introduction}
+Bremsstrahlung, derived from the German word for ``braking radiation,'' refers to the electromagnetic radiation emitted when a charged particle—typically a high-energy beta particle—is decelerated or deflected by the electric field of atomic nuclei. This deceleration results in the emission of photons, predominantly in the X-ray or gamma-ray region.
+
+In nuclear instrumentation, Bremsstrahlung is a secondary radiation phenomenon observed when beta particles interact with dense materials. Its intensity and spectral distribution depend on:
+\begin{itemize}
+    \item The energy of the incident beta particles
+    \item The atomic number ($Z$) of the absorber material
+    \item The geometry and thickness of the absorber
+\end{itemize}
+
+\subsubsection*{Mechanism of Production}
+When beta particles (e.g., from a \textsuperscript{90}Sr source) pass through a medium, they undergo Coulomb interactions with nuclei. The probability of Bremsstrahlung emission increases with:
+\begin{itemize}
+    \item Higher beta particle energy
+    \item Higher $Z$ of the absorber (e.g., Cu $>$ Al $>$ Perspex)
+\end{itemize}
+
+The emitted Bremsstrahlung photons form a continuous energy spectrum and can penetrate materials more deeply than the original beta particles.
+
+\subsubsection*{Attenuation of Bremsstrahlung}
+Attenuation refers to the reduction in intensity of Bremsstrahlung photons as they pass through matter. It follows an exponential decay law:
+
+\begin{equation}
+I = I_0 e^{-\mu x}
+\end{equation}
+
+Where:
+\begin{itemize}
+    \item $I$ is the transmitted intensity
+    \item $I_0$ is the initial intensity
+    \item $\mu$ is the linear attenuation coefficient (dependent on $Z$ and photon energy)
+    \item $x$ is the thickness of the absorber
+\end{itemize}
+
+In this experiment, attenuation is studied by reversing absorber combinations (e.g., Al–Perspex vs. Perspex–Al) and measuring count rates using a GM detector. The difference in counts reflects the directional dependence of Bremsstrahlung production and attenuation.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{Figures/Bremsstrahlung.png}
+    \caption{Experiment setup for production and attenuation of Bremsstrahlung}
+\end{figure}
+
+\subsubsection*{Experimental Rationale}
+By comparing count rates for different absorber orientations:
+\begin{itemize}
+    \item When high-$Z$ material faces the source, more Bremsstrahlung is produced and attenuated before reaching the detector.
+    \item When low-$Z$ material faces the source, less Bremsstrahlung is produced, and more photons reach the detector.
+\end{itemize}
+
+This directional asymmetry confirms that Bremsstrahlung is produced predominantly in high-$Z$ materials and attenuated according to their photon absorption properties.
+
+\subsection{Observation}
+
+\textbf{Source} = Sr-90 \hspace{4 cm} \textbf{Distance between source and detector} = 6cm	
+
+\textbf{Preset time} = 300 \hspace{3.4 cm} \textbf{Avr. BG Count}= 306
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|c|c|}
+\hline
+\multicolumn{1}{|c|}{\textbf{Absorber position}} & \textbf{Count} & \textbf{Net count} \\
+\hline
+Without Absorber         & 8180 & 7874 \\
+Perspex facing source    & 525  & 219  \\
+Al facing source         & 561  & 255  \\
+\hline
+\end{tabular}
+\caption{Al(0.7 mm), Perspex(1.8 mm)}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|l|c|c|}
+\hline
+\multicolumn{1}{|c|}{\textbf{Absorber position}} & \textbf{Count} & \textbf{Net count} \\
+\hline
+Without Absorber         & 8180 & 7874 \\
+Cu facing source         & 499  & 193  \\
+Perspex facing source    & 424  & 118  \\
+\hline
+\end{tabular}
+\caption{Perspex(1.8 mm), Cu(0.3 mm)}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|l|c|c|}
+\hline
+\multicolumn{1}{|c|}{\textbf{Absorber position}} & \textbf{Count} & \textbf{Net count} \\
+\hline
+Without Absorber         & 8180 & 7874 \\
+Al facing source         & 415  & 109  \\
+Cu facing source         & 466  & 160  \\
+\hline
+\end{tabular}
+\caption{Al(0.7 mm), Cu(0.3 mm)}
+\end{table}
+
+
+\subsection{Applications}
+\begin{itemize}
+    \item Helps design effective radiation shielding using high-Z materials like Cu and Al.
+    \item Aids in minimizing secondary radiation exposure in medical and nuclear settings.
+    \item Supports safe handling of beta sources by understanding Bremsstrahlung production.
+    \item Useful in calibrating GM counters for photon detection and attenuation studies.
+    \item Demonstrates directional dependence of radiation for optimized shielding layouts.
+\end{itemize}
+
+\section{Conclusion}
+The series of experiments conducted using the GC602A G.M. Counting System successfully demonstrated key principles of radiation detection and interaction:
+
+\begin{itemize}
+  \item \textbf{Inverse Square Law:} The count rate of gamma radiation was shown to decrease proportionally to the square of the distance from the source, validating the geometric dispersion of radiation in space.
+  
+  \item \textbf{Beta Particle Range and Energy:} By analyzing absorption curves for Tl-204 and Sr-90, the half-thickness method enabled estimation of maximum beta energies. The endpoint energy for Sr-90 was calculated to be approximately 1.74 MeV, consistent with literature values.
+  
+  \item \textbf{Backscattering of Beta Particles:} The experiment confirmed that beta backscattering increases with absorber thickness and atomic number, with saturation observed beyond a certain material depth.
+  
+  \item \textbf{Bremsstrahlung Production and Attenuation:} High-Z materials like copper and aluminum were shown to produce significant Bremsstrahlung when exposed to beta radiation. The directional dependence of absorber placement affected photon attenuation, reinforcing the importance of shielding geometry.
+\end{itemize}
+
+Overall, the experiments provided hands-on validation of theoretical models in radiation physics and highlighted the operational capabilities of GM counters in medical and nuclear applications.
+

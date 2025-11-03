@@ -1,0 +1,576 @@
+\section{Objective}
+To measure the Photon Beam output of a Medical Linear Accelerator.
+\section{Apparatus}
+\begin{enumerate}
+    \item  Medical Linear Accelerator
+    \item  Water/ Slab Phantom
+    \item  Ionization Chamber
+    \item Electrometer and Connecting cables
+    \item Thermometer and Barometer
+    \item Leveling tool (Spirit level)
+\end{enumerate}
+
+\subsection*{Medical Linear Accelerator}
+A Medical Linear Accelerator (LINAC) is a device used in external beam radiotherapy to treat cancer. It accelerates electrons using microwave technology and directs them to strike a high atomic number target, producing high-energy X-rays (photon beams). These photon beams are shaped and directed precisely toward the tumor using multileaf collimators (MLCs) while minimizing the dose to surrounding healthy tissues. 
+
+The LINAC can deliver various treatment techniques such as 3D-CRT, IMRT, and VMAT. Regular calibration and quality assurance are essential to ensure accurate dose delivery and patient safety.
+
+
+\begin{figure}[H]
+     \centering
+     \begin{subfigure}[b]{0.35\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{Figures/Medical linear accelarator.jpg}
+         \caption{Medical linear accelerator in AIIMS}
+     \end{subfigure}
+     \hspace{1.5 cm}
+     \begin{subfigure}[b]{0.35\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{Figures/Water phantom.jpg}
+         \caption{Water phantom}
+     \end{subfigure}
+\end{figure}
+
+\subsection*{Farmer Ionization Chamber 30013 (Waterproof)}
+
+The \href{https://www.ptwdosimetry.com/en/products/farmer-ionization-chamber-30013-waterproof}{Farmer Ionization Chamber 30013 } is a standard
+cylindrical thimble-type chamber widely used for reference dosimetry in
+external beam radiotherapy. It is designed for high-precision absorbed dose
+measurements in water phantoms and complies with international dosimetry
+protocols such as IAEA TRS-398 and AAPM TG-51.
+
+\begin{itemize}
+  \item \textbf{Design:} Cylindrical chamber with graphite-coated inner wall and central collecting electrode.
+  \item \textbf{Sensitive volume:} 0.6 cm$^{3}$ (standard Farmer-type).
+  \item \textbf{Application:} Reference dosimetry in water phantoms, calibration of linear accelerators, and absorbed dose determination.
+  \item \textbf{Waterproofing:} Hermetically sealed, allowing direct immersion in water phantoms without an external waterproof sleeve. This reduces setup complexity and avoids corrections for air gaps.
+  \item \textbf{Energy range:} Optimized for high-energy photon and electron beams used in clinical radiotherapy.
+  \item \textbf{Advantages:} High stability, reproducibility, and suitability for international codes of practice.
+\end{itemize}
+
+\begin{figure}[H]
+     \centering
+     \begin{subfigure}[b]{0.3\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{Figures/Chamber/Fermer type Ionization chamber.jpeg}
+         \caption{Farmer type Ionization chamber}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.3\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{Figures/Chamber/Farmer type Ionaization chamber connector.jpeg}
+         \caption{Farmer type Ionaization chamber connector}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.3\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{Figures/Chamber/Farmer type Ionaization chamber top view.jpeg}
+         \caption{Farmer type Ionization Chamber}
+     \end{subfigure}
+\end{figure}
+
+
+\section{Theory:}
+Medical LINACs are linear accelerators that accelerate electrons toa  certain amount of kinetic energy using RF fields. In a LINAC, the electrons are accelerated following straight trajectories in special evacuated structures called accelerating waveguides. Electrons follow a linear path through the same, relatively low, potential difference several times. The high-power RF fields used for electron acceleration in the accelerating waveguides are produced through the process of decelerating electrons in retarding potential in special evacuated devices called magnetrons and klystrons. These accelerated electrons are targeted to the high-Z material(Tungsten) to produce X-ray Photons for treatment. Before the treatment, the output of the LINAC must be determined accurately.
+and it must also be verified regularly during clinical use to ensure accurate delivery of the prescribed dose to the patient.
+
+The protocol, which is followed for LINAC output measurement, is TRS-398 (Technical Reports Series No. 398 "Absorbed Dose Determination in External Beam Radiotherapy" \cite{iaeaTRS398}) is the recommended international protocol for measuring output from a medical linear accelerator. The protocol and formalism for the measurement of output are described here.
+
+\textbf{$TPR_{20,10}$} is the ratio of the absorbed doses at depths of 20 and 10 cm in a water phantom, measured with a constant SCD of 100 cm and a field size of 10 cm × 10 cm at the plane of the chamber. The measurement depth can be chosen based on the $TPR_{20,10}$ value as given in the table below. The formula gives the absorbed dose to water at a point:
+\begin{equation}
+    D_{w,Q} = N_{D,w,Q_{0}} M_{Q} k_{Q,Q_{0}}
+\end{equation}
+
+$N_{D,w,Q_{0}} $ is the calibration factor in terms of absorbed dose to water of the dosimeter obtained from a standard laboratory. $M_{Q}$ = Corrected meter reading (The various correction factors on which the meter reading depends are discussed below), $k_{Q,Q_{0}}= $Beam quality correction factor.
+
+\subsection{Beam Quality Correction factor} 
+The beam quality correction factor is used when the measurement beam differs from the reference beam, where the chamber is calibrated. The values of this correction factor for various chambers and beam qualities ($TPR_{20, 10}$) are available in Table 14 of IAEA TRS 398. If both the reference beam (Where the chamber is calibrated) and measurement beam are the same, the Beam Quality Correction factor $k_{Q,Q_{0}}$ is 1.
+
+ \subsection{Correction for Temperature, Pressure, and Humidity}
+ Since the ionization chamber used to measure output is open to ambient air, the mass of the air in the cavity volume will be affected by the surrounding temperature, pressure, and humidity. No correction for humidity is applied if the humidity range is within 20-80\%. The correction due to temperature and pressure is given by
+ \begin{equation}
+    K_{T,P} = \bigg(\frac{273.15+T}{273.15+T_0}\bigg)\bigg(\frac{P_0}{P}\bigg)
+    \label{eqn:K_{T,P}0}
+\end{equation}
+\begin{itemize}
+    \item $T$ = Temperature at the time of measurement
+    \item $P$ = Pressure at the time of measurement
+    \item $T_{0}$ =  Reference temperature (20\textdegree C)
+    \item $P_{0}$ = Reference pressure (1013.15 mbar)
+\end{itemize}
+$T_{0}$ and $P_{0}$ are the temperature and pressure respectively at which the chamber is calibrated, and it is mentioned in the calibration certificate.
+
+In the above discussion it would be necessary to specify the temperature and pressure of the gas, since this determine its density. The mass, $m(T,P)$ of a given volume of air at temperature $T$ and pressure $P$ is related to its mass $m(0,1013.2)$ at 0 \textdegree C and 1013.2 mbar pressure by:
+\begin{equation}
+    m(T,P) = m(T_0,P_0)\bigg(\frac{273.15+T_0}{273.15+T}\bigg)\bigg(\frac{P}{P_0}\bigg)
+\end{equation}
+the first bracketed term corrects for the expansion of the gas with increased temperature and second for changes due to changes in pressure. Since the mass of the gas appears in the denominator in dose calculation formula from Bragg-Gray Cavity Theory, The correction factor $K_{TP}$ that must be applied to the dose determination is:
+\begin{equation}
+    K_{T,P} = \bigg(\frac{273.15+T}{273.15+T_0}\bigg)\bigg(\frac{P_0}{P}\bigg)
+\end{equation}
+
+\subsection{Correction for Ion Recombination/ Saturation} 
+This error is introduced due to the incomplete charge collection inside the ionization chamber. The two-voltage method,suggested by J.W. Boag and J. Currant is usually applied to calculate the recombination error. The protocol recommends that the ratio to be at least 2. Recombination factor correction factor($K_{s}$) is reciprocal of a chamber's collection efficiency and appears as a multiplicative factor in te dose calculation.
+
+\subsubsection{Efficiency Correction Factor for Pulsed Radiation}
+The formula for collection efficiency $f$ for a chamber exposed to pulsed radiation suggested by Boag and Currant is 
+\begin{equation}
+    f = \frac{1}{u} ln(1+u)
+    \label{eqn: collection efficiency}
+\end{equation}
+where 
+\begin{equation}
+    u = \frac{(\alpha / e)}{(k_{1}+k_{2})} (\frac{\rho d^{2}}{V})
+\end{equation}
+or, \begin{equation}
+    \mu = \frac{(\alpha / e)}{(k_{1}+k_{2})}
+\end{equation}
+
+\begin{itemize}
+    \item $\alpha =$ Ionic Recombination Coefficient
+    \item $e = $ Electronic Charge
+    \item $d = $ Electrode Spacing
+    \item $k_{1},k_{2} = $ Mobilities of positive and negative ions respectively.
+    \item $\rho = $ Initial charge density of positive and negative ions created by the pulse.
+\end{itemize}
+
+The two voltage technique suggested provides a relationship between collected charges, bias voltages and u given by, 
+\begin{equation}
+    \frac{q_{1}}{q_{2}} = \frac{V_{1}}{V_{2}}\frac{\ln(1+u)}{\ln(1+u\frac{V_{1}}{V_{2}})}
+    \label{eqn:two voltage}
+\end{equation}
+\subsubsection{Numerical solution for pulsed radiation}
+Now a program can be written to provide numerical solution to equation \ref{eqn:two voltage} for any voltage ratio . This equation was solved for $u$ using the method of Newton Raphson. The value of $u$ thus obtained was substituted in equation \ref{eqn: collection efficiency} to yield $f$ , the reciprocal of which is $k_{s}$ 
+
+
+Approximation for $k_{s}$ were constructed in the form of quadratic equations. For a given voltage ratio,the alogorithm described above can produce a data pairs. These data pairs were used to obtain quadratic fits of $K_{s}$ to Meter reading ratio.The fitted function took the form. 
+
+\begin{equation}
+    k_s = a_0 + a_1\left(\frac{M_1}{M_2}\right)+a_3\left(\frac{M_1}{M_2}\right)^{2}
+    \label{eqn:ks0}
+\end{equation}
+% Requires: \usepackage{graphicx}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{cccc}
+    \toprule
+    Voltage ratio & $a_0$ & $a_1$ & $a_2$ \\ \midrule
+    2.00 & 2.79977 & -4.50337 & 2.70513 \\
+    2.50 & 1.46830 & -1.57525 & 1.10746 \\
+    3.00 & 1.11751 & -0.72733 & 0.60982 \\
+    3.50 & 1.04426 & -0.47813 & 0.43044 \\
+    4.00 & 0.95461 & -0.24098 & 0.28634 \\
+    4.50 & 0.95134 & -0.18368 & 0.23255 \\
+    5.00 & 0.93661 & -0.16959 & 0.20625 \\
+    5.50 & 0.91052 & -0.04487 & 0.13433 \\
+    6.00 & 0.92763 & -0.05490 & 0.12720 \\
+    6.50 & 0.97077 & -0.11459 & 0.14488 \\
+    7.00 & 0.93554 & -0.03546 & 0.10000 \\
+    7.50 & 0.91955 & 0.00655 & 0.07400 \\
+    8.00 & 0.94682 & -0.03502 & 0.08812 \\
+    8.50 & 0.92533 & 0.01140 & 0.06048 \\
+    9.00 & 0.95805 & -0.03868 & 0.00808 \\
+    9.50 & 0.92112 & 0.03691 & 0.01409 \\
+    10.00 & 0.92323 & 0.03937 & 0.03730 \\ \bottomrule
+    \end{tabular}
+    \caption{Voltage Ratio and Coefficients \cite{colab2025example}}
+    \label{tab:voltage_coefficients}
+\end{table}
+This table consists value of $k_{s}$ for pulsed beam determined by the Boag and Currant by solving transcendental equation, and as determined from the quadratic fit.
+
+\subsection{Polarity Correction} 
+The electrometer reading changes when the polarity of the bias voltage applied to the ionization chamber is reversed. The correction factor for change in meter readings due to polarizing potentials of opposite polarity is given by.
+
+\subsubsection{Reason for Polarity Effect}
+
+Polarity effects in ionization chambers are caused by a radiation-induced current, also known as the Compton current, which arises as a charge imbalance due to charge deposition in the chamber’s electrodes. This current arises from the emission of secondary electrons predominantly in the direction of incident photons as a result of Compton interactions occurring in the chamber wall and electrode. Any difference in potential between the guard electrode and the collector may distort the electric field significantly, causing asymmetry in the polarity.
+
+\subsubsection{General Discussion}
+
+One can eliminate the polarity effect by making measurements at two different polarities. The term "polarity effect" has been used to refer to the ratio of readings with positive $M_{+}$ and negative $M_{-}$ polarity;that is, the polarity effect = $\frac{M_{+}}{M_{-}}$. $M$ is the reading obtained with the polarity used at the chamber.
+
+The polarity correction factor $K_{pol}$ is thus given by the following relationship:
+
+
+\begin{equation}
+    K_{pol} = \frac{|M_{+}|+ |M_{-}|}{2|M|}
+    \label{eqn:Kpol0}
+\end{equation}
+$M_{+}$ = Meter reading with positive bias voltage\\
+$M_{-}$ = Meter reading with negative bias voltage\\
+$M$ =  Meter reading with the usual bias voltage (used for daily output measurement purposes)
+
+\subsection{Electrometer Calibration}
+Usually, the ionization chamber and measuring electrometer are calibrated as a single unit. In that case, the electrometer calibration factor $k_{elec}$ is unity. If the electrometer is calibrated separately, the electrometer calibration factor must be multiplied by the uncorrected meter reading ($M_{Qunc}$) to calculate the corrected meter reading ($M_{Q}$). The corrected meter reading after applying all the correction factors is given below.
+\begin{equation}
+    M_{Q_{c}} = M_{Qunc}\times K_{T,P} \times K_{Pol} \times K_{s}
+    \label{eqn: corrected meter reading0}
+\end{equation}
+
+\begin{table}[H]
+\centering
+\caption{Reference conditions for the determination of absorbed dose to water in high energy photon beams \cite{iaeaTRS398}}
+\begin{tabular}{p{5cm}p{8cm}}\toprule
+\textbf{Influence quantity} & \textbf{Reference value or reference characteristic} \\ \midrule
+Phantom material & Water \\
+Chamber type & Cylindrical \\
+Measurement depth, $z_{\text{ref}}$ & 10 g/cm$^2$ \\
+Reference point of the chamber & On the central axis at the centre of the cavity volume \\
+Position of the reference point of the chamber & At measurement depth $z_{\text{ref}}$ \\
+Source surface distance or source chamber distance\textsuperscript{a} & 100 cm \\
+Field size\textsuperscript{b} & 10 cm $\times$ 10 cm \\
+Lateral beam profile & Homogeneous radial dose distribution over the sensitive volume of the ionization chamber\textsuperscript{c} \\ \bottomrule
+\end{tabular}
+
+\vspace{0.3cm}
+\raggedright
+\textsuperscript{a} If the reference dose has to be determined for an isocentric set-up, the source–axis distance (SAD) of the accelerator is to be used, even if this is not 100 cm.\\
+\textsuperscript{b} The field size is defined at the surface of the phantom for a source–surface distance type set-up, whereas for an SAD type set-up it is defined at the plane of the detector, placed at the reference depth in the water phantom at the isocentre of the machine.\\
+\textsuperscript{c} The radial dose distribution in the vicinity of the ionization chamber is mainly determined by the accelerator characteristics and cannot be easily modified by the user. When the radial dose distribution over the sensitive volume of the ionization chamber is non-uniform a correction for volume averaging has to be applied.\\
+\end{table}
+
+
+
+\section{Observation in AIIMS}
+
+\subsection{Tabulation for 6MV photon}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{ccccc}
+    \toprule
+        Bias Voltage  &  $M_{Q1}$   & $M_{Q2}$   & $M_{Q3}$  & Average ($M_{Qunc}$)\\ \midrule
+      +400 V & 12.41 nC & 12.40 nC & 12.41 nC & 12.407 nC \\
+      +200 V & 12.42 nC& 12.42 nC & 12.42 nC& 12.42 nC\\
+      -400 V & -12.38 nC& -12.38 nC& -12.40 nC & -12.39 nC\\
+    \bottomrule
+    \end{tabular}
+    \caption{Tabulation for 6 MV}
+\end{table}
+
+\subsubsection*{Correction for Temperature, Pressure, and Humidity}
+
+\begin{equation}
+    k_{T,P} = \bigg(\frac{273.15+T}{2731.5+T_0}\bigg)\bigg(\frac{P_0}{P}\bigg)
+    \label{eqn:K_{T,P}}
+\end{equation}
+where $T = 23 ^o$C, $T_0 = 20^o$C, $P_o = 101.3 $ kPa and $P = 101.1$ kPa.\
+
+
+So, After putting in the value, $\boxed{k_{TP} = 1.01223215} $.
+
+
+\subsubsection*{Correction for Ion Recombination/ Saturation:}
+
+\begin{equation}
+    k_s = a_0 + a_1\left(\frac{M_1}{M_2}\right)+a_3\left(\frac{M_1}{M_2}\right)^{2}
+\end{equation}
+
+where $a_0 = 2.79977$, $a_1 = -4.50337$, $a_2 = 2.70513$ for a voltage ratio of 2, and the values for $M_{1}$ and $M_2$ are the averages of the meter readings for +400 volts and +200 volts, respectively. So, $M_{1} = 12.407$ and $M_{2} = 12.42$.
+
+
+After calculating , $\boxed{k_{s} = 1.0005837}$.
+
+\subsubsection*{Polarity Correction:}
+\begin{equation}
+    K_{pol} = \frac{|M_{+}|+ |M_{-}|}{2|M|}
+\end{equation}
+
+By calculating the value for $|M_{+}|$ we get 12.407 nC and for $|M_{-}|$ we get -12.39 nC and for $|M|$ we get 12.407 nC.
+
+
+So, for the $K_{Pol}$ calculation, we get $\boxed{K_{Pol}=0.999186}$.
+
+\subsubsection*{Corrected meter reading:}
+\begin{align*}
+    M_Q &= M' \times k_{pol} \times k_{sat} \times k_{TP}\\
+        &= 12.407 \times  0.999186 \times 1.0005837 \times 1.01223215\\
+        &= \boxed{12.556 \text{ nC}}
+\end{align*}
+
+\subsubsection*{Absorbed does to water at 10 cm depth:}
+Given, $k_{Q, Q_0} = 0.995$ and $N_{D, w} = 5.36 \times 10^7$ Gy/C
+\begin{align*}
+    D'_{w, Q} &= M_Q \times N_{D,w} \times k_{Q, Q_0}  \\
+              &= 12.556 \text{ nC} \times 5.36 \times 10^7 \text{ Gy/C} \times 0.995 \\
+              &= \boxed{0.6696 \text{ cGy}}
+\end{align*}
+\subsubsection*{Dose at the depth of dose maxima, $Z_{max} = 100$ cm SSD set up:}
+PDD at $Z_{ref}$ for a 10 cm $\times$ 10 cm field size for a 6 MV beam is \textit{67.67\%}.
+
+Absorbed dose rate calibration at $Z_{max}$ 
+\begin{align*}
+    D_{w, Q} &= \frac{0.6696 \times 100}{67.67} \\
+             &= \boxed{0.9895 \text{ cGy/MU}} 
+\end{align*}
+
+\subsubsection*{Error calculation}
+\begin{itemize}
+  \item Output measured: \(0.9895 \, \text{cGy/MU} \)
+  \item Standard output: \( 1.0000 \, \text{cGy/MU} \)
+\end{itemize}
+
+
+
+\begin{align*}
+    \text{Error (\%)} &= \left( \frac{\text{Measured} - \text{Standard}}{\text{Standard}} \right) \times 100\\
+            &= \left| \frac{0.9895 - 1.0000}{1.0000} \right| \times 100\\
+            &= 1.05\% \text{ (Tolerance = 2\%) }
+\end{align*}
+
+\subsection{Tabulation for 10 MV X-ray}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{ccccc}
+    \toprule
+        Bias Voltage  &  $M_{Q1}$   & $M_{Q2}$   & $M_{Q3}$  & Average ($M_{Qunc}$)\\ \midrule
+      +400 V & 13.52 nC & 13.51 nC & 13.53 nC & 13.52 nC \\
+      +200 V & 13.55 nC& 13.56 nC & 13.54 nC& 13.55 nC\\
+      -400 V & -13.48 nC& -13.48 nC& -13.48 nC & -13.48 nC\\
+    \bottomrule
+    \end{tabular}
+    \caption{Tabulation for 10 MV}
+    \label{tab: tabulation for 10 MV}
+\end{table}
+
+\subsubsection*{Correction for Temperature, Pressure, and Humidity}
+
+\begin{equation}
+    k_{T,P} = \bigg(\frac{273.15+T}{2731.5+T_0}\bigg)\bigg(\frac{P_0}{P}\bigg)
+\end{equation}
+where $T = 23 ^o$C, $T_0 = 20^o$C, $P_o = 101.3 $ kPa and $P = 101.1$ kPa.\
+
+
+So, After putting in the value, $\boxed{k_{TP} = 1.01223215} $.
+
+
+\subsubsection*{Correction for Ion Recombination/ Saturation:}
+
+\begin{equation}
+    k_s = a_0 + a_1\left(\frac{M_1}{M_2}\right)+a_3\left(\frac{M_1}{M_2}\right)^{2}
+\end{equation}
+
+where $a_0 = 2.79977$, $a_1 = -4.50337$, $a_2 = 2.70513$ for a voltage ratio of 2, and the values for $M_{1}$ and $M_2$ are the averages of the meter readings for +400 volts and +200 volts, respectively. So, $M_{1} = 13.52$ nC and $M_{2} = -13.55$nC.
+
+
+After calculating , $\boxed{k_{s} = 0.999535}$.
+
+\subsubsection*{Polarity Correction:}
+\begin{equation}
+    K_{pol} = \frac{|M_{+}|+ |M_{-}|}{2|M|}
+\end{equation}
+
+By calculating the value for $|M_{+}|$ we get 13.52 nC and for $|M_{-}|$ we get -13.55 nC and for $|M|$ we get 13.52 nC.
+
+
+So, for the $K_{Pol}$ calculation, we get $\boxed{K_{Pol}=1.001109}$.
+
+\subsubsection*{Corrected meter reading:}
+\begin{align*}
+    M_Q &= M' \times k_{pol} \times k_{sat} \times k_{TP}\\
+        &= 13.52 \times  1.001109 \times 0.999535 \times 1.01223215 \\
+        &= \boxed{13.695 \text{ nC}}
+\end{align*}
+
+\subsubsection*{Absorbed does to water at 10 cm depth:}
+Given, $k_{Q, Q_0} = 0.982$ and $N_{D, w} = 5.36 \times 10^7$ Gy/C
+\begin{align*}
+    D'_{w, Q} &= M_Q \times N_{D,w} \times k_{Q, Q_0}\\
+              &= 13.695 \text{ nC} \times 5.36 \times 10^7 \text{ Gy/C} \times 0.982\\
+              &= \boxed{0.72084 \text{ cGy}}
+\end{align*}
+\subsubsection*{Dose at the depth of dose maxima, $Z_{max} = 100$ cm SSD set up:}
+PDD at $Z_{ref}$ for a 10 cm $\times$ 10 cm field size for a 10 MV beam is \textit{72.9\%}.
+
+Absorbed dose rate calibration at $Z_{max}$ 
+\begin{align*}
+    D_{w, Q} &= \frac{0.72084 \times 100}{72.9} \\
+             &= \boxed{0.98881 \text{ cGy/MU}} 
+\end{align*}
+
+\subsubsection*{Error calculation}
+\begin{itemize}
+  \item Output measured: \(0.98881 \, \text{cGy/MU} \)
+  \item Standard output: \( 1.0000 \, \text{cGy/MU} \)
+\end{itemize}
+
+
+
+\begin{align*}
+    \text{Error (\%)} &= \left( \frac{\text{Measured} - \text{Standard}}{\text{Standard}} \right) \times 100\\
+            &= \left| \frac{0.98881 - 1.0000}{1.0000} \right| \times 100\\
+            &= 1.19\% \text{ (Tolerance = 2\%) }
+\end{align*}
+
+
+\section{Observation in Acharya Harihar Post Graduate Institute of Cancer}
+
+\subsection{Tabulation for 6MV photon}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{ccccc}
+    \toprule
+        Bias VoltageV  &  $M_{Q1}$   & $M_{Q2}$   & $M_{Q3}$  & Average ($M_{Qunc}$)\\ \midrule
+      +400 V & 12.8 nC & 12.82 nC & 12.82 nC & 12.813 nC \\
+      -400 V & -12.83 nC& -12.84 nC & -12.85 nC& -12.84 nC\\
+      +200 V & -12.8 nC& 12.81 nC& 12.81 nC & 12.806 nC\\
+    \bottomrule
+    \end{tabular}
+    \caption{Tabulation for 6 MV}
+\end{table}
+
+\subsubsection*{Correction for Temperature, Pressure, and Humidity}
+
+\begin{equation}
+    k_{T,P} = \bigg(\frac{273.15+T}{2731.5+T_0}\bigg)\bigg(\frac{P_0}{P}\bigg)
+\end{equation}
+where the average temperature $T = 21.4 ^o$C, $T_0 = 20^o$C, $P_o = 101.3 $ kPa and $P = 100.3$ kPa.\
+
+
+So, After putting in the value, $\boxed{k_{TP} = 1.0147934} $.
+
+
+\subsubsection*{Correction for Ion Recombination/ Saturation:}
+
+\begin{equation}
+    k_s = a_0 + a_1\left(\frac{M_1}{M_2}\right)+a_3\left(\frac{M_1}{M_2}\right)^{2}
+\end{equation}
+
+where $a_0 = 2.79977$, $a_1 = -4.50337$, $a_2 = 2.70513$ for a voltage ratio of 2, and the values for $M_{1}$ and $M_2$ are the averages of the meter readings for +400 volts and +200 volts, respectively. So, $M_{1} = 12.813$ and $M_{2} = 12.806$.
+
+
+After calculating , $\boxed{k_{s} = 1.002026}$.
+
+\subsubsection*{Polarity Correction:}
+\begin{equation}
+    K_{pol} = \frac{|M_{+}|+ |M_{-}|}{2|M|}
+\end{equation}
+
+By calculating the value for $|M_{+}|$ we get 12.813 nC and for $|M_{-}|$ we get -12.84 nC and for $|M|$ we get 12.813 nC.
+
+
+So, for the $K_{Pol}$ calculation, we get $\boxed{K_{Pol}=0.9994927}$.
+
+\subsubsection*{Corrected meter reading:}
+\begin{align*}
+    M_Q &= M' \times k_{pol} \times k_{sat} \times k_{TP}\\
+        &= 12.813 \times  1.00105362  \times 0.9999565 \times 1.014793\\
+        &= \boxed{13.015676 \text{ nC}}
+\end{align*}
+
+\subsubsection*{Absorbed does to water at 10 cm depth:}
+Given, $k_{Q, Q_0} = 0.9893$ and $N_{D, w} = 5.353 \times 10^7$ Gy/C
+\begin{align*}
+    D'_{w, Q} &= M_Q \times N_{D,w} \times k_{Q, Q_0}  \\
+              &= 12.802 \text{ nC} \times 5.353 \times 10^7 \text{ Gy/C} \times 0.9893 \\
+              &= \boxed{0.677958\text{ cGy}}
+\end{align*}
+\subsubsection*{Dose at the depth of dose maxima, $Z_{max} = 100$ cm SSD set up:}
+PDD at $Z_{ref}$ for a 10 cm $\times$ 10 cm field size for a 6 MV beam is \textit{67.59\%}.
+
+Absorbed dose rate calibration at $Z_{max}$ 
+\begin{align*}
+    D_{w, Q} &= \frac{0.677958 \times 100}{67.59} \\
+             &= \boxed{1.00304 \text{ cGy/MU}} 
+\end{align*}
+
+\subsubsection*{Error calculation}
+\begin{itemize}
+  \item Output measured: \(1.00304 \, \text{cGy/MU} \)
+  \item Standard output: \( 1.0000 \, \text{cGy/MU} \)
+\end{itemize}
+
+
+
+\begin{align*}
+    \text{Error (\%)} &= \left( \frac{\text{Measured} - \text{Standard}}{\text{Standard}} \right) \times 100\\
+            &= \left( \frac{1.00304 - 1.0000}{1.0000} \right) \times 100\\
+            &= 0.304\% \text{ (Tolerance = 2\%) }
+\end{align*}
+
+\subsection{Tabulation for 15 MV X-ray}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{ccccc}
+    \toprule
+        Bias Voltage  &  $M_{Q1}$   & $M_{Q2}$   & $M_{Q3}$  & Average ($M_{Qunc}$)\\ \midrule
+      +400 V & 14.52 nC & 14.54 nC & 13.54 nC & 14.533 nC \\
+      -400 V & -14.57 nC& -14.58 nC & -14.58 nC& -14.576 nC\\
+      +200 V & 14.49 nC& 14.50 nC& 14.50 nC & 14.496 nC\\
+    \bottomrule
+    \end{tabular}
+    \caption{Tabulation for 15 MV}
+\end{table}
+
+\subsubsection*{Correction for Temperature, Pressure, and Humidity}
+
+\begin{equation}
+    k_{T,P} = \bigg(\frac{273.15+T}{2731.5+T_0}\bigg)\bigg(\frac{P_0}{P}\bigg)
+\end{equation}
+where the average temperature $T = 21.4 ^o$C, $T_0 = 20^o$C, $P_o = 101.3 $ kPa and $P = 100.3$ kPa.\
+
+
+So, After putting in the value, $\boxed{k_{TP} = 1.0147934} $.
+
+
+\subsubsection*{Correction for Ion Recombination/ Saturation:}
+
+\begin{equation}
+    k_s = a_0 + a_1\left(\frac{M_1}{M_2}\right)+a_3\left(\frac{M_1}{M_2}\right)^{2}
+\end{equation}
+
+where $a_0 = 2.79977$, $a_1 = -4.50337$, $a_2 = 2.70513$ for a voltage ratio of 2, and the values for $M_{1}$ and $M_2$ are the averages of the meter readings for +400 volts and +200 volts, respectively. So, $M_{1} = 14.533$ nC and $M_{2} = 14.496 $nC.
+
+
+
+After calculating , $\boxed{k_{s} = 1.003862}$.
+
+\subsubsection*{Polarity Correction:}
+\begin{equation}
+    K_{pol} = \frac{|M_{+}|+ |M_{-}|}{2|M|}
+\end{equation}
+
+By calculating the value for $|M_{+}|$ we get 14.533 nC and for $|M_{-}|$ we get -14.576 nC and for $|M|$ we get 13.52 nC.
+
+
+So, for the $K_{Pol}$ calculation, we get $\boxed{K_{Pol}=1.0014794}$.
+
+\subsubsection*{Corrected meter reading:}
+\begin{align*}
+    M_Q &= M' \times k_{pol} \times k_{sat} \times k_{TP}\\
+        &= 14.533 \times  1.0014794 \times 1.003862 \times 1.0147934 \\
+        &= \boxed{14.826852 \text{ nC}}
+\end{align*}
+
+\subsubsection*{Absorbed does to water at 10 cm depth:}
+Given, $k_{Q, Q_0} = 0.975$ and $N_{D, w} = 5.353 \times 10^7$ Gy/C
+\begin{align*}
+    D'_{w, Q} &= M_Q \times N_{D,w} \times k_{Q, Q_0}\\
+              &= 14.826852\text{ nC} \times 5.353 \times 10^7 \text{ Gy/C} \times 0.975\\
+              &= \boxed{0.77384 \text{ cGy}}
+\end{align*}
+\subsubsection*{Dose at the depth of dose maxima, $Z_{max} = 100$ cm SSD set up:}
+PDD at $Z_{ref}$ for a 10 cm $\times$ 10 cm field size for a 10 MV beam is \textit{75.48\%}.
+
+Absorbed dose rate calibration at $Z_{max}$ 
+\begin{align*}
+    D_{w, Q} &= \frac{0.77384 \times 100}{75.48} \\
+             &= \boxed{1.0252\text{ cGy/MU}} 
+\end{align*}
+
+\subsubsection*{Error calculation}
+\begin{itemize}
+  \item Output measured: \(1.0252 \, \text{cGy/MU} \)
+  \item Standard output: \( 1.0000 \, \text{cGy/MU} \)
+\end{itemize}
+
+
+
+\begin{align*}
+    \text{Error (\%)} &= \left( \frac{\text{Measured} - \text{Standard}}{\text{Standard}} \right) \times 100\\
+            &= \left( \frac{1.0252 - 1.0000}{1.0000} \right) \times 100\\
+            &= 2.52\% \text{ (Tolerance = 2\%) }
+\end{align*}
+
+
+\section{Conclusion}
+This practical provides a practice for reference dosimetry(beam calibration) in clinical high-energy photon beams. By using a calibration factor in terms of absorbed dose to water $N_{D,w,Q_{0}}$ for a dosimeter in a reference beam of quality $Q_{0}$. For the photon beam, the most common reference beam quality $Q_{0}$ is $^{60} $ Co gamma rays. This also provides hands-on experience with dose calculation, involving numerous correction factors. 

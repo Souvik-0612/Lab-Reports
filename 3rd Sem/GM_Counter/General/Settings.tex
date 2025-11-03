@@ -1,0 +1,87 @@
+% Give your report a title
+\newcommand\reporttitle{\textbf{Experiments with GM Counter}}
+
+% Add an experiment number
+\newcommand\expno{\textbf{Date of experiment: 10 September 2025}}
+
+% Insert course code, name, quartile number, and year (or any other subtitle)
+\newcommand\reportsubtitle{
+\textbf{Medical Physics Laboratory - I}
+}
+
+
+\newcommand\name{
+\textbf{Name:} Souvik Das\\
+}
+\newcommand\Roll{
+\textbf{Roll No:} 241126007
+}
+
+% Date and location
+\newcommand\placeanddate{
+\color{black}\textbf{National Institute of Science Education and Research\\
+Jatani, Odisha, India\\ 
+Date of submission: \today
+}}
+
+% Define NISER-blue (the colour of the NISER logo). Can be changed to change the look of the template drastically
+\definecolor{NISER-blue}{RGB}{0, 0, 0}
+
+
+% All of the following code can be removed to be left with (close to) default LaTeX behavior. 
+
+% Sets up hyperlinks in the document to be colored
+\hypersetup{
+    colorlinks=true,
+    linkcolor=NISER-blue,
+    urlcolor=NISER-blue,
+    citecolor = NISER-blue
+    }
+\urlstyle{same} % Defines settings for link and reference formatting
+
+
+% Change bullet style for levels 1, 2 and 3, respectively for itemize
+\renewcommand{\labelitemi}{\scriptsize\textcolor{NISER-blue}{$\blacksquare$}}% level 1
+\renewcommand{\labelitemii}{\scriptsize\textcolor{NISER-blue}{$\square$}}% level 2
+\renewcommand{\labelitemiii}{\textcolor{NISER-blue}{$\circ$}}% level 3
+
+% \renewcommand{\labelitemi}{\small\textcolor{NISER-blue}{\ding{70}}} % level 1
+% \renewcommand{\labelitemii}{\small\textcolor{NISER-blue}{\ding{71}}}% level 2
+% \renewcommand{\labelitemiii}{\tiny\textcolor{NISER-blue}{\ding{71}}}% level 3
+
+% Change bullet style for levels 1, 2 and 3, respectively for enumerate
+\renewcommand{\labelenumi}{\textbf{\textcolor{NISER-blue}{\arabic*.}}}% level 1
+\renewcommand{\labelenumii}{\textbf{\textcolor{NISER-blue}{[\alph*]}}}% level 2
+\renewcommand{\labelenumiii}{\textbf{\textcolor{NISER-blue}{\roman*.}}}% level 3
+
+% Have reference labels be linked to the section (section 3 will have fig. 3.1, etc.)
+\counterwithin{equation}{section} % For equations
+\counterwithin{figure}{section} % For figures
+\counterwithin{table}{section} % For tables
+
+% Creates a beautiful header/footer
+\pagestyle{fancy}
+\lhead{\includegraphics[height = 20pt]{Figures/Logos/NISER.jpg}}
+\rhead{\reporttitle}
+\renewcommand{\footrulewidth}{0.4pt}
+\cfoot{Page \thepage}
+
+% Formats section, subsection and subsubsection titles, respectively 
+\titleformat{\section}{\sffamily\color{NISER-blue}\Large\bfseries}{\thesection\enskip\color{gray}\textbar\enskip}{0cm}{} % Formats section titles
+
+\titleformat{\subsection}{\sffamily\color{NISER-blue}\large\bfseries}{\thesubsection\enskip\color{gray}\textbar\enskip}{0cm}{} % Formats subsection titles
+
+\titleformat{\subsubsection}{\sffamily\color{NISER-blue}\bfseries}{\thesubsubsection\enskip\color{gray}\textbar\enskip}{0cm}{} % Formats subsubsection titles
+
+% Formats captions
+\DeclareCaptionFont{NISER-blue}{\color{NISER-blue}}
+\captionsetup{labelfont={NISER-blue,bf}}
+
+ % Changes the font to modern
+\usepackage{mlmodern}
+
+% Removes indent when starting a new paragraph
+\setlength\parindent{0pt}
+
+% Limits the ToC to sections and subsections (no subsubsection)
+\setcounter{tocdepth}{3}

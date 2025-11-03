@@ -1,0 +1,33 @@
+\documentclass[a4paper, table]{article}
+\input{General/Preamble} % Loads in the preamble 
+\input{General/Settings} % Loads in user defined settings
+
+
+\begin{document}
+
+% Inserts the front page
+\input{Chapters/0. Frontpage}
+\newpage
+
+% Generates a ToC without page number
+{\hypersetup{linkcolor=black} % Keeps the ToC black even with non-black linkcolor
+\tableofcontents\thispagestyle{empty}}
+\newpage
+
+% Creates the introduction, starting page numbering
+\pagenumbering{arabic}
+\input{Chapters/1. Introduction} 
+% \newpage
+
+% % Copy this to add more chapters
+% \input{Chapters/2. Copy me}\newpage
+
+% Creates references using the Biblatex 
+\bibliographystyle{plain}
+\newpage
+\bibliography{General/References.bib}
+
+\newpage
+% \input{Chapters/Viva}
+
+\end{document}

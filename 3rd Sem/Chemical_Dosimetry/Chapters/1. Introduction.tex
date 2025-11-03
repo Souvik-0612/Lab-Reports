@@ -1,0 +1,502 @@
+\section{Objective}
+\begin{enumerate}
+    \item To prepare the Fricke chemical dosimeter solution and study the wavelength vs absorbance spectrum of irradiated Fricke solution with the help of a UV/Vis spectrophotometer
+    \item To find out the central axis dose rate and transit dose of the gamma irradiation chamber.
+    \item To calibrate the UV/Vis spectrophotometer in terms of absorbed dose and find out the unknown dose to a sample. 
+    \item To measure the Chemical yield of Fe$^{3+}$ ions formed due to the irradiation of Fricke solution.
+\end{enumerate}
+\section{Apparatus}
+\begin{itemize}
+    \item  Gamma Irradiation Chamber (GC-5000)
+    \item  Single-distilled water
+    \item 250mL Standard Volumetric Flask
+    \item  Pipette
+    \item Precision Balance
+    \item  Polypropylene irradiation tubes 
+    \item  Lint-free tissue papers
+    \item Optical cuvettes with 10 mm path length
+    \item Irradiation stands
+    \item Reagents (Analytical grade): 
+    \begin{itemize}
+        \item Ferrous ammonium sulphate [Fe (NH$_4$)$_2$ (SO$_4$)$_2$. 6H$_2$O]
+        \item Sodium chloride [NaCl]
+        \item Sulphuric acid [H$_2$SO$_4$]
+    \end{itemize}
+    \item  UV-VIS Double Beam Spectrophotometer (IG-28DS)
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\linewidth]{Figures/Im1.png}
+    \caption{ a) Gamma Chamber 5000 Image. b) Annular cylinder type source cage with source rods.\cite{Lab}}
+\end{figure}
+
+% Requires: \usepackage{graphicx}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|l|l|}
+        \hline
+        \textbf{Specifications} & \textbf{Values} \\ \hline
+        Maximum Co\textsuperscript{60} source capacity & 518 TBq (14000Ci) \\ \hline
+        Dose Rate at maximum capacity & 9kGy/hr (0.9 Mega Rad/hr) at center of sample chamber \\ \hline
+        Dose rate uniformity & +25\% or better radially \newline -25\% or better axially \\ \hline
+        Irradiation Volume & 5000cc approx. \\ \hline
+        Size of sample chamber & 17.2cm(dia) x 20.5cm (ht) \\ \hline
+        Shielding Material & Lead \& stainless steel \\ \hline
+        Weight of the unit & 5600kg. approx. \\ \hline
+        Size of the unit & 125cm(L)x106.5cm(W)x150cm(H) \\ \hline
+        Timer Range & 6 seconds onwards \\ \hline
+        Power Requirement & 220/230V, 50Hz, 10 Amps, Single phase \\ \hline
+    \end{tabular}
+    \caption{Gamma Chamber 5000 Specifications}
+    \label{tab:gamma_chamber_specifications}
+\end{table}
+
+A modern double-beam UV/Vis spectrophotometer, such as the IG-28DS,
+consists of several key components:
+\begin{enumerate}
+    \item \textbf{Light Source:} A deuterium lamp (D$_{2}$) for UV radiation
+    and a tungsten–halogen lamp for visible light.
+    \item \textbf{Monochromator:} Usually a diffraction grating that disperses the
+    polychromatic light into component wavelengths and isolates the desired one.
+    \item \textbf{Cuvette Holder:} Holds quartz cuvettes (transparent in UV range)
+    of standard 1 cm optical path length.
+    \item \textbf{Beam Splitter and Sector Mirror:} Splits light into reference and sample beams.
+    \item \textbf{Detector:} A silicon photodiode or photomultiplier tube that converts
+    transmitted light intensity into electrical signals.
+    \item \textbf{Display/Recorder:} Outputs absorbance as a function of wavelength,
+    allowing direct plotting of the absorption spectrum.
+\end{enumerate}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\linewidth]{Figures/Spectrophotometer.pdf}
+    \caption{Spectrophotometer}
+\end{figure}
+In double-beam instruments, the sample beam passes through the irradiated
+Fricke solution while the reference beam passes through a matched cuvette
+containing unirradiated solution. This setup corrects for background absorption,
+solvent effects, and instrument drift, thus improving accuracy.
+
+\section{Theory}
+
+\subsection*{Introduction to Chemical Dosimetry}
+Radiation dosimetry is the measurement of the energy deposited in a material or a medium by ionizing radiation. It is of central importance in fields such as radiation therapy, radiation protection, radiobiology, and radiation processing. While most dosimetry systems rely on physical signals (such as ionization in air or heat generation in calorimetry), another important class of systems measures chemical changes induced by radiation. These are collectively known as \textbf{chemical dosimeters}.\\
+
+In chemical dosimetry, the absorbed dose is inferred from the amount of radiation-induced chemical transformation in a sensitive medium. The method is based on the assumption that chemical yields are reproducible and proportional to the absorbed dose. Chemical dosimetry methods can be either \emph{relative} or \emph{absolute}, depending on whether calibration against a standard is required. The \textbf{Fricke dosimeter}, based on the oxidation of ferrous ions to ferric ions in an aqueous solution, is historically the most important chemical dosimeter. It is considered an \emph{absolute dosimeter} due to its well-understood radiation chemistry and reliability.
+
+\subsection*{Historical Background}
+
+The Fricke dosimeter was introduced in the 1920s by Hugo Fricke, a Danish-born American physicist. It quickly became one of the first reliable dosimetric systems for radiation measurements. Its strength lies in its reproducibility, theoretical foundation, and the fact that it directly links absorbed energy to measurable chemical products. Today, despite the advent of advanced physical dosimetry systems, the Fricke dosimeter remains a reference standard, widely used in calibration laboratories and radiation chemistry research.
+
+\subsection*{Radiolysis of Water}
+
+Since the Fricke dosimeter is an aqueous system, its operation depends fundamentally on the \textbf{radiolysis of water}. When ionizing radiation interacts with water molecules, it induces a cascade of events leading to the formation of reactive chemical species. The process can be divided into three stages:
+
+\subsubsection*{(i) Physical Stage ($\sim$ 1 fs)}
+The initial interaction between radiation and water molecules occurs within femtoseconds. Depending on the radiation type, this includes:
+\begin{itemize}
+    \item Photoelectric effect, Compton scattering, and pair production for photons.
+    \item Coulombic interactions for charged particles.
+\end{itemize}
+These interactions excite or ionize water molecules:
+\[
+\mathrm{H_{2}O \rightarrow H_{2}O^{*}}
+\]
+\[
+\mathrm{H_{2}O \rightarrow H_{2}O^{+} + e^{-}}
+\]
+Here, $\mathrm{H_{2}O^{*}}$ represents an excited state, while $\mathrm{H_{2}O^{+}}$ is an ionized molecule. The energetic electrons may in turn ionize other water molecules, producing cascades of secondary electrons until they lose energy and become thermalized.
+
+\subsubsection*{(ii) Physicochemical or Intermediate Stage ($\sim$ 1 ps)}
+In this stage, unstable species evolve into radicals and ions. Examples include:
+\[
+\mathrm{H_{2}O^{+} + H_{2}O \rightarrow OH^{\bullet} + H_{3}O^{+}}
+\]
+\[
+\mathrm{H_{2}O^{*} \rightarrow H^{\bullet} + OH^{\bullet}}
+\]
+\[
+\mathrm{e^{-}_{thermalized} + (H_{2}O)_{n} \rightarrow e^{-}_{aq}}
+\]
+Thus, the main products are:
+\begin{itemize}
+    \item Hydroxyl radical ($\mathrm{OH^{\bullet}}$), a strong oxidizing agent.
+    \item Hydrogen radical ($\mathrm{H^{\bullet}}$), a reducing agent.
+    \item Solvated electron ($\mathrm{e^{-}_{aq}}$), another strong reducing species.
+\end{itemize}
+
+\subsubsection*{(iii) Chemical Stage ($\sim$ 1 \textmu s)}
+The radicals produced are highly reactive and undergo secondary reactions. These include:
+\[
+2OH^{\bullet} \rightarrow H_{2}O_{2}
+\]
+\[
+2H^{\bullet} \rightarrow H_{2}
+\]
+\[
+OH^{\bullet} + H^{\bullet} \rightarrow H_{2}O
+\]
+The final mixture contains stable molecular products such as hydrogen peroxide, molecular hydrogen, and oxygen, alongside transient radicals. These reactive species are responsible for the oxidation of ferrous ions in Fricke solution.
+
+\subsection*{Principle of Fricke Dosimetry}
+
+The standard Fricke solution is prepared using:
+\begin{itemize}
+    \item $1$ mM ferrous sulfate ($\mathrm{FeSO_{4}}$),
+    \item $0.4$ M sulfuric acid ($\mathrm{H_{2}SO_{4}}$),
+    \item To reduce the deleterious effect of organic impurities often $0.1$ mM NaCl (sodium chloride) is added to the Fricke solution.
+\end{itemize}
+In our experiment, we have prepared \textbf{250 mL} of Fricke solution using single-distilled water,
+and the required quantities of each component were calculated accordingly.
+\begin{itemize}
+
+\item[(1)] \textbf{Ferrous ammonium sulfate (FAS)}, Fe(NH$_4$)$_2$(SO$_4$)$_2 \cdot$ 6H$_2$O (M = 392.14 g/mol)
+
+\[
+m_{\text{FAS}} = \frac{0.001 \, \text{mol/L} \times 392.14 \, \text{g/mol} \times 250 \, \text{mL}}{1000 \, \text{mL}} 
+= 0.098 \, \text{g} \approx \boxed{98 \, \text{mg}}
+\]
+
+\item[(2)] \textbf{Sulfuric acid}, H$_2$SO$_4$ (M = 98.08 g/mol)
+
+\[
+m_{\text{H}_2\text{SO}_4} = 0.4 \, \text{mol/L} \times 98.08 \, \text{g/mol} \times 0.250 \, \text{L} = 9.808 \, \text{g}
+\]
+
+Using conc. H$_2$SO$_4$ with density $\rho \approx 1.8 \, \text{g/mL}$:
+
+\[
+V_{\text{conc. H}_2\text{SO}_4} = \frac{9.808 \, \text{g}}{1.8 \, \text{g/mL}} \approx \boxed{5.43 \, \text{mL}}
+\]
+
+\item[(3)] \textbf{Sodium chloride}, NaCl (M = 58.44 g/mol) (impurity Scavenger)
+
+\[
+m_{\text{NaCl}} = \frac{0.001 \, \text{mol/L} \times 58.44 \, \text{g/mol} \times 250 \, \text{mL}}{1000 \, \text{mL}} 
+= 0.0146 \, \text{g} \approx \boxed{14.6 \, \text{mg}}
+\]
+
+\end{itemize}
+
+The solution is air-saturated to ensure dissolved oxygen. The presence of oxygen is critical because it allows full utilization of the hydrogen radical channel, thereby maximizing ferric ion yield.
+
+The dosimetric principle is based on the radiation-induced oxidation of ferrous ($\mathrm{Fe^{2+}}$) ions to ferric ($\mathrm{Fe^{3+}}$) ions:
+\[
+\mathrm{Fe^{2+} \xrightarrow{radiation} Fe^{3+}}
+\]
+The ferric ions have distinct optical absorption properties, which makes them measurable by spectrophotometry.
+
+\subsection*{Oxidation Pathways in Fricke Solution}
+
+There are three major oxidation pathways for ferrous ions:
+
+\subsubsection*{1. Hydroxyl Radical Channel}
+\[
+OH^{\bullet} + Fe^{2+} \rightarrow Fe^{3+} + OH^{-}
+\]
+Each hydroxyl radical converts one ferrous ion into ferric ion.
+
+\subsubsection*{2. Hydrogen Peroxide Channel}
+Hydrogen peroxide acts as a secondary oxidizing agent:
+\[
+H_{2}O_{2} + 2Fe^{2+} \rightarrow 2Fe^{3+} + 2OH^{-}
+\]
+Thus, one molecule of $\mathrm{H_{2}O_{2}}$ results in oxidation of two ferrous ions.
+
+\subsubsection*{3. Hydrogen Radical Channel (Oxygen Dependent)}
+In the presence of oxygen:
+\[
+H^{\bullet} + O_{2} \rightarrow HO_{2}^{\bullet}
+\]
+\[
+HO_{2}^{\bullet} + Fe^{2+} \rightarrow Fe^{3+} + HO_{2}^{-}
+\]
+\[
+HO_{2}^{-} + H^{+} \rightarrow H_{2}O_{2}
+\]
+The hydrogen peroxide formed further oxidizes two more ferrous ions. Overall, one hydrogen radical results in the production of three ferric ions.
+
+\subsection*{Radiolytic Yield}
+
+The efficiency of the dosimetric process is quantified by the \textbf{radiolytic yield}, $G(X)$, defined as the number of molecules or ions of species $X$ produced per $100$ eV of absorbed energy:
+\[
+G(X) = \frac{n(X)}{E}
+\]
+where $n(X)$ is the number of entities produced and $E$ is the imparted energy. For Fricke solution exposed to cobalt-60 gamma radiation, the yield of ferric ions is:
+\[
+G(Fe^{3+}) \approx 15.5 \text{ ions per 100 eV} \approx 1.6 \times 10^{-6} \, \mathrm{mol/J}
+\]
+
+\subsection*{Spectrophotometric Measurement}
+
+The concentration of ferric ions is measured using a UV/Vis spectrophotometer. Ferric ions exhibit characteristic absorbance peaks at 224 nm and 303 nm. Although the 224 nm peak is more intense, the 303 nm peak is preferred because it is less affected by impurities.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{Figures/Spectrum.png}
+    \caption{ Absorbance spectrum for ferric ( $Fe^{3+}$ ) ion in standard Fricke solution in the ultraviolet spectral region plotted for wavelengths $\lambda$ in the region from 200 nm to 400 nm. Absorbance peak 1 is at $\lambda$ = 224 nm, peak 2 at $\lambda$ = 303 nm \cite{Podgorsak2016RadiationPhysics}}
+\end{figure}
+
+The absorbance $A_{\lambda}$ at wavelength $\lambda$ is given by the Beer–Lambert law:
+\[
+A_{\lambda} = \varepsilon_{\mathrm{Fe^{3+}}} \, C_{\mathrm{Fe^{3+}}} \, l
+\]
+where:
+\begin{itemize}
+    \item $\varepsilon_{\mathrm{Fe^{3+}}}$ = molar absorption coefficient,
+    \item $C_{\mathrm{Fe^{3+}}}$ = ferric ion concentration,
+    \item $l$ = optical path length.
+\end{itemize}
+
+The absorbed dose $D$ in the Fricke solution can then be calculated as:
+\[
+D = \frac{\Delta A}{\varepsilon \, G \, \rho \, l}
+\]
+where $\Delta A$ is the net change in absorbance at 303 nm, $\rho$ is the density of the solution, and $G$ is the radiolytic yield.
+
+\subsection*{Net Change in Absorbance}
+Absorbance is a common measure of absorption and is defined in terms of the intensity of  incident light, $I_0$ and transmitted, $I$, light. The mathematical expression for $A$ is as follows:
+$$\text{Absorbance}(A_\lambda) = \log_{10}\frac{I_0}{I}$$
+Net Absorbance is related to the difference between the absorbance of the irradiated sample  and the unirradiated sample.
+$$\text{Net change in absorbance} = A_\text{irr} - A_\text{nonirr}$$
+
+\section{Observation and Calculations}
+\subsection{For Central Axis Dose Rate Measurement}
+For the first irradiation experiment, we exposed the Fricke solution samples at different time intervals in the Gamma Chamber. After irradiation, the absorbance was evaluated using the UV-VIS Double Beam Spectrophotometer. The spectrophotometer was powered on and allowed to stabilize for about 15–20 minutes. An initial air scan was performed with both compartments empty to check the instrument’s performance. Using air as both reference and sample, a wavelength versus absorbance scan was carried out to complete the zeroing process. A quartz cuvette was rinsed with distilled water, filled with unirradiated Fricke solution, and placed in the sample compartment to measure the baseline absorbance at 304 nm.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{S1.png}
+    \caption{Absorbance spectrum}
+\end{figure}
+The same cuvette was then rinsed and refilled with irradiated Fricke solution samples, and their absorbance values (A$_\text{irr}$) were measured against air as the reference. The average absorbance of unirradiated control samples (A$_\text{unirr}$) and irradiated samples were determined, and the net change in absorbance was calculated using:
+A$_\text{unirr}$ = 0.0399. Net absorbance = A$_\text{avr}$ - A$_\text{unirr}$.
+
+\begin{table}[H]
+\centering
+\caption{Absorbance data at different time intervals.}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Time(s)} & \textbf{Absorbance (A$_\text{irr}$)} & \textbf{A$_\text{avr}$} & \textbf{Net Absorbance} \\
+\hline
+\multirow{2}{*}{20} & 0.3756 & \multirow{2}{*}{0.37685} & \multirow{2}{*}{0.33695} \\
+ & 0.3781 & & \\
+\hline
+\multirow{2}{*}{45} & 0.6661 & \multirow{2}{*}{0.6456} & \multirow{2}{*}{0.6057} \\
+ & 0.6251 & & \\
+\hline
+\multirow{2}{*}{70} & 0.8700 & \multirow{2}{*}{0.87755} & \multirow{2}{*}{0.83765} \\
+ & 0.8851 & & \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{figure}[H]
+    \centering
+    \caption{Graph: Net absorbance vs Time(sec)}
+    \includegraphics[width=0.7\linewidth]{Figures/Central axis dose rate graph.pdf}
+\end{figure}
+The plot of Dose vs. absorbance was found to be a straight line given by the equation
+$$y = 0.01x + 0.143$$
+Dose rate, $$\bar D = \frac{\frac{\Delta A}{\Delta t}}{\varepsilon \, G \, \rho \, l}$$
+From the graph $\frac{\Delta A}{\Delta t} = 0.01$; $\varepsilon = 2187 $ litre/mole.cm; $l = 1$ cm; $\rho = 1.024 $kg/litre; $G(Fe^{3+}) \approx  1.6 \times 10^{-6} \, \mathrm{mol/J}$
+$$\implies \bar D = \frac{0.01}{2187\times1.6\times 10^{-6}\times1.024\times 1 } = 2.79 \text{ Gy/sec} = \boxed{167.44 \text{ Gy/min}} $$
+
+\begin{table}[H]
+    \centering
+    \caption{Error analysis}
+    \begin{tabular}{ccc}
+    \toprule
+    \multicolumn{3}{c}{Dose rate(Gy/min)}\\ \midrule
+        True value & Measured value & \% Error \\ \midrule
+        167.07 & 167.44 & 0.22\\ \bottomrule
+    \end{tabular}
+\end{table}
+
+
+
+\subsection{For Dose Calibration and Chemical Yield Measurement}
+In this part of the work, we first irradiated Fricke solution samples at the Gamma Chamber (GC5000) with a set of known doses. For each irradiated sample, the absorbance was measured using
+the UV-VIS spectrophotometer, and the corresponding values were recorded. These measurements
+allowed us to establish a calibration curve of absorbance versus absorbed dose, which serves as a
+reference for unknown dose estimation.
+
+
+Alongside these standard samples, we also irradiated one Fricke solution sample with an unknown dose under the same experimental conditions. The absorbance of this unknown sample was
+then measured and compared against the calibration curve in order to determine the corresponding
+absorbed dose.
+
+Once the absorbed dose values were obtained, we proceeded to evaluate the chemical yield,
+G(Fe$^{3+}$), by applying the standard relation between absorbed dose, density of the solution, optical
+path length, and the observed change in ferric ion concentration. In this way, the experiment not
+only enabled calibration of the system for dose measurement but also provided a direct determination of the chemical yield of ferric ions under our irradiation condition.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{Figures/S2.png}
+    \caption{Absorbance Spectrum by Spectrophotometer}
+\end{figure}
+
+% Requires: \usepackage{booktabs}
+\begin{table}[H]
+    \centering
+    \caption{Absorbance values at different doses(Gy)}
+    \begin{tabular}{cccc}
+        \toprule
+        \textbf{Dose (Gy)} & \multicolumn{2}{c}{\textbf{Net absorbance}} & \textbf{Average absorbance} \\
+        \midrule
+        50  & 0.3046 & 0.3010 & 0.3028 \\
+        100 & 0.5102 & 0.5122 & 0.5112 \\
+        200 & 0.8650 & 0.8689 & 0.8670 \\
+        300 & 1.1359 & 1.1377 & 1.1368 \\
+        \bottomrule
+    \end{tabular}
+    
+\end{table}
+
+\begin{figure}[H]
+    \centering
+    \caption{Plot of Time of Irradiation Vs absorbance Data for Fricke Solution}
+    \includegraphics[width=0.75\linewidth]{Dose calibration.pdf}
+    \label{fig: Dose calibration}
+\end{figure}
+The plot of Dose vs. absorbance was found to be a straight line given by the equation
+\begin{equation}
+    \boxed{y = 3.33\times10^{-3} x + 0.163}
+    \label{Equation: Calibration}
+\end{equation}
+\subsubsection*{Validation of Unknown Dose}
+Absorbance from unknown sample = 1.0937
+From the equation \ref{Equation: Calibration},
+$$ \text{Dose}= \frac{1.0937 - 0.163}{3.33\times10^{-3}} = \boxed{279.49 \text{ Gy}}$$
+
+\begin{table}[H]
+    \centering
+    \caption{Error analysis}
+    \begin{tabular}{ccc}
+    \toprule
+    \multicolumn{3}{c}{\textbf{Unknown dose(Gy)}}\\ \midrule
+        True value & Measured value & \% Error \\ \midrule
+        280 & 279.48 & 0.18\\ \bottomrule
+    \end{tabular}
+\end{table}
+
+\subsubsection*{Determination Of Chemical Yield}
+The chemical yield is defined as 
+$$G = \frac{\Delta A}{D\,\varepsilon \, \rho \, l}$$
+Where $\frac{\Delta A}{D} = 3.33\times 10^{-3}$ from equation \ref{Equation: Calibration}; $\varepsilon = 2187 $ litre/mole.cm; $l = 1$ cm; $\rho = 1.024 $kg/litre. 
+$$ \boxed{\text{Chemical yield(G)} = 1.49 \times 10^{-6} \text{ mole/J}}$$ 
+
+\begin{table}[H]
+    \centering
+    \caption{Error analysis}
+    \begin{tabular}{ccc}
+    \toprule
+    \multicolumn{3}{c}{\textbf{Chemical yield(G) mol/J}}\\ \midrule
+        True value & Measured value & \% Error \\ \midrule
+        $1.6 \times 10^{-6}$ & $1.49 \times 10^{-6}$ & 6.875 \\ \bottomrule
+    \end{tabular}
+\end{table}
+
+\subsection{For Transit Dose Measurement}
+
+% Requires: \usepackage{graphicx}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{ccc}
+        \toprule
+        \textbf{Time of Irradiation (Sec)} & \textbf{Net Absorbance} & \textbf{Calculated Dose (Gy)} \\
+        \midrule
+        20 & 0.33695 & 52.23723724 \\
+        45 & 0.6057 & 132.9429429 \\
+        70 & 0.83765 & 202.5975976 \\
+        95 & 1.02595 & 259.1441441 \\
+        120 & 1.20485 & 312.8678679 \\
+        \bottomrule
+    \end{tabular}
+    \caption{Irradiation Data Showing Absorbance and Dose}
+    \label{tab:irradiation_data}
+\end{table}
+
+\begin{figure}[H]
+    \centering
+    \caption{Plot of known Time of irradiation Vs calculated dose}
+    \includegraphics[width=0.75\linewidth]{Figures/Transit dose.pdf}
+\end{figure}
+From the graph, the intercept that represents the Transit Dose is \textbf{\textit{10.7 Gy}}.
+\section{Applications}
+
+The Fricke dosimeter serves as a reference standard for radiation dosimetry due to its reliability. Its applications include:
+\begin{itemize}
+    \item Calibration of radiation beams in therapy and industrial irradiation.
+    \item Benchmarking other dosimetry systems.
+    \item Radiation chemistry studies of free radicals.
+    \item Use in research facilities as a secondary standard.
+\end{itemize}
+
+\section{Precautions}
+
+To ensure reliable results and maintain laboratory safety during the Fricke
+chemical dosimetry experiment, the following precautions should be observed:
+
+\begin{enumerate}
+    \item \textbf{Chemical Handling:}
+    \begin{itemize}
+        \item Always wear gloves, a lab coat, and protective eyewear when handling
+        sulfuric acid, ferrous salts, and irradiated solutions.
+        \item Add sulfuric acid slowly to water while preparing solutions
+        (never the reverse), as the dissolution of concentrated acid is highly
+        exothermic.
+        \item Avoid skin contact and inhalation of vapors from sulfuric acid
+        and handle under a fume hood if possible.
+    \end{itemize}
+
+    \item \textbf{Preparation of Fricke Solution:}
+    \begin{itemize}
+        \item Use high-purity reagents and triple-distilled or deionized water
+        to minimize contamination from organic or metallic impurities.
+        \item Prepare the Fricke solution shortly before irradiation,
+        as prolonged storage can lead to spontaneous oxidation of ferrous ions.
+        \item Ensure the solution is fully aerated (air-saturated), since oxygen
+        is required for the complete ferric ion yield.
+        \item Avoid introducing air bubbles while filling irradiation tubes or cuvettes,
+        as they may alter optical path length and dose uniformity.
+    \end{itemize}
+
+    \item \textbf{Handling of Cuvettes and Spectrophotometer:}
+    \begin{itemize}
+        \item Clean cuvettes thoroughly using lint-free tissue to avoid scratches
+        or residual droplets that may distort absorbance readings.
+        \item Always hold cuvettes by the frosted sides; avoid touching the transparent
+        optical faces.
+        \item Use quartz cuvettes for UV measurements to ensure transparency
+        in the 200–400 nm region.
+    \end{itemize}
+\end{enumerate}
+
+\section{Conclusion}
+In this experiment, the principles of chemical dosimetry were demonstrated
+using the standard Fricke dosimeter. The Fricke solution, consisting of ferrous
+sulfate dissolved in aerated sulfuric acid, undergoes radiation-induced oxidation
+whereby ferrous ions ($\mathrm{Fe^{2+}}$) are converted to ferric ions ($\mathrm{Fe^{3+}}$)
+through the action of hydroxyl radicals, hydrogen peroxide, and other radiolytic
+species formed in the water radiolysis process. The concentration of ferric ions
+was measured using UV/Visible spectrophotometry at a wavelength of 303 nm,
+which provides reliable absorbance readings with minimal interference from
+impurities.
+
+A linear relationship was observed between the net absorbance change
+($\Delta A$) and the absorbed dose, confirming the proportionality between
+radiation dose and ferric ion production. From the spectrophotometric data, the
+absorbed dose, dose rate of the irradiation chamber, and the chemical yield of
+$\mathrm{Fe^{3+}}$ ions were successfully determined. The experimentally obtained
+values were found to be in good agreement with theoretical predictions and
+reference data, with only minor deviations due to instrumental or chemical
+uncertainties.
+
+This study demonstrates that the Fricke dosimeter is a highly reproducible and
+accurate chemical dosimeter within the dose range of approximately 40–400 Gy.
+Its well-characterized radiation chemistry, combined with the sensitivity of UV/Vis
+spectrophotometry, makes it a valuable reference dosimeter for calibration of
+radiation sources and validation of other dosimetric techniques. However, care
+must be taken regarding solution preparation, storage conditions, and oxygen
+saturation to ensure reliable results. Overall, the experiment highlights the
+importance of chemical dosimetry as both a practical tool and a fundamental
+method in radiation physics.

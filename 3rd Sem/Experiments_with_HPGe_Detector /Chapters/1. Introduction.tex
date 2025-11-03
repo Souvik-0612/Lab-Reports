@@ -1,0 +1,199 @@
+\section{Objective}
+\begin{itemize}
+    \item Energy calibration of HPGe detector
+    \item Absolute efficiency calibration of HPGe detector
+    \item Identification of radionuclides and measurement of their activity 
+    concentration present in environmental soil sample and tap water sample.
+\end{itemize}
+\section{Apparatus}
+\subsection{Introduction}
+High Purity Germanium (HPGe) detectors are semiconductor detectors widely 
+used in gamma spectroscopy due to their superior energy resolution compared to 
+other detector types like NaI(Tl) scintillation detectors. They are particularly 
+effective for identifying and quantifying gamma-emitting radionuclides in various
+samples, including environmental samples.\vspace{2 mm}
+
+Due to higher atomic number (Z=32), Ge has a much larger linear attenuation
+coefficient for gamma rays than Si (Z=14). Which leads to a shorter mean free path
+for gamma rays in Ge than in Si. This property makes Ge detectors more efficient
+at detecting gamma rays, especially at higher energies.\vspace{2 mm}
+
+The HPGe detectors must be operate at cryogenic temperatures (typically around 77 K,
+the boiling point of liquid nitrogen) to reduce thermal noise and improve their
+performance. This cooling is necessary because germanium has a relatively small bandgap,
+and at room temperature, thermal energy can excite electrons across the bandgap,
+leading to increased noise and reduced energy resolution.
+
+\subsection{Principle of operation}
+When a gamma ray interacts with the germanium crystal in the HPGe detector,
+it can undergo several types of interactions, including the photoelectric effect,
+Compton scattering, and pair production. These interactions result in the creation
+of electron-hole pairs within the crystal. \textbf{The number of electron-hole pairs generated
+is proportional to the energy of the incoming gamma ray}\vspace{2 mm}
+
+An electric field is applied across the germanium crystal, causing the electrons
+and holes to drift towards their respective electrodes. This movement of charge carriers
+generates a current pulse, which is then amplified and processed by the detector's electronics.
+The amplitude of the pulse is directly proportional to the energy of the incident gamma ray,
+allowing for precise energy measurements.\vspace{2 mm}
+
+\subsection{Construction and Cryostatic colling}
+The HPGe detector consists of a high-purity germanium crystal, typically in the form
+of a cylindrical or coaxial shape. The crystal is housed in a vacuum-sealed cryostat
+to maintain the low temperatures required for operation. The cryostat is often cooled
+using liquid nitrogen, which is circulated around the detector to keep it at the
+desired temperature.\vspace{2 mm}
+
+The main components of the system are the cooling rod (usually made of copper), the Dewar
+container (for storage of liquid nitrogen), and the fill collar (for refilling the Dewar). The
+cryostatic cooling systems provide the following features: cooling of the detector to obtain stable
+operating temperatures; high quality vacuum in the cryostat to avoid adsorption of contaminants
+on the detector surface and provides thermal insulation; suppression of heat transfer between
+cool inner parts and warm outer surface of the cryostat; mounting for the electrical contacts; and
+isolation from external vibration to avoid system noise interference.\vspace{2 mm}
+
+The Shielding involves an outer jacket of 10 mm carbon steel, an inner shield of 100-mm-thick
+Lead and a graded liner of tin and copper. Such graded shielding minimizes the background
+noise that has a very high probability of interference with measurement data. It is manufactured
+for use with a detector in a vertical configuration.\vspace{2 mm}
+
+\begin{table}
+    \centering
+    \begin{tabular}{l|l} \hline
+        \textbf{Component} & \textbf{Specification} \\ \hline
+        Detector model & GC3018 \\
+        Relative efficiency & $\geq$ 30\% relative to NaI(Tl) \\
+        Energy resolution & $\leq$ 1.8 keV at 1.33 MeV (Co-60) \\
+        Depletion voltage & $+$ 2400 Vdc \\
+        Recommended operating voltage & $+$ 2900 Vdc \\ \hline
+    \end{tabular}
+    \caption{Specifications of the HPGe Detector System}
+\end{table}
+
+%Adding 4 images in a 2x2 grid
+\begin{figure}[h!]
+    \centering
+    \begin{tabular}{cc}
+        \includegraphics[width=0.4\textwidth]{/Users/souvikpc/Desktop/Lab-Reports/Experiments_with_HPGe_Detector /Figures/Apparatus/Schematic.png} &
+        \includegraphics[width=0.4\textwidth]{/Users/souvikpc/Desktop/Lab-Reports/Experiments_with_HPGe_Detector /Figures/Apparatus/ Detector unit.png} \\
+        (a) Schematic Diagram of HPGe Detector & (b) HPGe Detector unit in CMRP\\
+        \includegraphics[width=0.4\textwidth]{/Users/souvikpc/Desktop/Lab-Reports/Experiments_with_HPGe_Detector /Figures/Apparatus/Upper view of Detector.png} &
+        \includegraphics[width=0.4\textwidth]{/Users/souvikpc/Desktop/Lab-Reports/Experiments_with_HPGe_Detector /Figures/Apparatus/Electronics part.png} \\
+        (c) Upper view of Detector with graded shielding.  & (d) Electronics part of HPGe Detector
+ \\
+    \end{tabular}
+    \caption{Images of the HPGe Detector System\cite{Lab}}
+\end{figure}
+
+\begin{table}
+    \centering
+    \begin{tabular}{l|l} 
+        \hline
+        \textbf{Component} & \textbf{Specification} \\ \hline
+        Diameter of crystal & 61.7 mm \\
+        Length of crystal & 40 mm \\
+        Distance from crystal to front face & 4.9 mm \\
+        Window material & 1.5 mm thick Aluminum \\
+        Active volume & $\sim$ 113 cm$^{3}$ \\
+        End cap & 3.00 inch diameter $\times$ 5.25 inch length \\\hline
+    \end{tabular}
+    \caption{Physical Characteristics of the HPGe Detector System}
+\end{table}
+
+\subsection{Electronics components associated}
+The HPGe detector system is complemented by a suite of electronic components
+that facilitate signal processing, amplification, and data acquisition. Key components include:
+
+\begin{itemize}
+    \item \textbf{Pre-amplifier:} High-purity Ge detectors are usually fitted with a charge-sensitive 
+    preamplifier, which acts as an interface between the detector crystal and the pulse-processing and 
+    analysis electronics further along the gamma-spectrometric system. The preamplifier is often assembled as an integral part
+    of the detector housing itself. It takes the charge produced from the detector (by the gamma
+    radiation from the sample) and integrates and amplifies this to produce a step-function pulse. The
+    amplitude of pulse is proportional to the total charge. The first stage usually includes a Field
+    Effect Transistor (FET) circuit, which is located inside, or adjacent to the cryostat and is also
+    cooled to reduce background-noise interference.
+    \item \textbf{Amplifier:} The amplifier primarily takes the pulse
+    signal from the preamplifier and considerably magnifies it. It also filters and shapes the incoming
+    pulse to enhance the signal-to-noise ratio. This improves the resolution and shortens the response
+    time to prevent overlap between pulses. Count rates for radionuclides in environmental samples
+    are generally less than 100 counts per second, thus the amplifier needs to perform best in this
+    range.
+    \item \textbf{Analog-to-Digital Converter (ADC):} The analogue signal produced by the detector and shaped by the amplifier needs to be converted
+    to a digital signal prior to registering in the MCA. This is undertaken using an analogue to digital
+    converter (ADC), which effectively converts the analogue signal from the amplifier to a digital
+    value.The pulses that emerge from the ADC are then registered in one of the channels of the
+    multi-channel analyzer (MCA). The MCA is often hardwired into the computer system (via an
+    electronic circuit inserted into the motherboard). The MCA provides the means by which the
+    counts from the detector are stored according to the energy that produced them. It performs a
+    number of tasks including collecting and sorting the input pulses, storing those data in a
+    spectrum, providing a format to display the data on the computer screen, and performing some
+    analysis of the data.
+    \item \textbf{Data Acquisition System (DAQ):} Collects and stores the digital data for analysis in the software.
+\end{itemize}
+
+\section{Theory}
+\subsection{Energy calibration of HPGe detector}
+Energy calibration is the process of establishing a relationship between the channel
+number in the multichannel analyzer (MCA) and the corresponding gamma-ray energy. This is
+typically done using known gamma-ray sources with well-defined energies. The calibration
+process involves the following steps:\vspace{2 mm}
+\begin{itemize}
+    \item \textbf{Selection of Calibration Sources:} Choose gamma-ray sources with known
+    energies that cover the energy range of interest. Common calibration sources include
+    Cs-137, Co-60, and Na-22.
+    \item \textbf{Data Acquisition:} Place the calibration sources in front of the
+    HPGe detector and acquire spectra for a sufficient duration to obtain clear peaks.
+    \item \textbf{Peak Identification:} Identify the peaks in the acquired spectra
+    corresponding to the known gamma-ray energies of the calibration sources.
+    \item \textbf{Calibration Curve:} Plot the channel numbers of the identified peaks
+    against their known energies. Fit a linear or polynomial function to the data points
+    to establish the calibration curve.
+    \item \textbf{Verification:} Verify the calibration by measuring additional known
+    sources and checking if the measured energies match the expected values.
+\end{itemize}
+
+\subsection{Absolute efficiency calibration of HPGe detector}\
+Absolute efficiency calibration involves determining the efficiency of the HPGe
+detector for detecting gamma rays at different energies. This is essential for
+quantifying the activity of radionuclides in samples. The calibration process includes
+the following steps:\vspace{2 mm}
+\begin{itemize}
+    \item \textbf{Selection of Calibration Sources:} Use gamma-ray sources with known
+    activities and energies.
+    \item \textbf{Data Acquisition:} Place the calibration sources in front of the
+    HPGe detector and acquire spectra for a known duration.
+    \item \textbf{Peak Area Calculation:} Identify the peaks in the spectra and
+    calculate the area under each peak, which corresponds to the number of counts
+    detected for that energy.
+    \item \textbf{Efficiency Calculation:} Calculate the absolute efficiency
+    using the formula:
+    \[ \epsilon(E) = \frac{N(E)}{A \cdot P(E) \cdot t} \]
+    where \( \epsilon(E) \) is the absolute efficiency at energy \( E \), \( N(E) \)
+    is the net peak area, \( A \) is the activity of the source, \( P(E) \) is the
+    emission probability for the gamma ray at energy \( E \), and \( t \) is the counting time.
+    \item \textbf{Efficiency Curve:} Plot the efficiency values against the corresponding
+    energies and fit a suitable function to obtain the efficiency curve.
+\end{itemize}
+
+\subsection{Indentification of radionuclides and measurment of their activity concentration present in environmental sample}
+To identify radionuclides and measure their activity concentration in environmental
+samples using the calibrated HPGe detector, follow these steps:\vspace{2 mm}
+\begin{itemize}
+    \item \textbf{Sample Preparation:} Collect and prepare environmental samples
+    (soil, water, etc.) ensuring they are in a suitable form for gamma spectroscopy.
+    \item \textbf{Data Acquisition:} Place the prepared samples in front of the
+    HPGe detector and acquire spectra for a sufficient duration to obtain clear peaks.
+    \item \textbf{Peak Identification:} Analyze the acquired spectra to identify
+    peaks corresponding to different radionuclides using the energy calibration curve.
+    \item \textbf{Activity Calculation:} Calculate the activity concentration of
+    each identified radionuclide using the formula:
+    \[ C = \frac{N(E)}{\epsilon(E) \cdot P(E) \cdot t \cdot V} \]
+    where \( C \) is the activity concentration, \( N(E) \) is the net peak area,
+    \( \epsilon(E) \) is the absolute efficiency, \( P(E) \) is the emission probability,
+    \( t \) is the counting time, and \( V \) is the volume of the sample.  
+\end{itemize}
+\section{Observation}   
+
+
+\section{Conclusion}

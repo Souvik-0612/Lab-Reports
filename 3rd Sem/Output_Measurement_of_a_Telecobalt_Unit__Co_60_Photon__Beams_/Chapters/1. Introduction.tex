@@ -1,0 +1,291 @@
+\section{Objective}
+To measure the output of a Telecobalt unit (Co-60 photon beams).
+\section{Apparatus}
+\begin{itemize}
+    \item Telecobalt Unit
+    \item Water/Slab Phantom
+    \item Ionization Chamber
+    \item Electrometer and Connecting cables
+    \item  Thermometer and Barometer
+\end{itemize}
+\subsubsection*{Telecobalt Unit}
+The Telecobalt machine is equipment that houses a Co-60 radioactive source with an activity of 10–12 kCi. The Co-60 source is doubly encapsulated in stainless steel, in a cylindrical shape, and contains Co-60 radioactive sources in the form of pellets. The typical size of this encapsulation is around 3 cm in length and 2–2.5 cm in diameter. 
+
+The main components of a telecobalt unit are the gantry, source head, collimator, and patient support assembly or treatment couch. The Co-60 source is placed inside a shielded chamber in the source head. During the time of treatment, the Co-60 source is driven toward the collimator, and the shutter is opened for irradiation. The gantry helps to rotate the unit around the patient. The collimator is a beam-limiting device that defines the radiation beam to a particular area of interest for the patient.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\linewidth]{Figures/Bhabhatron.pdf}
+    \caption{Telecobalt unit (Bhabhatron) at AHPGIC}
+    \label{fig:placeholder}
+\end{figure}
+
+\subsubsection*{Teletherapy Sources}
+The most widely used teletherapy source uses 60Co radionuclides  contained inside a cylindrical stainless steel capsule and sealed by welding. A  double-welded seal is used to prevent any leakage of the radioactive material. 
+\begin{itemize}
+    \item  To facilitate interchange of sources from one teletherapy machine to  another and from one isotope production facility to another, standard  source capsules have been developed.
+    \item  The typical diameter of the cylindrical teletherapy source is between 1  and 2 cm; the height of the cylinder is about 2.5 cm. The smaller the  source diameter, the smaller its physical penumbra and the more  expensive ihe source. Often a diameter of 1.5 cm is chosen as a  compromise between the cost and penumbra. 
+    \item Typical source activities are of the order of 5000–10 000 Ci (185–370 TBq)  and provide a typical dose rate at 80 cm from the teletherapy source of  the order of 100–200 cGy/min. Often the output of a teletherapy machine is stated in Rmm (roentgens per minute at 1 m) as a rough guide for the  source strength.
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{l|l} \hline
+        Source & Co-60\\
+        Half-life & 5.26 days \\
+        Specific activity(Ci/g) & 1100\\
+        Photon energy (MeV) & 1.17 and 1.33\\
+        Specific $\gamma$ rate constant
+        $\Gamma[Rm^{2}/(Ci.h)]$ & 1.31\\
+        Maximum source strength & 170 RMM(26-Dec-2017)\\
+        HVL (cm Pb) & 1.1\\
+        Means of Production & $^{59}Co+n$ in reactor\\ \hline
+    \end{tabular}
+\end{table}
+
+
+    \item  Teletherapy sources are usually replaced within one half-life after they are installed; however, financial considerations often result in longer  source usage.
+    \item The $^{60}Co$ radionuclides in a teletherapy source decay with a half-life of  5.26 years into $^{60}Ni$ with the emission of electrons (b particles) with a maximum energy of 320 keV and two g rays with energies of 1.17 MeV  and 1.33 MeV. The emitted gamma rays constitute the therapy beam; the  electrons are absorbed in the cobalt source or the source capsule, where  they produce relatively low energy and essentially negligible bremsstrahlung X-rays and characteristic X-rays.
+    \item  Cobalt-60 decays to Nickel-60 plus an electron and an electron antineutrino. The decay is initially to a nuclear excited state of nickel-60, from which it emits either one or two gamma-ray photons to reach the ground state of the nickel isotope. The decay scheme of Co-60 is shown,
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.5\linewidth]{Figures/Co-60.pdf}
+        \caption{Co-60 Decay Scheme}
+    \end{figure}
+
+\end{itemize}
+
+
+
+
+\section{Theory}
+The output of ionizing radiation beams produced by external beam radiotherapy treatment machines must be determined accurately before the machine is used clinically, and it must also be verified regularly during clinical use to ensure accurate delivery of the prescribed dose to the patient. The output of a Telecobalt machine is the absorbed dose rate to water measured in units of cGy/min at a reference depth in water for a reference field size (e.g., 10 cm $\times$ 10 cm). The output measurement is one of the quality assurance tests that is performed to ensure that the absorbed dose to water for the equipment is within acceptable tolerance, as recommended by the competent authority (AERB).
+
+IAEA TRS 398 --- “Absorbed Dose Determination in External Beam Radiotherapy” --- is the recommended protocol which is usually followed internationally for the measurement of output from a Telecobalt machine. The protocol and formalism for the measurement of output from a Telecobalt unit are described here.
+
+The absorbed dose to water at a point is given by:
+
+\[
+D_{w,Q} = N_{D,w,Q_0} \, M_Q \, k_{Q,Q_0}
+\]
+
+where
+
+\begin{itemize}
+    \item $N_{D,w,Q_0}$ = Calibration factor (Gy/nC) provided in the calibration certificate,
+    \item $M_Q$ = Corrected meter reading,
+    \item $k_{Q,Q_0}$ = Beam quality correction factor.
+\end{itemize}
+
+\subsection*{Beam Quality Correction Factor ($k_{Q,Q_0}$)}
+The beam quality correction factor is used when the measurement beam differs from the reference beam in which the chamber was calibrated. The values of this correction factor for various chambers are available in IAEA TRS 398. If both the reference beam and measurement beam are the same, then this factor is taken as 1.
+
+\subsection*{Correction for Temperature, Pressure, and Humidity ($k_{T,P}$)}
+Since the ionization chamber used to measure output is open to ambient air, the mass of the air in the cavity volume is affected by the surrounding temperature, pressure, and humidity. No correction for humidity is applied if the humidity range is within 20–80\%. The correction due to temperature and pressure is given by
+
+\[
+k_{T,P} = \frac{273.15 + T}{273.15 + T_0} \times \frac{P_0}{P}
+\]
+
+where $T$ = temperature at the time of measurement, $T_0$ = reference temperature (20°C), $P$ = pressure at the time of measurement, and $P_0$ = reference pressure (1013.2 mbar). $T_0$ and $P_0$ are the temperature and pressure, respectively, at which the chamber is calibrated, and are mentioned in the calibration certificate.
+
+\subsection*{Correction for Ion Recombination or Saturation ($k_s$)}
+This error arises due to incomplete charge collection inside the ionization chamber. The two-voltage method is usually applied to calculate the recombination error. The protocol recommends that the ratio of the two applied voltages be at least 2.
+
+During the charge collection, charges may be lost due to recombination in the active volume or cavity. This recombination is mainly of three types: columnar recombination (or initial recombination), Volume recombination (or general recombination) and Diffusion loss caused by the diffusion of ions onto the measuring electrode against the electric field. The initial recombination is due to the recombination of ions in a single charge particle track. On the other hand,  volume recombination is due to ions formed by separate ionizing particle tracks.  So, it is dependent on the dose rate. In continuous radiation beams, the general recombination is by far the most important charge loss mechanism, so that initial recombination and diffusion against the electric field are ignored in comparison to general recombination. Under this condition, Boag theory provides the following expression for the collection efficiency $f_{gen}^{c}$ for a constant dose rate and an electronegative cavity gas. 
+\begin{equation*}
+    f_{gen}^{c} = \frac{Q(V)}{Q_{sat}} = \frac{1}{1+\frac{\Lambda_{gen}^{c}}{V^{2}}}
+\end{equation*}
+\begin{equation*}
+    \frac{1}{Q(V)} = \frac{1}{Q_{sat}}+\frac{\Lambda_{gen}^{c}}{V^{2}Q_{sat}}
+\end{equation*}
+\begin{equation*}
+    \frac{1}{Q(V)} = \frac{1}{Q_{sat}}+\frac{\lambda_{gen}^{c}}{V^{2}}
+\end{equation*}
+$\lambda_{gen}^{c}$ is a parameter that is proportional to the dose rate but also depends on 
+chamber geometry and properties of ions of the cavity gas. The labels ``gen" and 
+``c" stand for ``general recombination" and ``continuous beam", respectively. 
+Let, in two voltage method for higher voltage V1 charge collection is $Q_{1}$ and for a 
+lower voltage $V_{2}$ charge collection is $Q_{2}$.
+\begin{equation*}
+    \frac{1}{Q_{1}} = \frac{1}{Q_{sat}}+\frac{\lambda_{gen}^{c}}{V^{2}_{1}}
+\end{equation*}
+\begin{equation}
+    \lambda_{gen}^{c} = \frac{V_{1}^{2}}{Q_{1}} - \frac{V_{1}^{2}}{Q_{sat}}
+\end{equation}
+
+For charge $Q_{2}$ at Voltage $V_{2}$
+\begin{equation*}
+    \frac{1}{Q_{2}} = \frac{1}{Q_{sat}}+\frac{\lambda_{gen}^{c}}{V^{2}_{2}}
+\end{equation*}
+\begin{equation}
+    \lambda_{gen}^{c} = \frac{V_{2}^{2}}{Q_{2}} - \frac{V_{2}^{2}}{Q_{sat}}
+\end{equation}
+Equating (4) and (5):
+\begin{equation*}
+     \frac{V_{1}^{2}}{Q_{1}} - \frac{V_{1}^{2}}{Q_{sat}} = \frac{V_{2}^{2}}{Q_{2}} - \frac{V_{2}^{2}}{Q_{sat}}
+\end{equation*}
+\begin{equation*}
+    \frac{V_{1}^{2}}{Q_{1}}-\frac{V_{2}^{2}}{Q_{2}} = \frac{1}{Q_{sat}}(V_{1}^{2}-V_{2}^{2})
+\end{equation*}
+
+\begin{equation*}
+    Q_{sat} = \frac{Q_{1}Q_{2}(V_{1}^{2}-V_{2}^{2})}{Q_{2}V_{1}^{2}-Q_{1}V_{2}^{2}}
+\end{equation*}
+Now we can put the $Q_{sat}$ value to obtain $f_{gen}^{c}$ and from its reciprocal value of $K_{s}$ 
+can be calculated.
+\begin{equation*}
+ f_{gen}^{c} = \frac{Q_{1}}{Q_{sat}} = \frac{Q_{1}}{\frac{Q_{1}Q_{2}(V_{1}^{2}-V_{2}^{2})}{Q_{2}V_{1}^{2}-Q_{1}V_{2}^{2}}}
+\end{equation*}
+\begin{equation*}
+    f_{gen}^{c} = \frac{\bigg(\frac{V_{1}}{V_{2}}\bigg)^{2}-\frac{Q_{2}}{Q_{2}}}{\bigg(\frac{V_{1}}{V_{2}}\bigg)^{2}-1}
+\end{equation*}
+\begin{equation*}
+    \boxed{k_{s} = \frac{1}{f_{gen}^{c}(V_{1})} = \frac{\bigg(\frac{V_{1}}{V_{2}}\bigg)^{2}-1}{\bigg(\frac{V_{1}}{V_{2}}\bigg)-\frac{Q_{1}}{Q_{2}}}}
+\end{equation*}
+
+\subsection*{Polarity Correction ($k_{pol}$)}
+The electrometer reading changes when the polarity of the bias voltage applied to the ionization chamber is reversed. The correction factor for change in meter readings due to polarizing potentials of opposite polarity is given by:
+
+\[
+k_{pol} = \frac{|M_+| + |M_-|}{2M}
+\]
+
+where $M_+$ = meter reading with positive bias voltage, $M_-$ = meter reading with negative bias voltage, and $M$ = meter reading with the usual bias voltage (used for daily output measurement).
+
+\subsection*{Electrometer Calibration ($k_{elec}$)}
+Usually, the ionization chamber and measuring electrometer are calibrated as a single unit. In that case, the electrometer calibration factor $k_{elec}$ is unity. If the electrometer is calibrated separately, this factor must be multiplied by the uncorrected meter reading to obtain the corrected reading. The corrected meter reading after applying all correction factors is given as:
+
+\[
+M_Q = M_{Q,unc} \, k_{T,P} \, k_{pol} \, k_s \, k_{elec}
+\]
+
+\begin{table}[H]
+\centering
+\caption{Reference Conditions for Absorbed Dose to Water in \(^{60}\)Co Gamma Ray Beams \cite{IAEA2024TRS398}}
+\begin{tabular}{p{5cm}|p{9cm}}\toprule
+\textbf{Influence Quantity} & \textbf{Reference Value or Characteristic} \\ \midrule
+Phantom material & Water \\ 
+Chamber type & Cylindrical or plane parallel \\
+Measurement depth, \(z_{\text{ref}}\) & 5 g/cm\(^2\) (or 10 g/cm\(^2\)) \\
+Reference point of the chamber & 
+\begin{itemize}
+  \item Cylindrical: On the central axis at the centre of the cavity volume.
+  \item Plane parallel: On the inner surface of the front wall.
+\end{itemize} \\
+Position of reference point of chamber & At the measurement depth \(z_{\text{ref}}\) for both chamber types \\
+Source–surface or source–chamber distance & 80 cm or 100 cm \\
+Field size & 10 cm \(\times\) 10 cm \\ \bottomrule
+\end{tabular}
+\end{table}
+
+
+\section{Observation}
+The $30 \times 30 \times 30 \ cm^{3}$ phantom is filled with water; the height of the water is  filled to 25 cm, so the chamber cavity comes at the depth of 10 cm. After proper  alignment with the levelling instruments the water temperature and ambient  pressure is checked.
+
+
+At first using a $25\times25 \ cm^{2} \ $field size a 3-minute warmup is fired. Then for output  measurement $10\times10 \ cm^{2}\ $ field size with an exposure time of 1 minute is fired for 
+each reading.
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{ccccc}\toprule
+         Bias Voltage(V)& $M_{1}(nC)$ & $M_{2}(nC)$ & $M_{3}(nC)$ & Average ($M_{Qunc}(nC)$)\\ \midrule
+         400 & 8.751 & 8.757 & 8.756 & 8.755($M^{*}_{1}$)\\
+         200 & 8.788 & 8.803 & 8.807 & 8.799\\
+         -400 & -8.78 & -8.773 & -8.771 & -8.775\\
+        Timer error reading(400 V) & 8.935 & 8.956 & 8.946 & 8.946($M_{2}^{*}$)\\ \bottomrule
+    \end{tabular}
+    \caption{Tabulation for output measurement}
+\end{table}
+
+\subsection*{Calculation:}
+\begin{itemize}
+    \item \textbf{Temperature and pressure correction factor}\
+    
+    T = 23.05\textdegree C, P = 1007.35 mbar\
+    
+    T = 20\textdegree C, P = 1013.2 mbar\
+
+    
+    \begin{align*}
+        K_{T,P} &= \frac{(273.2+T)\times P_{0}}{(273.2+T_{0})\times P}\\
+                &= \frac{(273.2+23.05)\times 1013.2}{(273.2+20)\times 1007.35}\\
+                &= \boxed{1.01627}
+    \end{align*}
+    
+    \item \textbf{Saturation Correction factor($k_{s}$):}\\
+    $V_{1}= 400 V; \ Q_{1}=  8.755\ nC$\\
+    $V_{2}= 200 V; \ Q_{2}= 8.799 \ nC$\\
+    \begin{align*}
+        k_{s} & = \frac{\bigg(\frac{V_{1}}{V_{2}}\bigg)^{2}-1}{\bigg(\frac{V_{1}}{V_{2}}\bigg)^2-\frac{Q_{1}}{Q_{2}}}\\
+              &= \frac{\left(\frac{400}{200}\right)^{2}-1}{\left(\frac{400}{200}\right)^2-\frac{8.755}{8.799}}\\
+              &= \boxed{0.9983}
+    \end{align*}
+
+    \item \textbf{Polarity Correction factor($k_{pol}$):}\
+
+    \begin{align*}
+        k_{pol} &= \frac{|M_+| + |M_-|}{2M}\\
+                &= \frac{|8.755| + |8.775|}{2\times8.755}\\
+                &= \boxed{1.001142}
+    \end{align*}
+    
+    \item \textbf{Timer Error:}\
+    t= 1 min; n=2
+
+    
+    \begin{align*}
+        \delta t &=\frac{M_{2}^{*}-M_{1}^{*}}{2M_{1}^{*}-M_{2}^{*}}\times t\\
+        &=\frac{8.946 - 8.755}{2\times8.755 - 8.946}\times 1 \text{ min}\\
+        &= 0.0223 \text{ min}
+    \end{align*}
+
+    
+    \item \textbf{Corrected Meter reading:}
+    \begin{align*}
+        M_{Q} &= M_{Qunc}\times k_{T,P}\times  k_{pol}\times k_{elec}\\
+        & = 8.755 \times 1.01627 \times 0.9983 \times 1.001142 \times 1\\
+        &= \boxed{8.892 \text{ nC}}
+    \end{align*}
+
+    \item \textbf{The absorbed dose to water at 10 cm depth:}\
+    
+    $k_{Q,Q_{0}} = 1$\
+    
+    $N_{D,w,Q_{0}} = 5.374 \times 10^{7} $ Gy/C\
+    \begin{align*}
+        D_{w,Q(z_{ref})}&=N_{D,w,Q_{0}} \times M_{Q} \times k_{Q,Q_{0}}\\
+                        &= 5.374 \times 10^{7}  \text{ Gy/C} \times 8.892  \text{ nC} \times 1\\
+                        &= \boxed{ 47.785  \text{ cGy}}
+    \end{align*}
+
+    \item \textbf{Absorbed dose rate to water at the depth of dose maximum, $Z_{max}$:}\
+    
+    Depth of dose maximum: $Z_{max}= 0.5\ g/cm^{2}$\
+    
+    \textbf{80 cm SSD set up} PDD at $Z_{ref}$ for a $10 \text{ cm} \times 10 \text{ cm}$ field size: \
+    
+    PDD ($Z_{ref} = 10 \ gm/cm^{2}) = 56.74\%$\
+    Absorbed dose rate calibration at $Z_{max}$\
+    \begin{align*}
+        {D_{w,Q_{z_{max}}}}&= \frac{D_{w,Q}}{PDD\times(t+\delta t)}\\
+                          &= \frac{47.785\times 100\ cGy}{56.74 \times 1.0223 \ min} \\
+                          &= \boxed{82.3804 \text{ cGy/min}}
+    \end{align*}
+
+\end{itemize}
+\section{Error}
+Output measured = 82.380 cGy/min.\
+
+The calculated output on the date of the experiment = 84.585 cGy/min.\
+
+\begin{align*}
+    \text{Error (\%)} &= \left( \frac{\text{Measured} - \text{Standard}}{\text{Standard}} \right) \times 100\\
+            &= \left| \frac{82.380 - 84.585}{84.585} \right| \times 100\\
+            &= 2.60\% \text{   (within tolerance = 3\%) }
+\end{align*}
+
+\section{Conclusion}
+The telecobalt machine uses a radioactive source with a defined geometry and  monoenergetic (or fixed average energy), so there is no change in energy.  However, due to exponential activity loss, the source strength decreases, so the  exposure at a fixed distance also decreases proportionally. During the treatment  time calculation, the initial strength of the source is considered, and the present  activity is calculated to prescribe the treatment time. The output of the machine is checked monthly to verify whether it is within tolerance ($<3\%$) from the  calculated value or not.\
+
+Our results enhance the overall knowledge regarding dose rate calculations and quality control, reinforcing the importance of safe and accurate radiation therapy for patients. This study underscores the significance of routine monitoring and upkeep of Telecobalt Units to maintain their effectiveness in cancer treatments.

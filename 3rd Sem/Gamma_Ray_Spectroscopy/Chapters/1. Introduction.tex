@@ -1,0 +1,490 @@
+\section{Objective}
+\begin{enumerate}
+    \item Energy calibration of gamma ray spectrometer.
+    \item Identification of unknown radio-nuclide.
+    \item Efficiency, calibration and determination of unknown activity.
+    \item Determination of mass energy absorption coefficient of Al and Cu.
+    \item Experiment based on back scattering of gamma rays.
+\end{enumerate}
+\section{Apparatus}
+\begin{itemize}
+    \item \textbf{Detector}: A NaI(Tl) scintillation detector\footnote{NaI(Tl) crystals are hygroscopic — they readily absorb water from the air. The crystal (and often the photomultiplier tube) is placed inside a hermetically sealed housing.} uses thallium activated sodium iodide to shift the wavelength of the light photons into the sensitive range of the photocathode, which are then converted into electrical pulses by a photomultiplier tube (PMT) for spectroscopy or counting applications. The working principle is as follow. 
+    \begin{itemize}
+        \item \textbf{Interaction}: Incident gamma rays interact in NaI(Tl) via photoelectric effect, Compton scattering, and pair production, generating energetic electrons that create excitations in the crystal lattice. 
+        \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.6\linewidth]{Figures/Scintilation detector.png}
+        \caption{The Structure of the NaI(Tl) Detector and Various Types of Gamma-Ray Interactions
+that Occur in the Typical Source-Detector-Shield Configuration.\cite{ortec2025gamma}}
+        \end{figure}
+        \item \textbf{Scintillation}: Thallium activator centers enable efficient radiative recombination, producing visible photons with peak emission around 415–420 nm. Refractive index @ emission max 1.85. \cite{berkeleynai2025}
+        \item \textbf{Photodetection and gain}: Crystals are wrapped with high-efficiency reflectors (e.g., Teflon, $Al_2O_3$) to maximize light collection into the photodetector. Photons strike the PMT photocathode to release photoelectrons, which are multiplied across a dynode chain to achieve gains up to $\approx 10^6$; typical PMT operating potentials are 700–1100 V in NaI(Tl) systems. Some of photocathode materials are AgOCs (most widely used), GaAs(Cs), InGaAs(Cs), SbCs$_3$, Baikhali materials, Multialkali materials.
+        \item \textbf{Proportionality}: The pulse height from the PMT is approximately proportional to the energy deposited in the crystal.
+    \end{itemize}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\linewidth]{Figures/Spectrum.png}
+    \caption{Typical $\gamma$-ray pulse height spectrum for a shielded setup of source and detector. \cite{ahmed2015radiation}}
+\end{figure}
+
+\begin{itemize}
+    \item  \textbf{Noise Peak}:
+This peak appears at very low energies and is caused by electronic noise from preamplifiers, thermal fluctuations, or leakage currents in semiconductor detectors. 
+It does not correspond to real gamma interactions but is always present in practical systems.
+
+\item  \textbf{X-ray Peaks}:
+Characteristic X-ray peaks arise from fluorescence of detector material or shielding. 
+For instance, in HPGe detectors, germanium K-shell X-rays ($\sim 10$ keV) are observed. 
+These X-rays are produced when gamma photons eject inner-shell electrons, and secondary photons are emitted.
+
+\item \textbf{Backscatter Peak}:
+This occurs when photons scatter in the surroundings (walls, shielding, or air) and then enter the detector. 
+Typically observed around $150$--$250$ keV, depending on the incident gamma-ray energy. 
+It corresponds to incomplete energy deposition since the photon has lost part of its energy outside the detector.
+
+\item \textbf{Double Escape Peak ($E_\gamma - 1.02~\text{MeV}$)}
+For high-energy gamma-rays ($E_\gamma > 1.022$ MeV), pair production can occur. 
+The gamma photon converts into an electron-positron pair. 
+Both particles deposit their kinetic energy in the detector, but the positron annihilates into two $511$ keV photons. 
+If both of these photons escape the detector, the measured energy is
+\[
+E_{\text{double escape}} = E_\gamma - 2 \times 511~\text{keV} = E_\gamma - 1.02~\text{MeV}.
+\]
+
+\item \textbf{Single Escape Peak ($E_\gamma - 511~\text{keV}$)}:
+Similar to the double escape peak, but in this case only one of the annihilation photons escapes, while the other is absorbed. 
+Thus the observed energy is
+\[
+E_{\text{single escape}} = E_\gamma - 511~\text{keV}.
+\]
+
+\textbf{Compton Continuum}:
+This broad distribution results from Compton scattering, where the incident photon transfers only part of its energy to an electron. 
+The scattered photon may escape the detector, leaving only the recoil electron's energy. 
+The continuum extends up to the Compton edge.
+
+\item \textbf{Compton Edge}:
+The maximum energy transfer occurs for a $180^\circ$ backscatter event. 
+The corresponding electron energy is
+\[
+E_{e, \text{max}} = E_\gamma \left(1 - \frac{1}{1 + \frac{2E_\gamma}{m_e c^2}} \right),
+\]
+where $m_e c^2 = 511~\text{keV}$. 
+This defines the upper boundary of the Compton continuum.
+
+\item \textbf{Full-Energy Peak (Photopeak, at $E_\gamma$)}: 
+This peak represents complete absorption of the incident gamma-ray energy in the detector. 
+It occurs primarily via the photoelectric effect (or Compton scattering followed by photoelectric absorption of the scattered photon). 
+It is the most important feature for isotope identification, as its position corresponds to the exact gamma-ray energy.
+
+\end{itemize}
+
+    \item \textbf{Spectrometric System}:
+
+\begin{itemize}
+    \item \textbf{Key Stages of Signal Processing}
+    \begin{enumerate}
+        \item \textbf{Preamplification}
+        \begin{itemize}
+            \item The first stage after the detector.
+            \item \textbf{Purpose}: To convert the weak charge signal from the detector (e.g., semiconductor crystal or scintillator with photomultiplier tube) into a voltage signal with sufficient amplitude and broadened time width.
+            \item \textbf{Requirements}: High stability, very low noise, and minimal distortion.
+        \end{itemize}
+
+    \item \textbf{Amplification and Shaping}
+    \begin{itemize}
+        \item After preamplification, the signal must be shaped to a suitable pulse form.
+        \item Shaping amplifiers (linear amplifiers or spectroscopy amplifiers) reduce noise, optimize energy resolution, and ensure that the pulses are standardized in width and height.
+        \item Proper shaping helps in distinguishing closely spaced energy peaks in the gamma-ray spectrum.
+    \end{itemize}
+    \item \textbf{Pulse Height Analysis (PHA)}
+    \begin{itemize}
+        \item The pulse height (amplitude) is proportional to the deposited gamma-ray energy.
+        \item In analog systems: A Pulse Height Analyzer directly sorts pulses by height into channels.
+        \item In digital systems: An Analog-to-Digital Converter (ADC) digitizes the shaped pulse, allowing computer-based processing.
+    \end{itemize}
+    \item \textbf{Multi-Channel Analyzer (MCA)}
+    \begin{itemize}
+        \item The MCA acts as the “brain” of the spectrometer.
+        \item It takes digitized pulses and sorts them into channels corresponding to energy bins using ADC(analog to digital).
+        \item The result is a histogram: a gamma-ray spectrum with counts per channel vs. energy.
+        \item Peaks in the spectrum correspond to specific gamma-ray energies, providing information about radionuclides present in the sample.
+    \end{itemize}
+    \end{enumerate}
+    \item \textbf{Essential Modules of a Gamma-Ray Spectrometer}
+    \begin{itemize}
+        \item \textbf{Power Supply (e.g., MINIBIN MB403)}: Provides stable, noise-free power to all modules. Even small fluctuations can distort measurements.
+        \item \textbf{High Voltage Unit (HV501)}: Used with photomultiplier tubes (PMTs) in scintillation detectors. Provides several hundred to thousands of volts with high precision. Voltage instability leads to gain drift and spectral distortion.
+        \item \textbf{Spectroscopy Amplifier (SA524) / Linear Amplifier (LA520)}: Boosts weak detector pulses and shapes them into standardized forms. Enhances energy resolution and ensures sharp, well-defined peaks.
+        \item \textbf{Multi-Channel Analyzer (MCA – 1K/4K/8K)}: Digitizes shaped pulses and builds the gamma-ray spectrum. The number of channels (1K, 4K, or 8K) determines the resolution of energy binning.
+        \item \textbf{Analysis Software (e.g., ANUSPECT)}: Used for real-time spectrum display, calibration, peak identification, and activity calculations. Converts raw pulse data into meaningful physical information.
+    \end{itemize}
+\end{itemize}
+
+\begin{figure}[H]
+  \centering
+  \begin{subfigure}[b]{0.48\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{Figures/Equipment.pdf}
+    \caption{Experiment setup}
+  \end{subfigure}\hfill
+  \begin{subfigure}[b]{0.48\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{Figures/Block diagram.png}
+    \caption{Block Diagram \cite{Lab}}
+  \end{subfigure}
+  \caption{Spectrometric System}
+\end{figure}
+
+
+
+    \item \textbf{Radionuclide}: We used the following gamma emitting isotopes
+    
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{ccc}
+        \toprule
+            Isotope & Energy(MeV) & Half life\\ \midrule
+            Cs-137 & 0.662 & 30 years\\
+            Co-60 & 1.17, 1.33 & 5.3 years\\
+            Na-22 & 0.511, 1280 & 2.6 years\\
+            Ba-133 & 0.356 & 10.5 years\\ \bottomrule
+        \end{tabular}
+        \caption{Energy and Half life of Radionuclide }
+        \label{Radionuclies}
+    \end{table}
+
+\begin{figure}[H]
+     \centering
+     \begin{subfigure}[b]{0.24\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{Figures/Decay scheme/Cs-137_BM.pdf}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.24\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{Figures/Decay scheme/Co-60_BM.pdf}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.24\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{Figures/Decay scheme/Na-22_BP.pdf}
+     \end{subfigure}
+     \hfill
+     \begin{subfigure}[b]{0.24\textwidth}
+         \centering
+         \includegraphics[width=\textwidth]{Figures/Decay scheme/Ba-133_BP.pdf}
+     \end{subfigure}
+        \caption{Decay Scheme for various radioisotopes \cite{lnhb_laraweb}}
+\end{figure}
+
+\end{itemize}
+\textbf{NOTE}: $^{22}_{11}\text{Na}$ emits positron($\beta^+$) which annihilates with electron and emits photons with energy 511 keV (= rest mass of an electron).
+\section{Energy Calibration of Gamma Ray Spectrometer (Linearity Study)}
+\subsection{Theory}
+The energy calibration is performed using radioactive sources of well-known gamma-ray energy. The calibration curve demonstrates a linear relationship between channel numbers and gamma-ray energies. This linearity indicates that the detector’s response to different gamma-ray energies is consistent and predictable, facilitating straightforward energy calibration. For the calibration, we need at least three data points. 
+\subsection{Observation}
+We used two isotopes with three different energies to calibrate the channel number with the energy.
+\begin{table}[H]
+        \centering
+        \begin{tabular}{cc}
+        \toprule
+            Isotope & Energy(MeV)\\ \midrule
+            Cs-137 & 0.662 \\
+            Co-60 & 1.17, 1.33 \\ \bottomrule
+        \end{tabular}
+\end{table}
+    
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{Figures/Energy calibration.jpeg}
+    \caption{Energy calibration using Anuspect}
+\end{figure}
+\subsection{Result}
+We found the calibrated equation as follows,
+\begin{equation}
+    \boxed{y =2.306x - 27.724}
+    \label{Calibration equation}
+\end{equation}
+
+where $y$ is the energy and the $x$ is the channel number.
+\subsection{Conclusion}
+This experiment verifies the relationship between the channel number and gamma ray energies is \textbf{linear}. Using this equation, we can predict the unknown source. 
+
+\section{Identification of unknown source}
+\subsection{Theory}
+In the previous experiment, we have calibrated the channel number with the energy, and we have an equation. Now we will take another, which is an unknown source, and take the reading. Using peak search in the Anuspect software, we'll find the channel number where the photo-peaks are. Using the calibration equation \ref{Calibration equation} we can find the energies corresponding to the peak and can identify the unknown source.
+\newpage
+\subsection{Observation}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{Figures/Unknown source identification.jpeg}
+    \caption{Unknown source gammar ray spectrum}
+\end{figure}
+\subsection{Result}
+From the spectrum we can see that there are two photo-peaks with channel numbers 233.0409 and 560.4118. Using calibration equation \ref{Calibration equation} we can find the energies \textbf{510 keV} and \textbf{1265 keV}. From the Table: \ref{Radionuclies} we can identify the energies of these two peaks which correspond to \textbf{Na-22}.
+\subsection{Error}
+\begin{table}[H]
+    \centering
+    % \caption{Error calculation of exp. and actual energies of Na-22}
+    \begin{tabular}{cccc}\toprule
+        Isotope & Actual energy & Exp. energy & \% error  \\ \midrule
+        \multirow{2}{*}{Na-22} & 511 keV & 510 keV & 0.19 \%\\
+         & 1280 keV & 1265 keV& 1.17 \%\\ \bottomrule
+    \end{tabular}
+    
+\end{table}
+\subsection{Conclusion}
+Gamma ray spectroscopy is a very essential tool for identifying the unknown source (or sources). 
+
+\section{Shape and efficiency calibration of gamma ray spectrometer and activity calculation of unknown source}
+\subsection{Theory}
+\subsubsection*{Shape Calibration → Accurate Counts Under the Peak}
+A gamma spectrum photopeak is not a perfect spike — it’s broadened by detector resolution.By performing shape calibration (FWHM vs. energy), you determine the correct Gaussian parameters to fit each peak.The area under that fitted Gaussian gives the total counts for that gamma energy, with minimal bias from noise or tailing.
+\subsubsection*{Efficiency Calibration → Linking Counts to Disintegrations}
+Detector efficiency tells you: What fraction of the photons emitted at a given energy are actually detected as counts. This varies strongly with gamma energy due to:
+\begin{itemize}
+    \item Crystal absorption efficiency
+    \item Geometric solid angle
+    \item Interaction probabilities (photoelectric, Compton, pair production)
+\end{itemize}
+
+\begin{equation*}
+    \text{Efficiency} = \frac{\text{Counts Per  Seconds(CPS)}}{\text{Disintegration Per Second (DPS)}} = \frac{\text{CPS}}{\text{Activity}}
+\end{equation*}
+\begin{equation}
+    \text{Activity  of  Soures} = \frac{\text{CPS}}{\text{Efficiency}}
+\end{equation}
+Where:
+\begin{itemize}
+    \item CPS comes from shape‑calibrated Gaussian fitting.
+    \item Efficiency comes from your multi‑point efficiency calibration.
+\end{itemize}
+The efficiency curve that built from known standards (Cs‑137, Co‑60, Ba‑133) lets us interpolate the efficiency for the specific Na‑22 peak.\
+
+Together, they make the activity value physically meaningful, rather than just a raw detector number.
+
+
+\subsection{Observation}
+\subsubsection*{Shape calibration}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{Figures/Activity of the unknown source/Shape.jpeg}
+    \caption{Shape calibration using Cs-137 and Co-60 peaks}
+\end{figure}
+To calculate the counts per second of the source, we fit a \textbf{Gaussian curve} in the photopeak of the gamma energies. The area under this gaussian curve gives the total count for this energy. Shape calibration equation is defined between the Full Width Half Maxima (FWHM) of the gaussian curve and the corresponding gamma energy. The shape calibration equation is:
+\begin{equation*}
+    \text{FWHM} = 1.179865\times x +226.033
+\end{equation*}
+\subsubsection*{Efficiency calibration}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{Figures/Activity of the unknown source/Efficiency.jpeg}
+    \caption{Efficiency calibration using Cs-137 and Co-60 peaks}
+\end{figure}
+We need four gamma energy peaks for efficiency calibration. In addition to the Cs-137 photopeak, two Co-60 photopeaks, we obtain the spectrum of Ba-133 to acquire its photopeak at 356.02 keV (Observed energy = 348.0831 keV). The shape calibration we did previously fits a gaussian curve to these spectra using NLSQ model fit (Non Linear Square Fit) to obtain the counts which are converted into cps by the software. We input the dps manually by calculating the current activities of the sources. The ratio of cps to dps gives the efficiency of the detector for that gamma energy. The calibration equation between efficiency and energy is:
+\begin{equation*}
+    \text{Efficiency} = 0.2348116*\ln{(E^{2})} - 4.623727*\ln{(E)} + 21.26301
+\end{equation*}
+Now that shape calibration and efficiency are done, we take the spectrum of previously identified Na-22 source and find out the detector efficiency corresponding to its photopeak energy using the calibration equations obtained before. 
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{cccc}\toprule
+        Source & Previous activity & Half-life & Current activity  \\ \midrule
+        Co-60 & 155 kBq (Mar-22) & 5.27 yr & 122.65 kBq\\
+        Cs-137 & 111 kBq (May-22) & 30 yr & 103.18 kBq\\
+        Ba-133 & 150 kBq (May-22 )& 10.5 yr &  121.97 kBq\\
+        Na-22 & 115 kBq (Mar-22) & 2.6 yr & 47.33 kBq\\  \bottomrule
+    \end{tabular}
+    \caption{Previous and current activity of different sources}
+\end{table}
+
+\newpage
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{Figures/Activity of the unknown source/Activity.jpeg}
+    \caption{Calculating the activity of an unknown source.}
+\end{figure}
+\subsection{Result}
+We click the "Compute activities" option in the "Activity" menu and note the activity of the Na-22 calculated by the software, which is equal to \textbf{66.6679 kBq}.
+
+Theoretically, the activity should be 47.33 kBq. So the relative error is \textbf{29.018 \%}. A possible reason for getting such an error might be 
+\begin{itemize}
+    \item Inaccuracies in the Gaussian fitting or efficiency interpolation.
+    \item Instrumental or calibration drift.
+    \item Previous activity written on the source might not be exact.
+\end{itemize}
+\subsection{Application}
+\begin{itemize}
+    \item \textbf{Detector QA/QC}: Maintains a verified energy resolution (from shape calibration) so peaks remain sharp and distinguishable over time.
+    \item \textbf{Quantitative analysis}: Efficiency curves allow converting counts to actual disintegration rates — vital for dose calculations in nuclear medicine and contamination assessments.
+\end{itemize}
+
+\section{Determination of mass energy absorption coefficient of Al and Cu.}
+\subsection{Theory}
+An experimental arrangement designed to measure the attenuation characteristics of a photon beam is shown in Figure \ref{Atteneuation}. A narrow beam of mono-energetic photons is incident on an absorber of variable thickness. A detector is placed at a fixed distance from the source and sufficiently farther away from the absorber so that only the primary photons (those photons that passed through the absorber without interacting) are measured by the detector. Any photon scattered by the absorber is not supposed to be measured in this arrangement.\\
+ Beer-Lambert law: The intensity($I(x)$) of the transmitted by a thickness $dx$ is given by 
+\begin{equation}
+    \boxed{I(x) = I_0 e^{-\mu x}}
+    \label{Linear attenuation}
+\end{equation}
+
+where $I_0$ is the intensity of the incident radiation on the absorber. $\mu$ is called linear attenuation coefficient. Half value layer(HVL) is the thickness of the absorber required to attenuate the intensity of the beam to half of its original value. Thus HVL = $\frac{ln 2}{\mu}$.
+\newpage
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\linewidth]{Figures/Atteneuation.png}
+    \caption{Diagram to illustrate an experimental arrangement for studying narrow-beam attenuation through an absorber \cite{gibbons2019khan}}
+    \label{Atteneuation}
+\end{figure}
+Because the attenuation produced by a thickness $x$ depends on the number of electrons presentn that thickness, $\mu$ depends on the density of the material. Thus dividing $\mu$ by the density($\rho$) of the material is independent of the density. $\mu/\rho$ is called the \textbf{mass attenuation factor}. The Eq \ref{Atteneuation} can be rewritten as
+\begin{equation}
+    \boxed{I(x) = I_0 e^{-\frac{\mu}{\rho} (\rho x)}}
+\end{equation}
+$\rho x$ is called the density thickness.
+
+\subsection{Observation}
+
+
+\begin{table}[H]
+    \centering
+    \caption{Gross and Net Counts for Copper and Aluminum.}
+    \begin{tabular}{ccc}
+        \toprule
+        \multicolumn{3}{c}{\textbf{Copper}} \\
+        \multicolumn{3}{c}{Avr bkg counts for 250 sec = 1930} \\
+        \midrule
+        Thickness (mm) & Gross counts & Net counts \\
+        \midrule
+        0  & 48517 & 46587 \\
+        2  & 43538 & 41608 \\
+        4  & 39151 & 37221 \\
+        6  & 36642 & 33712 \\
+        8  & 31930 & 30000 \\
+        10 & 28758 & 26828 \\
+        12 & 26182 & 24252 \\
+        14 & 23948 & 22018 \\
+        16 & 21477 & 19547 \\
+        18 & 19371 & 17441 \\
+        20 & 17672 & 15742 \\
+        \bottomrule
+    \end{tabular}
+    \quad
+    \begin{tabular}{ccc}
+        \toprule
+        \multicolumn{3}{c}{\textbf{Aluminium}} \\
+        \multicolumn{3}{c}{Avr bkg counts for 250 sec = 2116} \\
+        \midrule
+        Thickness (mm) & Gross counts & Net counts \\
+        \midrule
+        0  & 48451 & 46335 \\
+        6  & 44069 & 41953 \\
+        12 & 40171 & 38055 \\
+        18 & 36310 & 34194 \\
+        24 & 33272 & 31156 \\
+        30 & 30491 & 28375 \\
+        36 & 27406 & 25290 \\
+        42 & 24952 & 22836 \\
+        48 & 22753 & 20637 \\
+        54 & 18966 & 16850 \\
+        60 & 18571 & 16455 \\
+        \bottomrule
+    \end{tabular}
+    \label{tab:counts}
+\end{table}
+\newpage
+\begin{figure}[H]
+  \centering
+    \caption{Graph: Net count vs Thickness of the absorber}
+  \begin{subfigure}[b]{0.5\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{Figures/Graph: mass absorption/Copper.pdf}
+  \end{subfigure}\hfill
+  \begin{subfigure}[b]{0.5\textwidth}
+    \centering
+    \includegraphics[width=\linewidth]{Figures/Graph: mass absorption/Aluminum.pdf}
+  \end{subfigure}
+
+\end{figure}
+
+
+\subsection{Result}
+We have fitted the graph using the Eq \ref{Atteneuation}. 
+\begin{table}[H]
+    \centering
+    \begin{tabular}{cccc}\toprule
+        Material  & $\mu$(mm$^{-1}$) & HVL(mm) & Mass absorp. coefficient($\mu/\rho$)\\ \midrule
+        Copper & 0.054 & 12.836 & 0.060 cm$^2$/gm\\
+        Aluminum & 0.0171 & 40.534 & 0.063 cm$^2$/gm \\\bottomrule
+    \end{tabular}
+\end{table}
+
+Density of copper and aluminum is 8.96 g/cm$^3$ and 2.7 g/cm$^3$ respectively.
+\subsection{Application}
+Radiation shielding design: Choosing absorber materials and thickness for medical treatment rooms, nuclear reactors, or storage casks. Material characterization: Non‑destructive testing where photon attenuation can reveal density changes, corrosion, or defects.
+
+\section{Experiment based on Back scattering of gamma ray}
+\subsection{Theory}
+Backscattering of gamma photons refers to the phenomenon where gamma photons, upon interacting with a material, scatter back in the direction from which they came. This process is primarily a result of Compton scattering (A process where a gamma photon collides with a free electron, loses some of its energy, resulting in change in direction). The scattered photons energy ($h\nu'$) is depend on incident photon energy ($h\nu$), angle of scattering ($\theta$) asshown in formula below
+\begin{equation*}
+    h\nu' = \frac{h\nu}{1+h\nu/m_{0}c^{2}(1-\cos{\theta})}
+\end{equation*}
+Where $mc^{2}$ represents electron rest mass energy (0.511 MeV). The above equation signifies when scattering angle i.e $\theta$ is $180\textdegree$  which is the case for back-scattering photons, the scattered photon transfers maximum of its energy to the electron and it gets back scattered with a minimum amount of energy. For fixed gamma ray energy, scattering angle, experimental environment and density of material of interest, the intensity of back-scatter gamma photons depends on thickness of the material. If C is back-scattered gamma count rate, $\mu$ and $\mu’$ are linear attenuation constant for incident and scattered gamma radiation beam, and t is thickness of target material then all are related with expression as
+\begin{equation}
+    C = K\{1-exp[-(\mu+\mu^{'})t]\}
+    \label{Backscatter}
+\end{equation}
+Where K is a constant. Up to a certain thickness called saturation thickness, the number of counts increases, eventually reaching saturation.
+
+\subsection{Observation}
+We took perspex(acrylic) slabs with thickness of 1 cm each. Co-60 is used
+
+\begin{table}[H]
+    \centering
+    \caption{Data on perspex Thickness, Gross Counts, and Background Subtraction counts}
+    \begin{tabular}{|c|c|c|c|c|c|c|c|}
+        \hline
+        \multirow{2}{*}{\parbox{2.2 cm}{Prx Thickness in cm}} & \multicolumn{2}{c|}{Gross Counts in ROI} & \multirow{2}{*}{\parbox{2.2 cm}{Average \\Gross Count}} & \multirow{2}{*}{\parbox{2.2 cm}{Avg Gross BKG count}} & \multirow{2}{*}{\parbox{2.5 cm}{BKG subtracted\\ Gross Count}} & \multirow{2}{*}{\parbox{2.2 cm}{Corrected Gross Count}} \\ \cline{2-3}
+        & Count 1 & Count 2 & & & & \\ \hline
+        0  & 49553 & 49471 & 49512  & 8265 & 41247  & 0     \\
+        1  & 52391 & 52489 & 52440  & 8265 & 44175  & 2928  \\
+        2  & 53315 & 53492 & 53403.5 & 8265 & 45138.5 & 4116.5 \\
+        3  & 54957 & 55002 & 54979.5 & 8265 & 46714.5 & 5496.5 \\
+        4  & 55666 & 55822 & 55744  & 8265 & 47479  & 6232  \\
+        5  & 58182 & 56012 & 56097  & 8265 & 47877  & 6630  \\
+        6  & 55580 & 56719 & 56149.5 & 8265 & 48019.5 & 6777.5 \\
+        7  & 56268 & 56434 & 56351  & 8265 & 48086  & 6839  \\
+        8  & 56381 & 56705 & 56543  & 8265 & 48278  & 7031  \\
+        9  & 56756 & 56549 & 56607.5 & 8265 & 48342.5 & 7095.5 \\
+        10 & 57237 & 56131 & 56684  & 8265 & 48419  & 7172  \\ \hline
+    \end{tabular}
+\end{table}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\linewidth]{Figures/Backscattering spectrum.pdf}
+    \caption{Spectrum of Co-60 while using acrylic slabs}
+\end{figure}
+
+\newpage
+\subsection{Result}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\linewidth]{Figures/Backscattering.pdf}
+    \caption{Prx thickness vs Corrected gross count}
+\end{figure}
+I fit the graph with the equation \ref{Backscatter}. As we can see, after a certain thickness, the counts become saturated. 
+\subsection{Application}
+\begin{itemize}
+    \item \textbf{Non‑destructive thickness gauging}: Backscatter intensity can estimate thickness of pipes, walls, or coatings without cutting into them.
+    \item \textbf{Cargo/structural inspection}: Detecting voids, foreign objects, or improper fill inside containers and barriers.
+\end{itemize}
+
+\section{Applications of scintillation detector:}
+\begin{itemize}
+    \item  \textbf{Medical Diagnostics}: Scintillators find wide application in medical diagnostics. They are utilized in CT scanners, gamma cameras, and handheld survey meters for detecting and measuring radioactive contamination. Scintillation detectors, in conjunction with photomultiplier tubes, enable accurate monitoring of nuclear material.
+    \item \textbf{Particle Detectors}: In the field of high-energy physics, scintillators are employed as particle detectors. They aid in the detection and characterization of subatomic particles produced in particle accelerators and colliders.
+    \item \textbf{X-ray Security}: Scintillator-based detectors are employed in X-ray security systems at airports and other high-security locations. These detectors enhance the detection of illicit substances and contraband items.
+    \item \textbf{Homeland Security \cite{berkeleynai2025}}: Scintillators are extensively used by the American government as radiation detectors for homeland security purposes. These detectors help in identifying and preventing the illicit transportation of radioactive materials.
+\end{itemize}
