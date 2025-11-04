@@ -1,3 +1,7 @@
+This is the draft for lab reports. Just copy and paste changing the name of the file.
+
+
+
 ------------------------------------------------
 Title: Lab Report LaTeX Format
 Author: Souvik Das
