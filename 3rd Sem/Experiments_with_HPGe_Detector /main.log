@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  4 NOV 2025 13:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  6 NOV 2025 20:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -958,11 +958,11 @@ Package hyperref Info: Link coloring ON on input line 6.
 \openout4 = `main.out'.
 
  (./Chapters/0. Frontpage.tex
-<Figures/Logos/NISER.jpg, id=59, 290.88675pt x 301.72725pt>
+<Figures/Logos/NISER.jpg, id=59, 96.36pt x 103.587pt>
 File: Figures/Logos/NISER.jpg Graphic file (type jpg)
 <use Figures/Logos/NISER.jpg>
 Package pdftex.def Info: Figures/Logos/NISER.jpg  used on input line 9.
-(pdftex.def)             Requested size: 109.26108pt x 113.33159pt.
+(pdftex.def)             Requested size: 109.26108pt x 117.455pt.
 LaTeX Font Info:    Trying to load font information for OT1+mlmss on input line 22.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/mlmodern/ot1mlmss.fd
 File: ot1mlmss.fd 2021/01/11 v1.0 Font defs for mlmodern
@@ -1058,7 +1058,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 File: Figures/Logos/NISER.jpg Graphic file (type jpg)
 <use Figures/Logos/NISER.jpg>
 Package pdftex.def Info: Figures/Logos/NISER.jpg  used on input line 108.
-(pdftex.def)             Requested size: 19.28113pt x 20.0pt.
+(pdftex.def)             Requested size: 18.60411pt x 20.0pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
@@ -1069,19 +1069,19 @@ l.108     \item \textbf
 File: Figures/Logos/NISER.jpg Graphic file (type jpg)
 <use Figures/Logos/NISER.jpg>
 Package pdftex.def Info: Figures/Logos/NISER.jpg  used on input line 116.
-(pdftex.def)             Requested size: 19.28113pt x 20.0pt.
+(pdftex.def)             Requested size: 18.60411pt x 20.0pt.
 [2{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc} </Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Apparatus/Schematic.png> </Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Apparatus/ Detector unit.png> </Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Apparatus/Upper view of Detector.png> </Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Apparatus/Electronics part.png>]
 
 File: Figures/Logos/NISER.jpg Graphic file (type jpg)
 <use Figures/Logos/NISER.jpg>
 Package pdftex.def Info: Figures/Logos/NISER.jpg  used on input line 154.
-(pdftex.def)             Requested size: 19.28113pt x 20.0pt.
+(pdftex.def)             Requested size: 18.60411pt x 20.0pt.
 [3]) (./main.bbl)
 
 File: Figures/Logos/NISER.jpg Graphic file (type jpg)
 <use Figures/Logos/NISER.jpg>
 Package pdftex.def Info: Figures/Logos/NISER.jpg  used on input line 25.
-(pdftex.def)             Requested size: 19.28113pt x 20.0pt.
+(pdftex.def)             Requested size: 18.60411pt x 20.0pt.
 [4{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}] (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
@@ -1097,13 +1097,13 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Here is how much of TeX's memory you used:
  31843 strings out of 473190
  602576 string characters out of 5715801
- 1102891 words of memory out of 5000000
+ 1102945 words of memory out of 5000000
  54419 multiletter control sequences out of 15000+600000
  618018 words of font info for 126 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  89i,15n,96p,1079b,733s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmri10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmss10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmssbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb>
-Output written on main.pdf (6 pages, 2290595 bytes).
+Output written on main.pdf (6 pages, 2191925 bytes).
 PDF statistics:
  182 PDF objects out of 1000 (max. 8388607)
  138 compressed objects within 2 object streams

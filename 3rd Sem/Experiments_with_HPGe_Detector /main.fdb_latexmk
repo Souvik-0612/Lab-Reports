@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1762243590.03678 "main.aux" "main.bbl" "main" 1762243591.32476 0
+["bibtex main"] 1762440051.14914 "main.aux" "main.bbl" "main" 1762440052.32948 0
   "./General/References.bib" 1762194747.73249 74 1c95f03d303db184999381e1335841f1 ""
   "/usr/local/texlive/2025/texmf-dist/bibtex/bst/base/plain.bst" 1292289607 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "main.aux" 1762243591.10207 2529 90edb302cc81a9b9683e4a32021949a0 "pdflatex"
+  "main.aux" 1762440052.11852 2529 538e190d036d82bb5cb4c05c5ee6c875 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1762243590.11693 "/Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /main.tex" "main.pdf" "main" 1762243591.32488 0
+["pdflatex"] 1762440051.2289 "/Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /main.tex" "main.pdf" "main" 1762440052.3296 0
   "/Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /main.tex" 1762194747.73554 667 99476f49be0c2a2a54e2713a3ebd5c8a ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1202520719 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc" 1202520719 2840 216e6e45ad352e2456e1149f28885bee ""
@@ -226,20 +226,20 @@
   "/usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1741450574 3345740 46b66fdb0378f7bf5921b5eabf1762b8 ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
   "Chapters/0. Frontpage.tex" 1762194747.73098 550 21b289cff27c95db1228f558a3057e58 ""
-  "Chapters/1. Introduction.tex" 1762243587.32046 12401 61f725b2cd1725ff531bd65e89ac8c99 ""
+  "Chapters/1. Introduction.tex" 1762259493.53952 12401 61f725b2cd1725ff531bd65e89ac8c99 ""
   "Figures/Apparatus/ Detector unit.png" 1762197634.34237 420212 be0ecbfcb5a43318464097c9520b3c68 ""
   "Figures/Apparatus/Electronics part.png" 1762197692.35828 454999 5f8f26028f20538c88ea9062d9d87e0e ""
   "Figures/Apparatus/Schematic.png" 1762197596.23151 242626 983fbc822b3c3bfd2acb2ed3c2a9d464 ""
   "Figures/Apparatus/Upper view of Detector.png" 1762197664.57632 468088 f5df9e421800cc29081337ca09524394 ""
-  "Figures/Logos/NISER.jpg" 1762194747.73161 241939 be701718d3297f6ab638b1008671f04f ""
+  "Figures/Logos/NISER.jpg" 1762439926.32119 93679 26c68ccc5db4ea5eb7bc8139b1dbc7a8 ""
   "Figures/Logos/cmrp.jpg" 1762194747.73224 234564 9949f65f716b920bc34fc5f28cbe49c8 ""
   "General/Preamble.tex" 1762194747.7324 3712 3293c2c702d6ac275dc44585dc2a8019 ""
-  "General/Settings.tex" 1762194747.73258 3255 2a73cc111576b8f5fc9dc59f001ab9ee ""
-  "main.aux" 1762243591.10207 2529 90edb302cc81a9b9683e4a32021949a0 "pdflatex"
-  "main.bbl" 1762243590.11472 96 8838869a2549dcb475bc8c95050ca131 "bibtex main"
-  "main.out" 1762243591.10268 2500 c67cdd20d2eac52e6e75b01595ddff97 "pdflatex"
+  "General/Settings.tex" 1762439890.24008 3256 98ab1ee1699abddc720661a6d3e0323e ""
+  "main.aux" 1762440052.11852 2529 538e190d036d82bb5cb4c05c5ee6c875 "pdflatex"
+  "main.bbl" 1762440051.22621 96 8838869a2549dcb475bc8c95050ca131 "bibtex main"
+  "main.out" 1762440052.11905 2500 c67cdd20d2eac52e6e75b01595ddff97 "pdflatex"
   "main.tex" 1762194747.73554 667 99476f49be0c2a2a54e2713a3ebd5c8a ""
-  "main.toc" 1762243591.10284 1166 c9b056925c4c558d4690f0ddca86cb3d "pdflatex"
+  "main.toc" 1762440052.11919 1166 c9b056925c4c558d4690f0ddca86cb3d "pdflatex"
   (generated)
   "main.aux"
   "main.log"
