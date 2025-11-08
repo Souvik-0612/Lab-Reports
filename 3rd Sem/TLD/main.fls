@@ -1,8 +1,8 @@
-PWD /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector 
+PWD /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD
 INPUT /usr/local/texlive/2025/texmf.cnf
 INPUT /usr/local/texlive/2025/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /main.tex
+INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/main.tex
 OUTPUT main.log
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/base/article.cls
@@ -344,11 +344,11 @@ INPUT ./Chapters/0. Frontpage.tex
 INPUT Chapters/0. Frontpage.tex
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/mlmodern/rm-mlmr17.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/mlmodern/rm-mlmbx12.tfm
-INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Logos/NISER.jpg
-INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Logos/NISER.jpg
-INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Logos/NISER.jpg
-INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Logos/NISER.jpg
-INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Logos/NISER.jpg
+INPUT ./Figures/Logos/NISER.jpg
+INPUT ./Figures/Logos/NISER.jpg
+INPUT ./Figures/Logos/NISER.jpg
+INPUT ./Figures/Logos/NISER.jpg
+INPUT ./Figures/Logos/NISER.jpg
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/mlmodern/rm-mlmr12.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/mlmodern/rm-mlmbx12.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/mlmodern/rm-mlmr12.tfm
@@ -371,18 +371,21 @@ INPUT ./main.toc
 INPUT ./main.toc
 INPUT main.toc
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/mlmodern/rm-mlmbx10.tfm
+OUTPUT main.toc
+INPUT ./Chapters/1. Introduction.tex
+INPUT ./Chapters/1. Introduction.tex
+INPUT Chapters/1. Introduction.tex
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/mlmodern/rm-mlmr7.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/mlmodern/rm-mlmr5.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/mlmodern/omlmlmm.fd
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/mlmodern/omlmlmm.fd
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/mlmodern/omlmlmm.fd
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/mlmodern/mlmmi10.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/mlmodern/mlmmi7.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/mlmodern/mlmmi5.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/mlmodern/omsmlmsy.fd
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/mlmodern/omsmlmsy.fd
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/mlmodern/omsmlmsy.fd
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/mlmodern/mlmsy10.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/mlmodern/mlmsy7.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/mlmodern/mlmsy5.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/mlmodern/omxmlmex.fd
@@ -392,125 +395,22 @@ INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/mlmodern/mlmex10.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
-INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-msa.cfg
-INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-msa.cfg
-INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-msa.cfg
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
+INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-msa.cfg
+INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-msa.cfg
+INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-msa.cfg
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
-INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-msb.cfg
-INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-msb.cfg
-INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-msb.cfg
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
+INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-msb.cfg
+INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-msb.cfg
+INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-msb.cfg
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
-OUTPUT main.toc
-INPUT ./Chapters/1. Introduction.tex
-INPUT ./Chapters/1. Introduction.tex
-INPUT Chapters/1. Introduction.tex
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/mlmodern/rm-mlmss12.tfm
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/mlmodern/rm-mlmssbx10.tfm
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
-INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Apparatus/Schematic.png
-INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Apparatus/Schematic.png
-INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Apparatus/Schematic.png
-INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Apparatus/Schematic.png
-INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Apparatus/Schematic.png
-INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Apparatus/ Detector unit.png
-INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Apparatus/ Detector unit.png
-INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Apparatus/ Detector unit.png
-INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Apparatus/ Detector unit.png
-INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Apparatus/ Detector unit.png
-INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Apparatus/Upper view of Detector.png
-INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Apparatus/Upper view of Detector.png
-INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Apparatus/Upper view of Detector.png
-INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Apparatus/Upper view of Detector.png
-INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Apparatus/Upper view of Detector.png
-INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Apparatus/Electronics part.png
-INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Apparatus/Electronics part.png
-INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Apparatus/Electronics part.png
-INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Apparatus/Electronics part.png
-INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Apparatus/Electronics part.png
-INPUT ./Figures/Logos/NISER.jpg
-INPUT ./Figures/Logos/NISER.jpg
-INPUT ./Figures/Logos/NISER.jpg
-INPUT ./Figures/Logos/NISER.jpg
-INPUT ./Figures/Logos/NISER.jpg
-INPUT ./Figures/Logos/NISER.jpg
-INPUT ./Figures/Logos/NISER.jpg
-INPUT ./Figures/Logos/NISER.jpg
-INPUT ./Figures/Logos/NISER.jpg
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc
-INPUT ./Figures/Logos/NISER.jpg
-INPUT ./Figures/Logos/NISER.jpg
-INPUT ./Figures/Logos/NISER.jpg
-INPUT ./Figures/Logos/NISER.jpg
-INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Radioisotopes/Cs-137_BM.pdf
-INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Radioisotopes/Cs-137_BM.pdf
-INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Radioisotopes/Cs-137_BM.pdf
-INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Radioisotopes/Cs-137_BM.pdf
-INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Radioisotopes/Cs-137_BM.pdf
-INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Radioisotopes/Co-60_BM.pdf
-INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Radioisotopes/Co-60_BM.pdf
-INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Radioisotopes/Co-60_BM.pdf
-INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Radioisotopes/Co-60_BM.pdf
-INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Radioisotopes/Co-60_BM.pdf
-INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Radioisotopes/Na-22_BP.pdf
-INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Radioisotopes/Na-22_BP.pdf
-INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Radioisotopes/Na-22_BP.pdf
-INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Radioisotopes/Na-22_BP.pdf
-INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Radioisotopes/Na-22_BP.pdf
-INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Radioisotopes/Co-57_BP.pdf
-INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Radioisotopes/Co-57_BP.pdf
-INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Radioisotopes/Co-57_BP.pdf
-INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Radioisotopes/Co-57_BP.pdf
-INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Radioisotopes/Co-57_BP.pdf
-INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Radioisotopes/Ba-133_BP.pdf
-INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Radioisotopes/Ba-133_BP.pdf
-INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Radioisotopes/Ba-133_BP.pdf
-INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Radioisotopes/Ba-133_BP.pdf
-INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Radioisotopes/Ba-133_BP.pdf
-INPUT ./Figures/Logos/NISER.jpg
-INPUT ./Figures/Logos/NISER.jpg
-INPUT ./Figures/Logos/NISER.jpg
-INPUT ./Figures/Logos/NISER.jpg
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc
-INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Observations/Energy calibration.png
-INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Observations/Energy calibration.png
-INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Observations/Energy calibration.png
-INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Observations/Energy calibration.png
-INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Observations/Energy calibration.png
-INPUT ./Figures/Logos/NISER.jpg
-INPUT ./Figures/Logos/NISER.jpg
-INPUT ./Figures/Logos/NISER.jpg
-INPUT ./Figures/Logos/NISER.jpg
-INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Observations/Efficiency calibration.PNG
-INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Observations/Efficiency calibration.PNG
-INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Observations/Efficiency calibration.PNG
-INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Observations/Efficiency calibration.PNG
-INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Observations/Efficiency calibration.PNG
-INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Observations/Soil.PNG
-INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Observations/Soil.PNG
-INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Observations/Soil.PNG
-INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Observations/Soil.PNG
-INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Observations/Soil.PNG
-INPUT ./Figures/Logos/NISER.jpg
-INPUT ./Figures/Logos/NISER.jpg
-INPUT ./Figures/Logos/NISER.jpg
-INPUT ./Figures/Logos/NISER.jpg
-INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Observations/Water.PNG
-INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Observations/Water.PNG
-INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Observations/Water.PNG
-INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Observations/Water.PNG
-INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Observations/Water.PNG
 INPUT ./main.bbl
 INPUT ./main.bbl
 INPUT main.bbl
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/mlmodern/rm-mlmri10.tfm
 INPUT ./Figures/Logos/NISER.jpg
 INPUT ./Figures/Logos/NISER.jpg
 INPUT ./Figures/Logos/NISER.jpg
@@ -521,13 +421,7 @@ INPUT ./main.out
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmbx10.pfb
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmbx12.pfb
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmmi10.pfb
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmmi7.pfb
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmr10.pfb
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmr7.pfb
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmri10.pfb
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmss10.pfb
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmssbx10.pfb
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmsy10.pfb
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmsy7.pfb
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb

@@ -153,6 +153,22 @@ process involves the following steps:\vspace{2 mm}
     sources and checking if the measured energies match the expected values.
 \end{itemize}
 
+\subsection{Used radio active sources}
+% make figures with 3 by 2 grid
+\begin{figure}[H]
+    \centering
+    \begin{tabular}{ccc}
+        \includegraphics[width=0.3\textwidth]{/Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Radioisotopes/Cs-137_BM.pdf} &
+        \includegraphics[width=0.3\textwidth]{/Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Radioisotopes/Co-60_BM.pdf} &
+        \includegraphics[width=0.3\textwidth]{/Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Radioisotopes/Na-22_BP.pdf} \\
+        (a) Cs-137 & (b) Co-60 & (c) Na-22 \\ 
+        \includegraphics[width=0.3\textwidth]{/Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Radioisotopes/Co-57_BP.pdf} &
+        \includegraphics[width=0.3\textwidth]{/Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Radioisotopes/Ba-133_BP.pdf} \\
+        (d) Co-57 & (e) Ba-133  \\
+    \end{tabular}
+    \caption{Images of Radioactive Sources used in the Experiment\cite{LNHB_LARAWEB}}
+\end{figure}
+
 \subsection{Absolute efficiency calibration of HPGe detector}\
 Absolute efficiency calibration involves determining the efficiency of the HPGe
 detector for detecting gamma rays at different energies. This is essential for
@@ -186,14 +202,70 @@ samples using the calibrated HPGe detector, follow these steps:\vspace{2 mm}
     HPGe detector and acquire spectra for a sufficient duration to obtain clear peaks.
     \item \textbf{Peak Identification:} Analyze the acquired spectra to identify
     peaks corresponding to different radionuclides using the energy calibration curve.
-    \item \textbf{Activity Calculation:} Calculate the activity concentration of
-    each identified radionuclide using the formula:
-    \[ C = \frac{N(E)}{\epsilon(E) \cdot P(E) \cdot t \cdot V} \]
-    where \( C \) is the activity concentration, \( N(E) \) is the net peak area,
-    \( \epsilon(E) \) is the absolute efficiency, \( P(E) \) is the emission probability,
-    \( t \) is the counting time, and \( V \) is the volume of the sample.  
 \end{itemize}
-\section{Observation}   
 
+
+
+\section{Observation \& Analysis}   
+\subsection{Energy calibration}
+For the purpose of energy calibration, standard gamma-emitting radionuclides—Cobalt-60, Cobalt-57, Ba-133, Na-22 and
+Cesium-137—were employed. The gamma-ray spectra of each nuclide were recorded under identical conditions with an
+acquisition time of 100 seconds. For each spectrum, the channel number corresponding to the centroid (peak position)
+of the Gaussian-shaped photopeak was determined. The known gamma-ray energies associated with these radionuclides were then plotted against the
+respective channel numbers to establish a calibration curve. A linear regression analysis was performed to derive the
+calibration equation, which relates channel number to energy in keV. This calibration curve is essential for accurately determining the energies of unknown gamma-ray peaks in subsequent measurements.
+%include a image
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.499\textwidth]{/Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Observations/Energy calibration.png}
+    \caption{Energy Calibration Plot of HPGe Detector}
+\end{figure}
+
+\subsection{Absolute efficiency calibration}
+To achieve absolute efficiency calibration of the HPGe detector, standard gamma-emitting radionuclides Cobalt-60, Cobalt-57, Ba-133, Na-22 and Cesium-137—were utilized. The absolute efficiency of the detector was determined by measuring the count rates of these radionuclides at known activity levels.
+Using given activity we can find the activity in the time experiment using decay formula:
+\[ A = A_0 e^{-\lambda t} \]
+where \( A \) is the activity at time \( t \), \( A_0 \) is the initial activity, and \( \lambda \) is the decay constant of the radionucl
+%include a table
+\begin{table}[H]
+    \centering
+    \begin{tabular}{ll} \
+        \textbf{Radionuclide} & \textbf{Activity (kBq)} \\ \midrule
+        Ba-133 & 120.557 \\
+        Cs-137 & 102.8275\\
+        Co-57 & 4.9983\\
+        Co-60 & 98.0729\\
+        Na-22 & 45.475\\ \bottomrule
+    \end{tabular}
+    \caption{Calculated Activities for Standard Radionuclides using decay formula}
+\end{table}
+The measured count rates were then compared to the expected count rates calculated from the known activities and the detector's geometry. A calibration curve was established to relate the measured count rates to the absolute efficiency of the detector at different energies.
+%include a image
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.499\textwidth]{/Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Observations/Efficiency calibration.PNG}
+    \caption{Absolute Efficiency Calibration Plot of HPGe Detector}
+\end{figure}
+
+\subsection{Identification of radionuclides and measurement of their activity concentration present in environmental samples}
+High-purity germanium (HPGe) detectors are widely employed for high-resolution gamma spectrometry due to their superior energy resolution. In essence, radionuclides present in the soil emit gamma photons at characteristic energies, which interact with the germanium crystal of the detector. These interactions generate electrical signals proportional to the energies of the incident photons. The signals are then amplified and transmitted to a Multi-Channel Analyser (MCA), where they are displayed as a spectrum representing emission counts versus photon energy. The accompanying software processes the spectral data, converting peak counts into specific activity values through appropriate calibration procedures.
+
+For this experiment, two types of samples—tap water (100 mL) and soil (from the CMRP garden) (181 g)—were prepared and subjected to gamma-ray spectrometric analysis using identical measurement conditions. The spectra for each sample were recorded with a counting time of 1000 seconds.
+%include image
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.499\textwidth]{/Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Observations/Soil.PNG}
+    \caption{In the soil sample we can see the presence of K-40 radionuclides.}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.499\textwidth]{/Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Observations/Water.PNG}
+    \caption{In the water sample we can see the presence of K-40 radionuclides.}
+\end{figure}
+
+\section{Applications in medical physics}
+High Purity Germanium (HPGe) detectors play a crucial role in medical physics, particularly in the field of nuclear medicine and radiation therapy. Their high energy resolution allows for precise identification and quantification of gamma-emitting radionuclides used in diagnostic imaging and therapeutic applications. HPGe detectors are employed in the calibration of radiopharmaceuticals, ensuring accurate dosimetry for patient treatments. Additionally, they are used in quality control processes to verify the purity and activity of radioactive sources, contributing to patient safety and effective treatment outcomes. The ability of HPGe detectors to provide detailed spectral information enhances the accuracy of imaging techniques such as Single Photon Emission Computed Tomography (SPECT) and Positron Emission Tomography (PET), ultimately improving diagnostic capabilities in medical practice.
 
 \section{Conclusion}
+The experiment successfully demonstrated the energy calibration and absolute efficiency calibration of the HPGe detector using standard gamma-emitting radionuclides. The established calibration curves enable accurate identification and quantification of radionuclides in environmental samples. The analysis of soil and tap water samples revealed the presence of K-40 radionuclides, highlighting the detector's capability for environmental radioactivity assessment. Overall, the HPGe detector proved to be an effective tool for high-resolution gamma spectrometry in environmental studies.

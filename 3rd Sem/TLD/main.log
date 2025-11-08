@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  7 NOV 2025 19:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  7 NOV 2025 20:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /main.tex"
-(/Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /main.tex
+**"/Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/main.tex"
+(/Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/main.tex
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
 (/usr/local/texlive/2025/texmf-dist/tex/latex/base/article.cls
@@ -958,10 +958,10 @@ Package hyperref Info: Link coloring ON on input line 6.
 \openout4 = `main.out'.
 
  (./Chapters/0. Frontpage.tex
-</Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Logos/NISER.jpg, id=79, 96.36pt x 103.587pt>
-File: /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Logos/NISER.jpg Graphic file (type jpg)
-<use /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Logos/NISER.jpg>
-Package pdftex.def Info: /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Logos/NISER.jpg  used on input line 9.
+<Figures/Logos/NISER.jpg, id=31, 96.36pt x 103.587pt>
+File: Figures/Logos/NISER.jpg Graphic file (type jpg)
+<use Figures/Logos/NISER.jpg>
+Package pdftex.def Info: Figures/Logos/NISER.jpg  used on input line 9.
 (pdftex.def)             Requested size: 109.26108pt x 117.455pt.
 LaTeX Font Info:    Trying to load font information for OT1+mlmss on input line 22.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/mlmodern/ot1mlmss.fd
@@ -971,7 +971,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `mlmss' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-<Figures/Logos/cmrp.jpg, id=81, 1606.0pt x 1208.515pt>
+<Figures/Logos/cmrp.jpg, id=33, 1606.0pt x 1208.515pt>
 File: Figures/Logos/cmrp.jpg Graphic file (type jpg)
 <use Figures/Logos/cmrp.jpg>
 Package pdftex.def Info: Figures/Logos/cmrp.jpg  used on input line 27.
@@ -980,37 +980,7 @@ Package pdftex.def Info: Figures/Logos/cmrp.jpg  used on input line 27.
 
 [1
 
-{/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc} </Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Logos/NISER.jpg> <./Figures/Logos/cmrp.jpg>]) (./main.toc
-LaTeX Font Info:    Trying to load font information for OML+mlmm on input line 3.
- (/usr/local/texlive/2025/texmf-dist/tex/latex/mlmodern/omlmlmm.fd
-File: omlmlmm.fd 2021/01/11 v1.0 Font defs for mlmodern
-)
-LaTeX Font Info:    Trying to load font information for OMS+mlmsy on input line 3.
- (/usr/local/texlive/2025/texmf-dist/tex/latex/mlmodern/omsmlmsy.fd
-File: omsmlmsy.fd 2021/01/11 v1.0 Font defs for mlmodern
-)
-LaTeX Font Info:    Trying to load font information for OMX+mlmex on input line 3.
- (/usr/local/texlive/2025/texmf-dist/tex/latex/mlmodern/omxmlmex.fd
-File: omxmlmex.fd 2021/01/11 v1.0 Font defs for mlmodern
-)
-LaTeX Font Info:    External font `mlmex10' loaded for size
-(Font)              <10> on input line 3.
-LaTeX Font Info:    External font `mlmex10' loaded for size
-(Font)              <7> on input line 3.
-LaTeX Font Info:    External font `mlmex10' loaded for size
-(Font)              <5> on input line 3.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 3.
- (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-msa.cfg
-File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 3.
- (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) (/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-msb.cfg
-File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-))
+{/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc} <./Figures/Logos/NISER.jpg> <./Figures/Logos/cmrp.jpg>]) (./main.toc)
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
@@ -1030,142 +1000,49 @@ LaTeX Font Warning: Font shape `OMS/mlmss/bx/n' undefined
 (Font)              using `OMS/cmsy/m/n' instead
 (Font)              for symbol `textbar' on input line 1.
 
-</Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Apparatus/Schematic.png, id=116, 687.56876pt x 729.72626pt>
-File: /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Apparatus/Schematic.png Graphic file (type png)
-<use /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Apparatus/Schematic.png>
-Package pdftex.def Info: /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Apparatus/Schematic.png  used on input line 77.
-(pdftex.def)             Requested size: 182.09486pt x 193.25406pt.
-</Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Apparatus/ Detector unit.png, id=117, 513.92pt x 728.7225pt>
-File: /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Apparatus/ Detector unit.png Graphic file (type png)
-<use /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Apparatus/ Detector unit.png>
-Package pdftex.def Info: /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Apparatus/ Detector unit.png  used on input line 78.
-(pdftex.def)             Requested size: 182.09486pt x 258.20348pt.
-</Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Apparatus/Upper view of Detector.png, id=118, 607.26875pt x 563.10374pt>
-File: /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Apparatus/Upper view of Detector.png Graphic file (type png)
-<use /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Apparatus/Upper view of Detector.png>
-Package pdftex.def Info: /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Apparatus/Upper view of Detector.png  used on input line 80.
-(pdftex.def)             Requested size: 182.09486pt x 168.8465pt.
-</Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Apparatus/Electronics part.png, id=119, 612.2875pt x 568.1225pt>
-File: /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Apparatus/Electronics part.png Graphic file (type png)
-<use /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Apparatus/Electronics part.png>
-Package pdftex.def Info: /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Apparatus/Electronics part.png  used on input line 81.
-(pdftex.def)             Requested size: 182.09486pt x 168.95569pt.
+LaTeX Font Info:    Trying to load font information for OML+mlmm on input line 3.
+(/usr/local/texlive/2025/texmf-dist/tex/latex/mlmodern/omlmlmm.fd
+File: omlmlmm.fd 2021/01/11 v1.0 Font defs for mlmodern
+)
+LaTeX Font Info:    Trying to load font information for OMS+mlmsy on input line 3.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/mlmodern/omsmlmsy.fd
+File: omsmlmsy.fd 2021/01/11 v1.0 Font defs for mlmodern
+)
+LaTeX Font Info:    Trying to load font information for OMX+mlmex on input line 3.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/mlmodern/omxmlmex.fd
+File: omxmlmex.fd 2021/01/11 v1.0 Font defs for mlmodern
+)
+LaTeX Font Info:    External font `mlmex10' loaded for size
+(Font)              <7> on input line 3.
+LaTeX Font Info:    External font `mlmex10' loaded for size
+(Font)              <5> on input line 3.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 3.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 3.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+)) (./main.bbl
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
-
-
-<Figures/Logos/NISER.jpg, id=122, 96.36pt x 103.587pt>
-File: Figures/Logos/NISER.jpg Graphic file (type jpg)
-<use Figures/Logos/NISER.jpg>
-Package pdftex.def Info: Figures/Logos/NISER.jpg  used on input line 108.
-(pdftex.def)             Requested size: 18.60411pt x 20.0pt.
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.108     \item \textbf
-                       {Pre-amplifier:} High-purity Ge detectors are usually... [1 <./Figures/Logos/NISER.jpg>]
-
-File: Figures/Logos/NISER.jpg Graphic file (type jpg)
-<use Figures/Logos/NISER.jpg>
-Package pdftex.def Info: Figures/Logos/NISER.jpg  used on input line 116.
-(pdftex.def)             Requested size: 18.60411pt x 20.0pt.
-[2{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc} </Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Apparatus/Schematic.png> </Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Apparatus/ Detector unit.png> </Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Apparatus/Upper view of Detector.png> </Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Apparatus/Electronics part.png>]
-
-File: Figures/Logos/NISER.jpg Graphic file (type jpg)
-<use Figures/Logos/NISER.jpg>
-Package pdftex.def Info: Figures/Logos/NISER.jpg  used on input line 154.
-(pdftex.def)             Requested size: 18.60411pt x 20.0pt.
-[3]
-</Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Radioisotopes/Cs-137_BM.pdf, id=147, 290.77383pt x 225.84375pt>
-File: /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Radioisotopes/Cs-137_BM.pdf Graphic file (type pdf)
-<use /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Radioisotopes/Cs-137_BM.pdf>
-Package pdftex.def Info: /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Radioisotopes/Cs-137_BM.pdf  used on input line 161.
-(pdftex.def)             Requested size: 136.57462pt x 106.07764pt.
-</Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Radioisotopes/Co-60_BM.pdf, id=148, 327.47343pt x 254.07422pt>
-File: /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Radioisotopes/Co-60_BM.pdf Graphic file (type pdf)
-<use /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Radioisotopes/Co-60_BM.pdf>
-Package pdftex.def Info: /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Radioisotopes/Co-60_BM.pdf  used on input line 162.
-(pdftex.def)             Requested size: 136.57462pt x 105.9622pt.
-</Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Radioisotopes/Na-22_BP.pdf, id=149, 266.30742pt x 197.61328pt>
-File: /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Radioisotopes/Na-22_BP.pdf Graphic file (type pdf)
-<use /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Radioisotopes/Na-22_BP.pdf>
-Package pdftex.def Info: /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Radioisotopes/Na-22_BP.pdf  used on input line 163.
-(pdftex.def)             Requested size: 136.57462pt x 101.34831pt.
-</Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Radioisotopes/Co-57_BP.pdf, id=150, 376.40625pt x 282.30469pt>
-File: /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Radioisotopes/Co-57_BP.pdf Graphic file (type pdf)
-<use /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Radioisotopes/Co-57_BP.pdf>
-Package pdftex.def Info: /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Radioisotopes/Co-57_BP.pdf  used on input line 165.
-(pdftex.def)             Requested size: 136.57462pt x 102.43082pt.
-</Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Radioisotopes/Ba-133_BP.pdf, id=151, 364.17305pt x 282.30469pt>
-File: /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Radioisotopes/Ba-133_BP.pdf Graphic file (type pdf)
-<use /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Radioisotopes/Ba-133_BP.pdf>
-Package pdftex.def Info: /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Radioisotopes/Ba-133_BP.pdf  used on input line 166.
-(pdftex.def)             Requested size: 136.57462pt x 105.8683pt.
-
-
-File: Figures/Logos/NISER.jpg Graphic file (type jpg)
-<use Figures/Logos/NISER.jpg>
-Package pdftex.def Info: Figures/Logos/NISER.jpg  used on input line 199.
-(pdftex.def)             Requested size: 18.60411pt x 20.0pt.
-[4{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc} </Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Radioisotopes/Cs-137_BM.pdf> </Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Radioisotopes/Co-60_BM.pdf
-
-pdfTeX warning: pdflatex (file /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Radioisotopes/Co-60_BM.pdf): PDF inclusion: multiple pdfs with page group included in a single page
-> </Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Radioisotopes/Na-22_BP.pdf
-
-pdfTeX warning: pdflatex (file /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Radioisotopes/Na-22_BP.pdf): PDF inclusion: multiple pdfs with page group included in a single page
-> </Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Radioisotopes/Co-57_BP.pdf
-
-pdfTeX warning: pdflatex (file /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Radioisotopes/Co-57_BP.pdf): PDF inclusion: multiple pdfs with page group included in a single page
-> </Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Radioisotopes/Ba-133_BP.pdf
-
-pdfTeX warning: pdflatex (file /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Radioisotopes/Ba-133_BP.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->]
-</Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Observations/Energy calibration.png, id=328, 469.00218pt x 410.2828pt>
-File: /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Observations/Energy calibration.png Graphic file (type png)
-<use /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Observations/Energy calibration.png>
-Package pdftex.def Info: /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Observations/Energy calibration.png  used on input line 220.
-(pdftex.def)             Requested size: 227.16357pt x 198.71771pt.
-
-
-File: Figures/Logos/NISER.jpg Graphic file (type jpg)
-<use Figures/Logos/NISER.jpg>
-Package pdftex.def Info: Figures/Logos/NISER.jpg  used on input line 242.
-(pdftex.def)             Requested size: 18.60411pt x 20.0pt.
-[5 </Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Observations/Energy calibration.png>]
-</Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Observations/Efficiency calibration.PNG, id=337, 517.935pt x 447.17062pt>
-File: /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Observations/Efficiency calibration.PNG Graphic file (type png)
-<use /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Observations/Efficiency calibration.PNG>
-Package pdftex.def Info: /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Observations/Efficiency calibration.PNG  used on input line 246.
-(pdftex.def)             Requested size: 227.16357pt x 196.12793pt.
-</Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Observations/Soil.PNG, id=338, 1177.39874pt x 606.265pt>
-File: /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Observations/Soil.PNG Graphic file (type png)
-<use /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Observations/Soil.PNG>
-Package pdftex.def Info: /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Observations/Soil.PNG  used on input line 257.
-(pdftex.def)             Requested size: 227.16357pt x 116.9677pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-File: Figures/Logos/NISER.jpg Graphic file (type jpg)
-<use Figures/Logos/NISER.jpg>
-Package pdftex.def Info: Figures/Logos/NISER.jpg  used on input line 260.
-(pdftex.def)             Requested size: 18.60411pt x 20.0pt.
-[6 </Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Observations/Efficiency calibration.PNG>]
-</Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Observations/Water.PNG, id=346, 1081.03876pt x 489.83pt>
-File: /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Observations/Water.PNG Graphic file (type png)
-<use /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Observations/Water.PNG>
-Package pdftex.def Info: /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Observations/Water.PNG  used on input line 263.
-(pdftex.def)             Requested size: 227.16357pt x 102.92712pt.
-) (./main.bbl)
+)
 
 File: Figures/Logos/NISER.jpg Graphic file (type jpg)
 <use Figures/Logos/NISER.jpg>
 Package pdftex.def Info: Figures/Logos/NISER.jpg  used on input line 25.
 (pdftex.def)             Requested size: 18.60411pt x 20.0pt.
-[7 </Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Observations/Soil.PNG> </Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Experiments_with_HPGe_Detector /Figures/Observations/Water.PNG>] (./main.aux)
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.25 \newpage
+              [1] (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -1175,21 +1052,21 @@ L3 programming layer <2025-01-18>
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: C6E0371F95778CC6CF09EE370E4CE6F8;3988.
+(rerunfilecheck)             Checksum: 033A0347358B9D7B6F2ADCD4E38DF569;533.
  ) 
 Here is how much of TeX's memory you used:
- 31957 strings out of 473190
- 611443 string characters out of 5715801
- 1102945 words of memory out of 5000000
- 54498 multiletter control sequences out of 15000+600000
- 618848 words of font info for 136 fonts, out of 8000000 for 9000
+ 31687 strings out of 473190
+ 597243 string characters out of 5715801
+ 1092898 words of memory out of 5000000
+ 54344 multiletter control sequences out of 15000+600000
+ 604334 words of font info for 88 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 89i,16n,96p,1079b,733s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmmi7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmri10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmss10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmssbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmsy7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb>
-Output written on main.pdf (9 pages, 2692539 bytes).
+ 89i,15n,96p,1051b,733s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmss10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmssbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb>
+Output written on main.pdf (3 pages, 438726 bytes).
 PDF statistics:
- 428 PDF objects out of 1000 (max. 8388607)
- 311 compressed objects within 4 object streams
- 37 named destinations out of 1000 (max. 500000)
- 35053 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 95 PDF objects out of 1000 (max. 8388607)
+ 72 compressed objects within 1 object stream
+ 8 named destinations out of 1000 (max. 500000)
+ 28743 words of extra memory for PDF output out of 29859 (max. 10000000)
 

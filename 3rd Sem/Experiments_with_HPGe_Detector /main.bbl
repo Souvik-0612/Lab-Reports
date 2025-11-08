@@ -3,4 +3,10 @@
 \bibitem{Lab}
 {\em Lab Report, CMRP, NISER}.
 
+\bibitem{LNHB_LARAWEB}
+{Laboratoire National Henri Becquerel (LNHB)}.
+\newblock Laraweb: Library for gamma and alpha emissions — nucléide–lara web application.
+\newblock \url{http://www.lnhb.fr/Laraweb/}, 2025.
+\newblock Accessed: 2025-11-06.
+
 \end{thebibliography}
