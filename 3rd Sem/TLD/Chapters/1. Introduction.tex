@@ -13,5 +13,66 @@
 \end{itemize}
 \section{Theory}
 \section{Observation}
+\begin{table}[H]
+\centering
+\caption{Intensity values for different doses}
+\begin{tabular}{ccccccccc}
+\hline
+\textbf{Dose (Gy)} & \textbf{A} & \textbf{B} & \textbf{C} & \textbf{D} & \textbf{E} & \textbf{Net Intensity} \\
+\hline
+Background & 842326 & 8401365 & 7377735 & 1443072 & 12047312 & 0 \\
+0.5 & 42366729 & 46893479 & 36180595 & 48441922 & 54392237 & 39632630.4 \\
+1 & 72423155 & 80360004 & 73245158 & 82007274 & 73189478 & 70222651.8 \\
+2 & 94610261 & 93586371 & 99646954 & 94782233 & 91800276  & 88862857 \\
+3 & 97315644 & 10255814 & 110922831 & 111687756 & 108736283  & 100221763.6 \\
+4 & 118198629 & 117279687 & 121895156 & 112600457 & 117156973  & 111403818.4 \\
+6 & 129900901 & 129918209 & 134048179 & 127953661 & 126380141  & 123474018.2 \\
+Unknown A & 105077687 & 107876926 & 107610287 & 99717134 & 104853017  & 99004648.2 \\
+Unknown B & 119925678 & 120381880 & 116170288 & 118524838 & 120983219  & 113174818.6 \\
+\hline
+\end{tabular}
+\end{table}
 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{/Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/TL intensity vs Dose.pdf}
+    \caption{Dose vs Average Intensity graph for CaSO4: Dy TLD.}
+\end{figure}
+From the graph, we can see that the relationship between dose and intensity is linear. Using the linear fit equation, we can calculate the unknown doses.
+Using the linear fit equation:
+\[\boxed{\text{Dose} = \frac{I - 5.12\times10^7}{1.37\times10^{7}}}
+\]
+Where I = Intensity. So for unknown A: the intensity is 99004648.2
+\[\text{Dose} = \frac{99004648.2 - 5.12\times10^7}{1.37\times10^{7}} = \boxed{3.489} \text{ Gy}\]
+Similarly, for unknown B: the intensity is 113174818.6
+\[\text{Dose} = \frac{113174818.6 - 5.12\times10^7}{1.37\times10^{7}} = \boxed{4.524} \text{ Gy}\]
+So the relative errors in the calculated doses are:
+For unknown A:
+
+
+
+\subsection{Heating rate analysis}
+\begin{table}[H]
+\centering
+\caption{Intensity values for different doses}
+\begin{tabular}{ccccccc}
+\hline
+\textbf{Heating rate(°C/s)} & \textbf{A} & \textbf{B} &\textbf{C} & \textbf{Bg A} & \textbf{Bg B} & \textbf{Net Intensity} \\
+\hline
+1 & 128731197 & 156087955 & 130975226 & 4211945 & 28177825 & 122403241 \\
+1.5 & 91896493 & 106535449 & 111177232 & 5737988 & 34929935 & 82869096.5 \\
+2 & 97266471 & 77432993 & 109717659 & 17155082 & 2693598 & 84881367.67 \\
+2.5 & 93535507 & 81280319 & 87006715 & 15384092 & 23027192 & 68068538.33 \\
+3 & 88523949 & 75226109 & 72113909 & 7197779 & 16678551 & 66683157.33 \\
+4 & 69037517 & 63641046 & 65486040 & 69037517 & 307269 & 31382474.67 \\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{/Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/Heatingrate.pdf}
+    \caption{ Average Intensity graph for CaSO4: Dy TLD vs Heating rate}
+\end{figure}
 \section{Conclusion}
