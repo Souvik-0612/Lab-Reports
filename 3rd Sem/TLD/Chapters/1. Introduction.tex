@@ -12,7 +12,169 @@
     \item Radiation-generating equipment
 \end{itemize}
 \section{Theory}
+In a perfect crystalline insulator, the conduction and valence bands are separated by an energy
+difference of several eV, and there are no intermediate energy levels within the band gap. 
+Lumininescence detectors are created by adding impurities (activators) to the crystal structure that
+create energy levels within the band gap. When ionizing radiation interacts with the crystal, it
+excites electrons from the valence band to the conduction band(Fig. \ref{fig:mechanism}a), leaving behind holes in the valence
+band. Some of these electrons and holes become trapped at the impurity levels, creating metastable
+states. The trapped electrons and holes can later be released by providing energy, such as heat
+(thermoluminescence) or light (optically stimulated luminescence). In the absence of external
+stimulation, the trapped charges can remain in their metastable states for extended periods,
+ranging from hours to years, depending on the stability of the traps.
+
+During the readout process [Fig. \ref{fig:mechanism}(b)], stimulation by heat
+(TL) or light (OSL) releases the trapped charges. Once the
+trapped electron is released, it can recombine with the trapped
+hole, creating a defect in the excited state. TL or OSL results
+from the relaxation of these defects to return to the ground
+state by light emission. One should keep in mind that this
+model is simplified. Actual TL and OSL materials have many
+defects that may not give rise to observable TL/OSL signals
+but may act as competitors for the transitions represented in
+Fig. \ref{fig:mechanism}, causing changes in the TL/OSL properties. These
+competitors give rise to phenomena such as supralinearity of
+the dose response and sensitivity changes with detector's dose
+and annealing history.
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{/Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Theory/Mechanism.png}
+    \caption{Simplified energy level diagram representing the delocalized bands (valence band and conduction band) and the electronic transitions in Thermolumines-
+cent/optically stimulated luminescent material during irradiation (a) and readout (b) where stimulation is provided by heat or light. In this illustration, the hole
+trap is more stable than the electron trap. Therefore, the electron trap is said to act as a trapping center, whereas the hole trap is said to act as a recombination
+center.\cite{https://doi.org/10.1002/mp.13839}}
+    \label{fig:mechanism}
+\end{figure}
+
+Thermoluminescent dosimeters are read by increasing the
+temperature of the detector while monitoring the TL emitted,
+either creating a glow curve graph of signal vs temperature or
+by recording the total signal for a portion of the heating pro-
+cess. In the former, the TL signal can be defined as the maxi-
+mum intensity of a TL peak or the integrated TL intensity
+over a region of interest. Figure \ref{fig:tl100} illustrates a glow curve
+for LiF:Mg,Ti (TLD-100). Different trapping centers have
+different depths within the bandgap that require different tem-
+peratures for release. As the detector is heated, these trapping
+centers are stimulated sequentially, giving rise to a series of
+peaks. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{/Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Theory/TL100.png}
+    \caption{Thermoluminescent curves of LiF:Mg,Ti (TLD-100) subjected to different preirradiation annealing treatments. Peaks 1–5 correspond to different trapping centers (which yield signal at different temperatures); peak 5 occurs at the temperature of maximum signal.\cite{https://doi.org/10.1002/mp.13839}}
+    \label{fig:tl100}
+\end{figure}
+
+Both the temperature of the maximum peak and the
+maximum TL signal depend on the heating rate. To minimize
+the effect of heating rate fluctuations, the integral of the TL
+signal rather than its maximum is typically used to determine
+the dose. TL peaks with maxima around 200-225°C are best
+for dosimetry because of their stability at room temperature
+(Peak 5 in Fig. \ref{fig:tl100}). TL peaks at lower temperatures are due to
+shallow trapping levels in the band gap and may be unstable
+at room temperature. TL peaks appearing at higher temperatures may suffer interference from infrared black-body 
+radiation and spurious signals. These effects are mitigated by
+using a bandpass filter to eliminate the infrared signals and
+by flowing an inert gas such as $N_2$ or $Ar$ over the TL 
+phosphor during heating to reduce spurious signals. The relative
+importance of these peaks and the sensitivity of the detector
+will depend on annealing regimens before irradiation.
+Because the TL readout depletes the majority of the trapping
+centers, less than 1\% of the original signal should be
+observed if the material is read again without irradiation.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{/Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Theory/TLD reader.png}
+    \caption{Schematic diagram of a typical thermoluminescent dosimeter (TLD) reader.\cite{https://doi.org/10.1002/mp.13839}}
+    \label{fig:tld reader}
+\end{figure}
+While different peaks can include different information
+about the irradiation, in clinical practice the standard practice
+is to simply integrate the entire glow curve to yield the overall
+signal. To ensure reproducible results, a consistent heating
+cycle should be used.
+
+Figure \ref{fig:tld reader} presents a typical configuration for a TLD
+reader. The heating source can be an ohmically heated pan,
+preheated $N_2$ gas, or an infrared light source. A typical heating cycle consists of a rapid increase to a moderate
+temperature during which the signal, primarily from unstable
+traps, is not recorded, followed by a linear temperature
+increase during which the TL glow curve is measured (e.g.,
+peak 5 in Fig. \ref{fig:tl100}). The final step is heating the crystal to a
+high temperature to anneal the TLD, emptying the deep traps
+that were untouched at lower temperatures.
+
+
+\subsection{Types of TLD/OSLD}
+
+Thermoluminescent dosimeter (TLD) and optically stimulated luminescent dosimeter (OSLD) materials available commercially along with example commercial names, density $\rho$, effective atomic number Zeff, temperature of the main TL peak, and typical emission wavelength, sensitivity relative to LiF and fading.
+\begin{table}[ht]
+\centering
+\resizebox{\textwidth}{!}{
+\begin{tabular}{l l c c c c c c c}
+\hline
+Material & Commercial Name & $\rho$ & $Z_{\text{eff}}$ & Glow Peak ($^\circ$C) & Emission (nm) & TL Sens. & Fading \\
+\hline
+
+LiF:Mg,Ti (TL) & TLD-100 & 2.6 & 8.31 & $\sim$235 & $\sim$410 & Referent & 5\% in 3--12 months \\
+
+$^{6}$LiF:Mg,Ti (TL) & TLD-600 & 2.6 & 8.31 & $\sim$235 & $\sim$410 & 1.0 & 5\% in 3--12 months \\
+
+$^{7}$LiF:Mg,Ti (TL) & TLD-700 & 2.6 & 8.31 & $\sim$235 & $\sim$410 & 1.0 & 5\% in 3--12 months \\
+
+LiF:Mg,Cu,P (TL) & TLD-100H & 2.5 & 8.31 & $\sim$200 & $\sim$370 & 30  & 2\% in 3 months \\
+
+Li$_2$B$_4$O$_7$:Mn (TL) & TLD-800 & 2.3 & 7.32 & $\sim$185 & $\sim$600 & 0.3 & 5--10\% in 3 months \\
+
+CaF$_2$:Dy (TL) & TLD-200 & 3.18 & 16.90 & $\sim$160,185,245,290 & 480,575,660,750 & 30 & 25\% in 4 weeks \\
+
+CaF$_2$:Mn (TL) & TLD-400 & 3.18 & 16.90 & $\sim$300 & $\sim$495 & 10 & 15\% in 2--4 weeks \\
+
+\textbf{CaSO$_4$:Dy (TL)} & \textbf{TLD-900} & \textbf{2.61} & \textbf{15.62} & $\sim$220 & \textbf{480,575,660,750} & \textbf{15} & \textbf{6\% in 6 months} \\
+
+Al$_2$O$_3$:C (OSL) & nanoDot & 3.95 & 11.28 & $\sim$200 & $\sim$410 & N/A & 4\% in 3 months \\
+
+BeO (OSL) & Thermolox 995 & 2.85 & 7.21 & $\sim$210,330 & $\sim$335,390 & N/A  & 5--10\% in 3 months \\
+
+\hline
+\end{tabular}
+}
+\end{table}
+
+\subsection{TLD forms}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{/Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Theory/TLD forms.png}
+    \caption{Different forms of TLDs \cite{https://doi.org/10.1002/mp.13839}}
+    \label{fig:tld forms}
+\end{figure}
+
+Thermoluminescent dosimeters can be purchased in different forms that offer different advantages and disadvantages. 
+The main forms are powder and solid (Fig. \ref{fig:tld forms}), including rods, chips, disks, and microcubes. With powder it is possible
+ to generate a large number of TLD with uniform characteristics. However, powder is challenging to use in terms of loading,
+  handling, and annealing. Powder form is also sensitive to mass and powder distribution during readout. The mass of the powder
+   is important: if the mass is too large, excessive self-attenuation of the TL occurs, which decreases the apparent sensitivity.
+    Problems also arise for small masses. For masses $<$ 18 mg, the signal/mass becomes dependent on the mass; therefore,
+     only masses $>$ 20 mg should be used. The distribution of powder on the heating pan also requires attention, 
+     as the centering and distribution of the powder can affect the signal/mass by several percent. In contrast
+      to a powder form, solid forms can readily be annealed and reused indefinitely if appropriate procedures are 
+      followed. However, because each detector is unique, each will show variability in sensitivity that needs to
+       be accounted for. Solid forms are also sensitive to being scratched or chipped, and additional care is required in their handling.
+
+
+
+
+
+
+
+
 \section{Observation}
+
+
 \begin{table}[H]
 \centering
 \caption{Intensity values for different doses}
@@ -65,8 +227,7 @@ For unknown A:
 2 & 97266471 & 77432993 & 109717659 & 17155082 & 2693598 & 84881367.67 \\
 2.5 & 93535507 & 81280319 & 87006715 & 15384092 & 23027192 & 68068538.33 \\
 3 & 88523949 & 75226109 & 72113909 & 7197779 & 16678551 & 66683157.33 \\
-4 & 69037517 & 63641046 & 65486040 & 69037517 & 307269 & 31382474.67 \\
-\hline
+4 & 69037517 & 63641046 & 65486040 & 69037517 & 307269 & 31382474.67 \\ \hline
 \end{tabular}
 \end{table}
 
@@ -75,4 +236,15 @@ For unknown A:
     \includegraphics[width=0.7\textwidth]{/Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/Heatingrate.pdf}
     \caption{ Average Intensity graph for CaSO4: Dy TLD vs Heating rate}
 \end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{/Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/Intensity vs Temparature for defferent heating rate.pdf}
+    \caption{Glow Curve for different heating rates}
+\end{figure}
+
+
+\section{Applications}
+
+
 \section{Conclusion}

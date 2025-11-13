@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  12 NOV 2025 23:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  13 NOV 2025 19:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -155,6 +155,8 @@ Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
 \l_MT_below_shortintertext_sep=\dimen159
 \xmathstrut@box=\box55
 \xmathstrut@dim=\dimen160
+) (/usr/local/texlive/2025/texmf-dist/tex/latex/tools/indentfirst.sty
+Package: indentfirst 2023/07/02 v1.03 Indent first paragraph (DPC)
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
  (/usr/local/texlive/2025/texmf-dist/tex/latex/graphics/graphics.sty
@@ -958,7 +960,7 @@ Package hyperref Info: Link coloring ON on input line 6.
 \openout4 = `main.out'.
 
  (./Chapters/0. Frontpage.tex
-<Figures/Logos/NISER.jpg, id=35, 96.36pt x 103.587pt>
+<Figures/Logos/NISER.jpg, id=47, 96.36pt x 103.587pt>
 File: Figures/Logos/NISER.jpg Graphic file (type jpg)
 <use Figures/Logos/NISER.jpg>
 Package pdftex.def Info: Figures/Logos/NISER.jpg  used on input line 9.
@@ -971,7 +973,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `mlmss' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-<Figures/Logos/cmrp.jpg, id=37, 1606.0pt x 1208.515pt>
+<Figures/Logos/cmrp.jpg, id=49, 1606.0pt x 1208.515pt>
 File: Figures/Logos/cmrp.jpg Graphic file (type jpg)
 <use Figures/Logos/cmrp.jpg>
 Package pdftex.def Info: Figures/Logos/cmrp.jpg  used on input line 27.
@@ -981,31 +983,31 @@ Package pdftex.def Info: Figures/Logos/cmrp.jpg  used on input line 27.
 [1
 
 {/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc} <./Figures/Logos/NISER.jpg> <./Figures/Logos/cmrp.jpg>]) (./main.toc
-LaTeX Font Info:    Trying to load font information for OML+mlmm on input line 5.
+LaTeX Font Info:    Trying to load font information for OML+mlmm on input line 4.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/mlmodern/omlmlmm.fd
 File: omlmlmm.fd 2021/01/11 v1.0 Font defs for mlmodern
 )
-LaTeX Font Info:    Trying to load font information for OMS+mlmsy on input line 5.
+LaTeX Font Info:    Trying to load font information for OMS+mlmsy on input line 4.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/mlmodern/omsmlmsy.fd
 File: omsmlmsy.fd 2021/01/11 v1.0 Font defs for mlmodern
 )
-LaTeX Font Info:    Trying to load font information for OMX+mlmex on input line 5.
+LaTeX Font Info:    Trying to load font information for OMX+mlmex on input line 4.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/mlmodern/omxmlmex.fd
 File: omxmlmex.fd 2021/01/11 v1.0 Font defs for mlmodern
 )
 LaTeX Font Info:    External font `mlmex10' loaded for size
-(Font)              <10> on input line 5.
+(Font)              <10> on input line 4.
 LaTeX Font Info:    External font `mlmex10' loaded for size
-(Font)              <7> on input line 5.
+(Font)              <7> on input line 4.
 LaTeX Font Info:    External font `mlmex10' loaded for size
-(Font)              <5> on input line 5.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 5.
+(Font)              <5> on input line 4.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 4.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 5.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 4.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-msb.cfg
@@ -1030,59 +1032,98 @@ LaTeX Font Warning: Font shape `OMS/mlmss/bx/n' undefined
 (Font)              using `OMS/cmsy/m/n' instead
 (Font)              for symbol `textbar' on input line 1.
 
-</Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/TL intensity vs Dose.pdf, id=59, 924.45375pt x 572.1375pt>
-File: /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/TL intensity vs Dose.pdf Graphic file (type pdf)
-<use /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/TL intensity vs Dose.pdf>
-Package pdftex.def Info: /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/TL intensity vs Dose.pdf  used on input line 39.
-(pdftex.def)             Requested size: 318.66948pt x 197.22177pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
+</Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Theory/Mechanism.png, id=77, 1546.77875pt x 606.265pt>
+File: /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Theory/Mechanism.png Graphic file (type png)
+<use /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Theory/Mechanism.png>
+Package pdftex.def Info: /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Theory/Mechanism.png  used on input line 43.
+(pdftex.def)             Requested size: 318.66948pt x 124.90494pt.
 
 
 File: Figures/Logos/NISER.jpg Graphic file (type jpg)
 <use Figures/Logos/NISER.jpg>
-Package pdftex.def Info: Figures/Logos/NISER.jpg  used on input line 42.
+Package pdftex.def Info: Figures/Logos/NISER.jpg  used on input line 63.
 (pdftex.def)             Requested size: 18.60411pt x 20.0pt.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.42 F
-      rom the graph, we can see that the relationship between dose and inten... [1]
-LaTeX Font Info:    Trying to load font information for TS1+mlmr on input line 61.
+l.63 
+      [1 </Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Theory/Mechanism.png>]
+</Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Theory/TL100.png, id=89, 777.90625pt x 667.49374pt>
+File: /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Theory/TL100.png Graphic file (type png)
+<use /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Theory/TL100.png>
+Package pdftex.def Info: /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Theory/TL100.png  used on input line 66.
+(pdftex.def)             Requested size: 227.62206pt x 195.30989pt.
+LaTeX Font Info:    Trying to load font information for TS1+mlmr on input line 75.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/mlmodern/ts1mlmr.fd
 File: ts1mlmr.fd 2021/01/11 v1.0 Font defs for mlmodern
 )
-Overfull \hbox (6.2728pt too wide) in paragraph at lines 59--71
- [][] 
- []
-
-</Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/Heatingrate.pdf, id=66, 602.25pt x 372.39125pt>
-File: /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/Heatingrate.pdf Graphic file (type pdf)
-<use /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/Heatingrate.pdf>
-Package pdftex.def Info: /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/Heatingrate.pdf  used on input line 75.
-(pdftex.def)             Requested size: 318.66948pt x 197.04822pt.
-
-Underfull \vbox (badness 4048) has occurred while \output is active []
-
+</Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Theory/TLD reader.png, id=93, 609.27625pt x 544.0325pt>
+File: /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Theory/TLD reader.png Graphic file (type png)
+<use /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Theory/TLD reader.png>
+Package pdftex.def Info: /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Theory/TLD reader.png  used on input line 91.
+(pdftex.def)             Requested size: 227.62206pt x 203.24797pt.
 
 
 File: Figures/Logos/NISER.jpg Graphic file (type jpg)
 <use Figures/Logos/NISER.jpg>
-Package pdftex.def Info: Figures/Logos/NISER.jpg  used on input line 78.
+Package pdftex.def Info: Figures/Logos/NISER.jpg  used on input line 100.
 (pdftex.def)             Requested size: 18.60411pt x 20.0pt.
-[2{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc} </Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/TL intensity vs Dose.pdf>]) (./main.bbl
+[2{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc} </Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Theory/TL100.png> </Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Theory/TLD reader.png>]
+</Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Theory/TLD forms.png, id=109, 599.23875pt x 275.0275pt>
+File: /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Theory/TLD forms.png Graphic file (type png)
+<use /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Theory/TLD forms.png>
+Package pdftex.def Info: /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Theory/TLD forms.png  used on input line 151.
+(pdftex.def)             Requested size: 318.66948pt x 146.25906pt.
 
-LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
-)
+File: Figures/Logos/NISER.jpg Graphic file (type jpg)
+<use Figures/Logos/NISER.jpg>
+Package pdftex.def Info: Figures/Logos/NISER.jpg  used on input line 167.
+(pdftex.def)             Requested size: 18.60411pt x 20.0pt.
+[3{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc} </Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Theory/TLD forms.png>]
+</Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/TL intensity vs Dose.pdf, id=122, 924.45375pt x 572.1375pt>
+File: /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/TL intensity vs Dose.pdf Graphic file (type pdf)
+<use /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/TL intensity vs Dose.pdf>
+Package pdftex.def Info: /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/TL intensity vs Dose.pdf  used on input line 201.
+(pdftex.def)             Requested size: 318.66948pt x 197.22177pt.
+
+
+File: Figures/Logos/NISER.jpg Graphic file (type jpg)
+<use Figures/Logos/NISER.jpg>
+Package pdftex.def Info: Figures/Logos/NISER.jpg  used on input line 217.
+(pdftex.def)             Requested size: 18.60411pt x 20.0pt.
+[4 </Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/TL intensity vs Dose.pdf>]
+Overfull \hbox (6.2728pt too wide) in paragraph at lines 221--232
+ [][] 
+ []
+
+</Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/Heatingrate.pdf, id=146, 602.25pt x 372.39125pt>
+File: /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/Heatingrate.pdf Graphic file (type pdf)
+<use /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/Heatingrate.pdf>
+Package pdftex.def Info: /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/Heatingrate.pdf  used on input line 236.
+(pdftex.def)             Requested size: 318.66948pt x 197.04822pt.
+</Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/Intensity vs Temparature for defferent heating rate.pdf, id=147, 908.39375pt x 562.1pt>
+File: /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/Intensity vs Temparature for defferent heating rate.pdf Graphic file (type pdf)
+<use /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/Intensity vs Temparature for defferent heating rate.pdf>
+Package pdftex.def Info: /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/Intensity vs Temparature for defferent heating rate.pdf  used on input line 242.
+(pdftex.def)             Requested size: 318.66948pt x 197.18394pt.
+
+
+File: Figures/Logos/NISER.jpg Graphic file (type jpg)
+<use Figures/Logos/NISER.jpg>
+Package pdftex.def Info: Figures/Logos/NISER.jpg  used on input line 250.
+(pdftex.def)             Requested size: 18.60411pt x 20.0pt.
+[5 </Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/Heatingrate.pdf> </Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/Intensity vs Temparature for defferent heating rate.pdf
+
+pdfTeX warning: pdflatex (file /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/Intensity vs Temparature for defferent heating rate.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]) (./main.bbl)
 
 File: Figures/Logos/NISER.jpg Graphic file (type jpg)
 <use Figures/Logos/NISER.jpg>
 Package pdftex.def Info: Figures/Logos/NISER.jpg  used on input line 25.
 (pdftex.def)             Requested size: 18.60411pt x 20.0pt.
-[3 </Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/Heatingrate.pdf>] (./main.aux)
+[6] (./main.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -1092,21 +1133,21 @@ L3 programming layer <2025-01-18>
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 1C0BA4CEDF0D039B329437B3B2177E6A;701.
+(rerunfilecheck)             Checksum: 811591F14A88B0B9F7D7D48733300E66;1058.
  ) 
 Here is how much of TeX's memory you used:
- 31803 strings out of 473190
- 600904 string characters out of 5715801
- 1101952 words of memory out of 5000000
- 54428 multiletter control sequences out of 15000+600000
- 612121 words of font info for 103 fonts, out of 8000000 for 9000
+ 31932 strings out of 473190
+ 605825 string characters out of 5715801
+ 1107081 words of memory out of 5000000
+ 54497 multiletter control sequences out of 15000+600000
+ 618481 words of font info for 126 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 89i,16n,96p,1051b,733s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmss10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmssbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb>
-Output written on main.pdf (5 pages, 557631 bytes).
+ 89i,16n,96p,1051b,735s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmri10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmss10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmssbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmsy7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb>
+Output written on main.pdf (8 pages, 1325913 bytes).
 PDF statistics:
- 170 PDF objects out of 1000 (max. 8388607)
- 129 compressed objects within 2 object streams
- 15 named destinations out of 1000 (max. 500000)
- 34905 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 277 PDF objects out of 1000 (max. 8388607)
+ 206 compressed objects within 3 object streams
+ 28 named destinations out of 1000 (max. 500000)
+ 39050 words of extra memory for PDF output out of 42996 (max. 10000000)
 

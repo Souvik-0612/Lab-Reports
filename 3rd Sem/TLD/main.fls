@@ -50,6 +50,8 @@ INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/tools/calc.sty
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/tools/calc.sty
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/mathtools/mhsetup.sty
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/mathtools/mhsetup.sty
+INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/tools/indentfirst.sty
+INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/tools/indentfirst.sty
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/graphics/graphicx.sty
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/graphics/graphicx.sty
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/graphics/graphics.sty
@@ -412,37 +414,76 @@ INPUT ./Chapters/1. Introduction.tex
 INPUT ./Chapters/1. Introduction.tex
 INPUT Chapters/1. Introduction.tex
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
-INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/TL intensity vs Dose.pdf
-INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/TL intensity vs Dose.pdf
-INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/TL intensity vs Dose.pdf
-INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/TL intensity vs Dose.pdf
-INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/TL intensity vs Dose.pdf
+INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Theory/Mechanism.png
+INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Theory/Mechanism.png
+INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Theory/Mechanism.png
+INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Theory/Mechanism.png
+INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Theory/Mechanism.png
 INPUT ./Figures/Logos/NISER.jpg
 INPUT ./Figures/Logos/NISER.jpg
 INPUT ./Figures/Logos/NISER.jpg
 INPUT ./Figures/Logos/NISER.jpg
+INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Theory/TL100.png
+INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Theory/TL100.png
+INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Theory/TL100.png
+INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Theory/TL100.png
+INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Theory/TL100.png
+INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/mlmodern/ts1mlmr.fd
+INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/mlmodern/ts1mlmr.fd
+INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/mlmodern/ts1mlmr.fd
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/mlmodern/ts1-mlmr10.tfm
+INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Theory/TLD reader.png
+INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Theory/TLD reader.png
+INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Theory/TLD reader.png
+INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Theory/TLD reader.png
+INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Theory/TLD reader.png
+INPUT ./Figures/Logos/NISER.jpg
+INPUT ./Figures/Logos/NISER.jpg
+INPUT ./Figures/Logos/NISER.jpg
+INPUT ./Figures/Logos/NISER.jpg
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/mlmodern/rm-mlmss12.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/mlmodern/rm-mlmssbx10.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
-INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/mlmodern/ts1mlmr.fd
-INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/mlmodern/ts1mlmr.fd
-INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/mlmodern/ts1mlmr.fd
+INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Theory/TLD forms.png
+INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Theory/TLD forms.png
+INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Theory/TLD forms.png
+INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Theory/TLD forms.png
+INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Theory/TLD forms.png
+INPUT ./Figures/Logos/NISER.jpg
+INPUT ./Figures/Logos/NISER.jpg
+INPUT ./Figures/Logos/NISER.jpg
+INPUT ./Figures/Logos/NISER.jpg
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc
+INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/TL intensity vs Dose.pdf
+INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/TL intensity vs Dose.pdf
+INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/TL intensity vs Dose.pdf
+INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/TL intensity vs Dose.pdf
+INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/TL intensity vs Dose.pdf
+INPUT ./Figures/Logos/NISER.jpg
+INPUT ./Figures/Logos/NISER.jpg
+INPUT ./Figures/Logos/NISER.jpg
+INPUT ./Figures/Logos/NISER.jpg
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/mlmodern/ts1-mlmbx10.tfm
 INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/Heatingrate.pdf
 INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/Heatingrate.pdf
 INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/Heatingrate.pdf
 INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/Heatingrate.pdf
 INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/Heatingrate.pdf
+INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/Intensity vs Temparature for defferent heating rate.pdf
+INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/Intensity vs Temparature for defferent heating rate.pdf
+INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/Intensity vs Temparature for defferent heating rate.pdf
+INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/Intensity vs Temparature for defferent heating rate.pdf
+INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/Intensity vs Temparature for defferent heating rate.pdf
 INPUT ./Figures/Logos/NISER.jpg
 INPUT ./Figures/Logos/NISER.jpg
 INPUT ./Figures/Logos/NISER.jpg
 INPUT ./Figures/Logos/NISER.jpg
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc
 INPUT ./main.bbl
 INPUT ./main.bbl
 INPUT main.bbl
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/mlmodern/rm-mlmri10.tfm
 INPUT ./Figures/Logos/NISER.jpg
 INPUT ./Figures/Logos/NISER.jpg
 INPUT ./Figures/Logos/NISER.jpg
@@ -456,7 +497,9 @@ INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmbx12.pfb
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmmi10.pfb
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmr10.pfb
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmr7.pfb
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmri10.pfb
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmss10.pfb
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmssbx10.pfb
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmsy10.pfb
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmsy7.pfb
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb
