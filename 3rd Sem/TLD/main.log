@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  13 NOV 2025 20:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  13 NOV 2025 20:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1085,41 +1085,41 @@ Package pdftex.def Info: Figures/Logos/NISER.jpg  used on input line 167.
 </Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/TL intensity vs Dose.pdf, id=122, 924.45375pt x 572.1375pt>
 File: /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/TL intensity vs Dose.pdf Graphic file (type pdf)
 <use /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/TL intensity vs Dose.pdf>
-Package pdftex.def Info: /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/TL intensity vs Dose.pdf  used on input line 207.
+Package pdftex.def Info: /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/TL intensity vs Dose.pdf  used on input line 202.
 (pdftex.def)             Requested size: 318.66948pt x 197.22177pt.
 
 
 File: Figures/Logos/NISER.jpg Graphic file (type jpg)
 <use Figures/Logos/NISER.jpg>
-Package pdftex.def Info: Figures/Logos/NISER.jpg  used on input line 215.
+Package pdftex.def Info: Figures/Logos/NISER.jpg  used on input line 210.
 (pdftex.def)             Requested size: 18.60411pt x 20.0pt.
 [4 </Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/TL intensity vs Dose.pdf>]
 </Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/Intensity vs Temparature for defferent heating rate.pdf, id=146, 908.39375pt x 562.1pt>
 File: /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/Intensity vs Temparature for defferent heating rate.pdf Graphic file (type pdf)
 <use /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/Intensity vs Temparature for defferent heating rate.pdf>
-Package pdftex.def Info: /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/Intensity vs Temparature for defferent heating rate.pdf  used on input line 240.
+Package pdftex.def Info: /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/Intensity vs Temparature for defferent heating rate.pdf  used on input line 235.
 (pdftex.def)             Requested size: 318.66948pt x 197.18394pt.
 
-Overfull \hbox (6.2728pt too wide) in paragraph at lines 250--261
+Overfull \hbox (6.2728pt too wide) in paragraph at lines 245--256
  [][] 
  []
 
 </Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/Heatingrate.pdf, id=147, 602.25pt x 372.39125pt>
 File: /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/Heatingrate.pdf Graphic file (type pdf)
 <use /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/Heatingrate.pdf>
-Package pdftex.def Info: /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/Heatingrate.pdf  used on input line 265.
+Package pdftex.def Info: /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/Heatingrate.pdf  used on input line 260.
 (pdftex.def)             Requested size: 318.66948pt x 197.04822pt.
 
 
 File: Figures/Logos/NISER.jpg Graphic file (type jpg)
 <use Figures/Logos/NISER.jpg>
-Package pdftex.def Info: Figures/Logos/NISER.jpg  used on input line 268.
+Package pdftex.def Info: Figures/Logos/NISER.jpg  used on input line 263.
 (pdftex.def)             Requested size: 18.60411pt x 20.0pt.
 [5 </Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/Intensity vs Temparature for defferent heating rate.pdf>]
 
 File: Figures/Logos/NISER.jpg Graphic file (type jpg)
 <use Figures/Logos/NISER.jpg>
-Package pdftex.def Info: Figures/Logos/NISER.jpg  used on input line 321.
+Package pdftex.def Info: Figures/Logos/NISER.jpg  used on input line 316.
 (pdftex.def)             Requested size: 18.60411pt x 20.0pt.
 [6 </Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/Heatingrate.pdf>]) (./main.bbl)
 
