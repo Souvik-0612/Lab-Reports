@@ -173,7 +173,13 @@ The main forms are powder and solid (Fig. \ref{fig:tld forms}), including rods, 
 
 
 \section{Observation}
-
+The TLDs underwent irradiation at specified doses employing a medical linear accelerator. These
+TLD specimens were positioned within a solid water phantom that featured pre-engineered grooves to
+securely maintain the detectors alignment. For sample irradiation, a Source-to-Surface Distance (SSD)
+arrangement was utilized. A 10 cm build-up area was established above the TLDs to maintain charged
+particle equilibrium, with additional slabs positioned beneath the samples to manage backscatter
+radiation. This irradiation process was conducted using a Versa HD linear accelerator equipped with
+a 6 MV photon beam.
 
 \begin{table}[H]
 \centering
@@ -210,11 +216,34 @@ Where I = Intensity. So for unknown A: the intensity is 99004648.2
 Similarly, for unknown B: the intensity is 113174818.6
 \[\text{Dose} = \frac{113174818.6 - 5.12\times10^7}{1.37\times10^{7}} = \boxed{4.524} \text{ Gy}\]
 So the relative errors in the calculated doses are:
-For unknown A:
+\subsubsection*{Error analysis}
+\begin{table}[H]
+\centering
+\begin{tabular}{cccc}
+\hline
+\textbf{Unknown} & \textbf{Calculated Dose (Gy)} & \textbf{Actual dose (Gy)}& \textbf{Relative Error (\%)} \\
+\hline
+A & 3.49 & 3.35 & 4.18 \% \\
+B & 4.52 & 4.47 &  1.12 \% \\
+\hline
+\end{tabular}
+\end{table}
 
 
 
 \subsection{Heating rate analysis}
+Thermoluminescent dosimeter (TLD) samples administered with an identical dose are analyzed with
+respect to the heating rate: 1 °C/s, 1.5 °C/s, 2 °C/s, 2.5 °C/s, 3 °C/s and 4 °C/s.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{/Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/Intensity vs Temparature for defferent heating rate.pdf}
+    \caption{Glow Curve for different heating rates}
+\end{figure}
+
+From this graph, we can see that as the heating rate increases, the peak of the glow curve shifts to higher temperatures and the intensity decreases. 
+Because at higher heating rates, the trapped electrons have less time to be released and recombine with holes, leading to a lower intensity of emitted light.
+
 \begin{table}[H]
 \centering
 \caption{Intensity values for different doses}
@@ -237,14 +266,60 @@ For unknown A:
     \caption{ Average Intensity graph for CaSO4: Dy TLD vs Heating rate}
 \end{figure}
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.7\textwidth]{/Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/Intensity vs Temparature for defferent heating rate.pdf}
-    \caption{Glow Curve for different heating rates}
-\end{figure}
+From the graph, we can see that the relationship between heating rate and intensity is decreasing exponentially.
 
 
-\section{Applications}
+\section{Applications of TLDs}
+\begin{enumerate}[leftmargin=*,label=\arabic*.]
+  \item \textbf{Patient dosimetry}
+    \begin{itemize}
+      \item In-vivo surface dose verification during radiotherapy.
+      \item Measurement of entrance/exit doses and dose to critical points.
+      \item Verification for special setups (bolus, immobilization devices, etc.).
+    \end{itemize}
 
+  \item \textbf{Calibration and beam quality checks}
+    \begin{itemize}
+      \item Independent dose verification of linear accelerators and other treatment units.
+      \item Participation in external postal audits and inter-laboratory comparisons.
+    \end{itemize}
+
+  \item \textbf{Brachytherapy dosimetry}
+    \begin{itemize}
+      \item Point-dose measurements near LDR/HDR sources (e.g., I-125, Ir-192).
+      \item Mapping dose gradients around brachytherapy implants and applicators.
+    \end{itemize}
+
+  \item \textbf{Diagnostic radiology}
+    \begin{itemize}
+      \item Low-dose measurements in CT, mammography, fluoroscopy and radiography.
+      \item Organ or phantom dose estimation for protocol optimization and QA.
+    \end{itemize}
+
+  \item \textbf{Radiation protection / Occupational monitoring}
+    \begin{itemize}
+      \item Personal dosimetry (staff badges) in hospitals, nuclear facilities, and research labs.
+      \item Area monitoring for controlled or supervised radiation zones.
+    \end{itemize}
+
+  \item \textbf{Research and development}
+    \begin{itemize}
+      \item Radiation transport experiments, detector comparisons, and material studies.
+      \item Use in controlled experiments where precise point-dose readings are needed.
+    \end{itemize}
+
+  \item \textbf{Space and aviation dosimetry}
+    \begin{itemize}
+      \item Monitoring cosmic radiation exposure for astronauts and high-altitude crew.
+      \item Long-term passive monitoring in satellites and space hardware.
+    \end{itemize}
+
+  \item \textbf{Small-field and high-gradient dosimetry}
+    \begin{itemize}
+      \item Dose measurement for stereotactic radiosurgery (SRS) and stereotactic body radiotherapy (SBRT).
+      \item Measurements in regions with steep dose gradients or near tissue--air interfaces.
+    \end{itemize}
+\end{enumerate}
 
 \section{Conclusion}
+In this experiment, we explored the principles and applications of Thermoluminescence Dosimetry (TLD) using CaSO4: Dy as the dosimetric material. The linear relationship between dose and intensity was established, allowing for accurate dose measurements. The analysis of heating rates revealed their impact on glow curve characteristics, emphasizing the importance of controlled readout conditions. The calculated doses for unknown samples demonstrated the reliability of TLD in clinical dosimetry, with relative errors within acceptable limits. Overall, this experiment highlighted the effectiveness of TLD in radiation dose measurement and its potential applications in medical physics.

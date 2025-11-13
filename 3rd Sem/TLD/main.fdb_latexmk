@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1763042563.29013 "main.aux" "main.bbl" "main" 1763042565.83473 0
+["bibtex main"] 1763045502.83629 "main.aux" "main.bbl" "main" 1763045626.84062 0
   "./General/References.bib" 1763028670.98374 1894 20fac51ce336bf814b791f30bf29762c ""
   "/usr/local/texlive/2025/texmf-dist/bibtex/bst/base/plain.bst" 1292289607 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "main.aux" 1763042565.62781 5696 389fe0ad8a3be0dbcb57fdf413f161e3 "pdflatex"
+  "main.aux" 1763045626.63221 5705 257f1e992bacb5ad076436755dc5a17f "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1763042564.62832 "/Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/main.tex" "main.pdf" "main" 1763042565.83484 0
+["pdflatex"] 1763045625.6727 "/Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/main.tex" "main.pdf" "main" 1763045626.84072 0
   "/Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/main.tex" 1762527404.17863 667 99476f49be0c2a2a54e2713a3ebd5c8a ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1202520719 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc" 1202520719 2840 216e6e45ad352e2456e1149f28885bee ""
@@ -232,7 +232,7 @@
   "/usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1741450574 3345740 46b66fdb0378f7bf5921b5eabf1762b8 ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
   "Chapters/0. Frontpage.tex" 1762869393.12936 550 21b289cff27c95db1228f558a3057e58 ""
-  "Chapters/1. Introduction.tex" 1763042563.82509 13042 2461e5c7e9be3f0ba27745bcd73e1275 ""
+  "Chapters/1. Introduction.tex" 1763045625.51369 17438 8663a5a42661d13a4fa8fb21bed3b700 ""
   "Figures/Logos/Experimental data/Heatingrate.pdf" 1762969334.73851 46537 c450f1cce3ad0f717f2343530a1296e9 ""
   "Figures/Logos/Experimental data/Intensity vs Temparature for defferent heating rate.pdf" 1763011010.40635 119230 b29be80067c6478fc6f864cca46c79f1 ""
   "Figures/Logos/Experimental data/TL intensity vs Dose.pdf" 1762965938.98626 38023 bce23289fa9d1df70f7b4933df201328 ""
@@ -244,11 +244,11 @@
   "Figures/Theory/TLD reader.png" 1763039375.57952 89955 9d5eac2768bf1acddcd8d70e0aaf7550 ""
   "General/Preamble.tex" 1763042282.91986 3738 915370146c1000f762e714641210559c ""
   "General/Settings.tex" 1763041763.44572 3264 c2be126207276022e8176479510f5f4d ""
-  "main.aux" 1763042565.62781 5696 389fe0ad8a3be0dbcb57fdf413f161e3 "pdflatex"
-  "main.bbl" 1763042563.35939 426 f838bcae5972698e087ad770d1cf2ea7 "bibtex main"
-  "main.out" 1763042565.62841 1058 811591f14a88b0b9f7d7d48733300e66 "pdflatex"
+  "main.aux" 1763045626.63221 5705 257f1e992bacb5ad076436755dc5a17f "pdflatex"
+  "main.bbl" 1763045502.90512 426 f838bcae5972698e087ad770d1cf2ea7 "bibtex main"
+  "main.out" 1763045626.63299 1104 09796d140cf3cb5a089b184d8c0aa102 "pdflatex"
   "main.tex" 1762527404.17863 667 99476f49be0c2a2a54e2713a3ebd5c8a ""
-  "main.toc" 1763042565.62856 721 dcb4e3dd6c1396e9f9dd44fb8ea7d46c "pdflatex"
+  "main.toc" 1763045626.63315 729 a927b528dd2f2d7b81c3768a97d23cd3 "pdflatex"
   (generated)
   "main.aux"
   "main.log"

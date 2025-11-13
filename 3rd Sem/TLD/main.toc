@@ -5,7 +5,7 @@
 \contentsline {subsection}{\numberline {3.2}TLD forms}{3}{subsection.3.2}%
 \contentsline {section}{\numberline {4}Observation}{4}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Heating rate analysis}{5}{subsection.4.1}%
-\contentsline {section}{\numberline {5}Applications}{6}{section.5}%
-\contentsline {section}{\numberline {6}Conclusion}{6}{section.6}%
-\contentsline {section}{\numberline {7}References}{6}{section.7}%
+\contentsline {section}{\numberline {5}Applications of TLDs}{6}{section.5}%
+\contentsline {section}{\numberline {6}Conclusion}{7}{section.6}%
+\contentsline {section}{\numberline {7}References}{7}{section.7}%
 \contentsfinish 
