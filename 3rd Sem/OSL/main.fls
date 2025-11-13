@@ -371,11 +371,6 @@ INPUT ./main.toc
 INPUT ./main.toc
 INPUT main.toc
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/mlmodern/rm-mlmbx10.tfm
-OUTPUT main.toc
-INPUT ./Chapters/1. Introduction.tex
-INPUT ./Chapters/1. Introduction.tex
-INPUT Chapters/1. Introduction.tex
-INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/mlmodern/rm-mlmr7.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/mlmodern/rm-mlmr5.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/mlmodern/omlmlmm.fd
@@ -412,6 +407,14 @@ INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-msb.cfg
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/microtype/mt-msb.cfg
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
+OUTPUT main.toc
+INPUT ./Chapters/1. Introduction.tex
+INPUT ./Chapters/1. Introduction.tex
+INPUT Chapters/1. Introduction.tex
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/mlmodern/rm-mlmss12.tfm
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/mlmodern/rm-mlmssbx10.tfm
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
 INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/OSL/Figures/Experimental data/chart-2.pdf
 INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/OSL/Figures/Experimental data/chart-2.pdf
 INPUT /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/OSL/Figures/Experimental data/chart-2.pdf
@@ -442,3 +445,5 @@ INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmr7.pfb
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmss10.pfb
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmssbx10.pfb
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmsy10.pfb
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmsy7.pfb
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb

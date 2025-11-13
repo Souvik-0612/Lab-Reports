@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  13 NOV 2025 20:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  13 NOV 2025 22:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1073,53 +1073,53 @@ Package pdftex.def Info: Figures/Logos/NISER.jpg  used on input line 100.
 </Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Theory/TLD forms.png, id=109, 599.23875pt x 275.0275pt>
 File: /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Theory/TLD forms.png Graphic file (type png)
 <use /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Theory/TLD forms.png>
-Package pdftex.def Info: /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Theory/TLD forms.png  used on input line 151.
+Package pdftex.def Info: /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Theory/TLD forms.png  used on input line 147.
 (pdftex.def)             Requested size: 318.66948pt x 146.25906pt.
 
 
 File: Figures/Logos/NISER.jpg Graphic file (type jpg)
 <use Figures/Logos/NISER.jpg>
-Package pdftex.def Info: Figures/Logos/NISER.jpg  used on input line 167.
+Package pdftex.def Info: Figures/Logos/NISER.jpg  used on input line 166.
 (pdftex.def)             Requested size: 18.60411pt x 20.0pt.
 [3{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc} </Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Theory/TLD forms.png>]
 </Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/TL intensity vs Dose.pdf, id=122, 924.45375pt x 572.1375pt>
 File: /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/TL intensity vs Dose.pdf Graphic file (type pdf)
 <use /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/TL intensity vs Dose.pdf>
-Package pdftex.def Info: /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/TL intensity vs Dose.pdf  used on input line 202.
+Package pdftex.def Info: /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/TL intensity vs Dose.pdf  used on input line 198.
 (pdftex.def)             Requested size: 318.66948pt x 197.22177pt.
 
 
 File: Figures/Logos/NISER.jpg Graphic file (type jpg)
 <use Figures/Logos/NISER.jpg>
-Package pdftex.def Info: Figures/Logos/NISER.jpg  used on input line 210.
+Package pdftex.def Info: Figures/Logos/NISER.jpg  used on input line 206.
 (pdftex.def)             Requested size: 18.60411pt x 20.0pt.
 [4 </Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/TL intensity vs Dose.pdf>]
 </Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/Intensity vs Temparature for defferent heating rate.pdf, id=146, 908.39375pt x 562.1pt>
 File: /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/Intensity vs Temparature for defferent heating rate.pdf Graphic file (type pdf)
 <use /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/Intensity vs Temparature for defferent heating rate.pdf>
-Package pdftex.def Info: /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/Intensity vs Temparature for defferent heating rate.pdf  used on input line 235.
+Package pdftex.def Info: /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/Intensity vs Temparature for defferent heating rate.pdf  used on input line 231.
 (pdftex.def)             Requested size: 318.66948pt x 197.18394pt.
 
-Overfull \hbox (6.2728pt too wide) in paragraph at lines 245--256
+Overfull \hbox (6.2728pt too wide) in paragraph at lines 241--252
  [][] 
  []
 
 </Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/Heatingrate.pdf, id=147, 602.25pt x 372.39125pt>
 File: /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/Heatingrate.pdf Graphic file (type pdf)
 <use /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/Heatingrate.pdf>
-Package pdftex.def Info: /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/Heatingrate.pdf  used on input line 260.
+Package pdftex.def Info: /Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/Heatingrate.pdf  used on input line 256.
 (pdftex.def)             Requested size: 318.66948pt x 197.04822pt.
 
 
 File: Figures/Logos/NISER.jpg Graphic file (type jpg)
 <use Figures/Logos/NISER.jpg>
-Package pdftex.def Info: Figures/Logos/NISER.jpg  used on input line 263.
+Package pdftex.def Info: Figures/Logos/NISER.jpg  used on input line 259.
 (pdftex.def)             Requested size: 18.60411pt x 20.0pt.
 [5 </Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/Intensity vs Temparature for defferent heating rate.pdf>]
 
 File: Figures/Logos/NISER.jpg Graphic file (type jpg)
 <use Figures/Logos/NISER.jpg>
-Package pdftex.def Info: Figures/Logos/NISER.jpg  used on input line 316.
+Package pdftex.def Info: Figures/Logos/NISER.jpg  used on input line 312.
 (pdftex.def)             Requested size: 18.60411pt x 20.0pt.
 [6 </Users/souvikpc/Desktop/Lab-Reports/3rd Sem/TLD/Figures/Logos/Experimental data/Heatingrate.pdf>]) (./main.bbl)
 
@@ -1142,13 +1142,13 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Here is how much of TeX's memory you used:
  31959 strings out of 473190
  606193 string characters out of 5715801
- 1107081 words of memory out of 5000000
+ 1105081 words of memory out of 5000000
  54504 multiletter control sequences out of 15000+600000
  618896 words of font info for 131 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  89i,16n,96p,1051b,787s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmri10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmss10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmssbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmsy7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb>
-Output written on main.pdf (9 pages, 1332076 bytes).
+Output written on main.pdf (9 pages, 1331649 bytes).
 PDF statistics:
  294 PDF objects out of 1000 (max. 8388607)
  223 compressed objects within 3 object streams

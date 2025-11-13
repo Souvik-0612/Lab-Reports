@@ -50,6 +50,8 @@ INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/tools/calc.sty
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/tools/calc.sty
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/mathtools/mhsetup.sty
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/mathtools/mhsetup.sty
+INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/tools/indentfirst.sty
+INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/tools/indentfirst.sty
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/graphics/graphicx.sty
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/graphics/graphicx.sty
 INPUT /usr/local/texlive/2025/texmf-dist/tex/latex/graphics/graphics.sty

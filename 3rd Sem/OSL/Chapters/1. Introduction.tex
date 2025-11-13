@@ -1,6 +1,36 @@
 \section{Objective}
+\begin{itemize}
+    \item To study the characteristics of Optically stimulated luminescence material
+($Al_2O_3$:C-Alumina)
+    \item To calibrate the OSL research Reader in terms of absorbed dose and find out the
+unknown dose.
+\end{itemize}
 \section{Apparatus}
+\begin{itemize}
+    \item Alumina discs
+    \item OSL Reader
+    \item Radiation generating equipment (LINAC)
+    \item Blue light Bleaching machine
+\end{itemize}
 \section{Theory}
+
+
+\subsection{Types of OSLD}
+\begin{table}[ht]
+\centering
+\resizebox{\textwidth}{!}{
+\begin{tabular}{l l c c c c c c c}
+\hline
+Material & Commercial Name & $\rho$ & $Z_{\text{eff}}$ & Glow Peak ($^\circ$C) & Emission (nm) & TL Sens. & Fading \\
+\hline
+Al$_2$O$_3$:C & nanoDot & 3.95 & 11.28 & $\sim$200 & $\sim$410 & N/A & 4\% in 3 months \\
+
+BeO & Thermolox 995 & 2.85 & 7.21 & $\sim$210,330 & $\sim$335,390 & N/A  & 5--10\% in 3 months \\
+
+\hline
+\end{tabular}
+}
+\end{table}
 \section{Observation}
 \begin{table}[H]
 \centering
@@ -39,5 +69,15 @@ So for unknown A: the intensity is 33580259.5
 \[\text{Dose} = \frac{33580259.5 - 1.16\times10^7}{1.11\times10^{7}} = \boxed{1.98} \text{ Gy}\]
 Similarly, for unknown B: the intensity is 40879328
 \[\text{Dose} = \frac{40879328 - 1.16\times10^7}{1.11\times10^{7}} = \boxed{2.64} \text{ Gy}\]
-So the relative errors in the calculated doses are:
+\subsubsection*{Error calculation:}
+\begin{table}[H]
+\centering
+\begin{tabular}{cccc}
+\hline
+\textbf{Unknown} &\textbf{Calculated Dose (Gy)} & \textbf{Actual Dose (Gy)} & \textbf{Relative Error (\%)} \\
+\hline
+A & 1.98 & 1.78 & 11.24 \\
+B & 2.64 & 2.54 & 3.93 \\ \hline
+\end{tabular}
+\end{table}
 \section{Conclusion}
