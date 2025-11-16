@@ -9,6 +9,8 @@
 \contentsline {subsection}{\numberline {3.6}Filter Baskets and Their Configurations}{5}{subsection.3.6}%
 \contentsline {section}{\numberline {4}Observation}{5}{section.4}%
 \contentsline {section}{\numberline {5}Applications}{6}{section.5}%
-\contentsline {section}{\numberline {6}Conclusion}{7}{section.6}%
-\contentsline {section}{\numberline {7}References}{7}{section.7}%
+\contentsline {section}{\numberline {6}Advantages of OSL over TLD}{7}{section.6}%
+\contentsline {section}{\numberline {7}Disadvantages of OSL}{7}{section.7}%
+\contentsline {section}{\numberline {8}Conclusion}{7}{section.8}%
+\contentsline {section}{\numberline {9}References}{7}{section.9}%
 \contentsfinish 

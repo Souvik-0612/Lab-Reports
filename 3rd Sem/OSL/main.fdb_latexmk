@@ -1,13 +1,13 @@
 # Fdb version 4
-["bibtex main"] 1763275855.6541 "main.aux" "main.bbl" "main" 1763275882.55722 0
+["bibtex main"] 1763298311.01394 "main.aux" "main.bbl" "main" 1763298388.96692 0
   "./General/References.bib" 1763269075.59017 747 ebd25bd8b27aa8fe18562d3f20faa949 ""
   "/usr/local/texlive/2025/texmf-dist/bibtex/bst/base/plain.bst" 1292289607 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "main.aux" 1763275882.34805 3719 52ace53635043995a58b1467be9ca5b5 "pdflatex"
+  "main.aux" 1763298388.75774 3959 16539ed50247d9ddbcafcc783090bfd6 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1763275881.41939 "/Users/souvikpc/Desktop/Lab-Reports/3rd Sem/OSL/main.tex" "main.pdf" "main" 1763275882.55731 0
+["pdflatex"] 1763298387.71366 "/Users/souvikpc/Desktop/Lab-Reports/3rd Sem/OSL/main.tex" "main.pdf" "main" 1763298388.96703 0
   "/Users/souvikpc/Desktop/Lab-Reports/3rd Sem/OSL/main.tex" 1762970640.80276 667 99476f49be0c2a2a54e2713a3ebd5c8a ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1202520719 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
@@ -236,7 +236,7 @@
   "/usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1741450574 3345740 46b66fdb0378f7bf5921b5eabf1762b8 ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
   "Chapters/0. Frontpage.tex" 1762970640.79076 550 21b289cff27c95db1228f558a3057e58 ""
-  "Chapters/1. Introduction.tex" 1763275881.07842 18583 b50edf05b2bb133f43a66f8d257b26a7 ""
+  "Chapters/1. Introduction.tex" 1763298317.72962 19761 3271fc064df1a0bef96b57d274788a02 ""
   "Figures/Experimental data/chart-2.pdf" 1762970682.17109 34117 9fef48b69eba0e6a41a126644af81913 ""
   "Figures/Light stimultion/CW.png" 1763268895.04295 24302 336a5ebb545bcdcf565955e50fbb9d11 ""
   "Figures/Light stimultion/LM.png" 1763268921.79973 25955 93a1b1954287455b3351b0073050a1a7 ""
@@ -247,12 +247,12 @@
   "Figures/Theory/Bleaching.png" 1763267040.71961 1177212 ea7ae761eb4789968daaa543a9664cb4 ""
   "Figures/Theory/Process.png" 1763265480.26496 225659 02141c49a21c7e3420151a17fdc5b96a ""
   "General/Preamble.tex" 1763262558.09919 3736 5f9aa8720338c89dc612559cfbb471b6 ""
-  "General/Settings.tex" 1763262569.5289 3225 618c47df6ff5a018feb9802ed92719e3 ""
-  "main.aux" 1763275882.34805 3719 52ace53635043995a58b1467be9ca5b5 "pdflatex"
-  "main.bbl" 1763275855.72534 476 cc87f59fca0022c44452941686fc3bcf "bibtex main"
-  "main.out" 1763275882.3486 1802 8ec250da0a905cac7762e69d87b65396 "pdflatex"
+  "General/Settings.tex" 1763298387.54409 3228 c97d19ca81e49c51c4a9973e67c45d2c ""
+  "main.aux" 1763298388.75774 3959 16539ed50247d9ddbcafcc783090bfd6 "pdflatex"
+  "main.bbl" 1763298311.08556 476 cc87f59fca0022c44452941686fc3bcf "bibtex main"
+  "main.out" 1763298388.75834 2138 d3cd5f34f4f058c09480e61cb6b614bb "pdflatex"
   "main.tex" 1762970640.80276 667 99476f49be0c2a2a54e2713a3ebd5c8a ""
-  "main.toc" 1763275882.34876 1027 0ed51100060852d01a0f55622e6b9059 "pdflatex"
+  "main.toc" 1763298388.75848 1185 2a49e4dee7f19daf256241040bed9792 "pdflatex"
   (generated)
   "main.aux"
   "main.log"
