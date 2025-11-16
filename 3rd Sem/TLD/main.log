@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  13 NOV 2025 22:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  14 NOV 2025 08:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1140,15 +1140,15 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 09796D140CF3CB5A089B184D8C0AA102;1104.
  ) 
 Here is how much of TeX's memory you used:
- 31959 strings out of 473190
- 606193 string characters out of 5715801
+ 31957 strings out of 473190
+ 606169 string characters out of 5715801
  1105081 words of memory out of 5000000
  54504 multiletter control sequences out of 15000+600000
- 618896 words of font info for 131 fonts, out of 8000000 for 9000
+ 618813 words of font info for 130 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  89i,16n,96p,1051b,787s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmri10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmss10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmssbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/mlmodern/mlmsy7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb>
-Output written on main.pdf (9 pages, 1331649 bytes).
+Output written on main.pdf (9 pages, 1331653 bytes).
 PDF statistics:
  294 PDF objects out of 1000 (max. 8388607)
  223 compressed objects within 3 object streams

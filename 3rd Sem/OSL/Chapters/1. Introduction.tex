@@ -13,25 +13,245 @@ unknown dose.
     \item Blue light Bleaching machine
 \end{itemize}
 \section{Theory}
+Luminescence dosimetry comprises two relative dosimetry techniques: 
+thermoluminescence (TL) and optically stimulated luminescence (OSL). Of the two, TL dosimetry is older and better known, having been in commercial use since 1960s; OSL
+dosimetry, in commercial use since 1990s, is less known than TL dosimetry but
+has several features that give it an advantage over TL dosimetry. Both the TL and
+OSL phenomena became known soon after the discovery of ionizing radiation during
+1890s, but remained limited to academic interest until 1950s when their potential
+for practical use in radiation dosimetry for measurement of absorbed dose and in
+archaeology for dating of archaeological artifacts was established.
+In many respects TL and OSL are similar: they both have the same theoretical
+background, they both can be described as a process of stimulated phosphorescence
+occurring in a previously irradiated crystalline mineral referred to as a phosphor, and
+in both the stimulation results in emission of visible light proportional to the dose
+absorbed in the phosphor. The major difference between the two techniques is in the
+agent triggering acceleration of phosphorescence: in the TL process the stimulating
+agent is heat while the OSL process is stimulated with visible light.
 
+\subsection{Process of Optically Stimulated Luminescence}
+The free electrons and holes released by energetic charged particles migrate
+through the insulator in their respective energy bands and they either recombine or
+become trapped in an electron or hole trap, respectively, somewhere in the insulator.
+Two categories of trap are known:
+\begin{itemize}
+    \item First category is called a \textbf{storage trap} and its purpose is to trap free charge carriers
+during irradiation and release them during subsequent stimulation either with heat
+(TL process) or with light (OSL process).
+    \item Second category acts as a \textbf{recombination center} or luminescence center where
+a charge carrier released from a storage trap recombines with a trapped charge
+carrier of opposite sign. The recombination energy is at least partially emitted in
+the form of visible or ultraviolet light. The nature of the recombination process
+depends strongly on the relative magnitudes of the capture cross section of the
+unfilled storage traps and filled recombination centers
+\end{itemize}
+
+During irradiation of the insulator
+the secondary charged particles lift electrons into the conduction band either (i) from
+the valence band leaving a free hole in the valence band or (ii) from an empty hole
+trap thereby filling the hole trap. The system may approach thermal equilibrium in
+various ways:
+\begin{enumerate}
+    \item Two free charge carriers meet and recombine (electron-hole recombination);
+recombination energy is converted into heat.
+    \item Free charge carrier recombines with a charge carrier of opposite sign trapped at a
+luminescence (recombination) center; recombination energy is emitted as optical
+fluorescence.
+    \item Free charge carrier becomes trapped at a storage trap, eventually resulting in
+natural phosphorescence or accelerated phosphorescence called TL when the
+accelerating agent is heat and OSL when the accelerating agent is visible or
+ultraviolet light.
+\end{enumerate}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{/Users/souvikpc/Desktop/Lab-Reports/3rd Sem/OSL/Figures/Theory/Process.png}
+    \caption{Two-step processes of optically stimulated luminescence
+(OSL). Parts (a) and (c) illustrate step 1, parts (b) and (d) illustrate step 2. \cite{PodgorsakRadiationPhysics}}
+    \label{Fig:OSL_Process}
+\end{figure}
+Figure \ref{Fig:OSL_Process} illustrates the two major stages of the OSL dosimetry processes.
+Parts (a) and (c) show “Step 1: Irradiation” that consists of the following components:
+\begin{enumerate}
+    \item Interaction (PE, CE, TP, and NPP) of photon with an atom of insulator (phosphor)
+and release of energetic charged particle (photoelectron, Compton electron, PP
+electron and positron).
+    \item ropagation of the energetic charged particle through insulator and creation of
+electron-hole (e-h) pairs through ionization of atoms or ions of the insulator.
+(Note: only one e-h creation is shown; however, each energetic charged particle
+creates thousands of electron-hole pairs).
+    \item If the electron of the e-h pair was supplied with kinetic energy $E_K$ exceeding the
+energy gap $E_g$, the electron is lifted from the valence band into the conduction
+band (Note: if $E_K < E_g$, then both the electron and hole remain in the valence
+band, but they are bound together into a neutral entity called exciton, and migrate
+through the valence band).
+    \item Migration of free electron through conduction band of the insulator.
+    \item Trapping of electron into an empty electron trap.
+    \item Migration of hole of the e-h pair through valence band of the insulator.
+    \item Trapping of hole into an empty hole trap.
+\end{enumerate}
+Parts (b) and (d) of Fig. \ref{Fig:OSL_Process} show “Step 2: Readout'' of the OSL processes.  
+Part (b) is for $E_e < E_h$, indicating that the electron trap is a storage trap and the hole trap is a luminescence center; part (d) is for $E_e > E_h$, indicating that in this situation the electron trap acts as a luminescence center and the hole trap acts as a storage trap.  
+Part (b) has the following components:
+
+\begin{enumerate}
+    \item Ejection of trapped electron from the electron storage trap into the conduction band as a result of  exposure to light (OSL) of the previously irradiated insulator (phosphor).
+    \item Migration of free electron through the conduction band of the insulator.
+    \item Recombination of free electron with a trapped hole at a luminescence center.
+    \item Emission of visible or ultraviolet light (OSL).
+\end{enumerate}
+
+Part (d) of Fig. \ref{Fig:OSL_Process} has the following components:
+
+\begin{enumerate}
+    \item Ejection of trapped hole from the hole storage trap into the valence band as a result of  exposure to light (OSL) of the previously irradiated insulator.
+    \item Migration of free hole through the valence band of the insulator.
+    \item Recombination of free hole with a trapped electron at a luminescence center.
+    \item Emission of visible or ultraviolet light (OSL).
+\end{enumerate}
+\subsection{Method of stimulation}
+\begin{itemize}
+    \item Continuous-Wave (CW) Stimulation: In this method, the OSL dosimeter is contin-
+uously illuminated with light of constant intensity. CW-OSL remains the most commonly
+used stimulation technique due to its simplicity, reliability, and ease of implementation.The emitted luminescence signal typically follows an exponentially decreasing trend with
+time. The output intensity depends on the initial trap population, the stimulation power,
+and the duration of exposure. For a fixed illumination time and constant stimulation
+power, the integrated luminescent output is directly proportional to the initial number of
+filled traps in the dosimetric material.
+    \item Linearly Modulated (LM) Stimulation: In LM-OSL, the intensity of the stimulating
+light increases linearly with time, starting from zero and reaching a maximum value as
+the traps depopulate. The luminescence output exhibits distinct peaks corresponding to
+different trap depths. This feature is particularly useful when analyzing materials with
+multiple trapping levels, as it helps separate contributions from traps of different energies.
+    \item Pulsed Stimulation: In pulsed OSL systems, short bursts of high-intensity light are used
+to stimulate the dosimeter, while luminescence is measured between successive pulses.
+Optical filters are employed to minimize contamination from scattered stimulation light;
+however, since the intensity of the stimulating beam is several orders of magnitude higher
+than that of the emitted luminescence, some leakage may still reach the detector. To
+overcome this, the pulsed-OSL system is designed so that the detection electronics are
+gated—i.e., the photomultiplier tube (PMT) output is recorded only during the dark
+intervals between light pulses. During each pulse, electrons are excited from traps to
+the conduction band. When the pulse ends, these electrons recombine at luminescent
+centers, producing measurable light emission. This method significantly improves the
+signal-to-noise ratio and reduces background interference, making it particularly effective
+for low-dose measurements.
+% Insert images 3 by 1 grid
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{/Users/souvikpc/Desktop/Lab-Reports/3rd Sem/OSL/Figures/Light stimultion/CW.png}
+        \caption{CW-OSL}
+    \end{subfigure}
+    \begin{subfigure}{0.3\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{/Users/souvikpc/Desktop/Lab-Reports/3rd Sem/OSL/Figures/Light stimultion/LM.png}
+        \caption{LM-OSL}
+    \end{subfigure}
+    \begin{subfigure}{0.3\textwidth}
+        \centering  
+        \includegraphics[width=\textwidth]{/Users/souvikpc/Desktop/Lab-Reports/3rd Sem/OSL/Figures/Light stimultion/Pulsed.png}
+        \caption{Pulsed-OSL}
+    \end{subfigure}
+    \caption{Different methods of light stimulation in OSL dosimetry.\cite{BotterJensenOSL}}
+\end{figure}
+
+
+\end{itemize}
+\subsection{Bleaching Procedure}
+After each readout, a certain fraction of trapped charge carriers may remain within the de-
+fect centers of the OSL phosphor. These residual trapped electrons contribute to background
+signals and can affect the accuracy of subsequent dose measurements if not properly removed.
+Therefore, a bleaching process is carried out to eliminate the effects of any previous exposure
+and to stabilize the electron traps for reuse of the phosphor.
+
+Bleaching is performed using blue light illumination, which provides sufficient optical energy
+to release the remaining trapped electrons without causing thermal or structural damage to
+the phosphor material. In this procedure, all OSL discs are exposed to intense blue light for a
+sufficient duration to ensure complete optical bleaching. Typically, the phosphors are subjected
+to a blue light source of approximately 100 mW/cm2 for about 10 minutes, or alternatively, to
+continuous blue light exposure for a total period of at least 30 minutes.
+
+This optical bleaching effectively empties most of the shallow and intermediate traps,
+thereby minimizing the residual signal and allowing the OSL phosphors to be reused for sub-
+sequent irradiations with reliable and reproducible results.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{/Users/souvikpc/Desktop/Lab-Reports/3rd Sem/OSL/Figures/Theory/Bleaching.png}
+    \caption{Bleaching process of OSLD using blue light source.}
+\end{figure}
 
 \subsection{Types of OSLD}
+The Al2O3 : C phosphor exhibits strong sensitivity to low doses of ionizing radiation. Its
+main OSL emission peak occurs near 420 nm with a decay constant of approximately 35 ms,
+while a faster emission component appears around 335 nm with a decay constant of less than
+7 ns. Both of these luminescence bands are produced when trapped charge carriers in the
+dosimeter are released by optical stimulation, typically using green light centered around
+525 nm. Under continuous-wave (CW) OSL stimulation, maximum luminescence output is
+obtained when the stimulation wavelength is close to 500 nm.
 \begin{table}[ht]
 \centering
 \resizebox{\textwidth}{!}{
-\begin{tabular}{l l c c c c c c c}
+\begin{tabular}{l l c c c c c  c}
 \hline
-Material & Commercial Name & $\rho$ & $Z_{\text{eff}}$ & Glow Peak ($^\circ$C) & Emission (nm) & TL Sens. & Fading \\
+Material & Commercial Name & $\rho$ & $Z_{\text{eff}}$ & Glow Peak ($^\circ$C) & Emission (nm)  & Fading \\
 \hline
-Al$_2$O$_3$:C & nanoDot & 3.95 & 11.28 & $\sim$200 & $\sim$410 & N/A & 4\% in 3 months \\
+Al$_2$O$_3$:C & nanoDot & 3.95 & 11.28 & $\sim$200 & $\sim$410 & 4\% in 3 months \\
 
-BeO & Thermolox 995 & 2.85 & 7.21 & $\sim$210,330 & $\sim$335,390 & N/A  & 5--10\% in 3 months \\
+BeO & Thermolox 995 & 2.85 & 7.21 & $\sim$210,330 & $\sim$335,390 & 5--10\% in 3 months \\
 
 \hline
 \end{tabular}
 }
 \end{table}
+\subsection{OSL Research Reader}
+PC controlled TL/OSL reader manufactured by Nucleonix systems is a compact integral unit,
+designed primarily to meet the requirements of TL/OSL research community in R\&D labs and
+universities who are engaged in luminescence studies of TL/OSL material. Data acquisition
+is controlled by PC software. In OSL, optical stimulation by Blue and Green LED is also
+controlled by PC software and electronic circuits and embedded code in the microcontroller.
+System can be operated in TL or OSL modes required by the user.
+
+The TL/OSL stimulation and detection chamber is a precisely fabricated, light-leakage-free
+mechanical assembly housing a photon counting module with a detection filter basket. The
+LED stimulation assemblies are positioned diagonally around the photon counting module
+within a cylindrical enclosure. A dedicated OSL sample holder, integrated with a Kanthal
+heater strip and a driver circuit, is also built into the chamber.
+\begin{figure}
+    \centering
+    \includegraphics[width=0.7\textwidth]{/Users/souvikpc/Desktop/Lab-Reports/3rd Sem/OSL/Figures/Reader.png}
+    \caption{Schematic diagram of OSL Research Reader.}
+\end{figure}
+
+The optical stimulation system consists of blue and green LED clusters, each LED having
+a power rating of 3 W. Either the blue or green LED cluster (each containing two LEDs) can
+be operated during stimulation. The LEDs are positioned diagonally at 180◦ with suitable lens
+arrangements to provide uniform luminous intensity over the sample area.
+
+The blue LED clusters, each with 3 W output and placed 180◦ opposite to each other, provide
+stimulation with a peak emission wavelength of 465 nm and an emission band of 460–470 nm.
+The green LED clusters have a similar configuration. Each LED assembly is equipped with a
+long-pass stimulation filter of 420 nm cutoff and 12.5 mm diameter, which prevents scattered
+light below 420 nm from entering the photomultiplier tube (PMT) directly. A suitable focusing
+plano-concave lens is placed in front of each LED to focus the stimulation light onto the OSL
+sample positioned in the planchet.
+
+\subsection{Filter Baskets and Their Configurations}
+For Optically Stimulated Luminescence (OSL) measurements, the detection system utilizes the
+U-340 filter basket. This basket is designed to selectively transmit the luminescence signal
+while effectively blocking the stimulating light, ensuring accurate photon counting from the
+dosimeter.
+The U-340 detection filter assembly provides an effective optical thickness of 7.5 mm, typi-
+cally achieved by stacking three individual U-340 filters. These filters are arranged with O-rings
+placed between each layer to ensure mechanical stability and prevent light leakage. The assem-
+bly is secured using a chuck nut, which must be tightened sufficiently to hold the filters firmly
+in position without applying excessive pressure that could damage the glass.
+The U-340 filter has a peak transmission around 340 nm and an effective blocking range
+for longer wavelengths, making it suitable for blue-light stimulation OSL measurements. This
+configuration enhances the signal-to-noise ratio by allowing only the emitted luminescence to
+reach the photomultiplier tube (PMT) while minimizing scattered stimulation light.
+
 \section{Observation}
+After irradiation of the OSLD with known doses, the OSL reader gives the intensity counts for each disc. The following table shows the dose-dependent measurements of OSL.
 \begin{table}[H]
 \centering
 \begin{tabular}{cccc}
@@ -80,4 +300,13 @@ A & 1.98 & 1.78 & 11.24 \\
 B & 2.64 & 2.54 & 3.93 \\ \hline
 \end{tabular}
 \end{table}
+\section{Applications}
+\begin{itemize}
+    \item OSLDs are widely used in radiation therapy for patient dose monitoring and verification.
+    \item They are employed in environmental radiation monitoring to assess exposure levels in various settings.
+    \item OSLDs are utilized in personal dosimetry for occupational radiation workers to ensure safety and compliance with regulatory limits.
+    \item They find applications in space missions for monitoring cosmic radiation exposure to astronauts.
+    \item OSLDs are also used in archaeological dating and geological studies to determine the age of artifacts and sediments.
+\end{itemize}
 \section{Conclusion}
+From the experiment, we can conclude that the OSLD shows a linear relationship between dose and intensity. Using this linear relationship, we can calculate unknown doses with reasonable accuracy. The relative error for the calculated doses of unknown samples A and B are 11.24\% and 3.93\% respectively, indicating that the OSLD is a reliable dosimetry method for measuring absorbed doses in radiation therapy and other applications.

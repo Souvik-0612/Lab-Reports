@@ -1,3 +1,13 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{1}
+
+\bibitem{BotterJensenOSL}
+Lars B{\o}tter-Jensen, Stephen W.~S. McKeever, and Ann~G. Wintle.
+\newblock {\em Optically Stimulated Luminescence Dosimetry}.
+\newblock Elsevier, Amsterdam, 2003.
+
+\bibitem{PodgorsakRadiationPhysics}
+Ervin~B. Podgors{\v{s}}ak.
+\newblock {\em Radiation Physics for Medical Physicists}.
+\newblock Biological and Medical Physics, Biomedical Engineering. Springer, Berlin, Heidelberg, 2 edition, 2010.
 
 \end{thebibliography}
