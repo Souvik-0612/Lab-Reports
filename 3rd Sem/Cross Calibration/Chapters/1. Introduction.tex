@@ -1,0 +1,355 @@
+\section{Objective}
+To calibrate a therapy-level field chamber against a reference field chamber.
+\section{Apparatus}
+\begin{itemize}
+    \item Teletherapy Unit
+    \item Reference ionization chamber (Farmer chamber)
+    \item Electrometer
+    \item Water phantom
+    \item Ionization Chamber (Field Chamber)
+    \item Miscellaneous items: cables, connectors, etc.
+\end{itemize}
+
+\subsection{Ionisation chambers used}
+\subsection*{Reference Ionization chamber-Farmer ionization chamber:}
+\begin{itemize}
+    \item Ionization chamber model: PTW Farmer Ionization Chamber 30013 waterproof
+    \item Serial No: 009680
+    \item  Type: Cylindrical
+    \item  Sensitive volume 0.6 $cm^{3}$, vented
+    \item Dimensions of sensitive volume: Radius 3.05 mm, Length 23.0 mm
+    \item Wall of sensitive volume 0.335 $mm$ PMMA, 1.19 $g/cm^{3}$, 0.09 $mm$ graphite, 1.85 $g/cm^{3}$
+    \item Central electrode: Al,diameter $1.15 mm$
+    \item Calibration quality $Q_{0}$ = $^{60}Co$
+    \item Chamber Calibration factor, $N{D,W,Q_{o}} = 5.36 \times 10^{7} \ Gy/C$
+    \item Chamber Wall: Acrylic wall, graphited
+    \item Waterproof sleeve, Material: PMMA, Thickness: 4.55 mm
+\end{itemize}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{/Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Cross Calibration/Figures/Experimantal images/Ionisation chambers.pdf}
+    \label{fig:farmer}
+    \caption{Ionization chambers used}
+\end{figure}
+\subsection*{Field Ionization chamber-1 PinPoint ionization chamber:}
+\begin{itemize}
+    \item Ionization chamber model: PTW PinPoint Ionization Chamber 31014
+    \item  Serial No: 001521
+    \item  Type: Cylindrical
+    \item  Sensitive volume 0.015 $cm_{3}$,vented
+    \item  Central electrode: Al
+    \item  Calibration quality $Q_{0}$ = $^{60}Co$
+\end{itemize}
+\subsection*{Field Ionization chamber-2 Semiflex ionization chamber:}
+\begin{itemize}
+    \item Ionization chamber model: PTW Semiflex 3D Chamber 0.125 $cm^P{3}$ Type 31010
+    \item Type/Design: Cylindrical, waterproof, vented, guarded
+    \item Sensitive volume 0.125 $cm^{3}$
+    \item Dimensions of sensitive volume: Radius 2.75 mm, Length 6.5 mm
+    \item Wall of sensitive volume 0.55 mm PMMA, 1.19 $g/cm^{3}$, 0.15 mm graphite,0.82 $g/cm^{3}$
+    \item Central electrode: Al , diameter 1.1 mm
+    \item Calibration quality $Q_{0}$ = $^{60}Co$
+    \item Build-up cap: PMMA, thickness 3 mm
+\end{itemize}
+% Insert only one image 
+
+
+
+
+\section{Theory}
+In radiation dosimetry, accurate measurement of absorbed dose is crucial for effective treatment planning and delivery. Cross-calibration of a therapy-level dosimeter against a reference dosimeter ensures that the measurements are reliable and traceable to national or international standards.
+There are two set-ups available for the cross-calibration of ionisation chambers.
+
+\textbf{Sequential/Substitution Method}: The chambers are compared by placing them at the
+point zref inside the water phantom sequentially. The reference ionisation chamber readings are
+repeated to ensure the radiation beam's stability with time and the stability of the chamber. The
+tolerance between the initial and repeated measurements is 0.5\%.
+
+\textbf{Side-by-side setup}: The ionization chambers are compared by placing them side by side
+at the same depth in the water phantom and at the same time. The field size selected should be
+such that there should be at least a 3cm gap from each chamber to the field edge. The chambers
+need to be swapped in this method, and average reading should be used. This is done to remove
+the dependencies on the flatness of the beam.
+
+The government or other authorities have recognized the Primary Standard Dosimetry Laboratory (PSDL) as a national/international standardizing laboratory with the mission of creating, preserving, and enhancing primary standards in radiation dosimetry.A Secondary Standard Dosimetry Laboratory (SSDL), which is a dosimetry laboratory authorized by the relevant authorities to provide calibration services, is where the initial calibration services of a user (usually a hospital) ionization chamber are carried out. The PSDL is equipped with at least one secondary standard that has been calibrated against a primary standard.
+\begin{itemize}
+    \item \textbf{ The primary standard} is an instrument of the highest metrological quality
+ that permits determination of the unit of a quantity from its definition, and
+ the accuracy of which has been verified by comparison with the comparable
+ standards of other institutions participating in the international measurement
+ system.
+    \item \textbf{ A secondary standard } is an instrument calibrated by comparison with a
+ primary standard, either directly or indirectly by use of a working standard
+    \item \textbf{ A tertiary standard } is an instrument calibrated by direct comparison with a
+ secondary standard
+    \item \textbf{ Field instrument}  is a measuring instrument used for routine measurements.The
+ ionization chamber of a field instrument is often referred to as a field chamber.
+\end{itemize}
+ In many Radiotherapy centres, a variety of ionization chambers are available, each
+ differing in size, shape, and sensitive volume. The selection of a specific chamber depends on the type of Dosimetry required. For smaller field sizes, it’s recommended to use small-volume chambers. The calibration certificates for these chambers are typically valid for two years. Once the certificate expires, it’s crucial to recalibrate the chambers for continued accuracy.The user can cross-calibrate it against a reference chamber that has a valid calibration certificate from an accredited Calibration Laboratory. This method is called cross-calibration of field chambers. There are two set-ups available for the cross-calibration of ionisation chambers.
+
+The reference dosimeter, typically a Farmer chamber, has a well-established calibration factor provided by a standards laboratory. By exposing both the reference and field chambers to the same radiation field under identical conditions, we can determine the calibration factor for the field chamber.
+The calibration factor ($N_{D,w,Q}$) for the field chamber can be calculated using the formula:
+\[
+N^{\text{field}}_{D,w,Q_0}
+= 
+\frac{D_{w,Q}(z_{\text{ref}})}{M^{\text{field}}_{Q}\; k^{\text{field}}_{Q,Q_0}}
+=
+\frac{\overline{M}^{\,\text{ref}}_{Q}\; N^{\text{ref}}_{D,w,Q_0}\; k^{\text{ref}}_{Q,Q_0}}
+     {M^{\text{field}}_{Q}\; k^{\text{field}}_{Q,Q_0}}
+\]
+where:
+\begin{itemize}
+    \item $D_{w,Q}(z_{\text{ref}})$: Absorbed dose to water at the reference depth $z_{\text{ref}}$.
+    \item $M^{\text{field}}_{Q}$: Corrected reading from the field chamber.
+    \item $k^{\text{field}}_{Q,Q_0}$: Quality correction factor for the field chamber.
+    \item $\overline{M}^{\,\text{ref}}_{Q}$: Average corrected reading from the reference chamber.
+    \item $N^{\text{ref}}_{D,w,Q_0}$: Calibration factor of the reference chamber.
+    \item $k^{\text{ref}}_{Q,Q_0}$: Quality correction factor for the reference chamber.
+\end{itemize}
+There are two special cases for which $k^{ref}_{Q,Q_{0}} $= 1, and $k^{field}_{Q,Q_{0}}$ = 1. \\
+\begin{enumerate}
+    \item Chamber is cross-calibrated at the same beam quality ($Q_{0}$) as the reference chamber
+    \item If both the field and reference chamber have the same model number, whatever be the beam quality$k^{ref}_{Q,Q_{0}} $  = 1, and $k^{field}_{Q,Q_{0}}$ = 1.
+    \item The above equation reduces to
+    \begin{equation*}
+         N^{field}_{D,w,Q_{0}}= \frac{D_{w,Q}(z_{ref})}{M^{field}_{Q}} = \frac{\Bar{M}^{ref}_{Q}N^{ref}_{D,w,Q_{0}}}{M^{field}_{Q}}
+    \end{equation*}
+\end{enumerate}
+$N^{field}_{D,w,Q_{0}}$  
+gives the calibration factor in terms of the reference beam quality $Q_{0}$ if we
+ want to find the calibration factor in terms of the user beam quality Q i.e $N^{field}_{D,w,Q}$  then the equation becomes\\
+ \begin{equation*}
+      \boxed{N^{field}_{D,w,Q}= \frac{D_{w,Q}(z_{ref})}{M^{field}_{Q}} = \frac{\Bar{M}^{ref}_{Q}N^{ref}_{D,w,Q_{0}}K^{field}_{Q,Q_{0}}}{M^{field}_{Q}}}
+ \end{equation*}
+
+\subsection{ Beam Quality Correction factor $k_{Q,Q_{0}}$:}
+ The beam quality correction factor is used when the measurement beam differs from
+the reference beam where the chamber is calibrated. The values of this correction factor for
+various chambers and beam qualities ($TPR_{20, 10}$) are avai1234
+lable in Table 14 of IAEA TRS 398.
+If both the reference beam (Where the chamber is calibrated) and measurement beam are the
+same then $k_{Q,Q_{0}}$ is 1.
+\subsection{Correction for Temperature, Pressure, and Humidity ($k_{T,P}$):} 
+Since the ionization chamber used to measure output is open to ambient air, the mass
+of the air in the cavity volume will be affected by the surrounding temperature, pressure, and
+humidity. No correction for humidity is applied if the humidity range is within 20-80\%. The
+correction due to temperature and pressure is given by
+\begin{equation}
+    k_{T,P} = \frac{(273.2+T)}{(273.2+T_{0})}\frac{P_{0}}{P}
+\end{equation}
+where T = Temperature at the time of measurement\\
+$T_{0}$ = Reference temperature (20\textdegree C)\\
+P =  Pressure at the time of measurement\\
+$P_{0}$ =  Reference pressure (1013.2 mbar)\\
+$T_{0}$ and $P_{0}$ are the temperature and pressure respectively at which the chamber is calibrated, and it is mentioned in the calibration certificate.\\
+The temperature of the air in a chamber cavity should be taken as that of the
+ phantom, which is not necessarily the same as the temperature of the surrounding
+ air.To obtain this equilibrium with the ambient air and the air in the chamber cavity the chamber waterproof sleeve should be  vented to the atmosphere.\\
+ At the time of this writing the standardization laboratories in the United States 
+do not correct M for the humidity present in the air at the time of the calibration. 
+The atmosphere in those air-conditioned laboratories is controlled to have a tem- 
+perature in the neighborhood of 22\textdegree C, and the RH lies between 15\% and 75\%, 
+usually around 50\%. M is simply normalized to 760 torr and 22\textdegree C by the calibrating 
+laboratory through application of the equation 
+\begin{equation*}
+    M' = M \bigg(\frac{760}{P}\bigg)\bigg(\frac{273+T}{273+P_{0}}\bigg)
+\end{equation*}
+ where $M'$ is the charge measured under the existing calibration conditions, and M 
+is the corrected value to be divided into the Dose D to give the calibration factor 
+$N_{D,w}$.\\
+Since such a value of $N_{D,w}$ is correct for typical laboratory humidity conditions, no 
+humidity correction should be applied in using it.
+
+\subsection{Electrometer Calibration ($k_{elec}$):}
+Usually, the ionization chamber and measuring electrometer are calibrated as a single unit. In that case, the electrometer calibration factor
+ $K_{Q,Q_{0}}$ is unity. If the electrometer is calibrated separately, the electrometer calibration factor must be multiplied by the uncorrected
+  meter reading ($M_{Qunc}$) to calculate the corrected meter reading ($M_{Q}$). If you are using the same electrometer for both the chamber, 
+  this factor is not needed
+
+
+\subsection{Polarity Correction ($k_{pol}$):}
+Under identical irradiation conditions the use of polarizing potentials of opposite
+ polarity in an ionization chamber may yield different readings, a phenomenon that is 
+ referred to as the polarity effect. \textbf{For most ionization chamber types, the 
+ effect is practically negligible at phantom depths exceeding the depth of dose maximum
+  in megavoltage photon beams, but in the buildup region of megavoltage photon beams and 
+  in electron beams, notably at low energies, as well as in very low energy X ray beams,
+   the effect may be significant}.
+
+As in the bold text it can be seen that polarity correction is significant in the case of surface dose and low depths, We have to measure this surface doses and doses in the build up region with a parallel plat chamber for better spatial resolution.In the buildup region the positive chamber polarity produces a larger 
+signal than the negative polarity. The difference in signals is most 
+pronounced on the phantom surface and then diminishes with depth until 
+it disappears at depths of $z_{max}$ and beyond. In the buildup region, signals for both positive and negative chamber polarities are measured with a parallel-plate ionization chamber, and the average reading between the two polarities is used as the true dose value. Signal averaging eliminates the chamber Compton current that results from photon interactions in the measuring electrode of the chamber. In 
+the dose buildup region, these interactions cause a loss of electrons from the measuring electrode that is not fully compensated by the arrival of electrons from the upper layers of the phantom. The electron difference results in a non-dosimetric current, which is referred to as the Compton current, and causes an increased reading for positive chamber polarity and a decreased reading for negative chamber polarity. \\
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\linewidth]{/Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Cross Calibration/Figures/Polarity Correction.png}
+    \caption{ Megavoltage photon beam depth doses measured with a parallel-plate ionization chamber. In the buildup region the positive polarity produces a higher reading than the negative polarity, beyond $z_{max}$ both polarities give essentially identical signals.
+}
+    \label{fig:enter-label}
+\end{figure}
+The correction factor for change in meter readings due to polarizing potentials of opposite polarity is given by
+\begin{equation}
+    K_{pol} = \frac{|M_{+}|+|M_{-}|}{2M}
+\end{equation}
+$M_{+}$ = Meter reading with positive bias voltage\\
+$M_{-}$ = Meter reading with negative bias voltage\\
+$M$ = Meter reading with the usual bias voltage (used for daily output measurement purposes)
+
+\subsection{Correction for Ion Recombination/ Saturation ($k_{s}$):}
+The response of a given ionization chamber depends not only on the 
+radiation dose, dose rate and chamber polarity but also on the voltage applied  between the measuring and collecting electrodes of the chamber. The charges  produced in the chamber by radiation may differ from the charges that are actually collected, and these discrepancies (charge losses or excess charges) occur as a result of constraints imposed by the physics of ion transport in the chamber sensitive volume and the chamber electrical design. \\
+Charge losses in the chamber are caused by ion recombination; excess 
+charges are caused by charge multiplication and electrical breakdown. Both charge recombination and charge multiplication are influenced by the potential applied to the ionization chamber.\\
+
+This error is introduced due to the incomplete charge collection inside the ionization chamber. The two-voltage method is usually applied to calculate the recombination error. The protocol recommends that the ratio to be at least 2.
+\begin{equation}
+    k_{s} = \frac{(V_{1}/V_{2})-1}{(V_{1}/V_{2}) - (M_{1}/M_{2})}
+\end{equation}
+For pulsed beam from a Linear Accelerator the following formula needs to be used.
+\begin{equation}
+    k_{s} = a_{0}+a_{1}\bigg(\frac{M_{1}}{M_{2}}\bigg)+a_{2}\bigg(\frac{M_{1}}{M_{2}}\bigg)^{2}
+\end{equation}
+The corrected meter reading after applying all the correction factors is given below
+\begin{equation}
+    \mathbf{M_{Q} = M_{Qunc}k_{T,P}k_{pol}k_{sat}k_{elec}}
+\end{equation}
+\begin{table}[H]
+    \centering
+    \begin{tabularx}{1.0\linewidth}{cX} \hline
+        \textbf{Influence Quantity} & \textbf{Reference Value or Characteristics}\\\hline
+        Phantom material &  Water\\
+        Chamber type & Cylindrical or plane parallel\\
+        Measurement depth,$z_{ref}$ & 5 $g/cm^{2}$(or $10 g/cm^{2}$)\\
+        Reference point of
+        the chamber & For cylindrical chambers, on the central axis at the center of the cavity volume. For plane-parallel chambers, on the inner surface of the window at its center\\
+        Position of the
+        reference point & For cylindrical and plane-parallel chambers, at the measurement depth $z_{ref}$\\
+        SSD or SCD & 80 cm or 100 cm\\
+       Field size  & $10\times10 cm^{2}$\\ \hline
+    \end{tabularx}
+    \caption{ TRS-398 Protocol for Output Measurement: Reference conditions for determining absorbed dose to water in high energy photon beams. \cite{IAEA2000}}
+    \label{tab:my_label}
+\end{table}
+
+\section{Observation \& Result}
+We have done the cross calibration of two field chambers (PinPoint chamber and Semiflex chamber) against a reference Farmer chamber in a 6 MV photon beam from a Teletherapy unit. The measurements were done in a water phantom at a depth of 10 g/cm$^{2}$, SSD of 100 cm, and field size of $10\times10 cm^{2}$. The following are the observed readings after applying all necessary corrections:
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.4\linewidth]{/Users/souvikpc/Desktop/Lab-Reports/3rd Sem/Cross Calibration/Figures/Experimantal images/Slab Phantom.jpeg}
+    \caption{ Experimental Setup for Cross Calibration of Field Chamber}
+\end{figure}
+
+\subsection*{Reference chamber}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{ccccc}
+\toprule
+Bias & $M_1$ (nC) & $M_2$ (nC) & $M_3$ (nC) & $M_{\text{avr}}$ (nC) \\
+\midrule
+400    & 12.73 & 12.73 & 12.73 & 12.73 \\
+200    & 12.71 & 12.71 & 12.71 & 12.71 \\
+-400   & 12.77 & 12.78 & 12.78 & 12.78 \\
+\bottomrule
+\end{tabular}
+\caption{Reference chamber readings.}
+\end{table}
+
+Using the formulas we can summarize the values as:
+\[
+M_{\text{unc}} = 12.73,\quad T = 20^\circ\mathrm{C},\quad P = 1003 \text{ mbar}
+\]
+\[
+k_{TP} = 1.010169492,\quad k_{\text{pol}} = 1.001832941,\quad k_s = 1.001519461
+\]
+
+Now compute \(M_Q\):
+\[
+\begin{aligned}
+M_Q &= 12.73 \times 1.010169492 \times 1.001832941 \times 1.001519461 \\
+&= 12.90260351 \text{ nC}
+\end{aligned}
+\]
+
+Reference chamber constants:
+\[
+N_{D,W,Q} = 5.36\times 10^{7} \text{ Gy/C}, \qquad k_{Q,Q_0} = 0.991
+\]
+
+\subsection*{Field chamber: Semiflex (0.125 cc)}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{ccccc}
+\toprule
+Bias & $M_1$ (nC) & $M_2$ (nC) & $M_3$ (nC) & $M_{\text{avr}}$ (nC) \\
+\midrule
+400  & 2.369 & 2.370 & 2.370 & 2.37 \\
+200  & 2.362 & 2.363 & 2.362 & 2.36 \\
+-400 & 2.407 & 2.406 & 2.406 & 2.41 \\
+\bottomrule
+\end{tabular}
+\caption{Semiflex ionization chamber readings.}
+\end{table}
+
+Summary values:
+\[
+M_{\text{unc}} = 2.37,\quad k_{TP} = 1.010169492,\quad k_{\text{pol}} = 1.007736672,\quad k_s = 1.003008467
+\]
+
+Compute \(M_Q\):
+\[
+\begin{aligned}
+M_Q &= 2.37 \times 1.010169492 \times 1.007736672 \times 1.003008467 \\
+&= 2.419542026
+\end{aligned}
+\]
+
+Reported field chamber calibration constant:
+\[
+N_{D,W,Q} = \boxed{2.83\times 10^{8} \text{ Gy/C}}
+\]
+
+\subsection*{Field chamber: Pinpoint (0.015 cc)}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{ccccc}
+\toprule
+Bias & $M_1$ (nC) & $M_2$ (nC) & $M_3$ (nC) & $M_{\text{avr}}$ (nC) \\
+\midrule
+400  & 0.293 & 0.293 & 0.293 & 0.29 \\
+200  & 0.291 & 0.292 & 0.290 & 0.29 \\
+-400 & 0.297 & 0.297 & 0.297 & 0.30 \\
+\bottomrule
+\end{tabular}
+\caption{Pinpoint ionization chamber readings.}
+\end{table}
+
+Summary values:
+\[
+M_{\text{unc}} = 0.29,\quad k_{TP} = 1.010169492,\quad k_{\text{pol}} = 1.006825939,\quad k_s = 1.005011133
+\]
+
+Compute \(M_Q\):
+\[
+M_Q = 0.2994933176 \text{ nC}
+\]
+
+Calibration constant:
+\[
+N_{D,W,Q} = \boxed{2.29\times 10^{9} \text{ Gy/C}}
+\]
+
+\section{Conclusion}
+We successfully cross calibrated pinpoint and semiflex ionization chambers with farmer
+chamber as a reference chamber and obtained the Calibration factor ND,w,Q for both
+the chambers with respect to the user beam quality.The results of this experiment
+underscore the importance of regular calibration to ensure the dosimeter's precision
+and adherence to established standards. Accurate dose measurements are critical in
+radiation therapy, where small variations can have significant implications for patient
+outcomes. Regular cross-calibration against a reference dosimeter helps maintain the integrity
+of dose measurements, ensuring that therapeutic interventions are both safe and effective.
