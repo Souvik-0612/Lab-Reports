@@ -48,7 +48,26 @@ The survey of teletherapy unit is carried out using a survey meter around the te
     \caption{Layout of teletherapy unit in treatment room}
 \end{figure}
 \subsubsection{Weekly Time Averaged Dose-Equivalent Rate}
-The weekly time averaged dose-equivalent rate is calculated using the formula,
+If $R_w$ is the TADR averaged over a 40 hour week, it can be derived that
+
+\begin{equation}
+R_W = \mathrm{IDR} \times \frac{WU}{\mathrm{DR}_0} 
+\label{TADR}
+\end{equation}
+
+
+\begin{tabular}{ll}
+$R_w$ & is the TADR averaged over one week, in $\mathrm{Sv}\cdot\mathrm{week}^{-1}$; \\
+IDR & is instantaneous dose-equivalent rate in $\mathrm{Sv}\cdot\mathrm{h}^{-1}$ when the machine is operating at the dose output rate \\
+ & $\mathrm{DR}_0$; \\
+$W$ & is the weekly workload defined at 1 m in Gy; \\
+$U$ & is the use factor (=1 for secondary barriers or the maze entrance);\\
+$\mathrm{DR}_0$ & is the dose output rate at 1 m, in $\mathrm{Gy}\cdot\mathrm{h}^{-1}$.
+\end{tabular}
+\\
+$W = 1.5 \times 10^5 \, \mathrm{cGy/week} $ and $DR_0 = 82.38cGy/min\times ( 80/100)^2 = 52.7232$
+
+Using Equation \ref{TADR}, the weekly time averaged dose-equivalent rate is,
 
 
 
