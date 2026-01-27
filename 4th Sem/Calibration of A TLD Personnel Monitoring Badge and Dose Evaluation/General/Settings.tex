@@ -1,0 +1,50 @@
+% Give your report a title
+\newcommand\reporttitle{\textbf{Calibration of A TLD Personnel Monitoring
+Badge and Dose Evaluation}}
+\newcommand\expdate{{Date of experiment: 16 January 2026}}
+
+\newcommand\reportsubtitle{
+\textbf{Medical Physics Laboratory II}
+}
+
+
+\newcommand\name{
+\textbf{Name:} Souvik Das\\
+}
+\newcommand\Roll{
+\textbf{Roll No:} 241126007
+}
+
+% Date and location
+\newcommand\placeanddate{
+\color{black}\textbf{National Institute of Science Education and Research\\
+Jatani, Odisha, India\\ 
+Date of submission: \today
+}}
+
+
+% Creates a beautiful header/footer
+\pagestyle{fancy}
+\lhead{\includegraphics[height = 20pt]{Figures/Logos/NISER.jpg}}
+\rhead{\reporttitle}
+\renewcommand{\footrulewidth}{0.4pt}
+\cfoot{Page \thepage}
+
+
+% Define NISER-blue (the colour of the NISER logo). Can be changed to change the look of the template drastically
+\definecolor{NISER-blue}{RGB}{0, 0, 0}
+% Sets up hyperlinks in the document to be colored
+\hypersetup{
+    colorlinks=true,
+    linkcolor=NISER-blue,
+    urlcolor=NISER-blue,
+    citecolor = NISER-blue
+    }
+\urlstyle{same} % Defines settings for link and reference formatting
+
+% Formats captions
+\DeclareCaptionFont{NISER-blue}{\color{NISER-blue}}
+\captionsetup{labelfont={NISER-blue,bf}}
+
+% Limits the ToC to sections and subsections (no subsubsection)
+\setcounter{tocdepth}{3}
