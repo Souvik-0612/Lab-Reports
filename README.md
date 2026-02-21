@@ -1,9 +1,5 @@
-This repo is for writing lab reports in latex formet.
+> [!Note]
+> This repo is used to store the lab reports while studing in [NISER](https://www.niser.ac.in/cmrp/).
 
-To see the pdf of the report go to the particular experiment then click on the ``main.pdf``.
-
-These are the lab reports I had made while studyig Medical physics in the NISER Bhubaneswar.
-
-Hope some information will help you. 
-
-Enjoy reading! :-)
+> [!Warning]
+> You will find main.pdf which is the main report most of the cases.
