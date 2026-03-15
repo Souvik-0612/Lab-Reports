@@ -1,3 +1,7 @@
+\subsection{PDD }
+From the experimental data, we can plot the PDD curve for the 6 MV and 10 MV photon beams. The PDD curve illustrates how the absorbed dose varies with depth in a water phantom for a given beam energy and field size. By analyzing the PDD curves, we can determine important parameters such as the surface dose, depth of maximum dose (dmax), and the percentage dose at specific depths (e.g., D10 at 10 cm depth and D20 at 20 cm depth).
+
+The Data is analysed using Python, and the code snippet for the PDD analysis is provided below. The code reads the depth and dose data from an Excel file, calculates the percentage depth dose, and identifies key parameters such as surface dose, dmax, D10, and D20. Finally, it plots the PDD curve with annotations for these parameters.
 \begin{lstlisting}[style=mypython, caption={PDD analysis code}]
 # Importing some useful library
 import matplotlib.pyplot as plt
@@ -49,8 +53,123 @@ plt.savefig("PDD and Profile/Program/PDD_10MV.pdf", dpi=300, bbox_inches='tight'
 plt.show()
 \end{lstlisting}
 
+%Two figures side by side
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.8\textwidth]{/Users/souvikdas/Desktop/Lab-Reports/4th Sem/PDD and Profile/Program/PDD_6MV.pdf}
-    \caption{PDD profile of 6MV SSD=100, Water Phantom, F.S= 10x10cm$^2$}
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Program/PDD_6MV.pdf}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Program/PDD_10MV.pdf}
+    \end{minipage}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Program/PDD_Compare.pdf}
+\end{figure}
+
+\subsection{Beam Profile}
+The beam profile represents the variation of absorbed dose across the transverse plane of the beam at a specific depth. By analyzing the beam profile, we can assess parameters such as beam flatness and symmetry, which are crucial for ensuring uniform dose distribution in radiation therapy. The code snippet for analyzing the beam profile is provided below. The code reads the transverse dose data from an Excel file, calculates the flatness and symmetry, and plots the beam profile with annotations for these parameters.
+\begin{lstlisting}[style=mypython, caption={Beam profile analysis code}]
+# Importing some useful library
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+from pathlib import Path
+import scienceplots
+plt.style.use(['science', 'notebook', 'grid'])
+
+# Data Extraction from the xlsx file
+base_dir = Path(__file__).resolve().parent
+excel_file = base_dir / "PDD & PROFILE.xlsx"
+df = pd.read_excel(excel_file, sheet_name=2)
+x = np.array(df["Distance from central axis"])
+Ix = np.array(df["Crossline dose value"]) #Change the column name (Inline dose value or Crossline dose value)"
+Ix=Ix/max(Ix)*100   
+
+#Analyzing profile data
+xleft = 0; xright = 0    # To find the FWHM(Full width at half maximum) of the inline profile
+for i in range(int(len(x)/2)):
+    if 55 >= Ix[i] >=45:
+        xleft = x[i] - (x[i]-x[i-1])*(Ix[i]-50)/(Ix[i]-Ix[i-1])     #Linear interpolation
+    if 55 >= Ix[-i]>=45:
+        xright = x[-i] - (x[-i]-x[-i+1])*(Ix[-i]-50)/(Ix[-i]-Ix[-i+1])
+
+
+FieldWidth = xright - xleft # Geometrical field width
+
+
+Dmax = 0; Dmin = 100
+IIx = []
+xR = []; leftPenumbra = []; xL = []; rightPenumbra = []
+for i in range(len(x)):
+    if abs(x[i]) <= 0.4*FieldWidth:
+        if Dmax < Ix[i]:
+            Dmax = Ix[i]
+        if Dmin > Ix[i]:
+            Dmin = Ix[i]
+
+    if abs(x[i])<= FieldWidth/2:
+        IIx.append(Ix[i])
+
+    if i < int(len(x)/2) and 17 <= Ix[i] <= 83:
+        xL.append(x[i])
+        leftPenumbra.append(Ix[i])
+    if i > int(len(x)/2) and 17 <= Ix[i] <= 83:
+        xR.append(x[i])
+        rightPenumbra.append(Ix[i])
+
+n = int(len(IIx)/2); h = abs(x[1]-x[0]) # Step size for numerical integration
+AreaL = 0.5*h*(IIx[0]+2*sum(IIx[1:n])+IIx[n])             #Trapezoidal rule for area calculation of the left half of the profile
+AreaR = 0.5*h*(IIx[n+1]+2*sum(IIx[n+1:-1])+IIx[-1])
+perSymmetry = abs((AreaL - AreaR)/(AreaL+AreaR)*100)
+perFlatness = abs((Dmax - Dmin)/(Dmax+Dmin)*100)
+LeftPenumbra = abs(xL[-1] - xL[0]) # Left penumbra width
+RightPenumbra = abs(xR[-1] - xR[0]) # Right penumbra width
+
+
+#Plotting
+fig, ax = plt.subplots(figsize=(15, 8))
+ax.plot(x, Ix)
+plt.fill_between(xL, leftPenumbra, 0, color='lightcoral', alpha=0.35)
+plt.fill_between(xR, rightPenumbra, 0, color='skyblue', alpha=0.35)
+plt.plot([-FieldWidth/2, FieldWidth/2], [50, 50], color='red', linestyle='--', label='50% Line')
+plt.plot([-FieldWidth/2, -FieldWidth/2], [0, 102], color='green', linestyle='--')
+plt.plot([FieldWidth/2, FieldWidth/2], [0, 102], color='green', linestyle='--')
+plt.plot([0, 0], [0, 105], color='blue', linestyle='--')
+plt.plot([0.4*FieldWidth, 0.4*FieldWidth], [0, 102], color='orange', linestyle='--')
+plt.plot([-0.4*FieldWidth, -0.4*FieldWidth], [0, 102], color='orange', linestyle='--')
+info_text = (
+    f"Field size: {FieldWidth:.2f} mm\n"
+    f"Symmetry: {perSymmetry:.2f} %\n"
+    f"Flatness: {perFlatness:.2f} %\n"
+    f"Left penumbra: {LeftPenumbra:.2f} mm\n"
+    f"Right penumbra: {RightPenumbra:.2f} mm"
+)
+ax.text(0.02, 0.98, info_text, transform=ax.transAxes, va='top', ha='left',
+        fontsize=11, bbox=dict(boxstyle='round', facecolor='white', alpha=0.8, edgecolor='black'))
+ax.set_xlabel("Distance from central axis (mm)")
+ax.set_ylabel("Relative dose (%)")
+plt.savefig(base_dir / "CrosslineProfile.pdf", dpi=300, bbox_inches='tight')
+plt.show()
+\end{lstlisting}
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Program/CrosslineProfile.pdf}
+        \caption{Crossline beam profile}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{Program/InlineProfile.pdf}
+        \caption{Inline beam profile}
+    \end{subfigure}
+    \caption{Beam profile plots showing the crossline and inline dose distributions.}
 \end{figure}
