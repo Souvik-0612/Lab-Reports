@@ -71,7 +71,14 @@ plt.show()
     \centering
     \includegraphics[width=0.8\textwidth]{Program/PDD_Compare.pdf}
 \end{figure}
-
+\subsubsection{Observation from comparison graph}
+From the comparison graph of the PDD curves for 6 MV and 10 MV photon beams, we can observe the following:
+\begin{enumerate}
+    \item The depth of maximum dose (dmax) is greater for the 10 MV beam compared to the 6 MV beam. This is because higher energy photons have a greater penetration ability, resulting in a deeper dmax.
+    \item The surface dose is lower for the 10 MV beam compared to the 6 MV beam. This is due to the increased build-up effect for higher energy photons, which causes more dose to be deposited at greater depths rather than at the surface.
+    \item The percentage depth dose decreases more gradually with depth for the 10 MV beam compared to the 6 MV beam. This is because higher energy photons are less attenuated as they pass through the medium, resulting in a more uniform dose distribution with depth.
+    \item The D10 and D20 values are higher for the 10 MV beam compared to the 6 MV beam, indicating that a greater percentage of the dose is delivered at deeper depths for the higher energy beam. This is consistent with the increased penetration ability of the 10 MV photons.
+\end{enumerate}
 \subsection{Beam Profile}
 The beam profile represents the variation of absorbed dose across the transverse plane of the beam at a specific depth. By analyzing the beam profile, we can assess parameters such as beam flatness and symmetry, which are crucial for ensuring uniform dose distribution in radiation therapy. The code snippet for analyzing the beam profile is provided below. The code reads the transverse dose data from an Excel file, calculates the flatness and symmetry, and plots the beam profile with annotations for these parameters.
 \begin{lstlisting}[style=mypython, caption={Beam profile analysis code}]
