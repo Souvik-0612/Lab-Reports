@@ -99,12 +99,307 @@ After prescription, treatment planning begins with defining target volumes and c
 2. \textbf{Dose distribution in axial, sagittal, and coronal planes(3D dose distribution)}
 
 3. \textbf{Dose-volume histograms (DVHs)}
+
+
 \subsubsection{Intensity modulation}
-1. \textbf{Forward and Inverse Planning}
+1. \textbf{Forward and Inverse Planning}: In \textit{forward planning}, the treatment planner places beams into a radiotherapy treatment planning system that can deliver sufficient radiation to a tumor while both sparing critical organs and minimizing the dose to healthy tissue. The planner takes a trial and error approach while using past experience to alter beam parameters, such as beam weights and beam angles, to achieve an acceptable dose distribution. This is achievable when there is little geometric complexity with respect to adjacent critical organs or where doses delivered may be well below dose constraints for critical organs such as in palliative treatments. The treatment planner has the capability of modifying aperture shapes (such as defined by MLCs), beam weights, angles, and dose rates; such a large number of variables rapidly begins to exceed the capabilities of human comprehension. Hence, the concept of \textit{inverse planning} was developed, in which a mathematical optimization of beam delivery parameters is performed to achieve a treatment plan that meets desired dosimetric goals. The required dose goals or objectives are typically provided by the operator in the form of dose threshold points on a DVH curve. These may be simple minimum and maximum doses to structures, or relative organ volumes receiving a given dose. In its simplest form, inverse planning can be used to determine optimal beam weights for a multi-field 3DCRT treatment plan. Inverse planning is typically used to optimize beam delivery components, such as MLC segment shapes and weights, 2D incident fluence (later converted to something deliverable by an MLC), gantry rotation speed, and dose rate.
 
-2. \textbf{The rationale for intensity modulation}
+2. \textbf{The rationale for intensity modulation}: The primary rationale for intensity modulation arises from the vital clinical need to highly conform the prescribed dose to complex target volumes, particularly when sensitive organs are adjacent to or enveloped by concave tumor surfaces (e.g., a tumor wrapping around the spinal cord). 
 
+\begin{figure}[H]
+    \centering
+    \scalebox{0.8}{
+    \begin{tikzpicture}[
+        every node/.style={font=\sffamily}
+    ]
+
+        % ----- LEFT PANEL (3D Conformal) -----
+        \begin{scope}[shift={(-4.5, 0)}]
+            % Title
+            \node[above] at (0, 4) {\textbf{3D conformal}};
+            
+            % Body outline
+            \draw[thick] (0,0) ellipse (3.5cm and 2.2cm);
+            
+            % Beams
+            \foreach \ang/\rot in {145/55, 90/0, 35/-55} {
+                \begin{scope}[rotate=\rot, shift={(0, 3.2)}]
+                    % dashed lines
+                    \draw[black!60, thick, dashed] (-1.2, 0) -- (-1.2, -5.5);
+                    \draw[black!60, thick, dashed] (1.2, 0) -- (1.2, -5.5);
+                    % collimator
+                    \draw[thick, fill=white] (-1.2, 0) -- (-1.2, 0.6) -- (1.2, 0.6) -- (1.2, 0) -- cycle;
+                \end{scope}
+            }
+            
+            % Target Volume (Blue)
+            \draw [fill=blue!50!white, draw=black!70, thick] plot [smooth cycle, tension=0.7] coordinates {
+                (-1.0, 0.5) (-1.1, 0) (-0.8, -0.9) (0.8, -0.9) (1.1, 0) (0.8, 0.8) 
+                (0.2, 0.4) (-0.1, -0.1) (-0.6, 0.3)
+            };
+            
+            % Critical Structure (Green)
+            \filldraw[fill=green!60!black, draw=black!80, thick] (-0.3, 0.4) circle (0.2cm);
+            
+            % Isodoses
+            % Red (fails to spare)
+            \draw [red, thick] plot [smooth cycle, tension=0.7] coordinates {
+                (-1.2, 0.8) (-1.3, 0) (-1.0, -1.1) (1.0, -1.1) (1.3, 0) (1.0, 1.0) (-0.2, 1.0)
+            };
+            % Yellow (outer)
+            \draw [yellow!90!orange, thick] plot [smooth cycle, tension=0.7] coordinates {
+                (-1.4, 0.9) (-1.5, 0) (-1.2, -1.3) (1.2, -1.3) (1.5, 0) (1.2, 1.1) (-0.2, 1.1)
+            };
+        \end{scope}
+
+        % ----- RIGHT PANEL (Intensity Modulated) -----
+        \begin{scope}[shift={(4.5, 0)}]
+            % Title
+            \node[above] at (0, 4) {\textbf{Intensity modulated}};
+            
+            % Body outline
+            \draw[thick] (0,0) ellipse (3.5cm and 2.2cm);
+            
+            % Beams
+            % Left Beam (145)
+            \begin{scope}[rotate=55, shift={(0, 3.2)}]
+                \draw[black!60, thick, dashed] (-1.2, 0) -- (-1.2, -5.5);
+                \draw[black!60, thick, dashed] (1.2, 0) -- (1.2, -5.5);
+                \draw[thick, fill=white] (-1.2, 0) -- (-1.2, 0.3) -- (-0.8, 0.3) -- (-0.6, 0.8) -- (-0.2, 0.8) -- (0, 0.1) -- (0.4, 0.1) -- (0.6, 0.6) -- (1.0, 0.6) -- (1.2, 0.3) -- (1.2, 0) -- cycle;
+            \end{scope}
+            
+            % Top Beam (90)
+            \begin{scope}[rotate=0, shift={(0, 3.2)}]
+                \draw[black!60, thick, dashed] (-1.2, 0) -- (-1.2, -5.5);
+                \draw[black!60, thick, dashed] (1.2, 0) -- (1.2, -5.5);
+                \draw[thick, fill=white] (-1.2, 0) -- (-1.2, 0.2) -- (-0.8, 0.2) -- (-0.6, 0.7) -- (-0.2, 0.7) -- (0, 0.2) -- (0.2, 0.2) -- (0.5, 0.8) -- (0.9, 0.8) -- (1.1, 0.3) -- (1.2, 0.3) -- (1.2, 0) -- cycle;
+            \end{scope}
+            
+            % Right Beam (35)
+            \begin{scope}[rotate=-55, shift={(0, 3.2)}]
+                \draw[black!60, thick, dashed] (-1.2, 0) -- (-1.2, -5.5);
+                \draw[black!60, thick, dashed] (1.2, 0) -- (1.2, -5.5);
+                \draw[thick, fill=white] (-1.2, 0) -- (-1.2, 0.5) -- (-0.8, 0.5) -- (-0.5, 0.2) -- (-0.2, 0.2) -- (0.1, 0.7) -- (0.6, 0.7) -- (0.9, 0.4) -- (1.2, 0.4) -- (1.2, 0) -- cycle;
+            \end{scope}
+
+            % Target Volume (Blue)
+            \draw [fill=blue!50!white, draw=black!70, thick] plot [smooth cycle, tension=0.7] coordinates {
+                (-1.0, 0.5) (-1.1, 0) (-0.8, -0.9) (0.8, -0.9) (1.1, 0) (0.8, 0.8) 
+                (0.2, 0.4) (-0.1, -0.1) (-0.6, 0.3)
+            };
+            
+            % Critical Structure (Green)
+            \filldraw[fill=green!60!black, draw=black!80, thick] (-0.3, 0.4) circle (0.2cm);
+            
+            % Isodoses
+            % Red (conforms exactly)
+            \draw [red, thick] plot [smooth cycle, tension=0.7] coordinates {
+                (-1.1, 0.6) (-1.2, 0) (-0.9, -1.0) (0.9, -1.0) (1.2, 0) (0.9, 0.9) 
+                (0.2, 0.5) (-0.1, 0.0) (-0.6, 0.4)
+            };
+            % Yellow (follows conformity)
+            \draw [yellow!90!orange, thick] plot [smooth cycle, tension=0.7] coordinates {
+                (-1.3, 0.7) (-1.4, 0) (-1.1, -1.2) (1.1, -1.2) (1.4, 0) (1.1, 1.1) 
+                (0.2, 0.7) (-0.1, 0.2) (-0.6, 0.6)
+            };
+        \end{scope}
+
+        % ----- LEGEND -----
+        \begin{scope}[shift={(0, -3.5)}]
+            \filldraw[fill=blue!50!white, draw=black!70] (-3, 0) rectangle (-2.5, 0.4);
+            \node[right] at (-2.4, 0.2) {Target volume};
+            
+            \filldraw[fill=green!60!black, draw=black!80] (1, 0) rectangle (1.5, 0.4);
+            \node[right] at (1.6, 0.2) {Critical structure to avoid};
+        \end{scope}
+        
+    \end{tikzpicture}
+    }
+    \caption{Conformity of dose to a target volume with a concave surface cannot be achieved via simple beam's-eye view planning with unmodulated coplanar beams (left). At right, intensity-modulated beams conform the dose distribution exactly to the target, successfully sparing the critical structure.}
+    \label{fig:imrt_rationale}
+\end{figure}
+While conventional 3D conformal radiotherapy (3DCRT) shapes beam apertures using a 2D beam's-eye view (BEV), it fails to create conformal 3D dose distributions for hollow or cup-shaped targets because unmodulated uniform beams cannot selectively spare the nested critical structures. To achieve true volumetric conformity, non-uniform 2D beam intensity profiles must be generated. This typically involves a two-step planning process: determining suitable beam intensity maps through an inverse planning optimization algorithm, and then physically realizing these intensity profiles using computerized beam delivery mechanisms such as multileaf collimators (MLCs). Occasionally, these steps are combined via direct aperture optimization to overcome the mechanical limitations of the delivery device.
+
+
+\begin{figure}[H]
+    \centering
+    \scalebox{0.8}{
+    \begin{tikzpicture}[
+        every node/.style={font=\sffamily}
+    ]
+
+        % ----- LEFT PANEL (a) Target -----
+        \begin{scope}[shift={(-4.5, 0)}]
+            % Axes
+            \draw[thick] (0, 0) -- (4.5, 0) node[right] {Dose};
+            \draw[thick] (0, 0) -- (0, 4) node[above] {Volume};
+            
+            % Curve (target)
+            \draw[thick, blue!60!cyan] (0.2, 3.3) -- (2.5, 3.3) .. controls (2.8, 3.3) and (3.3, 0.5) .. (3.7, 0);
+            
+            % Legend
+            \draw[thick, blue!60!cyan] (0.8, 2.8) -- (1.3, 2.8) node[right, text=black] {target};
+            
+            % Dashed lines
+            \draw[dashed, black!70] (2.8, 3.8) -- (2.8, 0) node[below=2pt, text=black] {$d_{\text{min}}$};
+            \draw[dashed, black!70] (3.7, 3.8) -- (3.7, 0) node[below=2pt, text=black] {$d_{\text{max}}$};
+            
+            \node[below] at (2.25, -1) {\textbf{(a)}};
+        \end{scope}
+
+        % ----- RIGHT PANEL (b) Critical Organ -----
+        \begin{scope}[shift={(2.5, 0)}]
+            % Axes
+            \draw[thick] (0, 0) -- (4.5, 0) node[right] {Dose};
+            \draw[thick] (0, 0) -- (0, 4) node[above] {Volume};
+            
+            % Hatched area
+            \begin{scope}
+                % Clip region for the hatch
+                \clip (1.5, 0.9) -- (1.5, 1.9) to[out=-45, in=150] (2.8, 0.9) -- cycle;
+                \foreach \x in {-2,-1.8,...,4} {
+                    \draw[black!40, thin] (\x, 0) -- (\x+3, 3);
+                }
+            \end{scope}
+            
+            % Curve (critical organ)
+            \draw[thick, green!60!black] (0.2, 3.5) to[out=-70, in=135] (1.5, 1.9) to[out=-45, in=150] (2.8, 0.9) to[out=-30, in=165] (4.5, 0);
+            
+            % Legend
+            \draw[thick, green!60!black] (0.8, 3.3) -- (1.3, 3.3) node[right, text=black] {critical organ};
+            
+            % Dashed box
+            \draw[dashed, black!70] (1.5, 1.9) -- (1.5, 0.9);
+            \node[below, text=black] at (1.5, 0.9) {$d_{\text{max}}, V_{\text{max}}$};
+            
+            \draw[dashed, black!70] (1.5, 0.9) -- (2.8, 0.9);
+            \node[above right=1pt and -2pt, text=black] at (2.8, 0.9) {$d'_{\text{max}}, V_{\text{max}}$};
+            
+            % Points
+            \filldraw[black] (1.5, 0.9) circle (2pt);
+            \filldraw[black] (2.8, 0.9) circle (2pt);
+            
+            % Dashed line for d_max at the end
+            \draw[dashed, black!70] (4.5, 3.8) -- (4.5, 0) node[below=2pt, text=black] {$d_{\text{max}}$};
+            
+            \node[below] at (2.25, -1) {\textbf{(b)}};
+        \end{scope}
+        
+    \end{tikzpicture}
+    }
+    \caption{(a) Maximum and minimum target dose goals in terms of a DVH display. Any voxel with dose above the maximum and below the minimum will be penalized. (b) Maximum critical organ dose goal and a critical organ DVH goal. For the DVH goal we want the DVH curve to ideally reach that point. If the DVH passes underneath the point, that DVH goal is considered to be met and does not contribute to the optimization.}
+    \label{fig:dvh_goals}
+\end{figure}
 3. \textbf{Simple optimization mathematics}
+
+Consider the schematic shown in Figure \ref{fig: 5}. If the matrix containing all beamlet weights is $w$ and the matrix of calculated doses in the patient is $d$, the dose distribution is obtained from the matrix multiplication $d = Dw$ where $D$ gives the change in $d$ for a unit increment in each beam weight. Note that $d$ and $w$ are single-column matrices and $D$ is a rectangular matrix with the same number of rows as $d$ and the same number of columns as $w$ has rows. In fact, $d$ has as many rows as there are dose calculation points and $w$ has as many rows as there are beamlets in the problem. Figure \ref{fig: 5} shows a schematic of an intensity profile (the weights included in the $w$ vector) and a dose distribution described by the $d$ vector. An arrow is drawn (representing an element of the $D$ matrix) indicating the influence of a beam element on a dose element.
+
+Ideally, we would simply invert this matrix algebra expression and obtain $w$ from $w = D^{-1}d$, but this is not a straightforward procedure for reasons such as those discussed above.
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+        % Body/patient outline
+        \draw[fill=gray!30, thick] (0,0) ellipse (3cm and 1.5cm);
+        
+        % Target area
+        \draw[red, thick] (0,-0.2) .. controls (1,-0.2) and (0.5,0.5) .. (0,0.5) .. controls (-0.5,0.5) and (-1,-0.2) .. (0,-0.2);
+        \draw[yellow, thick] (0,-0.4) .. controls (1.2,-0.4) and (0.7,0.7) .. (0,0.7) .. controls (-0.7,0.7) and (-1.2,-0.4) .. (0,-0.4);
+
+        % Beam source
+        \draw[thick] (-0.8, 3) -- (0.8, 3);
+        \foreach \x in {-0.7,-0.5,...,0.7} {
+            \draw (\x, 3) -- (\x, {3 + 0.5*cos(\x*100)});
+        }
+        \draw[thick] (-0.8, 3) -- (-0.8, {3 + 0.5*cos(-80)});
+        \draw[thick] (0.8, 3) -- (0.8, {3 + 0.5*cos(80)});
+        \draw[thick] (-0.8, {3 + 0.5*cos(-80)}) .. controls (0, 3.8) .. (0.8, {3 + 0.5*cos(80)});
+        \node at (0, 3.7) {$w$};
+
+        % Beam lines
+        \draw[thick] (-0.8, 3) -- (-1.2, -1);
+        \draw[thick] (0.8, 3) -- (1.2, -1);
+
+        % D matrix representation
+        \draw[dashed, thick, ->] (-0.4, 3) -- (-0.6, 0.1);
+        \node at (-0.1, 1.5) {$D$};
+
+        % d voxel
+        \filldraw[black] (-0.7, 0) rectangle (-0.5, 0.2);
+        \node at (-0.2, 0.1) {$d$};
+
+        % Equation
+        \node at (2, 2) {\large $d = Dw$};
+    \end{tikzpicture}
+    \caption{Schematic of an intensity profile (the weights included in the $w$ vector) and a dose distribution described by the $d$ vector. An arrow is drawn (representing an element of the $D$ matrix) indicating the influence of a beam element on a dose element.}
+    \label{fig: 5}
+\end{figure}
+
+It is more instructive to write the dose calculation equation as a summation, where the dose in the $i$th voxel can be expressed as
+
+\begin{equation}
+    d_i = \sum_{j=1}^{M} D_{ij} w_j .
+    \label{1}
+\end{equation}
+
+Here $j$ is the beamlet index and there are $M$ beamlets over all beams used. Note that $D_{ij}$ is the dose delivered to the $i$th voxel by the $j$th beamlet for a unit beam weight. A unit of beam weight may be a unit of beam fluence, energy fluence, opening density, exposure time, or any quantity that the $D_{ij}$ matrix is normalized with respect to.
+
+\subsection*{The Objective Function}
+
+An optimization algorithm needs an objective function to measure how far the result currently is from the desired solution. For a dose optimization problem, the objective function needs to express an overall voxel-by-voxel deviation from the desired dose, including the importance, or penalty, for each of those deviations. Deviations need not include a subtraction of desired dose from actual dose, but this is a useful and obvious measure. In fact, a quadratic objective function---including a weighted sum of the squared difference between desired and actual dose---is often used. As mentioned above, there may be several goal doses that apply to different voxels, and these goal doses act as the desired dose. If we denote the goal dose for the $i$th voxel as a prescript dose, $d_i^{pres}$, and the associated penalty for deviating from that goal as $s_i$, then the objective function can be defined as
+
+\begin{equation}
+    F = \sum_{i=1}^{N} s_i \left( d_i - d_i^{pres} \right)^2 .
+    \label{2}
+\end{equation}
+
+Here there are $N$ voxels in which dose is to be considered throughout the dose matrix and corresponding to both targets and sensitive structures. The penalty values are typically user-defined by type and target/structure. If a voxel $i$ is in a given structure and its dose value $d_i$ exceeds the maximum dose goal for that structure, $d_i^{pres}$ in Equation \ref{2} will be the maximum dose goal for that structure. Similarly for structure voxels with dose beneath a minimum dose goal, $d_i^{pres}$ is the minimum dose.
+
+\subsection*{Iterative Optimization of Beamlet Weights}
+
+In order to drive the dose to a solution that better meets the pre-defined optimization goals, the most efficient tactic is to alter beamlet weights in some deterministic way. One such method is a so-called gradient technique, where the idea is to reduce the objective function value via calculated changes in the beamlet weights until its rate of change is zero. That is, the objective function is minimized. This concept is illustrated in Figure \ref{fig:6.13}, where as iterations continue, the gradient of the objective function change decreases until it reaches a plateau and the user (or system) would cease the optimization.
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+        % Axes
+        \draw[thick] (0,5) -- (0,0) -- (6,0);
+        \node[rotate=90, above=0.3cm] at (0,2.5) {\small Objective Function};
+        \node[below=0.2cm] at (3,0) {\small Iterations};
+
+        % Curves
+        \draw[thick, red] (0.3, 4.5) .. controls (0.6, 0.6) and (1.5, 0.2) .. (5.5, 0.2);
+        \draw[thick, brown] (0.3, 2.5) .. controls (0.8, 0.5) and (2, 0.4) .. (5.5, 0.4);
+        \draw[thick, blue] (0.3, 1.5) .. controls (0.8, 0.7) and (2.5, 0.6) .. (5.5, 0.6);
+        \draw[thick, black] (0.3, 4.8) .. controls (1.0, 1.5) and (2.5, 1) .. (5.5, 0.9);
+
+        % Legend
+        \node[text=red, right] at (3.5, 4.5) {\footnotesize Bladder};
+        \node[text=brown, right] at (3.5, 4.1) {\footnotesize Rectum};
+        \node[text=blue, right] at (3.5, 3.7) {\footnotesize Target};
+        \node[text=black, right] at (3.5, 3.3) {\footnotesize Total};
+    \end{tikzpicture}
+    \caption{As the iterations progress, the objective function is reevaluated for each structure that has an objective assigned to it. The gradient descent process aims to reduce the difference between the desired dose objective and the actual dose value with each iteration, resulting in the objective function described in Equation \ref{2} approaching zero as all objectives are met. Visualization of each individual objective function allows the user to determine which structure is contributing the most to the objective function, thus is farthest away from the desired dose.}
+    \label{fig:6.13}
+\end{figure}
+
+According to the commonly used quasi-Newton gradient technique, the calculated changes in beamlet weight can be arrived at via the derivative and second derivative of the objective function with respect to that particular weight. The change in weight of beamlet $j$ for a given iteration will be
+
+\begin{equation}
+    \Delta w_j = -\alpha \left( \frac{dF}{dw_j} \middle/ \frac{d^2F}{dw_j^2} \right) .
+    \label{3}
+\end{equation}
+
+The factor $\alpha$ is a damping term to ensure convergence to a solution. The proviso must be imposed that the adjusted weight cannot be less than zero (if it would become so, it is set to zero). Now using Equation (6.3), the change in weight becomes
+
+\begin{equation}
+    \Delta w_j = -\alpha \frac{\sum_{i=1}^{N} s_i \left( d_i - d_i^{pres} \right) D_{ij}}{\sum_{i=1}^{N} s_i D_{ij}^2} .
+    \label{4}
+\end{equation}
+
+Note that the weight change for beamlet $j$ is essentially a weighted average of the dose-differences for all voxels influenced by that beamlet, where the weights in the average are dependent on the penalty value appropriate to that voxel and on the dose per unit beamlet weight in that voxel. Thus, as should intuitively be the case, the influence of a particular voxel's dose-deviation on a given beamlet weight is larger when the dose per unit beamlet weight is higher for that voxel.
+
+
 \subsection{matRad Workflow}
 
 \texttt{matRad} is an open-source dose calculation and optimization toolkit developed entirely in MATLAB, explicitly designed for three-dimensional intensity-modulated radiation therapy (IMRT) research and educational purposes \cite{wieser_development_2017}. The software features a highly modular and sequential design that mirrors a clinical treatment planning environment. After importing patient anatomical models—either from external DICOM data or utilizing pre-loaded datasets like the CORT database—users can systematically compute and evaluate plans. The standard \texttt{matRad} workflow comprises four primary sequential processes:
