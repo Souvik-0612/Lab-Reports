@@ -429,5 +429,27 @@ The dose influence matrix calculation in \texttt{matRad} involves two main steps
 \subsubsection{Fluence optimization}
 The core task of fluence optimization is to determine the set of bixel or spot weights that yields a dose distribution best matching the clinical goals. \texttt{matRad} formulates this as a mathematical optimization problem, minimizing a weighted sum of objective functions subject to constraints. Supported objectives include squared overdosage and underdosage, mean dose, and equivalent uniform dose (EUD), as well as dose-volume histogram (DVH) constraints. The software utilizes the IPOPT (Interior Point OPTimizer) package for solving these large-scale non-linear optimization problems. The framework supports optimization based on physical dose, as well as biological effect and RBE-weighted dose for particle therapy, allowing for comprehensive treatment planning flexibility.
 
+\begin{table}[H]
+    \centering
+    \caption{Supported objective and constraint functions by matRad with dose $d_i$ in voxel $i$, prescribed dose $\hat{d}$, dose $\tilde{d}$ at prescribed volume, structure $S$, number of voxels in structure $N_S$, equivalent uniform dose (EUD) exponent $a$, Heaviside function $\Theta(x)$, and log-sum-exp function parameter $\kappa = 10^{-3}$. Min/max mean and min/max EUD constraints are not explicitly stated but are supported by matRad. \cite{wieser_development_2017}}
+    \renewcommand{\arraystretch}{1.5}
+    \resizebox{\textwidth}{!}{
+    \begin{tabular}{p{2.5cm}p{6cm}p{2.5cm}p{5cm}}
+        \hline
+        \multicolumn{2}{c}{Objectives} & \multicolumn{2}{c}{Constraints} \\
+        \hline
+        $f_{\text{sq deviation}}$ & $= \frac{1}{N_S} \sum_{i \in S} (d_i - \hat{d})^2$ & & \\
+        $f_{\text{sq under dosage}}$ & $= \frac{1}{N_S} \sum_{i \in S} \Theta(\hat{d} - d_i) (d_i - \hat{d})^2$ & $c_{\text{min dose}}$ & $= d_{\text{min}} - \kappa \log(\sum_{i \in S} e^{\frac{d_{\text{min}} - d_i}{\kappa}})$ \\
+        $f_{\text{sq over dosage}}$ & $= \frac{1}{N_S} \sum_{i \in S} \Theta(d_i - \hat{d}) (d_i - \hat{d})^2$ & $c_{\text{max dose}}$ & $= d_{\text{max}} + \kappa \log(\sum_{i \in S} e^{\frac{d_i - d_{\text{max}}}{\kappa}})$ \\
+        $f_{\text{mean}}$ & $= \frac{1}{N_S} \sum_{i \in S} d_i$ & $c_{\text{mean}}$ & $= \frac{1}{N_S} \sum_{i \in S} d_i$ \\
+        $f_{\text{EUD}}$ & $= \left( \frac{1}{N_S} \sum_{i \in S} d_i^a \right)^{\frac{1}{a}}$ & $c_{\text{EUD}}$ & $= \left( \frac{1}{N_S} \sum_{i \in S} d_i^a \right)^{\frac{1}{a}}$ \\
+        $f_{\text{min DVH}}$ & $= \frac{1}{N_S} \sum_{i \in S} \Theta(\hat{d} - d_i) \Theta(d_i - \tilde{d}) (d_i - \hat{d})^2$ & $c_{\text{min DVH}}$ & $= \frac{1}{N_S} \sum_{i \in S} \Theta(\hat{d} - d_i)$ \\
+        $f_{\text{max DVH}}$ & $= \frac{1}{N_S} \sum_{i \in S} \Theta(d_i - \hat{d}) \Theta(\tilde{d} - d_i) (d_i - \hat{d})^2$ & $c_{\text{max DVH}}$ & $= \frac{1}{N_S} \sum_{i \in S} \Theta(d_i - \hat{d})$ \\
+        \hline
+    \end{tabular}
+    }
+    \label{tab:matrad_funcs}
+\end{table}
+
 \subsubsection{Visualization}
 Visualization in \texttt{matRad} is primarily handled through its Graphical User Interface (GUI), which can be launched via the \texttt{matRadGUI} command. The GUI automatically detects the current state of the treatment plan in the workspace and displays relevant data, such as patient anatomy and beam geometry. Once the optimization process is complete, the calculated 3D dose distribution is visualized overlaid on the CT data. Users can interactively explore the plan through axial, sagittal, and coronal views, evaluate dose-volume histograms (DVHs), and analyze dose profiles (e.g., longitudinal profiles along the central beam axis) to assess plan quality.
