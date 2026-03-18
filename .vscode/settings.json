@@ -1,0 +1,53 @@
+{
+    "files.autoSave": "afterDelay",
+    "latex-workshop.intellisense.file.base": "file relative",
+    "latex-workshop.latex.outDir": "%DIR%",
+    "latex-workshop.latex.autoClean.run": "onBuilt",
+    "latex-workshop.latex.clean.method": "glob",
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk_no_synctex",
+            "command": "latexmk",
+            "args": [
+                "-pdf",
+                "-synctex=0",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-outdir=%OUTDIR%",
+                "%DOC%"
+            ]
+        }
+    ],
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "latexmk (no synctex)",
+            "tools": [
+                "latexmk_no_synctex"
+            ]
+        }
+    ],
+    "latex-workshop.latex.recipe.default": "first",
+    "latex-workshop.latex.clean.fileTypes": [
+        "*.aux",
+        "*.bbl",
+        "*.bcf",
+        "*.blg",
+        "*.idx",
+        "*.ind",
+        "*.lof",
+        "*.lot",
+        "*.out",
+        "*.run.xml",
+        "*.toc",
+        "*.acn",
+        "*.acr",
+        "*.alg",
+        "*.glg",
+        "*.glo",
+        "*.gls",
+        "*.fls",
+        "*.fdb_latexmk",
+        "*.log",
+        "*.synctex.gz"
+    ]
+}
