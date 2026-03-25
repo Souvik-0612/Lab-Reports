@@ -84,5 +84,5 @@ ax.text(0.02, 0.98, info_text, transform=ax.transAxes, va='top', ha='left',
         fontsize=11, bbox=dict(boxstyle='round', facecolor='white', alpha=0.8, edgecolor='black'))
 ax.set_xlabel("Distance from central axis (mm)")
 ax.set_ylabel("Relative dose (%)")
-plt.savefig("InlineProfile.pdf", dpi=300, bbox_inches='tight')
+plt.savefig("Figures/Profile/InlineProfile.pdf", dpi=300, bbox_inches='tight')
 plt.show()
