@@ -25,13 +25,13 @@ for i in range(len(PDD)):
         dmax = x[i]
     
     if PDD[i] > 90:
-        x90 = x[i] + ((x[i-1] - x[i])/(PDD[i-1] - PDD[i]))*(90 - PDD[i]) # Straight line interpolation
+        x90 = x[i] + ((x[i+1] - x[i])/(PDD[i+1] - PDD[i]))*(90 - PDD[i]) # Straight line interpolation
     if PDD[i] > 80:
-        x80 = x[i] + ((x[i-1] - x[i])/(PDD[i-1] - PDD[i]))*(80 - PDD[i]) # Straight line interpolation
+        x80 = x[i] + ((x[i+1] - x[i])/(PDD[i+1] - PDD[i]))*(80 - PDD[i]) # Straight line interpolation
     if PDD[i] > 50:
-        x50 = x[i] + ((x[i-1] - x[i])/(PDD[i-1] - PDD[i]))*(50 - PDD[i]) # Straight line interpolation
+        x50 = x[i] + ((x[i+1] - x[i])/(PDD[i+1] - PDD[i]))*(50 - PDD[i]) # Straight line interpolation
         PDD50 = PDD[i]
-        m = (PDD[i] - PDD[i-1])/(x[i] - x[i-1])
+        m = (PDD[i] - PDD[i+1])/(x[i] - x[i+1])
 
     if abs(PDD[i]- PDD[i-1]) > 0.01:
         xm = x[i]; PDDm = PDD[i]
