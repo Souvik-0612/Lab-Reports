@@ -25,15 +25,15 @@ for i in range(len(PDD)):
         dmax = x[i]
     
     if PDD[i] > 90:
-        x90 = x[i] + ((x[i+1] - x[i])/(PDD[i+1] - PDD[i]))*(90 - PDD[i]) # Straight line interpolation
+        x90 = x[i] + ((x[i-1] - x[i])/(PDD[i-1] - PDD[i]))*(90 - PDD[i]) # Straight line interpolation
     if PDD[i] > 80:
-        x80 = x[i] + ((x[i+1] - x[i])/(PDD[i+1] - PDD[i]))*(80 - PDD[i]) # Straight line interpolation
+        x80 = x[i] + ((x[i-1] - x[i])/(PDD[i-1] - PDD[i]))*(80 - PDD[i]) # Straight line interpolation
     if PDD[i] > 50:
-        x50 = x[i] + ((x[i+1] - x[i])/(PDD[i+1] - PDD[i]))*(50 - PDD[i]) # Straight line interpolation
+        x50 = x[i] + ((x[i-1] - x[i])/(PDD[i-1] - PDD[i]))*(50 - PDD[i]) # Straight line interpolation
         PDD50 = PDD[i]
-        m = (PDD[i] - PDD[i+1])/(x[i] - x[i+1])
+        m = (PDD[i] - PDD[i-1])/(x[i] - x[i-1])
 
-    if abs(PDD[i]- PDD[i-1]) > 0.01:
+    if abs(PDD[i]- PDD[i-1]) > 0.05:
         xm = x[i]; PDDm = PDD[i]
         
 
@@ -49,7 +49,7 @@ xq = (100 - c1)/m
 #Plotting
 plt.figure(figsize=(15, 8))
 plt.title(r"PDD profile of 6 MeV SSD=100, Water Phantom, F.S= 10x10cm$^2$", fontsize=20)
-plt.plot(x, PDD)
+plt.plot(x, PDD, '-o')
 plt.plot(xx, yy)
 
 plt.plot(x[0], PDD[0], "o") #Surface PDD

@@ -64,7 +64,7 @@ print("Right Penumbra: ", RightPenumbra)
 
 #Plotting
 fig, ax = plt.subplots(figsize=(15, 8))
-ax.plot(x, y)
+ax.plot(x, y, "o-", label="Beam Profile")
 plt.fill_between(xL, leftPenumbra, 0, color='lightcoral', alpha=0.35)
 plt.fill_between(xR, rightPenumbra, 0, color='skyblue', alpha=0.35)
 plt.plot([-FieldWidth/2, FieldWidth/2], [50, 50], color='red', linestyle='--', label='50% Line')
