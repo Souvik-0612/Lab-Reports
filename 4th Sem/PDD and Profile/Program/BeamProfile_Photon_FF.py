@@ -9,7 +9,7 @@ plt.style.use(['science', 'notebook', 'grid'])
 df = pd.read_excel("PROFILE Group 2.xlsx", sheet_name=1)
 x = np.array(df["Off Axis [mm]"])
 y = np.array(df["Inline dose"])
-y = y / max(y) * 100
+y = y / y[x==0] * 100
 
 #Data analysis 
 x50L = 0; x50R = 0; x80L = 0; x80R = 0; I80R = []; I80L = []
@@ -46,11 +46,10 @@ RightPenumbra = abs(xR[-1] - xR[0]) # Right penumbra width
 
 
 y50 = y[y > 50]
-n = int(len(y50)/2); h = abs(x[-1] - x[0])
+n = int(len(y50)/2); h = abs(x[1] - x[0])
 AreaL = 0.5*h*(y50[0] + y50[n] + 2*sum(y50[1:n]))
 AreaR = 0.5*h*(y50[n+1] + y50[-1] + 2*sum(y50[n+1:-1]))
 Symmetry = abs(AreaL - AreaR)/(AreaL + AreaR) * 100
-
 
 
 flatness = (Dmax - Dmin) / (Dmax + Dmin) * 100
@@ -64,7 +63,7 @@ print("Right Penumbra: ", RightPenumbra)
 
 #Plotting
 fig, ax = plt.subplots(figsize=(15, 8))
-ax.plot(x, y, "o-", label="Beam Profile")
+ax.plot(x, y, label="Beam Profile")
 plt.fill_between(xL, leftPenumbra, 0, color='lightcoral', alpha=0.35)
 plt.fill_between(xR, rightPenumbra, 0, color='skyblue', alpha=0.35)
 plt.plot([-FieldWidth/2, FieldWidth/2], [50, 50], color='red', linestyle='--', label='50% Line')
