@@ -1,0 +1,65 @@
+\subsection{Introduction to Brachytherapy}
+Brachytherapy is a specialized branch of radiation oncology involving the strategic placement of encapsulated, sealed radioactive sources either directly within or in close proximity to the target tumor volume. Historically derived from the Greek word for "short distance," this technique's core clinical advantage is its ability to conformally deliver an intensely localized radiation dose to a lesion while sharply curtailing the exposure to neighboring healthy tissues. This modality can be implemented as a standalone treatment or as a sequential boost following External Beam Radiotherapy (EBRT).
+
+Prior to clinical application, precise verification of the HDR source's dosimetric strength is mandatory to ensure patient safety and treatment efficacy. The standardized metric for this strength is the Air Kerma Strength (AKS) or the Reference Air Kerma Rate (RAKR). Accurate determination of the AKS/RAKR validates the vendor-supplied source activity and establishes a direct traceable link to primary dosimetric standards. Furthermore, since HDR brachytherapy relies on the rapid delivery of radiation over strictly controlled, short time frames, the absolute accuracy of the afterloader's treatment timer is of critical importance; any temporal discrepancy translates directly into a dosimetric error for the patient.
+
+\subsection{Categorization of Brachytherapy}
+Brachytherapy applications are broadly categorized by three main parameters: dose delivery rate, the anatomical placement of the source, and the temporal duration of the implant.
+
+\subsubsection{Classification by Dose Rate}
+\begin{itemize}
+    \item \textbf{Low Dose Rate (LDR):} Operates within a dose rate of 0.4 to 2 Gy/h. The radiation is administered continuously over extended periods (hours to days) using sources like I-125 and Cs-137. It is prevalent in treatments for prostate and certain gynecological malignancies.
+    \item \textbf{Medium Dose Rate (MDR):} Ranges from 2 to 12 Gy/h. It serves as an intermediate modality between LDR and HDR but has largely fallen out of modern clinical favor.
+    \item \textbf{High Dose Rate (HDR):} Defined by a dose rate exceeding 12 Gy/h. This approach utilizes remote afterloading technology to deliver massive doses in brief, fractionated sessions (minutes). Typical radionuclides include Ir-192 and Co-60. It is a dominant modality for treating cervical, breast, esophageal, and bronchial cancers.
+\end{itemize}
+
+\subsubsection{Classification by Source Placement}
+\begin{itemize}
+    \item \textbf{Intracavitary:} The radioactive source is introduced into existing natural anatomical cavities, such as the uterus, vaginal vault, or esophagus. It is a cornerstone technique for cervical cancer.
+    \item \textbf{Interstitial:} The sources are surgically implanted directly into the tumor matrix utilizing specialized needles, trocars, or flexible catheters. This technique is routinely applied to prostate, breast, and head and neck tumors.
+    \item \textbf{Surface (Mould/Plaque):} Custom-fabricated moulds or applicators hold the sources directly against the external body surface, primarily targeting superficial skin cancers or ocular melanomas.
+    \item \textbf{Intraluminal:} The delivery system is threaded through a lumen, such as a bronchus or biliary duct, to treat malignancies arising within hollow tubular organs.
+\end{itemize}
+
+\subsubsection{Classification by Implant Duration}
+\begin{itemize}
+    \item \textbf{Temporary Implants:} The radioactive material is positioned for a predetermined timeframe and subsequently retracted. This category encompasses LDR, MDR, and HDR modalities.
+    \item \textbf{Permanent Implants:} Tiny, sealed radioactive "seeds" (e.g., I-125) are permanently deposited within the target tissue, where they deliver their total dose over their radioactive lifespan.
+\end{itemize}
+
+\subsection{Brachytherapy Radioactive Sources}
+\subsubsection{Encapsulation and Design}
+To guarantee safety during clinical use and prevent systemic contamination, brachytherapy sources undergo strict encapsulation. The enclosing capsules are typically fabricated from robust metals such as stainless steel, titanium (Ti), or tungsten (W). These specific materials are favored due to their superior mechanical resilience, minimal attenuation of the emitted therapeutic radiation, and excellent biocompatibility.
+
+\subsubsection{Photonic Sources}
+The majority of brachytherapy relies on photon-emitting radionuclides. These sources produce photon spectra with average energies generally spanning from 0.02 MeV to 1.25 MeV. They are further divided by their energy profiles into Low Energy (LE, $\le 50$ keV, e.g., $^{125}$I, $^{103}$Pd) mostly used for permanent seeds, and High Energy (HE, $> 50$ keV, e.g., $^{192}$Ir, $^{60}$Co) which demand substantial shielding and are standard for temporary afterloading.
+
+\subsubsection{Source Strength Metrics}
+It is insufficient to rely solely on physical mass or basic construction to predict a source's dosimetric output; therefore, the physical "strength" must be explicitly defined. While historically, strength was denoted in terms of Radium-Equivalent Mass (comparing a source's exposure rate to a standard radium source), modern protocols utilize specific kerma-based quantities.
+
+\textbf{Air-Kerma Strength (AKS / $S_K$)}: The fundamental contemporary metric. It represents the air-kerma rate ($\dot{K}_{air}$) generated by the source in a free-space geometry, theoretically measured at a specific distance $r$ (usually normalized to 1 meter), taking the form:
+\begin{equation}
+S_K = \dot{K}_{air} \cdot r^2
+\end{equation}
+$S_K$ is typically expressed in units of $\mu$Gy m$^2$ h$^{-1}$ (or U).
+
+\subsection{Dosimetry via Well-Type Ionization Chamber}
+The internationally recognized gold standard for the clinical calibration of brachytherapy sources is the re-entrant or well-type ionization chamber. The standard dosimetric assembly includes the vented well-chamber itself, a specialized source-positioning insert (holder), a highly sensitive electrometer, and the necessary cabling.
+
+\subsubsection{The Well Chamber Design}
+Constructed specifically to measure sources approaching a $4\pi$ geometry, the chamber features a cylindrical outer housing and a concentric inner well into which the source is inserted. It requires an unsealed, vented design to adapt to atmospheric changes. The device incorporates a central collecting electrode, an outer polarizing electrode, and a guard electrode configured to minimize leakage currents. 
+A crucial characteristic of a well-chamber is its "sweet spot"—a localized axial region yielding maximum and uniform ionization response. The length of this sweet spot must comfortably exceed the physical length of the active source to ensure measurement stability regardless of minor positioning errors.
+
+% TODO: Insert Image of Output Signal vs Distance Inside Chamber Plot
+
+\subsubsection{Measurement Formalism}
+When utilizing a standard well-chamber, the Reference Air Kerma Rate ($\dot{K}_R$ or RAKR) is derived directly from the measured ionization current:
+\begin{equation}
+\dot{K}_R = \dot{M}_{corr} \cdot N_K
+\end{equation}
+Where $\dot{M}_{corr}$ is the electrometer reading corrected for environmental and operational influence quantities (temperature, pressure, recombination, and polarity), and $N_K$ represents the specific calibration coefficient provided by a Secondary Standard Dosimetry Laboratory (SSDL) for the specific well-chamber, electrometer, and source isotope combination.
+
+\subsection{HDR Afterloader Mechanics}
+The HDR remote afterloader is an advanced, computer-driven apparatus designed to securely store and precisely deploy a high-activity source (such as $^{192}$Ir). Using "stepping source" mechanics, a solitary miniaturized source is welded to the end of a drive cable. The system sequentially advances the source through transfer tubes into the applicator, pausing at programmed "dwell positions" for specific "dwell times" to carve out customized dose distributions. The unit houses the source in a dense tungsten safe when idle and incorporates extensive redundant safety mechanisms, including dummy check cables, radiation monitors, and manual retrieval backups.
+
+% TODO: Insert Simplified drawing of HDR brachytherapy delivery equipment

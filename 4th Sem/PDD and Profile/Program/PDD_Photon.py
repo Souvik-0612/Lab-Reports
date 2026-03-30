@@ -6,7 +6,7 @@ import scienceplots
 plt.style.use(['science', 'notebook', 'grid'])
 
 # Data Extraction from the xlsx file
-df = pd.read_excel("PDD Group 2.xlsx", sheet_name=1)
+df = pd.read_excel("PDD Group 2.xlsx", sheet_name=0)
 x = np.array(df["Depth[mm]"])
 y = np.array(df["Depth dose"])
 

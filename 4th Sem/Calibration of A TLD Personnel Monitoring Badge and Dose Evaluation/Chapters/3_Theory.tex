@@ -1,0 +1,139 @@
+The thermoluminescent dosimeter (TLD) was first introduced in 1954 by Professor Farrington Daniels at the University of Wisconsin-Madison. When exposed to ionizing radiation, electrons within the TLD material are excited and subsequently captured by dosimetric traps. These electrons remain localized in these traps until the material is subjected to thermal stimulation. As the temperature of the detector increases—typically reaching up to 400$^\circ$C—the trapped electrons gain enough thermal energy to escape. Upon returning to their ground state, they release energy in the form of a light pulse, a phenomenon known as luminescence. A photomultiplier tube (PMT) detects and quantifies this emitted light, the intensity of which is directly proportional to the radiation dose absorbed by the dosimeter.
+
+Due to its reliability, the TLD serves as a passive solid-state radiation detector and is widely recognized as a standard tool for personnel monitoring.
+
+In the context of the Indian nationwide personnel monitoring program, CaSO$_4$:Dy is the preferred TLD material. This phosphor is capable of detecting X-rays, gamma ($\gamma$), and beta ($\beta$) radiations. Although it is not inherently tissue-equivalent, its adoption is justified by several significant advantages, including high thermoluminescent sensitivity, cost-effectiveness, ease of fabrication, and a straightforward annealing process. The concentration of Dysprosium (Dy) dopant in the calcium sulfate matrix is maintained at 0.05 mole \%, equivalent to 500 ppm.
+
+\subsection{Detection Material}
+
+\subsubsection{Core Components and Geometry}
+A typical TLD badge comprises several key structural elements:
+\begin{itemize}
+    \item \textbf{Plastic Cassette/Holder:} This serves as the external casing, housing the TLD card and the associated filters, and offering physical protection to the internal components.
+    \item \textbf{TLD Card:} Usually constructed from nickel-plated aluminum, this card supports the thermoluminescent material. It features specific dimensions (commonly 52.5 mm $\times$ 30 mm $\times$ 1 mm) and incorporates an asymmetrical shape or a "V" notch to guarantee proper alignment when inserted into the TLD reader.
+    \item \textbf{TLD Discs/Elements:} The badge generally contains three or four small circular discs securely clipped into designated slots on the aluminum card.
+    \begin{itemize}
+        \item \textbf{Material Composition:} Frequently employed TLD materials include Lithium Fluoride (such as LiF:Mg,Ti or LiF:Mg,Cu,P), Calcium Sulphate (CaSO$_4$:Dy or CaSO$_4$:Tm), and Aluminium Oxide (Al$_2$O$_3$:C). Inherently insulators, these base materials are doped with specific activator ions (e.g., Mg, Ti, Dy, Tm, or Cu) that create necessary trapping and luminescence centers within the crystal lattice.
+        \begin{itemize}
+            \item LiF:Mg,Ti is highly valued for its tissue-equivalence, making it ideal for personnel dosimetry.
+            \item CaSO$_4$:Dy exhibits exceptional sensitivity but is characterized by a strong energy dependence.
+        \end{itemize}
+        \item \textbf{Dimensions:} The standard size for these discs is approximately 13.3 mm in diameter and 0.8 mm in thickness.
+    \end{itemize}
+\end{itemize}
+
+% TODO: Insert "Table 1: Characteristics of most common TL materials used in TL dosimetry" here.
+% TODO: Insert "Figure 2: TLD personnel monitoring badge schematic" here.
+
+\subsubsection{Filters in TLD Personnel Monitoring Badge}
+To differentiate between various radiation types and energies, and to facilitate the accurate evaluation of both shallow (skin) and deep (whole body) doses, the TLD badge utilizes a three-filter system positioned over the individual TLD discs:
+\begin{itemize}
+    \item \textbf{Metal Filter:} Comprising a combination of 1 mm of Aluminum and 0.9 mm of Copper, this filter mitigates the significant photon energy dependence of the underlying TL material.
+    \item \textbf{Plastic Filter:} Designed to be tissue-equivalent, this filter mimics human tissue. It partially absorbs lower-energy radiation, thereby assisting in the estimation of the shallow dose imparted to the skin.
+    \item \textbf{Open Window Filter:} This section lacks any covering, exposing the underlying TLD disc directly to the environment. It permits the detection of low-energy X-rays, gamma rays, and beta particles, and is primarily utilized for surface dose measurement and detecting beta contamination.
+\end{itemize}
+
+\subsection{Basic Structure and Traps}
+
+\subsubsection{Basic Insulator Band Model}
+TLD materials are fundamentally crystalline insulators or wide-bandgap semiconductors (with a bandgap exceeding 3 eV). In an ideal crystal, there are no energy levels within the forbidden gap. However, practical crystals contain structural imperfections, impurities, and lattice distortions. These defects establish localized energy states within the bandgap, functioning as either electron traps or recombination (luminescent) centers for charge carriers.
+
+\subsubsection{Traps and Luminescent Centers}
+\begin{itemize}
+    \item \textbf{Traps:} These are metastable localized energy levels within the forbidden band where charge carriers (electrons or holes) can be temporarily isolated, delaying their immediate recombination.
+    \item The characteristic depth of a trap (its energy difference from the conduction band) governs the required thermal activation energy for carrier release.
+    \begin{itemize}
+        \item \textbf{Shallow Traps:} These require minimal thermal energy to release electrons. They are easily emptied at lower temperatures and correspond to the early peaks observed in a glow curve.
+        \item \textbf{Deep Traps:} Characterized by a larger energy gap, these traps necessitate higher temperatures to free the trapped carriers. They correspond to high-temperature glow peaks; extremely deep traps may not be emptied during standard readout cycles.
+    \end{itemize}
+    \item \textbf{Recombination Centers:} Alongside traps, the material contains luminescent centers. When a released electron encounters a hole at one of these centers, recombination occurs, accompanied by the emission of a photon. These centers are typically linked to the intentionally introduced dopant ions (e.g., Ti in LiF or Dy in CaSO$_4$).
+\end{itemize}
+
+\subsubsection{Trap Population and Filling}
+During exposure to ionizing radiation, a competition exists between the trapping of charge carriers and their immediate recombination. The extent to which these traps are filled depends on parameters like trap density, capture cross-sections, and ambient temperature. Crucially, up to the point of saturation, the population of filled traps maintains a proportional relationship with the absorbed radiation dose.
+
+% TODO: Insert "Figure 3: Energy level diagram" here.
+
+\subsubsection{Fading}
+Fading refers to the spontaneous loss of the stored dosimetric signal over time. Even at room temperature, shallow traps may undergo thermal emptying, leading to a reduction in the measured dose if analysis is delayed.
+
+\subsection{Heating, Recombination, and Light Emission}
+
+\subsubsection{Controlled Heating / Thermal Stimulation}
+During the readout phase, the TLD is subjected to a controlled linear heating profile (e.g., $4^\circ$C/s). As the temperature escalates, the thermal energy ($kT$) becomes adequate to provide the necessary activation energy for electrons residing in traps of specific depths, elevating them into the conduction band. The likelihood of an electron escaping is exponentially dependent on both the temperature and the trap's activation energy. Consequently, distinct sets of traps release their electrons at characteristic temperatures.
+
+\subsubsection{Migration and Recombination}
+Once liberated into the conduction band, the electrons become mobile. They migrate through the crystal lattice until they interact with a recombination center. The ensuing recombination process releases excess energy as a visible photon. This luminescent output is captured by a PMT, and the recorded light intensity is plotted as a function of temperature.
+
+\subsubsection{Glow Curve Peaks}
+The varying depths of different traps mean that electrons are released across a range of temperatures, resulting in a glow curve characterized by multiple distinct peaks. Each peak signifies the depopulation of a specific trap type. The area under a given peak correlates with the number of released electrons, which ideally reflects the dose absorbed by that specific trap set. The peak's temperature location provides insight into the trap's activation energy. For dosimetric purposes, materials that yield well-separated peaks are highly desirable.
+
+\subsubsection{Example and Stability of Peaks}
+For practical dosimetry, a stable peak is selected. For instance, in CaSO$_4$:Dy, the primary dosimetric peak occurs at roughly $280^\circ$C. This temperature is sufficient to prevent rapid room-temperature fading but low enough to avoid complications associated with extreme heating. Conversely, low-temperature peaks are susceptible to rapid fading and are often intentionally erased during a pre-heat cycle before the final reading.
+
+% TODO: Insert "Figure 4: Example of a glow curve" here.
+
+\subsection{Annealing}
+Following the readout, a small fraction of deeply trapped electrons may remain. To clear these residual signals and restore the material's structural equilibrium for reuse, an annealing procedure is necessary. This involves heating the TLD phosphors in a specialized oven—typically at $400^\circ$C for one hour—ensuring that all traps are completely emptied without degrading the material's properties.
+
+\subsection{Working Principle of a TLD Personnel Monitoring Badge Reader}
+The readout process involves several sequential steps:
+\begin{enumerate}
+    \item Exposure to radiation causes electrons in the TLD material to be elevated and captured in metastable traps.
+    \item The quantity of these trapped electrons directly corresponds to the received radiation dose.
+    \item The exposed badge is inserted into the TLD reader.
+    \item A heating mechanism applies a precisely controlled thermal cycle to the TLD elements.
+    \item The increasing temperature liberates the trapped electrons.
+    \item As these electrons undergo recombination, they emit energy as visible light.
+    \item A Photomultiplier Tube (PMT) detects this emitted luminescence.
+    \item The PMT converts the optical signal into an equivalent electrical current.
+    \item This current is amplified and processed by the reader's internal electronics.
+    \item Finally, after applying pre-determined calibration factors, the system displays the calculated absorbed dose.
+\end{enumerate}
+
+\subsection{Reason for Using Three TLD Phosphors in a Personnel Monitoring Badge}
+The incorporation of three distinct TLD elements within a single badge is a deliberate design choice aimed at enhancing measurement accuracy:
+\begin{itemize}
+    \item \textbf{Radiation Type Discrimination:} The unique filters (metal, plastic, open window) over each element interact differently with X-rays, gamma, and beta radiation. Analyzing the relative responses of the three elements allows for the identification of the incident radiation type.
+    \item \textbf{Energy Dependence Compensation:} Materials like CaSO$_4$:Dy exhibit significant variations in response depending on the photon energy. The differential attenuation provided by the filters enables the application of correction factors, mitigating this energy dependence.
+    \item \textbf{Separation of Beta and Gamma Components:} Beta particles are largely stopped by the metal and plastic filters but easily penetrate the open window. Comparing the readouts allows the system to isolate and quantify the beta dose separately from the gamma dose.
+\end{itemize}
+
+\subsection{Dose, Temperature, and Energy Dependence of TL Intensity}
+\begin{itemize}
+    \item \textbf{Dose Dependence:} Within the standard occupational exposure range, the TL intensity maintains a linear relationship with the absorbed dose, a critical feature for reliable dosimetry. At extremely high doses, the material may exhibit supralinearity and eventual saturation as deeper traps become fully occupied.
+    \item \textbf{Temperature Dependence:} The readout is critically dependent on the heating profile. Insufficient heating fails to release all trapped charges, causing an underestimation of the dose. Conversely, excessive temperatures can induce thermal quenching, degrading the luminescent signal. Thus, precise thermal control is paramount.
+    \item \textbf{Energy Dependence:} The efficiency of the TL response varies with the energy of the incoming radiation. Typically, low-energy photons yield a higher TL response per unit dose than high-energy photons. The badge's filter system and specific calibration algorithms are employed to correct this intrinsic material behavior.
+\end{itemize}
+
+% TODO: Insert "Figure 5: Top inside view of the semi-automatic TLD badge reader" here.
+
+\subsection{Advantages of Thermoluminescent Dosimeters (TLD)}
+\begin{itemize}
+    \item \textbf{Wide Dose Range:} Capable of measuring exposures from micrograys up to several grays.
+    \item \textbf{High Sensitivity:} Excellent at detecting minimal radiation levels.
+    \item \textbf{Reusability:} Following proper thermal annealing, the dosimeters can be redeployed multiple times.
+    \item \textbf{Tissue Equivalence:} Specific phosphors (like LiF:Mg,Ti) closely match the effective atomic number of human tissue.
+    \item \textbf{Passive Operation:} They require no electrical power during the exposure period.
+    \item \textbf{Compact Form Factor:} Their small size and robust nature make them ideal for daily personnel wear.
+    \item \textbf{Linearity:} They offer a highly linear response across the typical occupational dose range.
+\end{itemize}
+
+\subsection{Limitations of Thermoluminescent Dosimeters (TLD)}
+\begin{itemize}
+    \item \textbf{Destructive Readout:} The process of reading the dose erases the stored signal, preventing a direct re-read of the exposure.
+    \item \textbf{Fading:} The trapped signal can spontaneously degrade over time, particularly in warm environments.
+    \item \textbf{Complex Evaluation:} Extracting the dose requires a sophisticated reader unit and a tightly controlled heating cycle.
+    \item \textbf{Energy Dependence:} Certain highly sensitive materials require complex filtration to correct for varying responses to different photon energies.
+    \item \textbf{Delayed Results:} Being a passive device, it does not offer real-time or instantaneous dose rate information.
+\end{itemize}
+
+\subsection{Heating Mechanism of the TLD Badge Reader}
+The integrity of the TLD readout heavily relies on the reader's heating system:
+\begin{itemize}
+    \item The reader elevates the temperature of the TLD discs to a precisely targeted level (often around $285^\circ$C) to stimulate electron release.
+    \item Modern automated readers frequently utilize a hot nitrogen gas system. A dedicated heater warms the nitrogen, which then flows uniformly over the discs, ensuring efficient and consistent thermal transfer.
+    \item The system includes a heating element (e.g., nichrome wire) coupled with advanced temperature control electronics to achieve a rapid ramp-up and a stable hold at the target temperature.
+    \item Thermocouples or similar sensors continuously monitor the temperature, feeding data back to the control system to maintain a precise thermal profile.
+    \item This highly regulated heating process guarantees reproducible glow curves, which is the foundational requirement for accurate dose calculation.
+\end{itemize}

@@ -1,52 +1,86 @@
-\textbf{C.1. Thermoluminescence Dosimetry}
-
-Many crystalline materials exhibit the phenomenon of thermoluminescence (TL). When such a crystal is irradiated, a very minute fraction of the absorbed energy is stored in the crystal lattice. Some of this energy can be recovered later as visible light if the material is heated. This phenomenon of the release of visible photons by thermal means is known as TL.
-
-The arrangement for measuring the TL output is shown schematically in Figure 8.10. The irradiated material is placed in a heater cup or planchet, where it is heated for a reproducible heating cycle. The emitted light is measured by a photomultiplier tube (PMT), which converts light into an electrical current. The current is then amplified and measured by a recorder or a counter.
-
-There are several TL phosphors available, but the most noteworthy are lithium fluoride (LiF), lithium borate (Li$_2$B$_4$O$_7$), and calcium fluoride (CaF$_2$). Their dosimetric properties are listed in Table 8.6. Of these phosphors, LiF is most extensively studied and most frequently used for clinical dosimetry. LiF in its purest form exhibits relatively little TL. But the presence of a trace amount of impurities (e.g., magnesium) provides the radiation-induced TL. These impurities give rise to imperfections in the lattice structure of LiF and appear to be necessary for the appearance of the TL phenomenon.
-
-\subsection{TLD Personnel Monitoring Badge}
-
-\begin{figure}[h!]
-    \centering
-    \includegraphics[width=0.4\textwidth]{Figures/TLD_Badge.jpg}
-    \caption{A typical Thermoluminescent Dosimeter (TLD) personnel monitoring badge.}
-    \label{fig:tld_badge}
-\end{figure}
-
-The Thermoluminescent Dosimeter (TLD) personnel monitoring badge is a crucial device used to measure an individual's accumulated exposure to ionizing radiation. In medical and industrial environments, these badges ensure occupational radiation safety and regulatory compliance by monitoring the cumulative dose received by staff, such as radiologists, technicians, and other medical personnel.
-
-\subsubsection{Operating Principle}
-The fundamental principle of a TLD badge is based on thermoluminescence. When the thermoluminescent material inside the badge is exposed to ionizing radiation (such as X-rays, gamma rays, or beta particles), electrons within the crystal lattice are excited and become trapped in metastable energy states (traps) caused by impurities or defects in the crystal. 
-
-These electrons remain trapped until the material is heated in a controlled manner using a TLD reader. Upon heating, the trapped electrons acquire enough thermal energy to escape the traps and return to their ground state. During this de-excitation process, the energy is released in the form of visible light (luminescence). The intensity of the emitted light is measured by a photomultiplier tube and is directly proportional to the amount of radiation dose absorbed by the dosimeter material.
-
-\subsubsection{Materials Used}
-Several thermoluminescent materials are utilized in personnel monitoring depending on the required sensitivity and energy response. The two most common materials used for medical applications are:
-
-\begin{enumerate}
-    \item \textbf{Calcium Sulfate doped with Dysprosium (CaSO$_4$:Dy)}: 
-    This is the most widely used material for TLD badges in India (standardized by BARC) and many other countries. 
-    \begin{itemize}
-        \item \textbf{High Sensitivity}: It is known for its exceptionally high sensitivity, particularly to low-energy photons, making it ideal for personnel monitoring where low dose detection is critical.
-        \item \textbf{Form Factor}: It is typically used in the form of CaSO$_4$:Dy phosphor embedded in Teflon discs.
-        \item \textbf{Energy Response}: Due to its relatively high effective atomic number ($Z_{eff} \approx 15.6$), it shows a significant over-response to low-energy X-rays compared to tissue. To compensate for this energy dependence, the TLD badge cassette is fitted with specific metallic filters (e.g., Copper and Aluminum) to flatten the energy response and accurately estimate the tissue dose.
-    \end{itemize}
-
-    \item \textbf{Lithium Fluoride (LiF)}:
-    Lithium Fluoride, often doped with Magnesium and Titanium (LiF:Mg,Ti, commercially known as TLD-100) or Magnesium, Copper, and Phosphorus (LiF:Mg,Cu,P), is another highly valued material globally.
-    \begin{itemize}
-        \item \textbf{Tissue Equivalence}: Its primary advantage is its near tissue-equivalent effective atomic number ($Z_{eff} \approx 8.2$, compared to 7.4 for soft tissue). This means its radiation absorption characteristics closely match those of human tissue across a wide range of photon energies.
-        \item \textbf{Sensitivity}: While traditional LiF:Mg,\allowbreak Ti is less sensitive than CaSO$_4$:\allowbreak Dy, the newer LiF:Mg,\allowbreak Cu,\allowbreak P variants offer extremely high sensitivity and low fading at room temperature, making them excellent for precise medical dosimetry.
-    \end{itemize}
-\end{enumerate}
-
-\subsubsection{Badge Design and Filters}
-A typical TLD badge wrapper (cassette) consists of multiple regions or "windows" containing different filters (such as open window, plastic filter, and metallic filters like Cu or Al). The dosimeter discs (e.g., three CaSO$_4$:Dy discs) are positioned behind these filters. 
+The following equipment and instruments were utilized in this experiment:
 \begin{itemize}
-    \item The different filters allow for the discrimination between different types of radiation (e.g., beta vs. gamma) and different energy ranges.
-    \item By comparing the readings from the discs behind different filters, the radiation quality and the accurate whole-body dose ($H_p(10)$) and skin dose ($H_p(0.07)$) can be evaluated.
+    \item TLD personnel monitoring badge
+    \item Automatic TLD badge reader system
+    \item Computer interface or software for reader control and data acquisition
+    \item Radiation Source (X-Ray unit)
+    \item Nitrogen gas supply (as required for the heating system)
 \end{itemize}
 
-HI
+% TODO: Figure 1 Experimental setup
+
+\subsection{Specifications of The Irradiation Setup}
+The irradiation was performed using a medical X-ray collimator. The detailed specifications are listed below:
+
+\begin{table}[H]
+    \centering
+    \caption{Specifications for Medical X-Ray Collimator SR-102}
+    \begin{tabular}{|l|l|}
+        \hline
+        \textbf{Field} & \textbf{Value} \\
+        \hline
+        Product Name & Medical X-Ray Collimator \\
+        Model & SR-102 \\
+        Product Part No. & 2111904064702317 \\
+        Input Power & AC 24V / DC 24V \\
+        Inherent Filtration & 1.0mmAl \\
+        Max Tube Voltage & 150kV \\
+        Production Date & 2019.5.5 \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\subsection{Badge Reader Specification}
+The readout of the TLD badges was conducted using an automatic badge reader system. Its technical specifications are as follows:
+
+\begin{table}[H]
+    \centering
+    \caption{TLD Badge Reader Specifications}
+    \begin{tabular}{|p{4.5cm}|p{10cm}|}
+        \hline
+        \textbf{Parameter} & \textbf{Details} \\
+        \hline
+        \textbf{Dosimeter} & Three-element BARC CaSO$_4$(Dy) PTFE disc dosimeter badge with personnel ID. \\
+        \hline
+        \textbf{Light Measurement System} & Photo-Multiplier tube (R 6094) Light measuring system (LMS). \\
+        \hline
+        \textbf{Dark current} & Dark current is 1 $\mu$Sv (CaSO$_4$) equivalent with software-based sampling \& subtraction. \\
+        \hline
+        \textbf{Heater Element} & Nichrome heater assembly. \\
+        \hline
+        \textbf{Heating Method} & Hot gas (N$_2$) heating. \\
+        \hline
+        \textbf{Nitrogen flow rate measurement} & Digital flow rate meter. \\
+        \hline
+        \textbf{Heating Cycle} & The temperature is raised to $280^\circ$C in 8 s and clamped at $285^\circ$C. \\
+        \hline
+        \textbf{Dose Range} & 50 $\mu$Sv -- 10 Sv (Gamma) and 100 $\mu$Sv -- 10 Sv (Beta). \\
+        \hline
+        \textbf{Dose Threshold} & $< 50 \mu$Sv. \\
+        \hline
+        \textbf{Readout time} & Approx 100 s per badge. \\
+        \hline
+        \textbf{Residual Signal} & $\leq 10 \%$ of reading. \\
+        \hline
+        \textbf{Facilities Available} & Entry of calibration factor, etc. Storage of dose and glow curve data of badges in Hard Disk. Stepper motor driver assembly for automatic feeding of 50 dosimeter cards loaded in a magazine. \\
+        \hline
+        \textbf{Software} & Windows 7 (32 bit) / XP-SP3 compatible software facilitates storage and display of glow curves, computations of dose \& generation of dose reports, transfer of data to user defined file, etc. \\
+        \hline
+        \textbf{Temperature Monitoring} & Chromel-Alumel thermocouple in hot gas stream. \\
+        \hline
+        \textbf{Range Selection} & Automatic. \\
+        \hline
+        \textbf{Calibration} & Coarse adjustment by varying the EHT through a potentiometer in the EHT circuit. \\
+        \hline
+        \textbf{Safeguards} & Heater / Gas flow / EHT / Card ID failure: The heater temperature, gas flow rate, card ID and EHT are checked for failure in every dosimeter readout cycle. In the event of failure of heater or gas flow rate or EHT or card ID, the readout is terminated and a message indicating corresponding failure message is flashed on the PC monitor. \\
+        \hline
+        \textbf{Mechanical Failure and failure message} & Any mechanical failure during readout cycle is sensed online \& cycle is terminated with an option for the user to restart the cycle. EHT or the input circuit (I-F converter) is sensed and reading cycle is terminated in case of failure. \\
+        \hline
+        \textbf{Nominal Power Supply} & Power supply: 230 V, 50 Hz: Power requirements: 500 VA (max including PC). \\
+        \hline
+    \end{tabular}
+\end{table}
+
+\subsection{Badge Reader Circuit Diagram}
+
+% TODO: Figure 6 Semiautomatic badge reader system: Type TL1010S
