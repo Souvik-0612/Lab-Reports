@@ -1,0 +1,15 @@
+\contentsline {section}{\numberline {1}Objective}{1}{section.1}%
+\contentsline {section}{\numberline {2}Apparatus}{1}{section.2}%
+\contentsline {section}{\numberline {3}Theory}{1}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Challenges in Brachytherapy Dosimetry}{1}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}The TG-43 Dosimetry Formalism}{1}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Fundamental TG-43 Parameters}{2}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.1}Air-Kerma Strength ($S_K$)}{2}{subsubsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.2}Dose Rate Constant ($\Lambda $)}{2}{subsubsection.3.3.2}%
+\contentsline {subsubsection}{\numberline {3.3.3}Geometry Function ($G(r, \theta )$)}{2}{subsubsection.3.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.4}Radial Dose Function ($g(r)$)}{2}{subsubsection.3.3.4}%
+\contentsline {subsubsection}{\numberline {3.3.5}2D Anisotropy Function ($F(r, \theta )$)}{3}{subsubsection.3.3.5}%
+\contentsline {subsection}{\numberline {3.4}Experimental Derivation using TLDs}{3}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Phantom Design and Methodology}{3}{subsection.3.5}%
+\contentsline {section}{\numberline {4}Observation}{3}{section.4}%
+\contentsline {section}{\numberline {5}Conclusion}{3}{section.5}%
