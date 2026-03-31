@@ -1,0 +1,85 @@
+\subsection{Challenges in Brachytherapy Dosimetry}
+Accurate dose assessment in clinical brachytherapy is intrinsically complex, governed by severe spatial constraints and extreme dose gradients. Measuring physical parameters surrounding miniature radioactive implants introduces complications relating to severe self-attenuation within the source matrix itself, highly asymmetric irradiation geometries, uncompensated tissue heterogeneities, and the profound manifestation of the inverse square law close to the radiation origin. High activity sources further exacerbate limitations associated with detector saturation and temporal resolution \cite{podgorsak2005radiation}.
+
+As a direct consequence of these empirical challenges, the standard paradigm for clinical brachytherapy heavily favors robust theoretical and computational models over routine in-vivo metrology. To mitigate the shortcomings of historical dose-calculation conventions—which often relied on overly simplistic approximations—the American Association of Physicists in Medicine (AAPM) promulgated the Task Group 43 (TG-43) report \cite{nath1995dosimetry}. This formalism emerged as a universally accepted protocol due to its analytical clarity, inherent accuracy, and adaptability across various source configurations.
+
+\subsection{The TG-43 Dosimetry Formalism}
+The TG-43 formalism establishes a standardized methodology to compute the absorbed dose rate within a homogenous, tissue-equivalent medium. It segregates the physical phenomena dictating dose deposition—such as primary photon fluence, source construction effects, attenuation, and scatter—into independent, measurable, or calculable parameters \cite{rivard2004update}.
+
+Assuming cylindrical symmetry around the source's longitudinal axis, the 2D dose rate $\dot{D}(r,\theta)$ at an arbitrary spatial point $P(r,\theta)$ is mathematically described as:
+\begin{equation}
+\dot{D}(r, \theta) = S_K \cdot \Lambda \cdot \frac{G_L(r, \theta)}{G_L(r_0, \theta_0)} \cdot g_L(r) \cdot F(r, \theta)
+\end{equation}
+
+Where:
+\begin{itemize}
+    \item $r$ defines the radial distance from the geometric center of the active core to the measurement point $P$.
+    \item $r_0$ is the universally adopted reference distance, fixed at 1 cm.
+    \item $\theta$ corresponds to the polar angle subtended relative to the source's longitudinal axis.
+    \item $\theta_0$ is the reference angle, defining the transverse bisecting plane of the source, established at $90^\circ$ (or $\pi/2$ radians).
+\end{itemize}
+
+% TODO: Insert Image: Fig 1 - Coordinate system used for brachytherapy dosimetry calculations.
+
+\subsection{Fundamental TG-43 Parameters}
+
+\subsubsection{Air-Kerma Strength ($S_K$)}
+$S_K$ characterizes the unattenuated output of the radioactive source and serves as the absolute scaling factor for the TG-43 equation. It is formally defined as the product of the air-kerma rate $\dot{K}_\delta(d)$ in vacuo and the square of the measurement distance $d$:
+\begin{equation}
+S_K = \dot{K}_\delta(d) \cdot d^2
+\end{equation}
+$S_K$ is expressed in units of $\mu$Gy m$^2$ h$^{-1}$ (commonly denoted as $U$). The measurement of $\dot{K}_\delta(d)$ occurs in free space on the transverse plane at a macroscopic distance (typically 1 meter) where the source appears as a point. The threshold parameter $\delta$ deliberately suppresses low-energy contaminant photons (e.g., Titanium characteristic X-rays under 5 keV) which marginally inflate the in-air kerma without contributing biologically relevant dose in tissue \cite{nath1995dosimetry}. The "in vacuo" specification demands rigorous corrections for ambient air attenuation, systemic scatter, and room geometry effects.
+
+\subsubsection{Dose Rate Constant ($\Lambda$)}
+The Dose Rate Constant acts as the conversion metric bridging the physical source output ($S_K$ in air) and the absorbed dose in the medium at the specific reference locus $P(r_0, \theta_0)$:
+\begin{equation}
+\Lambda = \frac{\dot{D}(r_0, \theta_0)}{S_K}
+\end{equation}
+$\Lambda$ is intrinsically linked to the specific radionuclide employed and the intricate internal architecture of the source capsule.
+
+\subsubsection{Geometry Function ($G(r, \theta)$)}
+The geometry function isolates and quantifies the spatial attenuation strictly dictated by the inverse square law, purposely ignoring phenomena related to tissue absorption or scattering. Depending on the volumetric distribution of the active material, it is modeled either as a theoretical point or a 1D line:
+\begin{equation}
+    G_P(r, \theta) = r^{-2} \quad \text{(Point Source Approximation)}
+\end{equation}
+\begin{equation}
+    G_L(r, \theta) = 
+    \begin{cases} 
+        \frac{\beta}{L r \sin\theta} & \text{if } \theta \neq 0^\circ \\
+        (r^2 - \frac{L^2}{4})^{-1} & \text{if } \theta = 0^\circ 
+    \end{cases} \quad \text{(Line Source Approximation)}
+\end{equation}
+Here, $L$ is the physical active length of the isotope, and $\beta$ represents the angle (in radians) geometrically bounded by the extremities of the active source to the point $P(r,\theta)$.
+
+\subsubsection{Radial Dose Function ($g(r)$)}
+The radial dose function maps the variation in dose rate solely attributable to photon absorption and bulk tissue scattering strictly along the transverse plane ($\theta_0 = 90^\circ$). It specifically divides out the purely spatial divergence accounted for by the geometry function:
+\begin{equation}
+g_X(r) = \frac{\dot{D}(r, \theta_0)}{\dot{D}(r_0, \theta_0)} \cdot \frac{G_X(r_0, \theta_0)}{G_X(r, \theta_0)}
+\end{equation}
+
+\subsubsection{2D Anisotropy Function ($F(r, \theta)$)}
+The anisotropy function $F(r, \theta)$ characterizes the angular distortion of the dose distribution relative to the transverse axis. This deviation from isotropy arises largely from self-absorption within the heavy-metal active core and the oblique filtration pathway through the protective titanium or steel encapsulation at steep polar angles:
+\begin{equation}
+F(r, \theta) = \frac{\dot{D}(r, \theta)}{\dot{D}(r, \theta_0)} \cdot \frac{G_L(r, \theta_0)}{G_L(r, \theta)}
+\end{equation}
+
+\subsection{Experimental Derivation using TLDs}
+While $G_X(r,\theta)$ is a purely mathematical construct derived from physical source dimensions, $g(r)$ and $F(r, \theta)$ mandate empirical validation. These metrics are proportional ratios of absolute dose rates at distinct spatial coordinates. 
+In a controlled experimental setup using solid-state dosimeters such as TLDs, provided that the physical configuration and irradiation parameters remain uniform, the accumulated TL signal (counts) is directly proportional to the absorbed dose rate.
+By executing ratio-based calculations, the absolute calibration constants of the TLDs mathematically cancel out, allowing the extraction of the TG-43 parameters using pure raw counts \cite{rivard2004update}:
+\begin{equation}
+g_X(r) = \frac{\text{TLD}(r, \theta_0)}{\text{TLD}(r_0, \theta_0)} \cdot \frac{G_X(r_0, \theta_0)}{G_X(r, \theta_0)}
+\end{equation}
+\begin{equation}
+F(r, \theta) = \frac{\text{TLD}(r, \theta)}{\text{TLD}(r, \theta_0)} \cdot \frac{G_L(r, \theta_0)}{G_L(r, \theta)}
+\end{equation}
+
+\subsection{Phantom Design and Methodology}
+Measurements are conducted utilizing a bespoke "IPD" Perspex phantom, a tissue-equivalent slab measuring $30 \times 30 \times 1$ cm$^3$. The center features a 2 mm diameter grooved channel specifically milled to accommodate an interstitial brachytherapy catheter. Arrayed along concentric arcs radiating from this central axis are precision-cut recesses ($2 \times 6.2$ mm$^2$) spaced at 15 mm radial intervals. These slots securely house the CaSO$_4$:Dy TLD capsules at defined polar angles ($30^\circ$, $60^\circ$, and $90^\circ$).
+
+The experimental workflow involves pre-scanning the phantom via CT to verify the spatial geometry within a Treatment Planning System (TPS). The source is positioned at the geometric center, and an initial planned dose (e.g., 2 Gy at 15 mm) is prescribed to dictate the dwell time. Post-irradiation, TLDs mapped to specific $(r, \theta)$ coordinates are meticulously extracted and processed through a TL reader to acquire the raw dosimetric counts required for the TG-43 formalism equations.
+
+% TODO: Insert Image: Fig 2 - Design of In-house IPD phantom
+% TODO: Insert Image: Fig 3 - Scanned Phantom In TPS
+% TODO: Insert Image: Fig 4 - IPD phantom showing distance and angle
+% TODO: Insert Image: Fig 5 - Measurement Setup for In Phantom Dosimetry

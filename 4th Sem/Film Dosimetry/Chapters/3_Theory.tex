@@ -1,0 +1,15 @@
+Radiochromic film has become a cornerstone in advanced radiation dosimetry due to its superior spatial resolution, near-tissue equivalence, and self-developing nature. Unlike traditional silver halide radiographic films, radiochromic films do not require wet chemical processing, thus eliminating darkroom uncertainties \cite{podgorsak2005radiation}. 
+
+\subsection{Physical Principles of GAFchromic Films}
+Modern GAFchromic\texttrademark{} films (e.g., EBT3) consist of an active layer comprising diacetylene monomers, sandwiched between two matte polyester substrate layers. Upon exposure to ionizing radiation, the monomers undergo a solid-state polymerization reaction. This process alters the molecular structure, absorbing visible light primarily in the red spectrum (around 633 nm), leading to a progressive darkening of the film \cite{devic2016aapm}. The degree of polymerization, and thus the macroscopic optical density (OD), is monotonically related to the absorbed dose.
+
+The net optical density ($\text{netOD}$) is defined as:
+\begin{equation}
+    \text{netOD} = \log_{10}\left(\frac{I_{\text{unexp}}}{I_{\text{exp}}}\right)
+\end{equation}
+where $I_{\text{unexp}}$ and $I_{\text{exp}}$ are the transmitted light intensities of the unexposed and exposed films, respectively.
+
+\subsection{Dosimetric System and Readout}
+The quantification of dose requires a meticulously calibrated flatbed document scanner (e.g., EPSON 12000 XL). During readout, the orientation of the film relative to the scan direction must be kept strictly consistent due to the anisotropic, highly organized polymer chains that cause polarization effects \cite{devic2016aapm}. 
+
+Furthermore, flatbed scanners typically exhibit a ``lateral response artifact,'' caused by the variation in the angle of incidence of the scanner's light source along the array axis. A robust QA protocol minimizes these artifacts through central scanning, multi-channel (RGB) analysis, and maintaining a constant post-irradiation development window (usually 24 hours) to account for asymptotic post-exposure polymerization.

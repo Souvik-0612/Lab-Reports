@@ -1,0 +1,15 @@
+The dose calibrator is the ultimate gatekeeper in nuclear medicine, acting as the final metrological check before radiopharmaceuticals are administered to patients. Assuring the highest degree of accuracy in these devices directly governs patient safety and the diagnostic or therapeutic efficacy of the procedure \cite{cherry2012physics}.
+
+\subsection{Ionization Chamber Mechanics}
+Dose calibrators are fundamentally deep, well-type ionization chambers, characteristically pressurized with Argon gas to 10–30 atmospheres \cite{aapm181}. The ``well'' geometry provides a near-$4\pi$ solid angle coverage, resulting in remarkably high geometric efficiency. When ionizing radiation traverses the pressurized gas, it generates electron-ion pairs. A stable, high potential difference across the concentric cylindrical electrodes sweeps these charge carriers away before recombination occurs, operating securely in the ionization saturation region (Townsend plateau).
+
+The resulting ionization current—often on the order of pico-to-microamperes—is proportional to the absolute activity of the sample, scaled by the specific gamma-ray constant of the radionuclide. A highly sensitive electrometer digitizes this current, mapping it to user-selected isotope settings \cite{knoll2010radiation}.
+
+\subsection{Routine Quality Assurance}
+The American Association of Physicists in Medicine (AAPM) outlines four mandatory QA procedures for dose calibrators \cite{aapm181}:
+\begin{enumerate}
+    \item \textbf{Accuracy (Annually):} Validates the system against NIST-traceable reference sources (e.g., $^{57}\text{Co}$, $^{137}\text{Cs}$, $^{133}\text{Ba}$). Measurements must lie within $\pm 5\%$ of the certified decay-corrected activity.
+    \item \textbf{Constancy (Daily):} Guarantees day-to-day reproducibility. A long-lived source ($^{137}\text{Cs}$) is measured across all frequently used isotope channels.
+    \item \textbf{Linearity (Quarterly):} Verifies that the electrometer responds linearly across the entire spectrum of clinical activities (from several Curies down to microCuries). This is commonly performed via the intrinsic decay method of $^{99m}\text{Tc}$ or utilizing calibrated attenuation sleeves (Calicheck).
+    \item \textbf{Geometry (Installation/Repair):} Assesses variations in response due to sample volume, container shape (syringe vs. vial), and position within the well.
+\end{enumerate}

@@ -1,0 +1,20 @@
+Radiation protection within medical physics relies unequivocally on the accurate detection and quantification of ambient radiation fields and surface contamination. Radioactive materials, particularly unsealed sources used in diagnostic and therapeutic nuclear medicine, pose significant risks of occupational and public exposure if improperly managed \cite{cherry2012physics}.
+
+\subsection{Area vs. Contamination Monitoring}
+Radiological monitoring is broadly bifurcated into two domains:
+\begin{itemize}
+    \item \textbf{Area Survey:} Determines the ambient dose equivalent rate (e.g., in $\mu\text{Sv/h}$ or mR/h). This establishes the safety parameters for controlled vs. supervised areas.
+    \item \textbf{Contamination Monitoring:} Identifies the presence of unsealed radiopharmaceuticals deposited on surfaces. Contamination is characterized as either \textit{fixed} (chemically bound to the substrate) or \textit{loose} (removable via wiping) \cite{knoll2010radiation}.
+\end{itemize}
+
+\subsection{Instrumentation Physics}
+\textbf{Gas-Filled Detectors (GM Counters):} Geiger-Müller (GM) counters are the standard for contamination monitoring due to their extreme sensitivity. A single ion pair can trigger a massive Townsend avalanche, producing a uniform, high-amplitude pulse regardless of the incident photon's energy \cite{knoll2010radiation}. However, GM counters suffer from significant ``dead time'' (the period post-avalanche where the detector is temporarily paralyzed) and are heavily energy-dependent, making them unsuitable for accurate high-dose-rate measurements.
+
+\textbf{Ionization Chambers:} For precise area dosimetry (dose rate measurement), portable air-filled ionization chambers are utilized. By operating in the saturation region without gas multiplication, the measured current strictly reflects the energy deposited in the chamber volume, ensuring an energy-independent reading proportional to the true tissue dose \cite{podgorsak2005radiation}.
+
+\subsection{Regulatory Framework}
+The International Commission on Radiological Protection (ICRP) and national bodies mandate strict adherence to contamination limits. When loose contamination is assessed via wipe tests, the activity $A$ (in Bq) is calculated by:
+\begin{equation}
+    A = \frac{\text{Net CPM}}{60 \times \epsilon_{\text{detector}} \times f_{\text{wipe}}}
+\end{equation}
+where $\epsilon_{\text{detector}}$ is the intrinsic detector efficiency and $f_{\text{wipe}}$ represents the wipe fraction (often conservatively assumed to be 0.1) \cite{cherry2012physics}.

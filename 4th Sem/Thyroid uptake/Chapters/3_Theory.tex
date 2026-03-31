@@ -1,0 +1,23 @@
+The clinical evaluation of thyroid physiology heavily relies on the gland's inherent mechanism of trapping and organifying iodine. By administering a known activity of a radioactive iodine isotope—such as $^{131}\text{I}$ or $^{123}\text{I}$—the fractional uptake can be quantitatively determined. This provides profound insight into hyperthyroid or hypothyroid conditions \cite{cherry2012physics}.
+
+\subsection{Detection Physics: NaI(Tl) Scintillators}
+Thyroid uptake probes universally employ Thallium-activated Sodium Iodide [NaI(Tl)] scintillation crystals. Incident gamma rays (e.g., the 364 keV emission of $^{131}\text{I}$) interact via the photoelectric effect and Compton scattering within the crystal lattice. The energy deposited raises electrons to the conduction band, which migrate to Thallium activation centers and subsequently emit visible photons (approximately 415 nm) upon de-excitation \cite{knoll2010radiation}.
+
+A photomultiplier tube (PMT) coupled to the crystal converts these scintillations into an amplified electrical pulse. The pulse amplitude is strictly proportional to the energy deposited by the incident gamma ray, allowing for energy discrimination via a Multi-Channel Analyzer (MCA).
+
+\subsection{Quality Assurance of the Uptake Probe}
+To ensure clinical integrity, the system must undergo stringent QA:
+\begin{itemize}
+    \item \textbf{Energy Calibration and Resolution:} Performed using a standard $^{137}\text{Cs}$ source (662 keV). The resolution, $R = (\text{FWHM}/E_0) \times 100$, typically must not exceed 9.5\% for flat-faced probes \cite{cherry2012physics}.
+    \item \textbf{Constancy:} A daily verification to ensure that the measured activity of a long-lived standard source aligns with its theoretical decay-corrected value.
+    \item \textbf{Chi-Square ($\chi^2$) Test:} Evaluates the statistical integrity of the counting system, assessing whether observed counts follow a true Poisson distribution. It is formulated as:
+    \begin{equation}
+        \chi^2 = \sum_{i=1}^{N} \frac{(O_i - \bar{O})^2}{\bar{O}}
+    \end{equation}
+\end{itemize}
+
+\subsection{Uptake Calculation}
+Thyroid uptake is expressed as the ratio of background-corrected net neck counts to the standard dose counts:
+\begin{equation}
+    \%\, \text{Uptake} = \left( \frac{\text{Neck Counts} - \text{Thigh (Background) Counts}}{\text{Standard Capsule Counts} - \text{Room Background}} \right) \times 100
+\end{equation}

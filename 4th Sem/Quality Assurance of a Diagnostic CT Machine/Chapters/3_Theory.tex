@@ -1,0 +1,51 @@
+\subsection{Introduction to Computed Tomography Quality Assurance}
+A Quality Assurance (QA) program in diagnostic radiology is a comprehensive set of protocols and procedures designed to ensure that diagnostic images are of sufficiently high quality to provide adequate diagnostic information, achieved at the lowest possible cost and with the least possible radiation exposure to the patient \cite{bushberg2011essential}. 
+
+For a Computed Tomography (CT) unit, QA protocols must strictly address image quality, geometric alignment, and dosimetric output. Furthermore, when CT images are utilized for radiotherapy treatment planning (CT-Simulation), the spatial integrity of the scanner and the consistency of electron density values across the CT, Treatment Planning System (TPS), and Digitally Reconstructed Radiographs (DRRs) must be rigorously verified \cite{aapm66}. 
+
+Quality assurance testing guarantees two fundamental tenets of radiation protection:
+\begin{enumerate}
+    \item The radiation dose received by the patient for diagnostic purposes is optimally minimized (ALARA principle).
+    \item High image quality facilitates accurate diagnosis, thereby scientifically justifying the radiation exposure.
+\end{enumerate}
+
+As per the guidelines mandated by regulatory bodies such as the Atomic Energy Regulatory Board (AERB), comprehensive acceptance testing upon new equipment installation and periodic QA are strict requirements. The QA tests for CT equipment are broadly classified into four primary categories: Mechanical Tests, Tests for High-Frequency Generators, Image Quality Parameters, and Radiation Safety \cite{aapm39}.
+
+\subsection{1. Mechanical Tests}
+The geometric fidelity of the scanner is critical to avoid image artifacts and ensure precise localization.
+\begin{itemize}
+    \item \textbf{Alignment of the Table to Gantry:} This test ensures that the longitudinal axis of the patient table is perfectly horizontal and aligned with the vertical line passing through the scanner's rotational axis. A mismatch in this alignment introduces severe image artifacts, particularly for bulky patients if their anatomy extends out of the volume of interest (VOI). The acceptable tolerance is $\pm 5$ mm of the table midline.
+    \item \textbf{Gantry Tilt Accuracy:} Most modern CT scanners allow non-orthogonal scanning by tilting the gantry to avoid specific organs (e.g., orbits). The accuracy of the displayed tilt angle is assessed by supporting an envelope-wrapped X-ray film vertically at the gantry end of the couch. Three axial exposures are made: one at $0^\circ$ tilt, one at maximum superior tilt, and one at maximum inferior tilt. The angles between the scan planes on the developed film are measured and compared against the gantry display. The tolerance is dictated by the manufacturer's specification, typically $\pm 2^\circ$ \cite{aapm39}.
+    \item \textbf{Table Indexing Accuracy:} Couch translation must be precisely synchronized with the X-ray tube rotation. Using a ruler or tape measure placed alongside the table, the indicated degree of couch movement is compared with the actual physical distance moved. To replicate clinical conditions, a distributed load of approximately 70–80 kg is placed on the table to simulate a patient's weight.
+\end{itemize}
+
+\subsection{2. Tests for High-Frequency Generators}
+The X-ray generator parameters directly dictate the photon fluence and beam quality, directly impacting patient dose and image contrast.
+\begin{itemize}
+    \item \textbf{Accuracy of Operating Potential (kVp):} The applied kilovoltage affects both the quality (penetrability) and quantity of the X-rays reaching the detector array. Variations from the prescribed kVp will negatively alter image contrast and noise characteristics; thus, the kVp settings must be periodically verified using a calibrated non-invasive kVp meter.
+    \item \textbf{Accuracy of Timer:} Inaccurate exposure times can result in underexposed (excessive quantum mottle) or overexposed (unnecessary patient dose) images, drastically altering tissue contrast resolution.
+    \item \textbf{Total Filtration:} Added filtration removes low-energy X-ray photons that do not possess sufficient energy to penetrate the patient and reach the detectors, contributing solely to patient skin dose. AERB recommends specific total filtration values (inherent + added) for different maximum-rated tube potentials. If the evaluated filtration is inadequate, additional physical filtration must be integrated into the tube housing.
+    \item \textbf{Linearity of Radiation Output (mA/mAs Linearity):} Keeping the kVp and exposure time constant, radiation output is measured across various mA stations. The Coefficient of Linearity (COL) is calculated from the average output $X$ (in mR/mAs or mGy/mAs):
+    \begin{equation}
+        \text{COL} = \frac{X_{\text{max}} - X_{\text{min}}}{X_{\text{max}} + X_{\text{min}}}
+    \end{equation}
+    The regulatory tolerance dictates that $\text{COL} \leq 0.1$.
+    \item \textbf{Reproducibility of Radiation Output:} Keeping mA and time fixed, the output is measured repeatedly at available kVp stations. Consistency is evaluated via the Coefficient of Variation (COV):
+    \begin{equation}
+        \text{COV} = \frac{1}{\bar{X}} \sqrt{ \frac{\sum(X_i - \bar{X})^2}{n-1} }
+    \end{equation}
+    The tolerance limit for reproducibility is $\text{COV} \leq 0.05$.
+\end{itemize}
+
+\subsection{3. Image Quality Tests}
+Image quality parameters are assessed using standardized test phantoms of human shape or specific uniform test objects provided by the manufacturer.
+\begin{itemize}
+    \item \textbf{Slice Thickness:} Assesses whether the effective physical slice thickness matches the nominally selected thickness on the console. 
+    \item \textbf{High Contrast Resolution:} Defines the minimum size of a detail visualized in the scan plane with a contrast $> 10\%$. It is influenced by the reconstruction algorithm, detector element width, and X-ray tube focal spot size. Evaluation techniques include mathematical derivation of the Modulation Transfer Function (MTF) from a point spread function, or visual assessment using a resolution bar phantom. Resolution is expressed as the spatial frequency (line pairs/cm) where the MTF falls to 50\%, 10\%, or 2\%. The visible line pairs in the image approximately correspond to the 2\% MTF value \cite{bushberg2011essential}.
+    \item \textbf{Low Contrast Resolution:} This metric represents the smallest visible object at a specific low contrast level for a given dose. It determines the system's capacity to differentiate tissues with minimal density differences relative to the surrounding background (e.g., soft tissue lesions).
+    \item \textbf{CT Number Accuracy and Uniformity:} CT numbers (Hounsfield Units) depend on tube voltage, beam filtration, and object attenuation. By definition, the CT number of water is 0. 
+    \begin{itemize}
+        \item \textit{Accuracy:} The measured CT number in the central Region of Interest (ROI) of a water phantom must be $0 \pm 4$ HU.
+        \item \textit{Uniformity:} The CT number of a homogeneous object should remain constant across the entire field of view. By placing four additional ROIs (North, East, South, West) near the phantom's periphery alongside the central ROI, the mean values are compared. The deviation between any peripheral ROI and the central ROI must not exceed $\pm 4$ HU \cite{aapm39}.
+    \end{itemize}
+\end{itemize}
