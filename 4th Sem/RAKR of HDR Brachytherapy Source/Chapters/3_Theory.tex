@@ -1,7 +1,7 @@
 \subsection{Introduction to Brachytherapy}
 Brachytherapy, deriving its name from the Greek word "brachys" meaning short distance, is an advanced modality of radiation oncology that involves the precise placement of encapsulated radioactive sources directly inside or immediately adjacent to a tumor volume \cite{khan2014physics}. The paramount clinical advantage of this modality lies in its adherence to the inverse square law; it delivers an extremely conformal, tumor-ablative radiation dose while ensuring a rapid dose fall-off that sharply spares surrounding critical healthy organs \cite{podgorsak2005radiation}. Depending on the clinical indication, brachytherapy can function as an exclusive, definitive treatment or as a highly targeted sequential boost complementing External Beam Radiotherapy (EBRT).
 
-Before any brachytherapy source is released for clinical patient treatment, independent physics verification of the source strength is legally and clinically mandated. Historically categorized by equivalent mass of radium, modern dosimetry explicitly quantifies source strength as the Air Kerma Strength ($S_K$) or the Reference Air Kerma Rate (RAKR) \cite{nath1995dosimetry}. Ascertaining the RAKR via absolute dosimetric measurement ensures that the actual radioactive output matches the manufacturer’s certificate within a stringent tolerance (typically $\pm 3\%$), maintaining unbroken traceability to Primary Standard Dosimetry Laboratories (PSDLs) \cite{rivard2004update}. Furthermore, High Dose Rate (HDR) treatments deliver massive localized doses in fractions of a minute; consequently, the electromechanical accuracy of the remote afterloader's timer and transit mechanism is of profound dosimetric consequence.
+Before any brachytherapy source is released for clinical patient treatment, independent physics verification of the source strength is legally and clinically mandated. Historically categorized by equivalent mass of radium, modern dosimetry explicitly quantifies source strength as the Air Kerma Strength ($S_K$) or the Reference Air Kerma Rate (RAKR) \cite{nath1995dosimetry}. Ascertaining the RAKR via absolute dosimetric measurement ensures that the actual radioactive output matches the manufacturer's certificate within a stringent tolerance (typically $\pm 3\%$), maintaining unbroken traceability to Primary Standard Dosimetry Laboratories (PSDLs) \cite{rivard2004update}. Furthermore, High Dose Rate (HDR) treatments deliver massive localized doses in fractions of a minute; consequently, the electromechanical accuracy of the remote afterloader's timer and transit mechanism is of profound dosimetric consequence.
 
 \subsection{Categorization of Brachytherapy}
 Brachytherapy interventions are broadly stratified by the rate of dose delivery, the anatomical method of source placement, and the duration the implant remains inside the patient \cite{khan2014physics}.
@@ -60,8 +60,14 @@ $S_K$ is expressed in units of $\mu$Gy m$^2$ h$^{-1}$ (often denoted by the symb
 
 \subsection{Brachytherapy Equipment: Siemens Healthineers BRAVOS}
 Modern High-Dose-Rate (HDR) brachytherapy delivery relies heavily on automated remote afterloader systems designed for maximum precision, safety, and operational efficiency. The Siemens Healthineers BRAVOS™ system \cite{siemensbravos2023} exemplifies the current state-of-the-art in this domain. This system typically utilizes a high-activity $^{192}$Ir source, securely stored within a heavily shielded internal safe when not in use. 
+% Include image of BRAVOS afterloader here
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{/Users/souvik/Desktop/Lab-Reports/4th Sem/RAKR of HDR Brachytherapy Source/Figures/Theory/Bravos.png}
+    \caption{Siemens Healthineers BRAVOS™ system. Weight 143 kg, dimensions 113.8 cm H $\times$ 53.8 cm W $\times$ 68.8 cm D}
+\end{figure}
 
-The BRAVOS afterloader is characterized by its integration of advanced safety and positioning technologies. A primary feature is its sophisticated pre-treatment verification process. Before the radioactive source is deployed into the patient, a non-radioactive ``dummy'' check cable is driven through the transfer tubes and into the applicator to confirm that the entire path is clear of obstructions and that the applicator geometry matches the treatment plan. This critical step ensures that the active source will reach its intended dwell positions without incident. The system employs high-precision stepper motors and encoder feedback loops to position the source with sub-millimeter accuracy at each programmed dwell location. Furthermore, the BRAVOS system integrates seamlessly with treatment planning software, allowing for complex, multi-catheter implants and highly conformal 3D dose distributions. The unit also includes redundant safety mechanisms, such as continuous internal radiation monitoring, automatic source retraction upon power failure or system error, and manual retraction capabilities, ensuring patient and staff safety throughout the procedure.
+The BRAVOS afterloader is characterized by its integration of advanced safety and positioning technologies. A primary feature is its sophisticated pre-treatment verification process. Before the radioactive source is deployed into the patient, a non-radioactive "dummy" check cable is driven through the transfer tubes and into the applicator to confirm that the entire path is clear of obstructions and that the applicator geometry matches the treatment plan. This critical step ensures that the active source will reach its intended dwell positions without incident. The system employs high-precision stepper motors and encoder feedback loops to position the source with sub-millimeter accuracy at each programmed dwell location. Furthermore, the BRAVOS system integrates seamlessly with treatment planning software, allowing for complex, multi-catheter implants and highly conformal 3D dose distributions. The unit also includes redundant safety mechanisms, such as continuous internal radiation monitoring, automatic source retraction upon power failure or system error, and manual retraction capabilities, ensuring patient and staff safety throughout the procedure.
 
 \subsection{Dosimetry via Well-Type Ionization Chamber}
 The internationally recognized gold standard for the clinical verification of brachytherapy source strength is the re-entrant or well-type ionization chamber. The standard dosimetric assembly includes the vented well-chamber, a specialized source-positioning insert (holder), a highly sensitive precision electrometer, and triaxial cabling \cite{khan2014physics}.
@@ -71,7 +77,12 @@ Constructed specifically to intercept sources in a near $4\pi$ geometry, the cha
 
 A critical functional characteristic of a well-chamber is its "sweet spot"—a localized axial region along the well's depth that yields the maximum and most uniform ionization response. The longitudinal extent of this sweet spot must comfortably exceed the physical active length of the source to guarantee measurement stability despite minor mechanical positioning uncertainties \cite{podgorsak2005radiation}.
 
-% TODO: Insert Image of Output Signal vs Distance Inside Chamber Plot
+\begin{figure}
+    \centering
+    \includegraphics[width=0.6\textwidth]{/Users/souvik/Desktop/Lab-Reports/4th Sem/RAKR of HDR Brachytherapy Source/Figures/Theory/Welltype chamber.png}
+    \caption{Basic design of a brachytherapy well type chamber.}
+\end{figure}
+
 
 \subsubsection{Measurement Formalism}
 When utilizing a calibrated well-chamber, the Reference Air Kerma Rate ($\dot{K}_R$ or RAKR) is derived directly from the measured electrometer ionization current:

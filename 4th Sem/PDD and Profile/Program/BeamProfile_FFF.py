@@ -9,7 +9,7 @@ plt.style.use(['science', 'notebook', 'grid'])
 df = pd.read_excel("PROFILE Group 2.xlsx", sheet_name=2)
 x = np.array(df["Off Axis [mm]"])
 y = np.array(df["Inline dose"])
-y = y / max(y) * 100
+y = y / y[x ==0] * 100
 
 IPy = []; IPx = []
 for i in range(len(x)-1):

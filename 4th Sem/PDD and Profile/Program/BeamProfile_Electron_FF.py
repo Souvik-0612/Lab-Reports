@@ -7,15 +7,16 @@ import scienceplots
 plt.style.use(['science', 'notebook', 'grid'])
 
 # Data Extraction from the xlsx file
-df = pd.read_excel("PROFILE Group 2.xlsx", sheet_name=1)
+df = pd.read_excel("PROFILE Group 2.xlsx", sheet_name=3)
 x = np.array(df["Off Axis [mm]"])
 y = np.array(df["Inline dose"])
 y = y / y[x==0] * 100
 
 
 #Data analysis 
-x50L = 0; x50R = 0; x80L = 0; x80R = 0; I80R = []; I80L = []
+x50L = 0; x50R = 0; x80L = 0; x80R = 0; I80R = []; I80L = []; x90L = 0; x90R = 0
 n = int(len(x)/2)
+
 for i in range(len(x)):
     #Geometric field size
     if y[i] > 50:
@@ -25,15 +26,8 @@ for i in range(len(x)):
         break
 
 FieldWidth = x50R - x50L
-
-Dmax = 0; Dmin = 100
-for i in range(len(x)):
-    # Flatness
-    if abs(x[i]) <= 0.4*FieldWidth:
-        if Dmax < y[i]:
-            Dmax = y[i]
-        if Dmin > y[i]:
-            Dmin = y[i]
+flatnessL = x90L - x50L; flatnessR = x90R - x50R
+flatness = (flatnessL + flatnessR)/2
 
 # Pnumbra lateral distance between 20% and 80% dose
 def find_crossing_x(side_x, side_y, level):
@@ -77,7 +71,6 @@ AreaR = 0.5*h*(y50[n+1] + y50[-1] + 2*sum(y50[n+1:-1]))
 Symmetry = abs(AreaL - AreaR)/(AreaL + AreaR) * 100
 
 
-flatness = (Dmax - Dmin) / (Dmax + Dmin) * 100
 print("Flatness: ", flatness)
 print("Symmetry: ", Symmetry)
 print(f"Left penumbra (80%-20%): {left_penumbra:.3f} mm")
@@ -107,5 +100,5 @@ ax.text(0.02, 0.98, info_text, transform=ax.transAxes, va='top', ha='left',
         fontsize=11, bbox=dict(boxstyle='round', facecolor='white', alpha=0.8, edgecolor='black'))
 ax.set_xlabel("Distance from central axis (mm)")
 ax.set_ylabel("Relative dose (%)")
-plt.savefig("Figures/Profile/6 MV photon(35 by 35)/InlineProfile.pdf", dpi=300, bbox_inches='tight')
+plt.savefig("Figures/Profile/6MeV(10 by 10)/InlineProfile.pdf", dpi=300, bbox_inches='tight')
 plt.show()
