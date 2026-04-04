@@ -1,8 +1,10 @@
-The thermoluminescent dosimeter (TLD) was first introduced in 1954 by Professor Farrington Daniels at the University of Wisconsin-Madison. When exposed to ionizing radiation, electrons within the TLD material are excited and subsequently captured by dosimetric traps. These electrons remain localized in these traps until the material is subjected to thermal stimulation. As the temperature of the detector increases—typically reaching up to 400$^\circ$C—the trapped electrons gain enough thermal energy to escape. Upon returning to their ground state, they release energy in the form of a light pulse, a phenomenon known as luminescence. A photomultiplier tube (PMT) detects and quantifies this emitted light, the intensity of which is directly proportional to the radiation dose absorbed by the dosimeter.
+The thermoluminescent dosimeter (TLD) was first introduced in 1954 by Professor Farrington Daniels at the University of Wisconsin-Madison. When exposed to ionizing radiation, electrons within the TLD material are excited and subsequently captured by dosimetric traps. These electrons remain localized in these traps until the material is subjected to thermal stimulation. As the temperature of the detector increases—typically reaching up to 400$^\circ$C—the trapped electrons gain enough thermal energy to escape. Upon returning to their ground state, they release energy in the form of a light pulse, a phenomenon known as luminescence. A photomultiplier tube (PMT) detects and quantifies this emitted light, the intensity of which is directly proportional to the radiation dose absorbed by the dosimeter \cite{rivera_thermoluminescence_2012,gibbons_khans_2020}.
 
-Due to its reliability, the TLD serves as a passive solid-state radiation detector and is widely recognized as a standard tool for personnel monitoring.
+Due to its reliability, the TLD serves as a passive solid-state radiation detector and is widely recognized as a standard tool for personnel monitoring \cite{kry_aapm_2020}.
 
-In the context of the Indian nationwide personnel monitoring program, CaSO$_4$:Dy is the preferred TLD material. This phosphor is capable of detecting X-rays, gamma ($\gamma$), and beta ($\beta$) radiations. Although it is not inherently tissue-equivalent, its adoption is justified by several significant advantages, including high thermoluminescent sensitivity, cost-effectiveness, ease of fabrication, and a straightforward annealing process. The concentration of Dysprosium (Dy) dopant in the calcium sulfate matrix is maintained at 0.05 mole \%, equivalent to 500 ppm.
+In the context of the Indian nationwide personnel monitoring program, CaSO$_4$:Dy is the preferred TLD material. This phosphor is capable of detecting X-rays, gamma ($\gamma$), and beta ($\beta$) radiations. Although it is not inherently tissue-equivalent, its adoption is justified by several significant advantages, including high thermoluminescent sensitivity, cost-effectiveness, ease of fabrication, and a straightforward annealing process. The concentration of Dysprosium (Dy) dopant in the calcium sulfate matrix is maintained at 0.05 mole \%, equivalent to 500 ppm \cite{del_sol_fernandez_thermoluminescent_2016,nuraeni_preliminary_2017}.
+
+From a clinical dosimetry standpoint, optimal TLD use requires controlled reader stability, robust calibration factors, uncertainty tracking, and periodic quality assurance checks. These operational principles are aligned with modern recommendations for luminescent dosimetry in medical physics practice \cite{kry_aapm_2020}.
 
 \subsection{Detection Material}
 
@@ -21,9 +23,17 @@ A typical TLD badge comprises several key structural elements:
         \item \textbf{Dimensions:} The standard size for these discs is approximately 13.3 mm in diameter and 0.8 mm in thickness.
     \end{itemize}
 \end{itemize}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{/Users/souvik/Desktop/Lab-Reports/4th Sem/Calibration of A TLD Personnel Monitoring Badge and Dose Evaluation/Figures/Theory/synthesis.png}
+    \caption{Schematic representation of co-precipitation method for synthesizing CaSO4:Dy.}
+    
+\end{figure}
+In practical low-dose X-ray fields, both CaSO$_4$:Dy and LiF:Mg,Cu,P show useful linear response and reproducibility, but CaSO$_4$:Dy generally provides higher sensitivity and lower detection threshold, which is particularly advantageous for personnel monitoring close to the dose limit \cite{del_sol_fernandez_thermoluminescent_2016}.
 
 % TODO: Insert "Table 1: Characteristics of most common TL materials used in TL dosimetry" here.
 % TODO: Insert "Figure 2: TLD personnel monitoring badge schematic" here.
+% Suggested file and location: insert badge image here using Figures/TLD_Badge.jpg after this paragraph.
 
 \subsubsection{Filters in TLD Personnel Monitoring Badge}
 To differentiate between various radiation types and energies, and to facilitate the accurate evaluation of both shallow (skin) and deep (whole body) doses, the TLD badge utilizes a three-filter system positioned over the individual TLD discs:
@@ -32,6 +42,11 @@ To differentiate between various radiation types and energies, and to facilitate
     \item \textbf{Plastic Filter:} Designed to be tissue-equivalent, this filter mimics human tissue. It partially absorbs lower-energy radiation, thereby assisting in the estimation of the shallow dose imparted to the skin.
     \item \textbf{Open Window Filter:} This section lacks any covering, exposing the underlying TLD disc directly to the environment. It permits the detection of low-energy X-rays, gamma rays, and beta particles, and is primarily utilized for surface dose measurement and detecting beta contamination.
 \end{itemize}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{/Users/souvik/Desktop/Lab-Reports/4th Sem/Calibration of A TLD Personnel Monitoring Badge and Dose Evaluation/Figures/Theory/TLD batch.png}
+    \caption{Schematic of a TLD personnel monitoring badge showing the arrangement of filters and TLD discs.}
+\end{figure}
 
 \subsection{Basic Structure and Traps}
 
@@ -52,6 +67,17 @@ TLD materials are fundamentally crystalline insulators or wide-bandgap semicondu
 \subsubsection{Trap Population and Filling}
 During exposure to ionizing radiation, a competition exists between the trapping of charge carriers and their immediate recombination. The extent to which these traps are filled depends on parameters like trap density, capture cross-sections, and ambient temperature. Crucially, up to the point of saturation, the population of filled traps maintains a proportional relationship with the absorbed radiation dose.
 
+\subsubsection{Kinetic Model and Glow Curve Formalism}
+For first-order thermoluminescence kinetics, the TL intensity can be represented as
+\begin{equation}
+I(T) = -\frac{dn}{dt} = n s \exp\left(-\frac{E}{kT}\right),
+\end{equation}
+where $n$ is the trapped carrier population, $s$ is the frequency factor, $E$ is trap depth (activation energy), $k$ is the Boltzmann constant, and $T$ is absolute temperature. Under a linear heating rate $\beta = dT/dt$, the peak position shifts with $E$, $s$, and $\beta$. The integrated light output,
+\begin{equation}
+L = \int I(T)\,dt,
+\end{equation}
+is proportional to absorbed dose over the linear operating region and forms the basis of dose calibration \cite{rivera_thermoluminescence_2012,gibbons_khans_2020}.
+
 % TODO: Insert "Figure 3: Energy level diagram" here.
 
 \subsubsection{Fading}
@@ -70,11 +96,22 @@ The varying depths of different traps mean that electrons are released across a 
 
 \subsubsection{Example and Stability of Peaks}
 For practical dosimetry, a stable peak is selected. For instance, in CaSO$_4$:Dy, the primary dosimetric peak occurs at roughly $280^\circ$C. This temperature is sufficient to prevent rapid room-temperature fading but low enough to avoid complications associated with extreme heating. Conversely, low-temperature peaks are susceptible to rapid fading and are often intentionally erased during a pre-heat cycle before the final reading.
+This reported peak position for CaSO$_4$:Dy is consistent with experimental literature where the dosimetric peak appears near $277.5^\circ$C in low-dose studies \cite{del_sol_fernandez_thermoluminescent_2016}.
 
-% TODO: Insert "Figure 4: Example of a glow curve" here.
+
+%Insert two images side by side
+\begin{figure}
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \includegraphics[width=\textwidth]{/Users/souvik/Desktop/Lab-Reports/4th Sem/Calibration of A TLD Personnel Monitoring Badge and Dose Evaluation/Figures/Theory/GlowCurve1.png}
+    \end{minipage}\hfill
+    \begin{minipage}{0.45\textwidth}
+        \includegraphics[width=\textwidth]{/Users/souvik/Desktop/Lab-Reports/4th Sem/Calibration of A TLD Personnel Monitoring Badge and Dose Evaluation/Figures/Theory/GlowCurve2.png}
+    \end{minipage}
+\end{figure}
 
 \subsection{Annealing}
-Following the readout, a small fraction of deeply trapped electrons may remain. To clear these residual signals and restore the material's structural equilibrium for reuse, an annealing procedure is necessary. This involves heating the TLD phosphors in a specialized oven—typically at $400^\circ$C for one hour—ensuring that all traps are completely emptied without degrading the material's properties.
+Following the readout, a small fraction of deeply trapped electrons may remain. To clear these residual signals and restore the material's structural equilibrium for reuse, an annealing procedure is necessary. This involves heating the TLD phosphors in a specialized oven—typically at $400^\circ$C for one hour—ensuring that all traps are completely emptied without degrading the material's properties. Controlled re-annealing also affects sensitivity and glow-curve characteristics, so a fixed and reproducible annealing protocol is essential for calibration consistency \cite{nuraeni_preliminary_2017,kry_aapm_2020}.
 
 \subsection{Working Principle of a TLD Personnel Monitoring Badge Reader}
 The readout process involves several sequential steps:
@@ -90,6 +127,13 @@ The readout process involves several sequential steps:
     \item This current is amplified and processed by the reader's internal electronics.
     \item Finally, after applying pre-determined calibration factors, the system displays the calculated absorbed dose.
 \end{enumerate}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.7\textwidth]{/Users/souvik/Desktop/Lab-Reports/4th Sem/Calibration of A TLD Personnel Monitoring Badge and Dose Evaluation/Figures/Theory/Reader.png}
+    \caption{Schematic representation of a TLD reader system.}
+\end{figure}
+
+In clinical quality assurance workflows, this sequence is supplemented by routine checks for element correction coefficients, reader stability, background subtraction, and batch-wise calibration verification to maintain measurement uncertainty within acceptable limits \cite{kry_aapm_2020,manna_use_2023}.
 
 \subsection{Reason for Using Three TLD Phosphors in a Personnel Monitoring Badge}
 The incorporation of three distinct TLD elements within a single badge is a deliberate design choice aimed at enhancing measurement accuracy:
@@ -105,6 +149,8 @@ The incorporation of three distinct TLD elements within a single badge is a deli
     \item \textbf{Temperature Dependence:} The readout is critically dependent on the heating profile. Insufficient heating fails to release all trapped charges, causing an underestimation of the dose. Conversely, excessive temperatures can induce thermal quenching, degrading the luminescent signal. Thus, precise thermal control is paramount.
     \item \textbf{Energy Dependence:} The efficiency of the TL response varies with the energy of the incoming radiation. Typically, low-energy photons yield a higher TL response per unit dose than high-energy photons. The badge's filter system and specific calibration algorithms are employed to correct this intrinsic material behavior.
 \end{itemize}
+
+These dependencies are not only theoretical; they directly influence calibration and uncertainty budgets in medical dosimetry. Therefore, calibration should ideally be performed under beam qualities and geometries close to actual use conditions \cite{kry_aapm_2020,rivera_thermoluminescence_2012}.
 
 % TODO: Insert "Figure 5: Top inside view of the semi-automatic TLD badge reader" here.
 
@@ -136,4 +182,13 @@ The integrity of the TLD readout heavily relies on the reader's heating system:
     \item The system includes a heating element (e.g., nichrome wire) coupled with advanced temperature control electronics to achieve a rapid ramp-up and a stable hold at the target temperature.
     \item Thermocouples or similar sensors continuously monitor the temperature, feeding data back to the control system to maintain a precise thermal profile.
     \item This highly regulated heating process guarantees reproducible glow curves, which is the foundational requirement for accurate dose calculation.
+\end{itemize}
+
+\subsection{Suggested Image Placement in Theory Section}
+For improving clarity and presentation quality, include the following figures at these points in this chapter:
+\begin{itemize}
+    \item After the subsection \textit{Detection Material}: Insert the badge photograph/schematic (recommended file: \url{Figures/TLD_Badge.jpg}) to show cassette, card, and filter arrangement.
+    \item After \textit{Basic Insulator Band Model}: Insert an energy-band/trap diagram (create as \url{Figures/energy_band_diagram.png}) showing valence band, conduction band, traps, and recombination centers.
+    \item After \textit{Glow Curve Peaks}: Insert a representative glow curve plot (create as \url{Figures/glow_curve_example.png}) with labeled dosimetric peak near $280^\circ$C for CaSO$_4$:Dy.
+    \item After \textit{Dose, Temperature, and Energy Dependence}: Insert the calibration response figure (existing file: \url{Figures/calibration_curve.png}) to support the linearity discussion.
 \end{itemize}
