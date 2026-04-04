@@ -1,201 +1,98 @@
-\subsection{PDD }
-From the experimental data, we can plot the PDD curve for the 6 MV and 10 MV photon beams. The PDD curve illustrates how the absorbed dose varies with depth in a water phantom for a given beam energy and field size. By analyzing the PDD curves, we can determine important parameters such as the surface dose, depth of maximum dose (dmax), and the percentage dose at specific depths (e.g., D10 at 10 cm depth and D20 at 20 cm depth).
+\subsection{Observed PDD Curves}
 
-The Data is analysed using Python, and the code snippet for the PDD analysis is provided below. The code reads the depth and dose data from an Excel file, calculates the percentage depth dose, and identifies key parameters such as surface dose, dmax, D10, and D20. Finally, it plots the PDD curve with annotations for these parameters.
-\begin{lstlisting}[style=mypython, caption={PDD analysis code}]
-# Importing some useful library
-import matplotlib.pyplot as plt
-import numpy as np
-import pandas as pd
-import scienceplots
-plt.style.use(["science", "notebook", "grid"])
-
-# Data Extraction from the xlsx file
-df = pd.read_excel("PDD and Profile/Program/PDD & PROFILE.xlsx", sheet_name=1)
-x = np.array(df["Depth"])
-y = np.array(df["Depth dose"])
-
-# Percentage depth dose
-PDD = y/max(y)*100
-
-# To find the surface PD(Percentage dose), dmax, D10(Dose at 10 cm depth), D20
-# variable initilization
-SPD = 0 # surface PD
-dmax = 0; D10 = 0;D20 = 0
-for i in range(len(PDD)):
-    if PDD[i] == 100:
-        dmax = x[i]
-    if x[i] == 0:
-        SPD = PDD[i]
-    if x[i] == 100: # 100 mm
-        D10 = PDD[i]
-    if x[i] == 200: # 200 mm
-        D20 = PDD[i]
-        
-
-#Plotting
-plt.figure(figsize=(15, 8))
-plt.title(r"PDD profile of 10MV SSD=100, Water Phantom, F.S= 10x10cm$^2$", fontsize=20)
-plt.plot(x, PDD)
-bbox = dict(boxstyle="round", fc="0.8")
-plt.scatter([0, dmax, 100, 200], [SPD, 100, D10, D20], color='red', zorder=3)
-plt.annotate(f"Surface PD: {SPD:.2f}%", xy=(0, SPD), xytext=(25, SPD + 8),bbox=bbox,
-             arrowprops=dict(arrowstyle="->", lw=1.5), fontsize=11)
-plt.annotate(f"Dmax: {dmax:.2f} mm", xy=(dmax, 100), xytext=(dmax + 20, 95),bbox=bbox,
-             arrowprops=dict(arrowstyle="->", lw=1.5), fontsize=11)
-plt.annotate(f"PD10: {D10:.2f}%", xy=(100, D10), xytext=(120, D10 + 8),bbox=bbox,
-             arrowprops=dict(arrowstyle="->", lw=1.5), fontsize=11)
-plt.annotate(f"PD20: {D20:.2f}%", xy=(200, D20), xytext=(220, D20 + 8),bbox=bbox,
-             arrowprops=dict(arrowstyle="->", lw=1.5), fontsize=11)
-plt.ylabel("PDD(%)")
-plt.xlabel("Depth(mm)")
-plt.savefig("PDD and Profile/Program/PDD_10MV.pdf", dpi=300, bbox_inches='tight')
-plt.show()
-\end{lstlisting}
-
-%Two figures side by side
 \begin{figure}[H]
-    \centering
-    \begin{minipage}{0.48\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{Program/PDD_6MV.pdf}
-    \end{minipage}
-    \hfill
-    \begin{minipage}{0.48\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{Program/PDD_10MV.pdf}
-    \end{minipage}
+	\centering
+	\includegraphics[width=0.8\textwidth]{Program/Figures/PDD/PDD_6MVPhoton.pdf}
+	\caption{Percentage depth dose for 6 MV photon beam.}
 \end{figure}
 
 \begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\textwidth]{Program/PDD_Compare.pdf}
+	\centering
+	\includegraphics[width=0.8\textwidth]{Program/Figures/PDD/PDD_15MVPhoton.pdf}
+	\caption{Percentage depth dose for 15 MV photon beam.}
 \end{figure}
-
-\begin{table}[H]
-    \centering
-    \caption{Comparison of PDD parameters for 6 MV and 10 MV photon beams}
-    \begin{tabular}{|c|c|c|}
-        \hline
-        \textbf{Parameter} & \textbf{6 MV} & \textbf{10 MV} \\
-        \hline
-        Surface dose (\%) & 48.96 & 38.90 \\
-        \hline
-        $d_{\max}$ (mm) & 15.00 & 25.00 \\
-        \hline
-        $D_{10}$ (\%) & 67.07 & 73.09 \\
-        \hline
-        $D_{20}$ (\%) & 39.17 & 45.91 \\
-        \hline
-    \end{tabular}
-\end{table}
-
-\subsubsection{Observation from comparison graph}
-From the comparison graph of the PDD curves for 6 MV and 10 MV photon beams, we can observe the following:
-\begin{enumerate}
-    \item The depth of maximum dose (dmax) is greater for the 10 MV beam compared to the 6 MV beam. This is because higher energy photons have a greater penetration ability, resulting in a deeper dmax.
-    \item The surface dose is lower for the 10 MV beam compared to the 6 MV beam. This is due to the increased build-up effect for higher energy photons, which causes more dose to be deposited at greater depths rather than at the surface.
-    \item The percentage depth dose decreases more gradually with depth for the 10 MV beam compared to the 6 MV beam. This is because higher energy photons are less attenuated as they pass through the medium, resulting in a more uniform dose distribution with depth.
-    \item The D10 and D20 values are higher for the 10 MV beam compared to the 6 MV beam, indicating that a greater percentage of the dose is delivered at deeper depths for the higher energy beam. This is consistent with the increased penetration ability of the 10 MV photons.
-\end{enumerate}
-\subsection{Beam Profile}
-The beam profile represents the variation of absorbed dose across the transverse plane of the beam at a specific depth. By analyzing the beam profile, we can assess parameters such as beam flatness and symmetry, which are crucial for ensuring uniform dose distribution in radiation therapy. The code snippet for analyzing the beam profile is provided below. The code reads the transverse dose data from an Excel file, calculates the flatness and symmetry, and plots the beam profile with annotations for these parameters.
-\begin{lstlisting}[style=mypython, caption={Beam profile analysis code}]
-# Importing some useful library
-import matplotlib.pyplot as plt
-import numpy as np
-import pandas as pd
-from pathlib import Path
-import scienceplots
-plt.style.use(['science', 'notebook', 'grid'])
-
-# Data Extraction from the xlsx file
-base_dir = Path(__file__).resolve().parent
-excel_file = base_dir / "PDD & PROFILE.xlsx"
-df = pd.read_excel(excel_file, sheet_name=2)
-x = np.array(df["Distance from central axis"])
-Ix = np.array(df["Crossline dose value"]) #Change the column name (Inline dose value or Crossline dose value)"
-Ix=Ix/max(Ix)*100   
-
-#Analyzing profile data
-xleft = 0; xright = 0    # To find the FWHM(Full width at half maximum) of the inline profile
-for i in range(int(len(x)/2)):
-    if 55 >= Ix[i] >=45:
-        xleft = x[i] - (x[i]-x[i-1])*(Ix[i]-50)/(Ix[i]-Ix[i-1])     #Linear interpolation
-    if 55 >= Ix[-i]>=45:
-        xright = x[-i] - (x[-i]-x[-i+1])*(Ix[-i]-50)/(Ix[-i]-Ix[-i+1])
-
-
-FieldWidth = xright - xleft # Geometrical field width
-
-
-Dmax = 0; Dmin = 100
-IIx = []
-xR = []; leftPenumbra = []; xL = []; rightPenumbra = []
-for i in range(len(x)):
-    if abs(x[i]) <= 0.4*FieldWidth:
-        if Dmax < Ix[i]:
-            Dmax = Ix[i]
-        if Dmin > Ix[i]:
-            Dmin = Ix[i]
-
-    if abs(x[i])<= FieldWidth/2:
-        IIx.append(Ix[i])
-
-    if i < int(len(x)/2) and 17 <= Ix[i] <= 83:
-        xL.append(x[i])
-        leftPenumbra.append(Ix[i])
-    if i > int(len(x)/2) and 17 <= Ix[i] <= 83:
-        xR.append(x[i])
-        rightPenumbra.append(Ix[i])
-
-n = int(len(IIx)/2); h = abs(x[1]-x[0]) # Step size for numerical integration
-AreaL = 0.5*h*(IIx[0]+2*sum(IIx[1:n])+IIx[n])             #Trapezoidal rule for area calculation of the left half of the profile
-AreaR = 0.5*h*(IIx[n+1]+2*sum(IIx[n+1:-1])+IIx[-1])
-perSymmetry = abs((AreaL - AreaR)/(AreaL+AreaR)*100)
-perFlatness = abs((Dmax - Dmin)/(Dmax+Dmin)*100)
-LeftPenumbra = abs(xL[-1] - xL[0]) # Left penumbra width
-RightPenumbra = abs(xR[-1] - xR[0]) # Right penumbra width
-
-
-#Plotting
-fig, ax = plt.subplots(figsize=(15, 8))
-ax.plot(x, Ix)
-plt.fill_between(xL, leftPenumbra, 0, color='lightcoral', alpha=0.35)
-plt.fill_between(xR, rightPenumbra, 0, color='skyblue', alpha=0.35)
-plt.plot([-FieldWidth/2, FieldWidth/2], [50, 50], color='red', linestyle='--', label='50% Line')
-plt.plot([-FieldWidth/2, -FieldWidth/2], [0, 102], color='green', linestyle='--')
-plt.plot([FieldWidth/2, FieldWidth/2], [0, 102], color='green', linestyle='--')
-plt.plot([0, 0], [0, 105], color='blue', linestyle='--')
-plt.plot([0.4*FieldWidth, 0.4*FieldWidth], [0, 102], color='orange', linestyle='--')
-plt.plot([-0.4*FieldWidth, -0.4*FieldWidth], [0, 102], color='orange', linestyle='--')
-info_text = (
-    f"Field size: {FieldWidth:.2f} mm\n"
-    f"Symmetry: {perSymmetry:.2f} %\n"
-    f"Flatness: {perFlatness:.2f} %\n"
-    f"Left penumbra: {LeftPenumbra:.2f} mm\n"
-    f"Right penumbra: {RightPenumbra:.2f} mm"
-)
-ax.text(0.02, 0.98, info_text, transform=ax.transAxes, va='top', ha='left',
-        fontsize=11, bbox=dict(boxstyle='round', facecolor='white', alpha=0.8, edgecolor='black'))
-ax.set_xlabel("Distance from central axis (mm)")
-ax.set_ylabel("Relative dose (%)")
-plt.savefig(base_dir / "CrosslineProfile.pdf", dpi=300, bbox_inches='tight')
-plt.show()
-\end{lstlisting}
 
 \begin{figure}[H]
-    \centering
-    \begin{subfigure}[b]{0.48\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{Program/CrosslineProfile.pdf}
-        \caption{Crossline beam profile}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}[b]{0.48\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{Program/InlineProfile.pdf}
-        \caption{Inline beam profile}
-    \end{subfigure}
-    \caption{Beam profile plots showing the crossline and inline dose distributions. The distance between the two green vertical lines represents the geometrical field size. The left and right penumbra regions are shown by the reddish and bluish shaded areas, respectively.}
+	\centering
+	\includegraphics[width=0.8\textwidth]{Program/Figures/PDD/PDD_6MVFFFPhoton.pdf}
+	\caption{Percentage depth dose for 6 MV FFF photon beam.}
 \end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{Program/Figures/PDD/PDD_6MeV_Electron.pdf}
+	\caption{Percentage depth dose for 6 MeV electron beam.}
+\end{figure}
+
+\clearpage
+\subsection{Observed Beam Profiles}
+
+\subsubsection{6 MV Photon (10 x 10 cm2)}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{Program/Figures/Profile/6 MV photon(10 by 10)/InlineProfile.pdf}
+	\caption{Inline beam profile for 6 MV photon beam at 10 $\times$ 10 cm$^2$.}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{Program/Figures/Profile/6 MV photon(10 by 10)/CrosslineProfile.pdf}
+	\caption{Crossline beam profile for 6 MV photon beam at 10 $\times$ 10 cm$^2$.}
+\end{figure}
+
+\subsubsection{6 MV Photon (35 x 35 cm2)}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{Program/Figures/Profile/6 MV Photon(35 by 35)/InlineProfile.pdf}
+	\caption{Inline beam profile for 6 MV photon beam at 35 $\times$ 35 cm$^2$.}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{Program/Figures/Profile/6 MV Photon(35 by 35)/CrosslineProfile.pdf}
+	\caption{Crossline beam profile for 6 MV photon beam at 35 $\times$ 35 cm$^2$.}
+\end{figure}
+
+\subsubsection{6 MV FFF Photon (20 x 20 cm2)}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{Program/Figures/Profile/6MV FFF(20 by 20)/Beam_Profile_FFF.pdf}
+	\caption{Inline beam profile for 6 MV FFF photon beam at 20 $\times$ 20 cm$^2$.}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{Program/Figures/Profile/6MV FFF(20 by 20)/Beam_Profile_FFF_Crossline.pdf}
+	\caption{Crossline beam profile for 6 MV FFF photon beam at 20 $\times$ 20 cm$^2$.}
+\end{figure}
+
+\subsubsection{6 MeV Electron (10 x 10 cm2)}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{Program/Figures/Profile/6MeV(10 by 10)/InlineProfile.pdf}
+	\caption{Inline beam profile for 6 MeV electron beam at 10 $\times$ 10 cm$^2$.}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\textwidth]{Program/Figures/Profile/6MeV(10 by 10)/CrosslineProfile.pdf}
+	\caption{Crossline beam profile for 6 MeV electron beam at 10 $\times$ 10 cm$^2$.}
+\end{figure}
+
+\clearpage
+\subsection{Python Programs Used for Analysis}
+
+\lstinputlisting[style=mypython, caption={Python program for photon PDD analysis.}]{Program/PDD_Photon.py}
+
+\lstinputlisting[style=mypython, caption={Python program for electron PDD analysis.}]{Program/PDD_Electron.py}
+
+
+\lstinputlisting[style=mypython, caption={Python program for photon flattened-beam profile analysis.}]{Program/BeamProfile_Photon_FF.py}
+
+\lstinputlisting[style=mypython, caption={Python program for FFF beam profile analysis.}]{Program/BeamProfile_FFF.py}
+
+\lstinputlisting[style=mypython, caption={Python program for electron beam profile analysis.}]{Program/BeamProfile_Electron_FF.py}

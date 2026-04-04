@@ -184,7 +184,7 @@ plt.text(
     bbox=dict(boxstyle="round,pad=0.45", facecolor="white", alpha=0.92, edgecolor="black", linewidth=0.8),
 )
 
-plt.title("Beam Profile for 6MV FFF (20x20 cm² field)", fontsize=14)
+plt.title("Beam Profile for 6MV FFF (20x20 cm2 field)", fontsize=14)
 plt.xlabel("Off Axis [mm]")
 plt.ylabel("Crossline dose")
 plt.savefig("Figures/Profile/6MV FFF(20 by 20)/Beam_Profile_FFF_Crossline.pdf", dpi=300, bbox_inches="tight")
