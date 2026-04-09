@@ -19,7 +19,16 @@ Where:
     \item $\theta_0$ is the reference angle, defining the transverse bisecting plane of the source, established at $90^\circ$ (or $\pi/2$ radians).
 \end{itemize}
 
+
 % TODO: Insert Image: Fig 1 - Coordinate system used for brachytherapy dosimetry calculations.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.6\textwidth]{/Users/souvik/Desktop/Lab-Reports/4th Sem/IN Phantom Dosimetry of Brachytherapy Source/Figures/Theory/TG43 Image.png}
+\caption{Schematic representation of the cylindrical coordinate system used in TG-43 dosimetry calculations. The source is located at the origin, with the active core aligned along the z-axis. The point of interest $P(r, \theta)$ is defined by its radial distance $r$ and polar angle $\theta$. The reference point $P(r_0, \theta_0)$ is located at $r_0 = 1$ cm and $\theta_0 = 90^\circ$.}
+\label{Source}
+\end{figure}
+
 
 \subsection{Fundamental TG-43 Parameters}
 
@@ -50,6 +59,22 @@ The geometry function isolates and quantifies the spatial attenuation strictly d
     \end{cases} \quad \text{(Line Source Approximation)}
 \end{equation}
 Here, $L$ is the physical active length of the isotope, and $\beta$ represents the angle (in radians) geometrically bounded by the extremities of the active source to the point $P(r,\theta)$.
+
+For a line source centered at the origin, let $\theta_1$ and $\theta_2$ be the angles subtended by the two ends of the active length at the point $P(r,\theta)$. Then,
+\begin{equation}
+    \beta = \theta_2 - \theta_1
+\end{equation}
+where
+\begin{equation}
+    \tan \theta_2 = \frac{r \sin\theta}{r \cos\theta - L/2}
+\end{equation}
+\begin{equation}
+    \tan \theta_1 = \frac{r \sin\theta}{r \cos\theta + L/2}
+\end{equation}
+Therefore, the angular span is given by
+\begin{equation}
+    \beta = \tan^{-1}\left(\frac{r \sin\theta}{r \cos\theta - L/2}\right) - \tan^{-1}\left(\frac{r \sin\theta}{r \cos\theta + L/2}\right)
+\end{equation}
 
 \subsubsection{Radial Dose Function ($g(r)$)}
 The radial dose function maps the variation in dose rate solely attributable to photon absorption and bulk tissue scattering strictly along the transverse plane ($\theta_0 = 90^\circ$). It specifically divides out the purely spatial divergence accounted for by the geometry function:
