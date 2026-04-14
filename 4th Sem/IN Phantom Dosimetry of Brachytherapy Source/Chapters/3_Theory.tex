@@ -104,6 +104,55 @@ Measurements are conducted utilizing a bespoke "IPD" Perspex phantom, a tissue-e
 
 The experimental workflow involves pre-scanning the phantom via CT to verify the spatial geometry within a Treatment Planning System (TPS). The source is positioned at the geometric center, and an initial planned dose (e.g., 2 Gy at 15 mm) is prescribed to dictate the dwell time. Post-irradiation, TLDs mapped to specific $(r, \theta)$ coordinates are meticulously extracted and processed through a TL reader to acquire the raw dosimetric counts required for the TG-43 formalism equations.
 
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{\detokenize{Figures/Theory/INPhantamExp.jpg}}
+\caption{Experimental setup used for in-phantom dosimetry measurements.}
+\label{fig:inphantom-setup}
+\end{figure}
+
+\subsection{MicroSelectron HDR System Specifications}
+Table~\ref{tab:microselectron-specs} summarizes key technical specifications of the Elekta microSelectron platform and its commonly used $^{192}$Ir source model.
+
+\begin{table}[H]
+\centering
+\caption{Selected specifications of Elekta microSelectron HDR system}
+\label{tab:microselectron-specs}
+\begin{tabular}{|p{0.42\textwidth}|p{0.5\textwidth}|}
+\hline
+\textbf{Specification} & \textbf{Value} \\
+\hline
+System type & Remote afterloading brachytherapy platform (HDR/PDR configurable) \\
+\hline
+Dwell step options & 2.5 mm, 5 mm, or 10 mm \\
+\hline
+Source positioning accuracy & $\pm 1$ mm at each dwell position \\
+\hline
+Available treatment channel configurations & 6, 18, or 30 channels \\
+\hline
+Source active core dimensions ($^{192}$Ir mHDR-v2) & Length: 3.60 mm; diameter: 0.65 mm \\
+\hline
+Encapsulation dimensions/material & 0.90 mm outer diameter, AISI 316L stainless steel capsule \\
+\hline
+\end{tabular}
+\end{table}
+
+These values are compiled from Elekta microSelectron product documentation and CLRP source-model data \cite{elekta_microselectron_brochure,clrp_microselectron_v2}.
+
+\begin{figure}[H]
+\centering
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\includegraphics[width=\textwidth]{\detokenize{Figures/Theory/OldSource.png}}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\includegraphics[width=\textwidth]{\detokenize{Figures/Theory/NewSource.png}}
+\end{minipage}
+\caption{MicroSelectron HDR 192Ir source type designs (Nucletron B.V ., Veenendaal, The Netherlands). (a) The old ``classic'' design with 0.6 mm cylindrical core diameter and 3.5 mm core length having a total outer diameter (including encapsulation) of 1.1 mm.20 (b) The new design with a cylindrical core diameter of 0.65 mm and core length of 3.6 mm. The total outer diameter of this source design is 0.9 mm (figure provided by Nucletron). All dimensions shown are in mm.}
+\label{fig:microselectron-source-designs}
+\end{figure}
+
 % TODO: Insert Image: Fig 2 - Design of In-house IPD phantom
 % TODO: Insert Image: Fig 3 - Scanned Phantom In TPS
 % TODO: Insert Image: Fig 4 - IPD phantom showing distance and angle
