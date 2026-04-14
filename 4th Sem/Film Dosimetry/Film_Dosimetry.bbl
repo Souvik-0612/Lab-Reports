@@ -1,0 +1,33 @@
+\begin{thebibliography}{1}
+
+\bibitem{devic2016aapm}
+S.~Devic {\em et~al.}, ``Aapm task group 235 report: Radiochromic film
+  dosimetry,'' {\em Medical Physics}, vol.~43, no.~10, pp.~5556--5584, 2016.
+
+\bibitem{podgorsak2005radiation}
+E.~B. Podgorsak, {\em Radiation Oncology Physics: A Handbook for Teachers and
+  Students}.
+\newblock International Atomic Energy Agency, 2005.
+
+\bibitem{mendez2021radiochromic}
+I.~Mendez, P.~Peterlin, R.~Hudej, A.~Strojnik, and B.~Casar, ``A protocol for
+  accurate radiochromic film dosimetry using radiochromic.com,'' {\em Radiology
+  and Oncology}, vol.~55, no.~3, pp.~369--378, 2021.
+
+\bibitem{radiochromic_tutorials}
+{Radiochromic.com}, ``Radiochromic.com tutorials.''
+  \url{https://radiochromic.com/tutorials/tutorials.php}, 2026.
+\newblock Accessed: 2026-04-12.
+
+\bibitem{lewis2015lateral}
+D.~Lewis and M.~F. Chan, ``Technical note: On gafchromic ebt-xd film and the
+  lateral response artifact,'' {\em Medical Physics}, vol.~42, no.~1,
+  pp.~643--649, 2015.
+
+\bibitem{mendez2018multigaussian}
+I.~Mendez, R.~Hudej, P.~Peterlin, A.~Strojnik, and B.~Casar, ``Multigaussian
+  method: A new approach to mitigating spatial heterogeneities with
+  multichannel radiochromic film dosimetry,'' {\em Physics in Medicine \&
+  Biology}, vol.~63, no.~17, p.~175016, 2018.
+
+\end{thebibliography}
