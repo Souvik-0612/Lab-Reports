@@ -7,9 +7,12 @@
     "latex-workshop.latex.tools": [
         {
             "name": "latexmk_no_synctex",
-            "command": "latexmk",
+            "command": "/Library/TeX/texbin/latexmk",
             "args": [
                 "-pdf",
+                "-pdflatex=/Library/TeX/texbin/pdflatex",
+                "-e",
+                "$bibtex=q{/Library/TeX/texbin/bibtex %O %B}",
                 "-synctex=0",
                 "-interaction=nonstopmode",
                 "-file-line-error",
