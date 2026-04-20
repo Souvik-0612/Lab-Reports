@@ -1,7 +1,9 @@
-Radiochromic film dosimetry is widely used in modern radiotherapy because it provides high spatial resolution, near water-equivalent response, broad dynamic range, and self-developing behavior without wet chemical processing \cite{devic2016aapm,podgorsak2005radiation}. For small fields, steep dose gradients, MLC-modulated deliveries, and geometric QA tests, film remains one of the most informative 2D dosimeters. The practical workflow used in this experiment follows recommended procedures from Radiochromic.com tutorials and peer-reviewed protocol papers \cite{mendez2021radiochromic,radiochromic_tutorials}.
+Radiochromic film dosimetry is widely used in modern radiotherapy because it provides high spatial resolution, near water-equivalent response, broad dynamic range, and self-developing behavior without wet chemical processing \cite{devic2016aapm,podgorsak2005radiation}. For small fields, steep dose gradients, MLC-modulated deliveries, and geometric QA tests, film remains one of the most informative 2D dosimeters. The practical workflow used in this experiment follows recommended procedures from Radiochromic.com tutorials, peer-reviewed protocol papers, and the EBT3 product guidance published by Ashland \cite{mendez2021radiochromic,radiochromic_tutorials,papaconstadopoulos2014protocol,ashland_gafchromic_ebt3}.
 
 \subsection{Fundamental Physical Principle}
 GAFchromic\texttrademark{} EBT3 film consists of an active microcrystalline layer between polyester substrates. Ionizing radiation initiates polymerization of sensitive monomers in the active layer, creating color centers that increase optical absorbance. The color change is dose-dependent and can be digitized by a flatbed scanner. Since EBT3 is nearly tissue equivalent, perturbation of the radiation field is small for megavoltage dosimetry \cite{devic2016aapm}.
+
+For EBT3 specifically, the manufacturer describes the film as suitable for fast and highly accurate radiotherapy measurements with high-resolution images, while protocol studies recommend standardized reflection scanning and consistent film handling to reduce readout error \cite{ashland_gafchromic_ebt3,papaconstadopoulos2014protocol}.
 
 The optical density (OD) of a scanned film is
 \begin{equation}
@@ -22,7 +24,7 @@ Film response is not measured directly in Gy; instead, scanner pixel values in r
     \item analysis algorithm.
 \end{itemize}
 
-Important scanner effects include orientation dependence and the lateral response artifact (LRA). LRA appears as position-dependent scanner response along the lamp axis and can bias dose if calibration regions are not centered or corrected \cite{lewis2015lateral}. Hence, protocol-driven scanning is essential: warm-up scans, fixed orientation, centered placement, repeated scans (first discarded), and identical acquisition settings for calibration and measurement \cite{mendez2021radiochromic,radiochromic_tutorials}.
+Important scanner effects include orientation dependence and the lateral response artifact (LRA). LRA appears as position-dependent scanner response along the lamp axis and can bias dose if calibration regions are not centered or corrected \cite{lewis2015lateral}. Hence, protocol-driven scanning is essential: warm-up scans, fixed orientation, centered placement, repeated scans (first discarded), and identical acquisition settings for calibration and measurement \cite{mendez2021radiochromic,radiochromic_tutorials,papaconstadopoulos2014protocol}.
 
 \subsection{Calibration Theory and Dose Conversion}
 \subsubsection{Need for Lot-Specific Calibration}
