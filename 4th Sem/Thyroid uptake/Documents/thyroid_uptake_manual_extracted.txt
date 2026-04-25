@@ -1,0 +1,368 @@
+
+
+===== PAGE 1 =====
+1 
+ 
+ 
+ 
+ 
+ 
+ 
+      
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+CALIBRATION AND QUALITY 
+ASSURANCE OF A THYROID UPTAKE 
+MEASUREMENT UNIT
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+CENTER FOR MEDICAL AND RADIATION PHYSICS 
+ 
+
+
+===== PAGE 2 =====
+2 
+AIM: 
+● To Study the Calibration of the Thyroid Uptake Measurement Unit. 
+● Perform the Quality Assurance tests of the Thyroid Uptake Measurement Unit. 
+● Determine the percentage of Radioiodine uptake using a patient's measured data.  
+ 
+Equipment Required: 
+● Thyroid uptake measurement unit (CAPTUS 4000e thyroid uptake probe with a computer system) 
+● Check sources: Cs137 & Eu152 
+● Source holder 
+● Neck Phantom 
+Theory: 
+ Nuclear medicine is a branch of medical speciality that uses a unique drug known as 
+radiopharmaceuticals, which contain radioisotope -labelled pharmaceuticals. These radiopharmaceuticals are 
+used to diagnose and treat diseases like cancer and hyperthyroidism and to perform functional studies of 
+specific organs like the thyroid, heart, kidney, etc.  
+Thyroid uptake measurement is a  nuclear medicine procedure used to evaluate thyroid function by 
+assessing the amount of radiotracer absorbed by the thyroid gland. The measurement test can be done by 
+quantifying or measuring the amount of radioactive iodine absorbed by the thyroid gland within a specified 
+time frame (like immediately after administration, after 2hr, or after 24 hours). The isotopes of Iodine used for 
+this purpose are I123 and I131 and are commonly available in capsule or liquid form. The dose administered is 
+generally 10μCi to 30μCi for I 123 and I 131. The measurement can be carried out with specially designed 
+equipment known as a thyroid uptake measurement unit. 
+Instrument and Its Accessories: 
+ A thyroid uptake measurement unit  consists of a thyroid uptake measurement probe and a computer 
+readout system. The thyroid uptake measurement probe consists of a sodium iodide (NaI:(Tl)) scintillation 
+crystal integrated with a multi-channel analyzer with suitable lead shielding and a flat field collimator.  
+The thyroid uptake probe, CAPTUS 4000e, is a comprehensive Nuclear Medicine Measurement System with 
+specific software modules for thyroid uptake, bioassay, wipe tests and automated quality assurance tests. The 
+system includes a fully functional 1024-channel MCA with automatic and manual calibration. The well-type 
+detector is an optional device for the assembly, but its presence is very useful in Bioassay and wipe tests. The 
+complete setup is shown in Figure 1 below, and detailed technical specifications of the thyroid uptake system 
+are given in Table 1 below. 
+ 
+Figure 1: CAPTUS 4000e Unit 
+
+
+===== PAGE 3 =====
+3 
+Table - 1 
+Specification Detailed 
+Make Mirion - Capintec 
+Model CAPTUS 4000e 
+ 
+ 
+ 
+ 
+Detector  
+ 
+Probe 
+Detector Material NaI(Tl) 
+Dimension 2"X2" 
+Resolution ≤9.5% or better for Cs137 
+ 
+ 
+ 
+Well 
+Detector Material NaI(TI) well-type crystal 
+Dimension 2"X2" 
+WELL Diameter  1.6CM 
+WELL Depth 3.8CM 
+Resolution ≤10.0% or better for Cs137 
+Shielding Material Lead lined with brass to minimise backscattering 
+ 
+ 
+MCA 
+Type CAP MCA  
+Channel 1024 
+Maximum Count Rate 200000Cps 
+ROI's Selection Automatic and Manual 
+Operational 
+Environment 
+Requirement 
+Temperature Range 100C to 300C 
+Pressure Range 91 to 105KiloPascal 
+Humidity Range Maximum relative humidity < 95% 
+ 
+NECK Phantom: 
+ The Neck Phantom (Biodex Neck Phantom) is designed to simulate a patient's neck. The phantom is 
+made up of Lucite, and it has a two-part insert that allows counting from a bottle, vial, or capsule. A capsule 
+holder is supplied to enable the user to count from capsules directly. The standard count rate is obtained by 
+placing the pharmaceutical (Radioiodinated pharmaceutical either in capsule or liquid form) in the holder part 
+of the phantom, as shown in Figure 2 (c), and measuring the counts at a 25cm distance from this phantom. The 
+setup picture is shown below. 
+ 
+(a) Biodex Neck Phantom  
+(b)Inner Insert for vial placement  
+(c) Setup for standard dose 
+measurement 
+Figure 2: Design of a Neck Phantom 
+ 
+To measure the thyroid uptake accurately, the probe must be calibrated with a standard source. The 
+calibration method used in CAPTUS 4000e is a direct method integrated with the software itself and known 
+by the name "AUTO CALIBRATION". Apart from this calibration procedure , routine quality assurance 
+checks need to be followed for better equipment performance: the linearity test, constancy test, accuracy check, 
+Chi-square test, and MDA test. The details of the tests are briefly described below. 
+ 
+
+
+===== PAGE 4 =====
+4 
+Tests to Be Performed: 
+Calibration of Thyroid uptake measurement unit: 
+ The calibration simply means the detector's energy calibration . The goal of energy calibration is to 
+find a relation between the channel numbers of the MCA  and the corresponding energies of a standard 
+radioactive source. So, in our case, the detector, along with the software, is calibrated in such a way that it will 
+always show a peak at a predefined location or channel number for a particular standard radioactive source 
+with known energy. Hence , each time  we start the  calibration, the software will automatically adjust its 
+parameters like Gain and zero offset to bring the known energy peak to its predefined Channel number. This 
+adjustment is possible in one attempt or may require two to three iterations. Such a type of calibration process 
+is known as auto -calibration. Sometimes, the auto -calibration process is accompanied by  energy resolution 
+calculation. For flat-faced detectors like NaI (Tl) thyroid probes, the energy resolution should be <9.5%, and 
+For Well detectors, the resolution should be <10.0% measured at the Cs137 662 keV peak. The energy resolution 
+generally changes slightly over several years (increases by 1% to 3%). 
+Linearity Test: 
+ After the energy calibration, linearity tests  are performed to check whether the software gives the 
+correct energy value corresponding to the channel number for a known source . It will be easier if  we take a 
+source emitting multiple known energies.  The software-calculated energy  and its deviation from the true 
+energy value will be displayed on the software screen. 
+Constancy Test 
+ This test compares the standard source activity with the activity measured. The activity of the standard 
+source is entered into the setup during installation. During the measurement, the decay-corrected activity is 
+compared with the decay corrected by the software. It increases the accuracy of a measur ement. The counts 
+measured are converted to activity using efficiency values using the Isotope Library  of the standard source. 
+The deviation between the calculated and measured activity is the percent error and should be within ±10%. 
+This percentage deviation should not change for two or three consecutive measurements on the same day and 
+for consecutive days. The percentage of deviation between measured and calculated activity shows the 
+accuracy of the Detector Probe. The accuracy of the software result can also be verified by manually calculating 
+the decay corrected activity from the source data. 
+Chi-Square Test: 
+The Chi-Square test provides a sensitive check of the system's overall counting performance. This test 
+will check the difference between observed and expected counts for a particular number of iterations. The 
+software uses the 662 keV peak of the Cs137 source. Chi-square values are given in the following table for 5, 
+10, 15, and 20 repetitions. The Chi-Square Test results should fall between the 0.95 and 0.05 probability values 
+in the table below almost all the time. 
+ 
+Note: This table is taken from the CAPTUS 4000e Owner's Manual 
+The Chi-Square value can be obtained from the equation given below-  
+ 
+
+
+===== PAGE 5 =====
+5 
+Where,  
+n is the number of iterations 
+Xi = Counts for measurement of ith time 
+Xav= Average of the n measurements. 
+ 
+So, for 10 iterations, the chi-square value should be within 3.33 to 16.9, 90% of the time. The software will 
+automatically calculate this value and give us the result. 
+Minimum detectable Activity (MDA) Test: 
+ This test measures counts and calculates activity in the Region of Interest (ROI) for the isotope selected 
+in the Setup. As isotopes of interest are already loaded in the software library, the ROI region for the energy 
+peaks is already known, or you can add the ROI manually. The measurement is performed without any source 
+placed in the detector, which therefore gives a value for the Minimum Detectable Activity (MDA)  
+Measurement of Uptake: 
+ The thyroid uptake measurement is generally performed in intervals, such as just after administering 
+the dose, between 2hr -6hr, and after 24hr. The uptake is usually measured at 25 cm between the face of the 
+crystal and the anterior neck of the patient or phantom. Neck counts, lower thigh counts (body background),  
+calibrated standard in neck phantom counts (Administered Counts) and room background counts are obtained 
+at each counting session. By using these counts, the % of thyroid uptake can be calculated using the following 
+formula: 
+𝑅𝐴𝐼𝑈 =
+𝑃−𝑇
+𝐶−𝐵 𝑋100 — (1) 
+Where RAIU= Radioactive Iodine Uptake  
+P= Patient Neck count rate (direct counts 25cm from the neck of an administered patient) 
+T = Patient Background count rate (counts from the thigh of the administered patient)  
+C = Dose (standard) count rate (Counts obtained using Neck Phantom and standard s ource to be 
+administered) 
+B = Room background count rate (Counts without any source) 
+Dose (standard) count rate or Administered counts are obtained by counting the tracer administered to the 
+patient or a standard (equivalent to the administered dose) in a neck phantom, with correction for decay if 
+necessary. 
+Procedure: 
+Auto Calibration: (Direct Method) 
+ 
+● To perform auto calibration, click on the auto calibration tab on the CAPTUS® 4000e Main screen, 
+and after clicking it, the Auto calibration screen will appear as shown in the figure below. 
+● On the Select Detector in the right corner of the auto-calibration window, select the desired detector 
+(i.e. Probe or Well) to perform calibration. By default, PROBE is always selected. 
+● Select the Start Procedure button to start the calibration procedure. 
+● After clicking the start button, the software will prompt you to place the Cs 137 source on the selected 
+detector (Probe or well). Place the Cs 137 rod source in the selected detector. To ensure reproducible 
+source placement for the Uptake Probe, turn the Uptake Probe so that the Collimator opening faces 
+the ceiling. Gently place the active end of the rod source onto the middle surface of the crystal. Use a 
+rod source holder to ensure the rod stands freely and does not lean to the side. 
+● Select the OK button to proceed with the calibration process. As counting progresses, the live spectra 
+will appear on the screen as shown. The system will count for as long as necessary until sufficient 
+calibrations are acquired. 
+ 
+
+===== PAGE 6 =====
+6 
+ 
+ 
+Figure 3: CAPTUS 4000e Main Screen 
+ 
+Figure 4: Auto Calibration Screen 
+ 
+Figure 5: Cs-137 Spectrum in Auto Calibration Process 
+
+
+===== PAGE 7 =====
+7 
+● During the Auto Calibration, the software will adjust parameters like Gain and zero offset to bring the 
+662KeV peak of Cs-137 to Channel number 331. So, within 2 to 3 iterations, it will be achieved, and 
+successful calibration will appear in the result box. 
+● The result box will also show the FWHM value for the detector. 
+● A similar process can also be followed to calibrate the Well detector. 
+Linearity Test: 
+● After successful auto-calibration, the screen appears as shown in Figure below, prompting to perform 
+Linearity Correction using Eu152. 
+ 
+ 
+● Select the Yes button to proceed with further calibration , place the Eu152 source in the selected 
+detector in the same position as Cs137, and select the OK button. 
+● After the count collection is over, the system is fully calibrated. Complete results are displayed in the 
+lower half of the screen, and all the data is automatically stored in the system. 
+Constancy Check: 
+● If the calibration is successful, Eu152 Linearity Correction results appear on the screen, and the 
+software prompts you to perform the Constancy Test as shown in the figure. 
+ 
+ 
+● Select the Yes button to proceed. The figure will be displayed 
+ 
+● Place the Cs 137 source rod in the selected detector. The source must be  placed in the same position 
+each time the Constancy Test is performed. 
+● Select the OK button to proceed with the test. As the counting progresses, the live spectra and 
+measurement time are displayed on the screen. 
+● After the test is completed, the test results appear in the box below the measurement spectrum , as 
+shown in Figure. Note the displayed Deviation value. 
+
+
+===== PAGE 8 =====
+8 
+ 
+Figure 6: Constancy Test Result 
+ 
+Chi-Square Test: 
+● Make sure Auto Calibration is done before performing the Chi-square test. 
+● Click on the Chi-Square test in the CAPTUS 4000e Main screen, and then the Chi-Square test screen 
+will appear. 
+● Click on the start button. The software will quickly prompt the Cs-137 source to be placed in the 
+selected detector. After putting the source, click ok. 
+● The software then starts taking the counts; typically, it will perform a 10-repetition test. The screen 
+displays live spectra, measurement time (upper right corner) and the remaining repetitions. 
+ 
+  
+ 
+● After 10 repetitions, the test is completed, and the test results appear in the results box, as shown in 
+the figure below. 
+● If the Chi-Square value is out of range, perform the test again. If the test passes the second time, the 
+system functions properly. 
+
+
+===== PAGE 9 =====
+9 
+      
+ 
+Minimum Detectable Activity test (MDA test): 
+● Select the MDA Test button on the Quality Assurance Main Screen. MDA Test Screen will appear 
+like the figure below 
+ 
+ 
+● Note that in the Select Detector frame, PROBE is selected by default. To change the detector to Well, 
+select the WELL radio button. 
+● Select the Setup button, and the Quality Setup Screen will appear. Only the MDA Test frame values 
+are used in this test. 
+ 
+ 
+
+
+===== PAGE 10 =====
+10 
+● To change the Counting Time, click in the text box and input the new value. To select another isotope, 
+click in the Selected Isotope drop-down box and click on the desired isotope to select it. This sets a 
+new ROI for count measurement 
+● To alter values used in the formula for MDA calculation, select the desired radio button in the Formula 
+frame. 
+● Select the Done button to save the added information, return to the MDA Test Screen, and Select the 
+Start Procedure button. The software will quickly prompt you to Remove all sources.  
+● Remove any radioactive source from the vicinity and select the OK button to proceed with the test. 
+● When the measurement is completed, the screen appears like that shown in the Figure, displaying the 
+Minimum Detectable Activity (MDA) measured in the selected isotope's ROI. 
+ 
+ 
+Figure 7: MDA test screen 
+ 
+Thyroid uptake procedure: 
+● Prepare two identical radiopharmaceutical source samples, one for standard reference dose 
+measurement and the other for patient dose administration. 
+● Before the dose administration , measure the standard dose counts using neck phantom, as shown in 
+the figure below. 
+ 
+Figure 8: Standard dose measurement setup using neck phantom and thyroid probe at 25cm  
+
+
+===== PAGE 11 =====
+11 
+● Keep the detector at 25cm from the neck phantom with the help of a pointer rod. 
+● Before the measurement, background counts should be measured without any source in the room. 
+● Before administering the radiopharmaceutical to the patient, background counts should be measured 
+from the patient's thigh. 
+● After the dose administration, measurement is done by keeping a 25cm distance from the neck. 
+● A similar procedure should be followed for successive measurements of the background and the 
+patient's neck after 2 hrs and 24 hrs to calculate the percentage of thyroid uptake. 
+ 
+● A patient's software calculated thyroid uptake is shown. You can calculate the % of thyroid uptake for 
+the same patient and verify with software using the decay equation for the corresponding time as the 
+type of radionuclide administered is provided and by equation 1. 
+Calculation: 
+Half-life of I-131 = 8.06 days 
+Before Administration Room Background count = 417 
+CPM 
+Net initial count before administration = 
+48002 CPM 
+ 
+Nature of readings After 2 hours of administration After 24 hours of administration 
+Patient background count  1022 CPM 518 CPM 
+Patient Thyroid count 3943 CPM 11949 CPM 
+Net patient dose count 2921 CPM 11431 CPM 
+Remaining activity (𝐴𝑜𝑒−𝜆𝑡) 47659 CPM 44047 CPM 
+Thyroid Uptake 6.1% 25.9% 
+ 
+Precaution 
+● Wear gloves while handling radiopharmaceuticals during measurements. 
+● Wash your hands with soap and water after the experiment. 
+● Never put sharp instruments like a knife or pen into the well or probe. 
+ 
+References: 
+● Captus 4000e Manual 
