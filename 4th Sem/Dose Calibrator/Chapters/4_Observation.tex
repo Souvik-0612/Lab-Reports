@@ -35,6 +35,13 @@ Repetition No. & Activity Measured ($\mu$Ci) & Deviation (\%) & Tolerance \\
 \end{tabular}
 \end{center}
 
+\begin{figure}
+\centering
+\includegraphics[width=0.6\textwidth]{//Users/souvik/Desktop/Lab-Reports/4th Sem/Dose Calibrator/Figures/Experimental/Geometry test.jpg}
+\caption{Experimental setup for geometry test. The source vial is placed in the well of the dose calibrator, and saline is added incrementally to assess the influence of geometry on the measured activity. The lead shielding around the chamber minimizes background radiation, ensuring accurate readings.}
+\end{figure}
+
+
 \subsection{Tabulation for linearity test (Source: $^{18}$F-FDG, interval = 30 min):}
 
 \begin{table}[H]
@@ -55,6 +62,14 @@ Apr 20 2026 19:12 & 210 & 2.47 mCi  & 2.47 mCi  & -0.0 \\
 Apr 20 2026 19:42 & 240 & 2.04 mCi  & 2.04 mCi  & 0.1 \\
 Apr 20 2026 20:12 & 270 & 1.690 mCi & 1.689 mCi & 0.1 \\
 Apr 20 2026 20:42 & 300 & 1.396 mCi & 1.397 mCi & -0.1 \\
+Apr 20 2026 21:12 & 330 & 1.155 mCi & 1.156 mCi & -0.1 \\
+Apr 20 2026 21:42 & 360 & 956 uCi   & 956 uCi   & -0.1 \\
+Apr 20 2026 22:12 & 390 & 791 uCi   & 791 uCi   & -0.0 \\
+Apr 20 2026 22:42 & 420 & 654 uCi   & 655 uCi   & -0.1 \\
+Apr 20 2026 23:12 & 450 & 541 uCi   & 542 uCi   & -0.1 \\
+Apr 20 2026 23:42 & 480 & 448 uCi   & 448 uCi   & -0.1 \\
+Apr 21 2026 00:12 & 510 & 370 uCi   & 371 uCi   & -0.1 \\
+Apr 21 2026 00:42 & 540 & 307 uCi   & 307 uCi   & -0.1 \\
 
 \hline
 \end{tabular}
@@ -67,14 +82,8 @@ Apr 20 2026 20:42 & 300 & 1.396 mCi & 1.397 mCi & -0.1 \\
 \hline
 Date \& Time & Elapsed (min) & Measured & Predicted & \% Var \\
 \hline
-Apr 20 2026 21:12 & 330 & 1.155 mCi & 1.156 mCi & -0.1 \\
-Apr 20 2026 21:42 & 360 & 956 uCi   & 956 uCi   & -0.1 \\
-Apr 20 2026 22:12 & 390 & 791 uCi   & 791 uCi   & -0.0 \\
-Apr 20 2026 22:42 & 420 & 654 uCi   & 655 uCi   & -0.1 \\
-Apr 20 2026 23:12 & 450 & 541 uCi   & 542 uCi   & -0.1 \\
-Apr 20 2026 23:42 & 480 & 448 uCi   & 448 uCi   & -0.1 \\
-Apr 21 2026 00:12 & 510 & 370 uCi   & 371 uCi   & -0.1 \\
-Apr 21 2026 00:42 & 540 & 307 uCi   & 307 uCi   & -0.1 \\
+
+
 Apr 21 2026 01:12 & 570 & 253 uCi   & 254 uCi   & -0.2 \\
 Apr 21 2026 01:42 & 600 & 210 uCi   & 210 uCi   & 0.1 \\
 Apr 21 2026 02:12 & 630 & 173.8 uCi & 173.8 uCi & 0.0 \\
@@ -98,27 +107,44 @@ Apr 21 2026 08:42 & 1020& 15.09 uCi & 14.79 uCi & 2.0 \\
 \begin{figure}[H]
 \centering
 \includegraphics[width=0.6\textwidth]{/Users/souvik/Desktop/Lab-Reports/4th Sem/Dose Calibrator/Figures/Experimental/LinearityTest.pdf}
-\caption{Linearity test plot for $^{18}$F-FDG source. The measured activity closely follows the predicted decay curve, indicating good linearity of the dose calibrator across a wide range of activities. The percentage variation remains within acceptable limits, confirming the reliability of the instrument for clinical use.}
+\caption{Linearity test plot for $^{18}$F-FDG source. The measured activity closely follows the predicted decay curve, indicating good linearity of the dose calibrator across a wide range of activities.}
 \end{figure}
 
-\subsection{Tabulation for geometry test (Source: $^{99m}$Tc):}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{/Users/souvik/Desktop/Lab-Reports/4th Sem/Dose Calibrator/Figures/Experimental/Timeactivity curve.pdf}
+\caption{The time-activity curve for decay method.}	
+\end{figure}
 
-\begin{center}
-\begin{tabular}{|c|c|}
+\subsection{Tabulation for geometry test (Source: $^{18}$F):}
+
+Source F-18 \\
+Activity with only F-18 in Syringe = 1.29 mCi \\
+Activity without F-18 in Syringe = 86 $\mu$Ci \\
+Background Activity = 23.5 $\mu$Ci \\
+
+Net Activity in Vial with F-18 only = 1.18 mCi
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|}
 \hline
-Sample Volume & Sample Activity \\
+\textbf{Saline Volume (ml)} & \textbf{Activity (mCi)} & \textbf{\% Variation} \\
 \hline
-0 ml saline & 4.41 mCi \\
-1 ml saline & 4.38 mCi \\
-2 ml saline & 4.39 mCi \\
-3 ml saline & 4.41 mCi \\
-4 ml saline & 4.43 mCi \\
-5 ml saline & 4.42 mCi \\
+1  & 1.19 & +0.85 \\
+2  & 1.18 & 0.00  \\
+3  & 1.19 & +0.85 \\
+4  & 1.17 & -0.85 \\
+5  & 1.18 & 0.00  \\
+6  & 1.15 & -2.54 \\
+7  & 1.16 & -1.69 \\
+8  & 1.15 & -2.54 \\
+9  & 1.14 & -3.39 \\
+10 & 1.15 & -2.54 \\
 \hline
 \end{tabular}
-\end{center}
-
-Mean activity after dilution (from the available observations) $\approx 4.41$ mCi.
+\caption{Percentage variation of activity with respect to 1.18 mCi}
+\end{table}
 
 \subsection{Result}
 The dose calibrator readings were within tolerance in the performed QA checks:
