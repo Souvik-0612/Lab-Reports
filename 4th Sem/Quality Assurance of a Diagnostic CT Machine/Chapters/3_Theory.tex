@@ -57,7 +57,7 @@ The basic guidelines explicitly prescribe:
 \subsection{Quality Assurance (QA) Parameters}
 As per the guidelines mandated by regulatory bodies such as the Atomic Energy Regulatory Board (AERB), comprehensive acceptance testing upon new equipment installation and periodic QA are strict requirements. The QA tests for CT equipment are broadly classified into four primary categories: Mechanical Tests, Tests for High-Frequency Generators, Image Quality Parameters, and Radiation Safety \cite{aapm39}.
 
-\subsubsection{1. Mechanical and Geometric Tests}
+\subsubsection{Mechanical and Geometric Tests}
 The geometric fidelity of the scanner is critical to avoid image artifacts and ensure precise localization.
 \begin{itemize}
     \item \textbf{Alignment of the Table to Gantry:} This test ensures that the longitudinal axis of the patient table is perfectly horizontal and aligned with the vertical line passing through the scanner's rotational axis. A mismatch introduces severe image artifacts, particularly for bulky patients. The acceptable tolerance is $\pm 5$ mm of the table midline.
@@ -66,7 +66,7 @@ The geometric fidelity of the scanner is critical to avoid image artifacts and e
     \item \textbf{Laser Positioning Accuracy:} Both internal gantry lasers and external wall-mounted alignment lasers guarantee iso-centering the patient. Max acceptable limit is typically $\pm 2\text{ mm}$.
 \end{itemize}
 
-\subsubsection{2. Tests for High-Frequency Generators}
+\subsubsection{Tests for High-Frequency Generators}
 The X-ray generator parameters directly dictate the photon fluence and beam quality, directly impacting patient dose and image contrast.
 \begin{itemize}
     \item \textbf{Accuracy of Operating Potential (kVp):} The applied kilovoltage affects both the quality and quantity of the X-rays. Variations from the prescribed kVp will negatively alter image contrast. Performance bounds fall within $\pm 5\%$.
@@ -75,7 +75,7 @@ The X-ray generator parameters directly dictate the photon fluence and beam qual
     \item \textbf{Half-Value Layer (HVL) / Total Filtration:} Added filtration removes low-energy X-ray photons that do not possess sufficient energy to penetrate the patient and reach the detectors.
 \end{itemize}
 
-\subsubsection{3. Image Quality Evaluation}
+\subsubsection{Image Quality Evaluation}
 Image quality parameters are assessed using standardized test phantoms of human shape or specific uniform test objects provided by the manufacturer.
 \begin{itemize}
     \item \textbf{CT Number Accuracy and Uniformity:} CT numbers (Hounsfield Units) depend on tube voltage, beam filtration, and object attenuation. By definition, the CT number of water is 0. 
@@ -88,7 +88,7 @@ Image quality parameters are assessed using standardized test phantoms of human 
     \item \textbf{Slice Thickness (Z-axis Resolution):} Assesses whether the effective physical slice thickness matches the nominally selected thickness on the console. Tolerances define an error bracket $\leq 1\text{ mm}$ for sub-millimeter slices and $\pm 10\%$ for $> 2\text{ mm}$.
 \end{itemize}
 
-\subsubsection{4. CT Dosimetry and Radiation Safety}
+\subsubsection{CT Dosimetry and Radiation Safety}
 The primary objective of these metrics aims exactly mapping standard absorbed doses.
 \begin{itemize}
     \item \textbf{Computed Tomography Dose Index ($CTDI_{100}$):} Incorporates practical parameters using a standard $100\text{ mm}$ pencil ionization chamber internally fixed inside standard body phantoms registering core dose lengths mathematically via:
@@ -109,5 +109,3 @@ The primary objective of these metrics aims exactly mapping standard absorbed do
     \end{equation}
 \end{itemize}
 
-\subsection{Conclusion of the Theory}
-Integrating comprehensive architectural safety defined by robust AERB room matrices directly to clinical routine requires aggressive Quality Assurance. From establishing raw mechanical synchrony to intricate multi-parameter dosimetric limits using precise solid-state phantoms, this workflow essentially controls X-ray hazards and standardizes diagnosis consistently mapping out anatomical precision flawlessly across multiple institutions.

@@ -7,6 +7,23 @@ Two principle isotopes of iodine are routinely utilized for uptake measurements:
     \item \textbf{$^{123}\text{I}$:} An electron capture (EC) decaying nuclide with a physical half-life of 13.2 hours. It decays to $^{123}\text{Te}$, emitting a primary gamma ray of 159 keV (83\% abundance). Its absence of particulate radiation translates to a remarkably lower patient radiation dosimetry compared to $^{131}\text{I}$, making it the preferred tracer for purely diagnostic imaging and uptake measurements.
 \end{itemize}
 
+\subsection{Thyroid Probe}
+The thyroid probe is a specialized radiation counter predominantly employed to measure the fractional uptake of radioiodine, such as $^{131}\text{I}$ or $^{123}\text{I}$, within the thyroid gland following the oral administration of a radioactive capsule (e.g., $^{131}\text{I}$-NaI or $^{123}\text{I}$-NaI) \cite{saha_nuclear_medicine}. 
+
+Fundamentally, the operational architecture of a thyroid probe largely mirrors that of a well counter. It incorporates a Thallium-activated Sodium Iodide, NaI(Tl), scintillation detector, typically possessing dimensions of $5\text{ cm}$ in diameter and $5\text{ cm}$ in thickness. This detector is optically coupled to a Photomultiplier (PM) tube. The associated electronic processing chain comprises a pre-amplifier, an amplifier, a Pulse Height Analyzer (PHA), and a scaler to register the quantitative counts \cite{saha_nuclear_medicine}.
+
+One of the critical distinguishing features of the thyroid probe, which differentiates it from a standard well counter, is the necessity of a collimator. The collimator restricts the field of view specifically to the localized region of the thyroid gland. It structurally consists of a cylindrical lead barrel, approximately $20$ to $25\text{ cm}$ in length, which envelops both the NaI(Tl) crystal and the PM tube. This robust shielding significantly mitigates the background activity arising from $\gamma$-radiations originating from physiological areas outside the thyroid gland from reaching the detector \cite{saha_nuclear_medicine}.
+
+The geometric detection efficiency of a thyroid probe operates inversely with the square of the distance separating the face of the detector and the patient's thyroid. During preparation, the probe is initially calibrated for photon energies utilizing a known standard, typically the $662\text{ keV}$ $\gamma$-ray peak of a $^{137}\text{Cs}$ source. Following baseline calibration, the system's discriminator settings (the PHA window) are specifically tuned to the characteristic energy of the administered isotope, such as the $364\text{ keV}$ $\gamma$-ray for $^{131}\text{I}$. 
+
+While unscattered primary photons are targeted, photons that undergo Compton scattering within the thyroid tissue itself may still reach and interact within the detector because they originate within the unshielded field of view and are not stopped by the collimator barrel. To prevent these lower-energy scattered photons from falsely elevating the count rate, they are systematically excluded from the total measured counts by selecting highly appropriate lower and upper discriminator settings on the PHA carefully bounding the $364\text{ keV}$ $\gamma$-ray photopeak of $^{131}\text{I}$ \cite{saha_nuclear_medicine}. Additionally, the inherent attenuation of outgoing $\gamma$-photons by the overlying thyroid tissues themselves inherently reduces the overall detection efficiency of the internal activity.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{/Users/souvik/Desktop/Lab-Reports/4th Sem/Thyroid uptake/Figures/Theory/TyroidProbe.png}
+    \caption{Schematic representation of a thyroid probe system, illustrating the NaI(Tl) scintillation crystal, photomultiplier tube, lead collimator, and associated electronic processing units. The collimator restricts the field of view to the thyroid region, while the scintillation crystal converts incident gamma photons into visible light, which is then amplified by the PMT for quantitative analysis.}
+    \label{fig:thyroid_probe}
+\end{figure}
 \subsection{Apparatus and System Architecture}
 The precise derivation of fractional radioiodine uptake requires highly specialized radiometric instrumentation. A typical Thyroid Uptake Measurement Unit (such as the CAPTUS 4000e unit) encompasses a meticulously engineered combination of scintillation detection, complex electronics, geometric shielding, and digital processing units. The overall architectural pipeline maps incident radiation into quantitative count rates within specific energy windows.
 
