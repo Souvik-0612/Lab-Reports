@@ -1,5 +1,33 @@
 Nuclear medicine departments handle unsealed radionuclides for diagnostic imaging and targeted therapy. Unlike sealed-source applications, the radiopharmaceutical can spread outside the vial through preparation errors, spills, aerosols, patient excreta, contaminated disposables, and poor workflow segregation. Therefore, \textit{radiation survey} and \textit{contamination monitoring} are not supplementary tasks but foundational radiation protection operations that support safe daily clinical practice \cite{cherry2012physics,iaea_ssg46,aerb_rpr2004}.
 
+\subsection{Nuclear Medicine Department Design and Layout}
+
+The architectural design and layout of a nuclear medicine department are fundamental in executing effective radiation protection protocols, specifically the principles of time, distance, and shielding. A well-planned layout minimizes the crossing paths of radioactive sources, injected patients, and non-radiation workers or the general public \cite{iaea_ssg46}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Figures/Experimental/NM department layout.jpg}
+    \caption{Typical layout and room design of a Nuclear Medicine Department showcasing the segregation of active and non-active zones.}
+    \label{fig:nm_layout}
+\end{figure}
+
+As shown in Figure \ref{fig:nm_layout}, a typical department is broadly categorized into:
+\begin{itemize}
+    \item \textbf{Unrestricted/Non-Active Areas:} Reception, waiting rooms for non-injected patients, staff offices, and reporting rooms. These areas require no special radiation monitoring and are generally accessible.
+    \item \textbf{Supervised Areas:} Rooms where occupational exposure conditions need to be kept under review, but special procedures are not normally needed. This includes corridors connecting active rooms or camera control rooms.
+    \item \textbf{Controlled/Active Areas:} Areas where specific protective measures and safety provisions are required for controlling normal exposures or preventing the spread of contamination. These include:
+    \begin{itemize}
+        \item \textit{Radiopharmacy / Hot Lab:} The most critical area where unsealed sources are stored, eluted, and dispensed. It typically features L-bench shields, fume hoods, and strict access control.
+        \item \textit{Injection / Dose Administration Room:} Where the prepared dose is administered to the patient.
+        \item \textit{Post-Injection Waiting Area:} A dedicated room or shielded cubicles for patients to wait while the radiopharmaceutical distributes in their body. These patients are active radiation sources and must be isolated from non-injected patients.
+        \item \textit{Imaging Rooms (PET/SPECT):} Housing the scanner gantries.
+        \item \textit{Active Toilets:} Specially plumbed designated toilets for injected patients to safely dispose of radioactive bodily fluids, often leading to delay-and-decay tanks.
+        \item \textit{Radioactive Waste Storage:} Secure areas for the decay of contaminated syringes, vials, and consumables prior to safe disposal \cite{aerb_publications}.
+    \end{itemize}
+\end{itemize}
+
+The workflow is designed to be unidirectional wherever possible—from receiving the isotope, to the hot lab, to patient injection, to the scan room, and finally to patient exit—preventing the backward tracking of contamination into clean zones.
+
 \subsection{Protection Philosophy and Regulatory Basis}
 The theoretical basis of this experiment is rooted in three internationally accepted principles:
 \begin{itemize}
