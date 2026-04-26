@@ -9,43 +9,105 @@ Quality assurance testing guarantees two fundamental tenets of radiation protect
     \item High image quality facilitates accurate diagnosis, thereby scientifically justifying the radiation exposure.
 \end{enumerate}
 
+\subsection{Basic Principles of Computed Tomography (CT)}
+Computed Tomography (CT) is a highly sophisticated medical imaging modality that utilizes X-ray radiation to produce cross-sectional images (slices) of the human body. Unlike conventional projection radiography, where a three-dimensional anatomical volume is superimposed onto a two-dimensional plane, CT generates true cross-sectional maps of X-ray attenuation coefficients. It accomplishes this via computationally reconstructing multiple angular projections acquired as an X-ray tube and detector array rotate around the patient.
+
+The fundamental principle revolves around the measurement of radiation attenuation. An X-ray beam is restricted by collimators into a narrow fan or cone shape. As this beam transverses the patient, its intensity is attenuated through photoelectric absorption and Compton scattering. The transmitted beam intensity is measured by an array of detectors situated directly opposite the X-ray tube. The data set representing the attenuation profile from a single angle is termed a "projection." The gantry rotates seamlessly, establishing millions of discrete measurements over $360^\circ$. A computer system applies complex mathematical algorithms—most notably, Filtered Back Projection (FBP) or modern Iterative Reconstruction (IR) techniques—to map these attenuation measurements into a matrix of pixels. Each pixel is assigned a CT number (Hounsfield Unit, HU) indicative of the linear attenuation coefficient of the corresponding tissue voxel. This rigorous mathematical foundation not only eliminates structural superimposition but dramatically empowers the detection of subtle low-contrast differences among soft tissues compared to standard radiography.
+
+\subsection{Description of the CT Machine Components}
+A diagnostic state-of-the-art CT machine is an amalgamation of intricate mechanical, electrical, hardware, and software subsystems functioning in extraordinary synchrony. The core components include the Gantry, Examination Table, the Computer System, and the Control Console.
+
+\subsubsection{The Scanning Gantry}
+The gantry is the dominant mechanical structure in the CT suite and houses the principal X-ray generation and detection assemblies. It typically features a central aperture (commonly $70$ to $80\text{ cm}$ in diameter) through which the patient couch freely translates. To accommodate different anatomical orientations, the entire gantry structure can often be tilted (usually up to $\pm 30^\circ$) from the vertical axis.
+\begin{itemize}
+    \item \textbf{X-ray Tube:} Modern CT tubes are engineered to sustain immense thermal loads resulting from continuous, high-mA scanning required in multislice or helical CTs. They utilize rotating tungsten-rhenium anodes with large anode heat capacities and high cooling rates. The focal spot size directly bounds the system's geometric resolution; hence, many tubes incorporate "flying focal spot" technology, alternating the electron beam position to double the sampling frequency and reduce aliasing artifacts.
+    \item \textbf{Detector Array:} Operating directly opposite the X-ray tube, the detector array captures exiting attenuation photon flux and transduces it into proportional electronic signals. Contemporary multi-detector CT (MDCT) units utilize solid-state scintillation detectors (such as Gadolinium Oxysulfide, $\text{Gd}_2\text{O}_2\text{S}$, or specialized ceramics). These rare-earth scintillators absorb X-rays efficiently to produce visible light flashes, which are instantaneously registered by integrated photodiodes. Essential characteristics of CT detectors include high geometrical efficiency, superior capture efficiency, negligible afterglow, and high dynamic range.
+    \item \textbf{Data Acquisition System (DAS):} Positioned intimately within the gantry alongside the detectors, the DAS is responsible for rapidly measuring the minute analog photoelectric signals emanating from the detectors. These weak currents are amplified and converted mathematically into discrete digital data streams via analog-to-digital converters (ADCs). The colossal data packages are subsequently relayed to the computer system.
+    \item \textbf{Slip Ring Technology:} This revolution enabled continuous helical (spiral) scanning. Unlike early generations where cables tethered the rotating components—necessitating a scan-and-stop operation to unwind—slip rings utilize conductive concentric tracks and metallic brushes. This mechanism transmits electrical power to the rotating tube and smoothly transfers continuous streams of digital data back to the stationary computer framework, facilitating unceasing sub-second rotations.
+    \item \textbf{Collimators:} Beam collimation dictates the dose profile and z-axis slice width. \textit{Pre-patient collimators} shape the primary X-ray fan/cone, controlling patient dose by eliminating penumbral, divergent edges, and establishing the dose profile width ($N \cdot w$). \textit{Post-patient collimators} are situated precisely over the detector faces, significantly minimizing the detection of scattered photon trajectories which would drastically degrade image contrast.
+\end{itemize}
+
+\subsubsection{The Examination Table (Couch)}
+The patient table provides immense structural rigidity combined with remarkable positional precision. During helical acquisitions, the table uniformly feeds the patient into the aperture simultaneously with continuous X-ray tube rotation. The bed must be fabricated from low $Z$-material (often carbon fiber) to avert significant X-ray attenuation and beam-hardening artifacts where the beam crosses through the structure. It must maintain mechanical indexing accuracy up to fraction-of-a-millimeter precision beneath weight loads exceeding $200\text{ kg}$. 
+
+\subsubsection{The Computer and Reconstruction System}
+The high-performance computer infrastructure bridges raw output and displayable image. It resolves millions of simultaneous linear equations generated by the DAS in essentially real time. It governs the entire hardware, stores retrospective raw data, interfaces via DICOM to the PACS (Picture Archiving and Communication System), and enables 3-dimensional multi-planar rendering, fluoroscopic CT, and complex dosimetric records.
+
+\subsubsection{The Control Console}
+The control console acts as the solitary user interface situated safely behind the lead-glass partition. It consists of multiple monitors, dedicated keypads for parameter manipulation (e.g., kV, mA, slice thickness, pitch), and communication systems coupling the operator visually and audibly to the patient via intercoms.
+
+\subsection{Facility Design and CT Room Layout (AERB Guidelines)}
+Since computed tomography utilizes high-energy X-rays and large cumulative doses, structural radiation shielding and logical facility architecture are imperative for protecting staff, public, and adjacent zones against secondary scattered rays. In India, the Atomic Energy Regulatory Board (AERB) stringently regulates these layouts.
+
+The basic guidelines explicitly prescribe:
+\begin{itemize}
+    \item \textbf{Minimum Room Size:} The room housing the CT gantry must be sufficiently large to maneuver patients completely (minimum 25 sq. m usually depending on unit dimensions; minimizing dimensions around 4m). This safely dilutes in-room scatter by the inverse-square law.
+    \item \textbf{Shielding Integrity:} The primary mechanism of exposure to individuals outside the CT room is scattered radiation from the patient's body and the gantry itself. Walls typically must consist of robust masonry (e.g., $9$-inch solid brick) or be internally lined with specified lead equivalence (frequently $2\text{ mm}$ Pb). The access doors strictly require equivalent wood-and-lead sandwich protection ($2\text{ mm}$ lead equivalence) to ensure zero weak points.
+    \item \textbf{Control Console Placement and Viewing Glass:} To prevent occupational exposure, the technologist must operate the scanner entirely from a distinct control room or a heavily shielded alcove. Direct visual observation is uncompromisingly established using a specialized lead-glass window. As per the AERB Model Layout in the appended document, the viewing window is specified as $100\text{ cm} \times 80\text{ cm}$ maintaining a strict \textbf{$2.0\text{ mm}$ lead equivalence}.
+    \item \textbf{Operational Layout:} The layout must minimize the scatter angle. In the prescribed structural blueprint (refer to Figure \ref{fig:ct_layout}), the Examination Table (1) moves perpendicularly relative to the structural geometry, while the Control Unit (3) is protected dynamically from immediate sideways scattering. Warning fixtures, prominently a bright \textit{Red Light} and radiation warning placards strictly adorn the external facade to deter entry during beam-on periods.
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{/Users/souvik/Desktop/Lab-Reports/4th Sem/Quality Assurance of a Diagnostic CT Machine/Documents/Model-Layout-CT-Scan_AERB.pdf}
+    \caption{Model Room Layout for CT Scan Installation as prescribed by AERB. Components include: 1. CT gantry, 2. Examination Table, 3. Control Unit, 4. Electronics, 5. Viewing Glass ($100\text{ cm} \times 80\text{ cm}$ of $2.0\text{ mm}$ lead equivalence).}
+    \label{fig:ct_layout}
+\end{figure}
+
+\subsection{Quality Assurance (QA) Parameters}
 As per the guidelines mandated by regulatory bodies such as the Atomic Energy Regulatory Board (AERB), comprehensive acceptance testing upon new equipment installation and periodic QA are strict requirements. The QA tests for CT equipment are broadly classified into four primary categories: Mechanical Tests, Tests for High-Frequency Generators, Image Quality Parameters, and Radiation Safety \cite{aapm39}.
 
-\subsection{1. Mechanical Tests}
+\subsubsection{1. Mechanical and Geometric Tests}
 The geometric fidelity of the scanner is critical to avoid image artifacts and ensure precise localization.
 \begin{itemize}
-    \item \textbf{Alignment of the Table to Gantry:} This test ensures that the longitudinal axis of the patient table is perfectly horizontal and aligned with the vertical line passing through the scanner's rotational axis. A mismatch in this alignment introduces severe image artifacts, particularly for bulky patients if their anatomy extends out of the volume of interest (VOI). The acceptable tolerance is $\pm 5$ mm of the table midline.
-    \item \textbf{Gantry Tilt Accuracy:} Most modern CT scanners allow non-orthogonal scanning by tilting the gantry to avoid specific organs (e.g., orbits). The accuracy of the displayed tilt angle is assessed by supporting an envelope-wrapped X-ray film vertically at the gantry end of the couch. Three axial exposures are made: one at $0^\circ$ tilt, one at maximum superior tilt, and one at maximum inferior tilt. The angles between the scan planes on the developed film are measured and compared against the gantry display. The tolerance is dictated by the manufacturer's specification, typically $\pm 2^\circ$ \cite{aapm39}.
-    \item \textbf{Table Indexing Accuracy:} Couch translation must be precisely synchronized with the X-ray tube rotation. Using a ruler or tape measure placed alongside the table, the indicated degree of couch movement is compared with the actual physical distance moved. To replicate clinical conditions, a distributed load of approximately 70–80 kg is placed on the table to simulate a patient's weight.
+    \item \textbf{Alignment of the Table to Gantry:} This test ensures that the longitudinal axis of the patient table is perfectly horizontal and aligned with the vertical line passing through the scanner's rotational axis. A mismatch introduces severe image artifacts, particularly for bulky patients. The acceptable tolerance is $\pm 5$ mm of the table midline.
+    \item \textbf{Gantry Tilt Accuracy:} Most modern CT scanners allow non-orthogonal scanning by tilting the gantry. The accuracy of the displayed tilt angle is assessed by supporting an envelope-wrapped X-ray film vertically at the gantry end of the couch. The tolerance is typically $\pm 2^\circ$ \cite{aapm39}.
+    \item \textbf{Table Indexing Accuracy and Increment:} Couch translation must be precisely synchronized with the X-ray tube rotation. Using a ruler or tape measure placed alongside the table, the indicated degree of couch movement is compared with the actual physical distance moved. Tolerances specify differences extending over $\pm 1\text{ mm}$.
+    \item \textbf{Laser Positioning Accuracy:} Both internal gantry lasers and external wall-mounted alignment lasers guarantee iso-centering the patient. Max acceptable limit is typically $\pm 2\text{ mm}$.
 \end{itemize}
 
-\subsection{2. Tests for High-Frequency Generators}
+\subsubsection{2. Tests for High-Frequency Generators}
 The X-ray generator parameters directly dictate the photon fluence and beam quality, directly impacting patient dose and image contrast.
 \begin{itemize}
-    \item \textbf{Accuracy of Operating Potential (kVp):} The applied kilovoltage affects both the quality (penetrability) and quantity of the X-rays reaching the detector array. Variations from the prescribed kVp will negatively alter image contrast and noise characteristics; thus, the kVp settings must be periodically verified using a calibrated non-invasive kVp meter.
-    \item \textbf{Accuracy of Timer:} Inaccurate exposure times can result in underexposed (excessive quantum mottle) or overexposed (unnecessary patient dose) images, drastically altering tissue contrast resolution.
-    \item \textbf{Total Filtration:} Added filtration removes low-energy X-ray photons that do not possess sufficient energy to penetrate the patient and reach the detectors, contributing solely to patient skin dose. AERB recommends specific total filtration values (inherent + added) for different maximum-rated tube potentials. If the evaluated filtration is inadequate, additional physical filtration must be integrated into the tube housing.
-    \item \textbf{Linearity of Radiation Output (mA/mAs Linearity):} Keeping the kVp and exposure time constant, radiation output is measured across various mA stations. The Coefficient of Linearity (COL) is calculated from the average output $X$ (in mR/mAs or mGy/mAs):
-    \begin{equation}
-        \text{COL} = \frac{X_{\text{max}} - X_{\text{min}}}{X_{\text{max}} + X_{\text{min}}}
-    \end{equation}
-    The regulatory tolerance dictates that $\text{COL} \leq 0.1$.
-    \item \textbf{Reproducibility of Radiation Output:} Keeping mA and time fixed, the output is measured repeatedly at available kVp stations. Consistency is evaluated via the Coefficient of Variation (COV):
-    \begin{equation}
-        \text{COV} = \frac{1}{\bar{X}} \sqrt{ \frac{\sum(X_i - \bar{X})^2}{n-1} }
-    \end{equation}
-    The tolerance limit for reproducibility is $\text{COV} \leq 0.05$.
+    \item \textbf{Accuracy of Operating Potential (kVp):} The applied kilovoltage affects both the quality and quantity of the X-rays. Variations from the prescribed kVp will negatively alter image contrast. Performance bounds fall within $\pm 5\%$.
+    \item \textbf{Reproducibility of Radiation Output:} Keeping mA and time fixed, the output is measured repeatedly at available kVp stations. Consistency is evaluated via the Coefficient of Variation (COV), maintaining $\text{COV} \leq 0.05$.
+    \item \textbf{Linearity of Radiation Output (mA/mAs Linearity):} Keeping the kVp and exposure time constant, radiation output is measured across various mA stations. The Coefficient of Linearity (COL) is calculated spanning contiguous values and must fall under $\leq 0.1$.
+    \item \textbf{Half-Value Layer (HVL) / Total Filtration:} Added filtration removes low-energy X-ray photons that do not possess sufficient energy to penetrate the patient and reach the detectors.
 \end{itemize}
 
-\subsection{3. Image Quality Tests}
+\subsubsection{3. Image Quality Evaluation}
 Image quality parameters are assessed using standardized test phantoms of human shape or specific uniform test objects provided by the manufacturer.
 \begin{itemize}
-    \item \textbf{Slice Thickness:} Assesses whether the effective physical slice thickness matches the nominally selected thickness on the console. 
-    \item \textbf{High Contrast Resolution:} Defines the minimum size of a detail visualized in the scan plane with a contrast $> 10\%$. It is influenced by the reconstruction algorithm, detector element width, and X-ray tube focal spot size. Evaluation techniques include mathematical derivation of the Modulation Transfer Function (MTF) from a point spread function, or visual assessment using a resolution bar phantom. Resolution is expressed as the spatial frequency (line pairs/cm) where the MTF falls to 50\%, 10\%, or 2\%. The visible line pairs in the image approximately correspond to the 2\% MTF value \cite{bushberg2011essential}.
-    \item \textbf{Low Contrast Resolution:} This metric represents the smallest visible object at a specific low contrast level for a given dose. It determines the system's capacity to differentiate tissues with minimal density differences relative to the surrounding background (e.g., soft tissue lesions).
     \item \textbf{CT Number Accuracy and Uniformity:} CT numbers (Hounsfield Units) depend on tube voltage, beam filtration, and object attenuation. By definition, the CT number of water is 0. 
     \begin{itemize}
         \item \textit{Accuracy:} The measured CT number in the central Region of Interest (ROI) of a water phantom must be $0 \pm 4$ HU.
-        \item \textit{Uniformity:} The CT number of a homogeneous object should remain constant across the entire field of view. By placing four additional ROIs (North, East, South, West) near the phantom's periphery alongside the central ROI, the mean values are compared. The deviation between any peripheral ROI and the central ROI must not exceed $\pm 4$ HU \cite{aapm39}.
+        \item \textit{Uniformity:} The CT number of a homogeneous object should remain constant across the entire field of view. The deviation between any peripheral ROI and the central ROI must not exceed $\pm 4$ HU.
     \end{itemize}
+    \item \textbf{High Contrast Resolution (Spatial Resolution):} Defines the minimum size of a detail visualized with a contrast $> 10\%$. Expressed as spatial frequency (line pairs/cm), aiming normally for $> 15 \text{ lp/cm}$.
+    \item \textbf{Low Contrast Resolution:} This metric represents the smallest visible object at a specific low contrast level. It determines the system's capacity to differentiate tissues with minimal density differences relative to the surrounding background.
+    \item \textbf{Slice Thickness (Z-axis Resolution):} Assesses whether the effective physical slice thickness matches the nominally selected thickness on the console. Tolerances define an error bracket $\leq 1\text{ mm}$ for sub-millimeter slices and $\pm 10\%$ for $> 2\text{ mm}$.
 \end{itemize}
+
+\subsubsection{4. CT Dosimetry and Radiation Safety}
+The primary objective of these metrics aims exactly mapping standard absorbed doses.
+\begin{itemize}
+    \item \textbf{Computed Tomography Dose Index ($CTDI_{100}$):} Incorporates practical parameters using a standard $100\text{ mm}$ pencil ionization chamber internally fixed inside standard body phantoms registering core dose lengths mathematically via:
+    \begin{equation}
+        CTDI_{100} = \frac{1}{N \cdot w} \int_{-50}^{50} D(z) dz
+    \end{equation}
+    \item \textbf{Weighted CTDI ($CTDI_w$):} Captures differences over standard volumetric bodies:
+    \begin{equation}
+        CTDI_w = \frac{1}{3} CTDI_{100, \text{Center}} + \frac{2}{3} CTDI_{100, \text{Periphery}}
+    \end{equation}
+    \item \textbf{Volume CTDI ($CTDI_{vol}$):} Scales linearly utilizing standard overlap metrics or Pitch factor ($p$):
+    \begin{equation}
+        CTDI_{vol} = \frac{CTDI_w}{\text{Pitch}}
+    \end{equation}
+    \item \textbf{Dose Length Product (DLP):} Standard metric summing absolutely up along structural axial axes $L$:
+    \begin{equation}
+        \text{DLP} = CTDI_{vol} \times L \quad (\text{mGy}\cdot\text{cm})
+    \end{equation}
+\end{itemize}
+
+\subsection{Conclusion of the Theory}
+Integrating comprehensive architectural safety defined by robust AERB room matrices directly to clinical routine requires aggressive Quality Assurance. From establishing raw mechanical synchrony to intricate multi-parameter dosimetric limits using precise solid-state phantoms, this workflow essentially controls X-ray hazards and standardizes diagnosis consistently mapping out anatomical precision flawlessly across multiple institutions.
