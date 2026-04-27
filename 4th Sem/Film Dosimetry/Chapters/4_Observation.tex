@@ -1,0 +1,211 @@
+\subsection{Calibration of known film doses}
+
+\begin{itemize}
+    \item \textbf{Machine:} Elekta Versa HD
+    \item \textbf{SAD:} $100\text{ cm}$
+    \item \textbf{Buildup slab:} $5\text{ cm}$
+    \item \textbf{Base slabs:} $10\text{ cm}$
+    \item \textbf{PDD at $5\text{ cm}$:} 0.86
+    \item \textbf{Field Size (FS):} $10 \times 10\text{ cm}^2$, 6 MV photon
+\end{itemize}
+
+\textbf{MU Calculation:}
+\begin{equation}
+    MU = \frac{Dose}{1\text{ cGy}/MU \times PDD}
+\end{equation}
+
+\textbf{Dose and Corresponding Monitor Units (MU):}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+        \textbf{S.No.} & \textbf{Dose} & \textbf{MU} \\
+        \hline
+        1 & Background & - \\
+        2 & 0.2 Gy & 23 MU \\
+        3 & 0.5 Gy & 58 MU \\
+        4 & 1 Gy & 116 MU \\
+        5 & 2 Gy & 232 MU \\
+        6 & 3 Gy & 349 MU \\
+        7 & 4 Gy & 465 MU \\
+        8 & 5 Gy & 581 MU \\
+        9 & 8 Gy & 930 MU \\
+        \hline
+    \end{tabular}
+\end{table}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{/Users/souvik/Desktop/Lab-Reports/4th Sem/Film Dosimetry/Figures/Experimental/Film with known doses.png}
+    \caption{Film with known doses}
+    \label{fig:calibration_known_doses}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{"/Users/souvik/Desktop/Lab-Reports/4th Sem/Film Dosimetry/Figures/Experimental/CalibrationOutput.png"}
+        \caption{Calibration Output}
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{"/Users/souvik/Desktop/Lab-Reports/4th Sem/Film Dosimetry/Figures/Experimental/Sensitometry curve.png"}
+        \caption{Sensitometric curves}
+    \end{minipage}
+\end{figure}
+
+\subsection{Dose-Optical Density Relationship}
+
+Mathematically, it can be expressed as a negative logarithm of Transmittance:
+\begin{equation}
+    \text{Optical Density} = -\log_{10}(T) = -\log_{10}\left(\frac{I}{I_0}\right) \quad \text{or} \quad \text{Optical Density} = \log_{10}\left(\frac{I_0}{I}\right)
+\end{equation}
+Where $T$ is transmittance, $I_0$ is the intensity of incident radiation, and $I$ is the intensity of transmitted radiation.
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+        \textbf{Dose (Gy)} & \textbf{Pixel} & \textbf{OD} \\
+        \hline
+        0 & 40493 ($I_0$) & 0 \\
+        0.2 & 36093 & 0.04995697197 \\
+        0.5 & 34707 & 0.06696287769 \\
+        1 & 31666 & 0.1067867461 \\
+        2 & 27885 & 0.1620093047 \\
+        3 & 25655 & 0.1982079345 \\
+        4 & 24119 & 0.225020656 \\
+        5 & 21969 & 0.2655696646 \\
+        8 & 19023 & 0.3281009456 \\
+        \hline
+    \end{tabular}
+    \caption{Dose vs Pixel Value and Optical Density (OD)}
+\end{table}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{/Users/souvik/Desktop/Lab-Reports/4th Sem/Film Dosimetry/Figures/Experimental/ OD vs Dose(Gy) .pdf}
+    \caption{Dose vs Optical Density (OD)}
+    \label{fig:dose_vs_od}
+\end{figure}
+\subsection{Dosimetry of unknown doses}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{"/Users/souvik/Desktop/Lab-Reports/4th Sem/Film Dosimetry/Figures/Experimental/Unnknown dose.png"}
+    \caption{Film with unknown doses}
+    \label{fig:unknown_doses}
+\end{figure}
+
+\subsubsection{Result}
+\begin{itemize}
+    \item Dose of Film 1 = 3.64 Gy
+    \item Dose of Film 2 = 6.57 Gy
+\end{itemize}
+
+\subsubsection{Error Analysis}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        \textbf{Film} & \textbf{True Dose (Gy)} & \textbf{Calculated Dose (Gy)} & \textbf{Percentage Error (\%)} \\
+        \hline
+        Film 1 & 4.00 & 3.64 & 9.00 \\
+        Film 2 & 6.90 & 6.57 & 4.78 \\
+        \hline
+    \end{tabular}
+    \caption{Error between calculated and true dose}
+\end{table}
+
+\subsection{Spoke Test}
+\subsubsection{Couch Spoke Test}
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{"/Users/souvik/Desktop/Lab-Reports/4th Sem/Film Dosimetry/Figures/Experimental/CouchSpokeTest.png"}
+        \caption{Couch Spoke Test}
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{"/Users/souvik/Desktop/Lab-Reports/4th Sem/Film Dosimetry/Figures/Experimental/CouchSpokeTestReport.png"}
+        \caption{Couch Spoke Test Report}
+    \end{minipage}
+\end{figure}
+Isocenter Radius = 0.46mm, which is within tolerance(2mm).
+\subsubsection{Collimator Spoke Test}
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{"/Users/souvik/Desktop/Lab-Reports/4th Sem/Film Dosimetry/Figures/Experimental/CollimeterSpoketest.png"}
+        \caption{Collimator Spoke Test}
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{"/Users/souvik/Desktop/Lab-Reports/4th Sem/Film Dosimetry/Figures/Experimental/CollimeterSpoketestReport.png"}
+        \caption{Collimator Spoke Test Report}
+    \end{minipage}
+\end{figure}
+Isocenter Radius = 0.50mm, which is within tolerance(2mm)
+\subsubsection{Gantry Spoke Test}
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{"/Users/souvik/Desktop/Lab-Reports/4th Sem/Film Dosimetry/Figures/Experimental/GantrySpoketest.png"}
+        \caption{Gantry Spoke Test}
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{"/Users/souvik/Desktop/Lab-Reports/4th Sem/Film Dosimetry/Figures/Experimental/GantrySpoketestReport.png"}
+        \caption{Gantry Spoke Test Report}
+    \end{minipage}
+\end{figure}
+Isocenter Radius = 0.59mm, which is within tolerance(2mm)
+\subsection{PSQA Gamma Analysis}
+
+\subsection{Field Size Congruence Test}
+\subsubsection{Symmetric Field $5 \times 5 \text{cm}^2$}
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{"/Users/souvik/Desktop/Lab-Reports/4th Sem/Film Dosimetry/Figures/Experimental/Symmetric field.png"}
+        \caption{Symmetric Field}
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{"/Users/souvik/Desktop/Lab-Reports/4th Sem/Film Dosimetry/Figures/Experimental/SymmetricfieldReport.png"}
+        \caption{Symmetric Field Report}
+    \end{minipage}
+\end{figure}
+The Light-radiation displacement along the +x (in-line) and x (in-line) directions is 0 mm and -0.7 mm,
+respectively, while along the +y and y directions, it is -1.2 mm and 0.1 mm, respectively. As per AERB
+guidelines, the deviation should be less than ±2 mm.
+\subsubsection{Asymmetric Field $5 \times 8 \text{cm}^2$}
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{"/Users/souvik/Desktop/Lab-Reports/4th Sem/Film Dosimetry/Figures/Experimental/AsymmetricField.png"}
+        \caption{Asymmetric Field}
+    \end{minipage}\hfill
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{"/Users/souvik/Desktop/Lab-Reports/4th Sem/Film Dosimetry/Figures/Experimental/Assymetricfieldreport.png"}
+        \caption{Asymmetric Field Report}
+    \end{minipage}
+\end{figure}
+The Light-radiation displacement along the +x (in-line) and x (in-line) directions is -0.2 mm and -0.6 mm,
+respectively, while along the +y and y directions, it is -1.9 mm and -0.4 mm, respectively. As per AERB guide-
+lines, the deviation should be less than ±2 mm
+\subsection{Radiation Field Analysis(Symmetric Field $5 \times 5 \text{cm}^2$)}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{"/Users/souvik/Desktop/Lab-Reports/4th Sem/Film Dosimetry/Figures/Experimental/FieldAnalysis.png"}
+    \caption{Radiation Field Analysis}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{"/Users/souvik/Desktop/Lab-Reports/4th Sem/Film Dosimetry/Figures/Experimental/FieldAnalysisReport.png"}
+    \caption{Radiation Field Analysis Report}
+\end{figure}
