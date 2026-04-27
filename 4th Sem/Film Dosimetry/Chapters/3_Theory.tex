@@ -85,5 +85,51 @@ Conversely, reflection scanning utilizes an entirely different photon path.
     While reflection scanning is mandatory for older opaque film models that do not permit light transmission, it is strongly discouraged for modern EBT films used in precision radiotherapy procedures.
 \end{itemize}
 
-\section{Conclusion on Readout Optimization}
-By standardizing the timing of the readout stage—waiting consistently for the fast post-irradiation OD growth phase to stabilize (e.g., 24 hours)—and utilizing transmission mode with a multi-channel capable flatbed scanner, clinical medical physicists can extract highly accurate and intricately patterned planar dose distributions, confirming the geometric and dosimetric safety of highly modulated modern radiotherapy deliveries.
+\section{Gamma Analysis in IMRT Quality Assurance}
+
+Intensity Modulated Radiotherapy (IMRT) leverages many small, irregular fields to produce complex dose distributions, facilitating dose escalation by sparing adjacent healthy tissue. This complexity necessitates rigorous, patient-specific Quality Assurance (QA) to verify that the calculated dose from the Treatment Planning System (TPS) matches the physically delivered dose \cite{qa_imrt_omp}.
+
+To evaluate this agreement, measured and calculated dose distributions are typically compared using the $\gamma$-index.
+
+\subsection{Dose Difference and Distance-to-Agreement (DTA)}
+Traditional verification metrics include:
+\begin{itemize}
+    \item \textbf{Dose Difference:} Compares the measured and calculated dose at each specific point. This works exceptionally well in regions of uniform dose but is highly sensitive to minimal setup or alignment errors in steep dose gradients, producing high failure rates.
+    \item \textbf{Distance-to-Agreement (DTA):} Measures the spatial distance between a point on the measured distribution and the nearest point of equal dose on the calculated distribution. While DTA works well in high-gradient regions, it becomes overly sensitive in homogeneous dose regions.
+\end{itemize}
+
+\subsection{The $\gamma$-Index Concept}
+The Gamma ($\gamma$) index resolves the limitations of using Dose Difference or DTA individually by mathematically combining them. It defines a 2-dimensional space where one axis represents the dose difference and the other represents the distance-to-agreement. For each point in the distribution, a generalized Euclidean distance—normalized to respective acceptance criteria—is calculated. The minimum generalized distance over all calculated points is designated as the $\gamma$-index ($\gamma$) \cite{qa_imrt_omp}.
+
+A point passes the evaluation if $\gamma \le 1$. Conversely, points with $\gamma > 1$ fail the test. The $\gamma$-index evaluation is ultimately dominated by dose difference in homogeneous regions and by DTA in regions containing steep dose gradients.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{"/Users/souvik/Desktop/Lab-Reports/4th Sem/Film Dosimetry/Figures/Theory/GammaIndex.png"}
+    \caption{The $\gamma$-Index Concept}
+\end{figure}
+
+\subsection{Criteria and Action Limits}
+A treatment plan is evaluated by determining if the percentage of passing points ($\gamma \le 1$) exceeds a critical threshold value. The stringency of the test depends on several parameters:
+\begin{itemize}
+    \item \textbf{Distance Criteria (DTA):} Commonly set to $2\text{ mm}$ or $3\text{ mm}$.
+    \item \textbf{Dose Difference Criteria:} Commonly set to $2\%$ or $3\%$ (with $3\%$ being the most widely adopted).
+    \item \textbf{Threshold Dose:} A low-dose cutoff (usually $10\%$ of the global maximum dose) below which data points are excluded from the test. This prevents clinically irrelevant, lower-dose regions from artificially inflating the pass rate.
+    \item \textbf{Normalization:} Dose differences can be evaluated relative to the \textit{local} dose or the \textit{global maximum} dose. Global normalization generally yields a higher pass rate and is recommended over local normalization for QA \cite{qa_imrt_omp}.
+\end{itemize}
+
+Based on AAPM TG-218 recommendations \cite{qa_imrt_omp}, clinical plans are subjected to:
+\begin{itemize}
+    \item \textbf{Tolerance Limits:} The expected machine capability under standard operation ($\ge 95\%$ pass rate utilizing $3\%/2\text{ mm}$ criteria and $10\%$ threshold).
+    \item \textbf{Action Limits:} The absolute minimum performance directly impacting patient safety. Plans failing this limit must not be delivered clinically and require re-evaluation ($\ge 90\%$ pass rate utilizing $3\%/2\text{ mm}$ criteria and $10\%$ threshold).
+\end{itemize}
+
+
+\subsection{Coincidence of Light Field and Radiation Field}
+The coincidence of the optical (light) field and radiation field ensures that the visual field used for patient setup accurately represents the actual treatment field. This is a fundamental geometric QA test. As per AAPM TG-142 and AERB guidelines, the deviation between light and radiation fields should typically be within $\pm 2\text{ mm}$. This test verifies collimator alignment and prevents geographic miss during treatment.
+
+\subsection{Spoke Test}
+The spoke (star shot) test is used to evaluate the mechanical isocenter of the LINAC, particularly the alignment of gantry, collimator, and couch rotations. Multiple radiation exposures are delivered at different gantry or collimator angles onto a film or detector. The intersection of the radiation lines indicates the isocenter. According to AAPM TG-142, the diameter of the isocenter sphere should be within specified tolerances (typically $\le 2\text{ mm}$), ensuring precise beam delivery.
+
+
+
