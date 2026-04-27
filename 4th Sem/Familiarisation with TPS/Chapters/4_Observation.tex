@@ -1,30 +1,156 @@
-\subsection{5 Beam Planning}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\textwidth]{/Users/souvik/Desktop/Lab-Reports/4th Sem/Familiarisation with TPS/Figures/Experimental/5BeamPlanning.png}
-    \caption{Beam Planning}
-    \label{fig:5_Beam_Planning}
-\end{figure}
+\subsection{Head and Neck Planning}
+\subsubsection{5 Beam Planning}
 
+%Two images side by side
 \begin{figure}[H]
     \centering
-    \begin{subfigure}[b]{0.40\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{/Users/souvik/Desktop/Lab-Reports/4th Sem/Familiarisation with TPS/Figures/Experimental/5BeamOptimization.png}
-        \caption{Beam Optimization}
-        \label{fig:5_Beam_Optimization}
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=\textwidth]{//Users/souvik/Desktop/Lab-Reports/4th Sem/Familiarisation with TPS/Figures/Experimental/5 Beam plan.png}
+        \caption{5 Beam Planning}
     \end{subfigure}
     \hfill
-    \begin{subfigure}[b]{0.48\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{/Users/souvik/Desktop/Lab-Reports/4th Sem/Familiarisation with TPS/Figures/Experimental/5BeamDVH.png}
-        \caption{Beam DVH}
-        \label{fig:5_Beam_DVH}
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=\textwidth]{//Users/souvik/Desktop/Lab-Reports/4th Sem/Familiarisation with TPS/Figures/Experimental/5 Beam DVH.png}
+        \caption{DVH of 5 Beam Planning}
     \end{subfigure}
-    \caption{Five-beam optimization and corresponding DVH.}
-    \label{fig:5_Beam_Optimization_DVH}
+    \caption{5 Beam Planning and its DVH}
 \end{figure}
 
-From the DVH, the PTV shows good dose coverage around the prescribed dose with a steep dose fall-off, while surrounding normal tissues receive comparatively lower doses, indicating an acceptable treatment plan quality.
+\subsubsection{7 Beam Planning}
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=\textwidth]{//Users/souvik/Desktop/Lab-Reports/4th Sem/Familiarisation with TPS/Figures/Experimental/7 Beam plan.png}
+        \caption{7 Beam Planning}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=\textwidth]{//Users/souvik/Desktop/Lab-Reports/4th Sem/Familiarisation with TPS/Figures/Experimental/7 Beam DVH.png}
+        \caption{DVH of 7 Beam Planning}
+    \end{subfigure}
+    \caption{7 Beam Planning and its DVH}
+\end{figure}
+\subsubsection{9 Beam Planning}
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=\textwidth]{//Users/souvik/Desktop/Lab-Reports/4th Sem/Familiarisation with TPS/Figures/Experimental/9 Beam plan.png}
+        \caption{9 Beam Planning}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.45\textwidth}
+        \includegraphics[width=\textwidth]{//Users/souvik/Desktop/Lab-Reports/4th Sem/Familiarisation with TPS/Figures/Experimental/5 Beam DVH.png}
+        \caption{DVH of 9 Beam Planning}
+    \end{subfigure}
+    \caption{9 Beam Planning and its DVH}
+\end{figure}
 
-\subsection{7 Beam Planning}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{"//Users/souvik/Desktop/Lab-Reports/4th Sem/Familiarisation with TPS/Figures/Experimental/H&N DVH.pdf"}
+    \caption{Dose Volume Histogram (DVH) for Head and Neck Planning}
+    \label{fig:hn_dvh}
+\end{figure}
+
+\section*{QUANTEC-Based Evaluation of Treatment Plans (SIB Technique)}
+
+The treatment plan was generated using a Simultaneous Integrated Boost (SIB) technique, delivering different prescription doses to multiple target volumes in 30 fractions:
+\begin{itemize}
+    \item PTV70: 70 Gy in 30 fractions ($\approx 2.33$ Gy/\#)
+    \item PTV63: 63 Gy in 30 fractions ($\approx 2.10$ Gy/\#)
+\end{itemize}
+
+The DVH values represent dose per fraction (Gy/\#) and were multiplied by 30 to obtain total dose in Gy. 
+
+For organs at risk (OARs), evaluation was performed using absolute dose values and compared directly with QUANTEC guidelines. For serial organs such as the spinal cord, $D_{2\%}$ was used as a surrogate for $D_{\max}$.
+
+\subsection*{Spinal Cord}
+QUANTEC recommends $D_{\max} < 45$ Gy.
+
+\begin{itemize}
+    \item 5 beams: $D_{2} = 34.57$ Gy
+    \item 7 beams: $D_{2} = 32.53$ Gy
+    \item 9 beams: $D_{2} = 36.09$ Gy
+\end{itemize}
+
+All plans satisfy the constraint. The 7-beam configuration provides the best sparing of the spinal cord.
+
+\subsection*{Brainstem}
+QUANTEC recommends $D_{\max} < 54$ Gy.
+
+\begin{itemize}
+    \item 5 beams: $D_{2} = 34.28$ Gy
+    \item 7 beams: $D_{2} = 36.28$ Gy
+    \item 9 beams: $D_{2} = 31.56$ Gy
+\end{itemize}
+
+All plans are within tolerance, with the 9-beam configuration providing the lowest dose.
+
+\subsection*{Parotid Glands}
+QUANTEC recommends mean dose $D_{\text{mean}} < 26$ Gy.
+
+\begin{itemize}
+    \item Left Parotid:
+    \begin{itemize}
+        \item 5 beams: $22.21$ Gy
+        \item 7 beams: $23.81$ Gy
+        \item 9 beams: $23.39$ Gy
+    \end{itemize}
+    \item Right Parotid:
+    \begin{itemize}
+        \item 5 beams: $21.35$ Gy
+        \item 7 beams: $23.33$ Gy
+        \item 9 beams: $23.18$ Gy
+    \end{itemize}
+\end{itemize}
+
+All plans satisfy QUANTEC criteria. The 5-beam configuration provides superior parotid sparing and is preferable for reducing xerostomia risk.
+
+\subsection*{Optic Nerves and Chiasm}
+QUANTEC recommends $D_{\max} < 54$ Gy.
+
+\begin{itemize}
+    \item All plans: $D_{2} < 5$ Gy
+\end{itemize}
+
+These structures are well below tolerance in all configurations.
+
+\subsection*{Larynx}
+QUANTEC recommends mean dose $D_{\text{mean}} < 44$ Gy.
+
+\begin{itemize}
+    \item 5 beams: $34.59$ Gy
+    \item 7 beams: $34.31$ Gy
+    \item 9 beams: $35.85$ Gy
+\end{itemize}
+
+All plans meet the constraint, with the 7-beam configuration showing slightly improved sparing.
+
+\subsection*{Target Coverage}
+Target volumes were evaluated relative to their respective prescriptions:
+
+\begin{itemize}
+    \item PTV70 ($70$ Gy prescription):
+    \begin{itemize}
+        \item $D_{98}$: 63.05 Gy (5 beams), 64.11 Gy (7 beams), 63.83 Gy (9 beams)
+    \end{itemize}
+    
+    \item PTV63 ($63$ Gy prescription):
+    \begin{itemize}
+        \item $D_{98}$: $\approx 47.5$--$48.6$ Gy across all plans
+    \end{itemize}
+\end{itemize}
+
+All plans achieve acceptable coverage of both target volumes.
+
+\subsection*{Conclusion}
+All treatment plans satisfy QUANTEC dose constraints for organs at risk. 
+
+\begin{itemize}
+    \item The 7-beam plan provides the best overall balance between target coverage and spinal cord sparing.
+    \item The 5-beam plan achieves superior parotid sparing and may be preferred when minimizing xerostomia is prioritized.
+    \item The 9-beam plan increases spinal cord dose and low-dose spread without significant clinical advantage.
+\end{itemize}
+
+\noindent
+Thus, the 7-beam configuration is considered the most optimal plan under QUANTEC-based evaluation.

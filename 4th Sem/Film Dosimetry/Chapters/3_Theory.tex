@@ -1,107 +1,89 @@
-Radiochromic film dosimetry is widely used in modern radiotherapy because it provides high spatial resolution, near water-equivalent response, broad dynamic range, and self-developing behavior without wet chemical processing \cite{devic2016aapm,podgorsak2005radiation}. For small fields, steep dose gradients, MLC-modulated deliveries, and geometric QA tests, film remains one of the most informative 2D dosimeters. The practical workflow used in this experiment follows recommended procedures from Radiochromic.com tutorials, peer-reviewed protocol papers, and the EBT3 product guidance published by Ashland \cite{mendez2021radiochromic,radiochromic_tutorials,papaconstadopoulos2014protocol,ashland_gafchromic_ebt3}.
 
-\subsection{Fundamental Physical Principle}
-GAFchromic\texttrademark{} EBT3 film consists of an active microcrystalline layer between polyester substrates. Ionizing radiation initiates polymerization of sensitive monomers in the active layer, creating color centers that increase optical absorbance. The color change is dose-dependent and can be digitized by a flatbed scanner. Since EBT3 is nearly tissue equivalent, perturbation of the radiation field is small for megavoltage dosimetry \cite{devic2016aapm}.
+Radiation dosimetry is a critical aspect of radiotherapy and medical physics, ensuring that intended radiation doses are accurately and precisely delivered to specific target volumes while sparing healthy tissues. Film dosimetry stands out as one of the most powerful tools in this field due to its unparalleled high spatial resolution, which makes it ideal for measuring dose distributions with steep dose gradients, such as those found in Intensity Modulated Radiation Therapy (IMRT), Volumetric Modulated Arc Therapy (VMAT), and Stereotactic Radiosurgery (SRS) \cite{niroomand2020}.
 
-For EBT3 specifically, the manufacturer describes the film as suitable for fast and highly accurate radiotherapy measurements with high-resolution images, while protocol studies recommend standardized reflection scanning and consistent film handling to reduce readout error \cite{ashland_gafchromic_ebt3,papaconstadopoulos2014protocol}.
+Historically and currently, film dosimetry predominantly involves two major categories of films: radiographic films and radiochromic films (RCF). Both films serve as dosimetric tools but operate on entirely fundamentally different chemical and physical principles.
 
-The optical density (OD) of a scanned film is
-\begin{equation}
-    OD = \log_{10}\left(\frac{I_0}{I}\right),
-\end{equation}
-where $I_0$ is transmitted light intensity through an unirradiated reference and $I$ is transmitted intensity through the exposed film. In practice, net optical density is used:
-\begin{equation}
-    \mathrm{netOD}=\log_{10}\left(\frac{PV_{\mathrm{unexp}}}{PV_{\mathrm{exp}}}\right),
-\end{equation}
-where $PV_{\mathrm{unexp}}$ and $PV_{\mathrm{exp}}$ are scanner pixel values under fixed scanning conditions.
+\subsection{Radiographic Film}
+Radiographic films have been utilized in medical imaging and dosimetry for over a century. The active sensing layer in a radiographic film consists of microscopic silver halide crystals (typically $95\%$ silver bromide and $5\%$ silver iodide) embedded in a gelatin matrix coated on a flexible polyester base. When ionizing radiation or light strikes the film, electrons are released, reducing silver ions ($Ag^+$) into metallic silver ($Ag^0$). This creates a ``latent image'' that is invisible to the naked eye. To render this image visible and suitable for dosimetric measurements, the film must undergo a rigorous wet chemical processing procedure involving a developer (to amplify the latent image), a fixer (to remove unexposed silver halides), washing, and drying.
 
-\subsection{Scanner-Based Readout and Image Formation}
-Film response is not measured directly in Gy; instead, scanner pixel values in red, green, and blue channels are acquired (typically 48-bit RGB, 16-bit/channel). Accurate dosimetry therefore depends on a stable dosimetric chain:
+\subsection{Radiochromic Film (RCF)}
+Radiochromic film dosimetry is a more recent chemical dosimetry technique that eliminates the complexities of wet chemical processing. Instead of utilizing silver halides, the active radiation-sensitive medium in radiochromic films is composed of microcrystalline di-acetylene monomers ($C_4H_2$). When exposed to ionizing radiation, these highly unsaturated hydrocarbon monomers undergo a solid-state, chain-growth photo-polymerization process. This chemical reaction directly produces colored polymer chains, progressively turning the film darker (often a shade of blue or green depending on the specific model) as the absorbed dose increases. Because this color change occurs directly as a result of the irradiation, radiochromic films are self-developing \cite{niroomand2020}.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{/Users/souvik/Desktop/Lab-Reports/4th Sem/Film Dosimetry/Figures/Theory/RCF working.png}
+    \caption{Diacetylene monomers, upon exposure to ionizing radiation, polymerize into (b) butatriene structure polymer; as the polymer chain grows, it rearranges via (c) an intermediate between butatriene structure and acetylene structure, into (d) acetylene structure polymer}
+\end{figure}
+\section{Advantages of Radiochromic Film Over Radiographic Film}
+
+The transition from radiographic to radiochromic film in modern clinical dosimetry is driven by several significant physical and practical advantages of RCF over its predecessor:
+
 \begin{itemize}
-    \item film lot,
-    \item irradiation geometry,
-    \item scanner model and settings,
-    \item analysis algorithm.
+    \item \textbf{Self-Developing Nature:} Because the radiochromic process relies on direct solid-state polymerization, it requires absolutely no chemical development, physical processing, or thermal treatment. This completely eliminates the need for darkrooms, complex processing machinery, and hazardous chemical waste disposal associated with radiographic films. It also removes the large dosimetric uncertainties intrinsic to temperature, chemical concentration, and agitation variations in wet chemical processing.
+    \item \textbf{Tissue Equivalency:} Radiographic films possess a high effective atomic number ($Z_{eff} \approx 40-45$) due to the heavy silver halides, leading to substantial over-responses at low photon energies via the photoelectric effect. Conversely, radiochromic films are composed primarily of organic molecules containing hydrogen, carbon, and oxygen. Consequently, their effective atomic number ($Z_{eff} \approx 6.8$ to $7.5$) is remarkably close to that of water and human tissue.
+    \item \textbf{Insensitivity to Visible Light:} While radiographic films are extremely sensitive to visible light and must be handled under strict darkroom conditions, most modern radiochromic films are largely insensitive to room light (incandescent light). They can be comfortably handled and prepared in normal ambient lighting, though prolonged exposure to direct sunlight or strong ultraviolet (UV) fluorescent sources should be avoided to prevent background photo-polymerization.
+    \item \textbf{Water Resistance:} Many radiochromic film models (such as the EBT3) feature protective polyester laminations that restrict water ingress into the active layer. This allows the films to be fully immersed in water phantoms for direct absolute or relative depth-dose measurements, provided the cut edges are adequately sealed.
+    \item \textbf{High Spatial Resolution:} RCF provides excellent spatial resolution limited only by the size of the microcrystalline grains (in the micrometer range) and the resolution capability of the readout scanner, making it exceptionally reliable for high-gradient stereotactic fields and micro-dosimetry.
 \end{itemize}
 
-Important scanner effects include orientation dependence and the lateral response artifact (LRA). LRA appears as position-dependent scanner response along the lamp axis and can bias dose if calibration regions are not centered or corrected \cite{lewis2015lateral}. Hence, protocol-driven scanning is essential: warm-up scans, fixed orientation, centered placement, repeated scans (first discarded), and identical acquisition settings for calibration and measurement \cite{mendez2021radiochromic,radiochromic_tutorials,papaconstadopoulos2014protocol}.
+\section{Available RCF Models and Dosimetric Characteristics}
 
-\subsection{Calibration Theory and Dose Conversion}
-\subsubsection{Need for Lot-Specific Calibration}
-Radiochromic film sensitivity varies by manufacturing lot and changes slowly with storage conditions (time, temperature, humidity). Therefore, calibration must be lot-specific and repeated periodically. Calibration doses must cover the complete clinical dose range to avoid extrapolation error \cite{mendez2021radiochromic,devic2016aapm}.
-
-\subsubsection{Sensitometric Relationship}
-Calibration establishes a mapping
-\begin{equation}
-    D = f(PV_R, PV_G, PV_B) \quad \text{or} \quad D=f(\mathrm{netOD}),
-\end{equation}
-where $D$ is absorbed dose. Modern multichannel methods use all RGB channels to separate dose-dependent signal from dose-independent perturbations (film thickness variation, scanner nonuniformity). Radiochromic.com reports use multigaussian/channel-based modeling and spline sensitometric fitting with optional lateral correction \cite{mendez2018multigaussian,mendez2021radiochromic}.
-
-\subsubsection{Practical Calibration Sequence}
-The recommended sequence is:
-\begin{enumerate}
-    \item Cut one sheet into multiple strips while preserving orientation marks.
-    \item Irradiate strips to known reference doses, including one unexposed strip (0 Gy).
-    \item Choose dose points from low dose to about 120\% of maximum expected clinical dose.
-    \item Scan strips together at the scan center with fixed geometry.
-    \item Assign ROIs with homogeneous dose and fit calibration model.
-\end{enumerate}
-
-Uncertainty in reference dose (usually from ion chamber traceability) propagates directly into film dose uncertainty; therefore, careful reference dosimetry is mandatory.
-
-\subsection{Determination of Unknown Dose}
-After calibration, the unknown irradiated film is scanned under the same protocol. Pixel values are converted to dose point-by-point through the fitted calibration function. If needed, inter-scan correction and dose-rescaling options are applied with central unexposed/known-dose reference ROIs \cite{radiochromic_tutorials}.
-
-For any ROI, the mean absorbed dose is
-\begin{equation}
-    \bar{D}=\frac{1}{N}\sum_{i=1}^{N} D_i,
-\end{equation}
-and ROI standard deviation estimates local heterogeneity plus noise:
-\begin{equation}
-    \sigma_D = \sqrt{\frac{1}{N-1}\sum_{i=1}^{N}(D_i-\bar{D})^2}.
-\end{equation}
-
-\subsection{Spoke (Starshot) Test: Geometric QA Principle}
-The spoke or starshot film test evaluates radiation isocenter size and stability. Multiple narrow beams are delivered at different gantry/collimator angles to produce a star pattern on film. Ideally, all beam axes intersect at a common point; deviations indicate mechanical/radiation misalignment.
-
-From analyzed spoke lines, the software estimates:
+Since the early 1990s, numerous models of radiochromic films have been developed and commercialized, predominantly under the GAFchromic\textsuperscript{TM} brand (Ashland Inc.). These models are tailored for different dose ranges and applications.
 \begin{itemize}
-    \item radiation isocenter coordinates,
-    \item isocenter radius (or diameter),
-    \item displacement relative to fiducial/laser marker.
+    \item \textbf{High Dose Films:} Early models like MD-55 and HD-810 were designed for high-dose ranges (10 Gy to 1000 Gy) used in industrial applications, blood irradiation, and brachytherapy.
+    \item \textbf{External Beam Therapy (EBT) Films:} To match the required sensitivity for standard clinical external beam radiotherapy (cGy to Gy range), the EBT series was introduced. 
+    \item \textbf{GAFchromic EBT2 and EBT3:} EBT2 included a yellow dye in the active layer to reduce UV/visible light sensitivity and incorporated a marker dye to allow for active layer thickness corrections. EBT3 maintained the exact same active layer composition but introduced a symmetrical construction (matte polyester laminates on both sides to eliminate orientation dependence and Newton's rings artifacts during scanning).
+    \item \textbf{EBT-XD:} Specifically engineered for the dose distributions of SRS and SBRT, the EBT-XD film offers optimal dose assessment for high dose deliveries (up to 40 Gy and beyond).
 \end{itemize}
 
-A smaller reconstructed isocenter radius indicates better geometric precision of treatment delivery, which is critical for IMRT/VMAT and stereotactic techniques.
+The dosimetric characteristics of radiochromic films determine their accuracy, reliability, and precision in clinical environments.
 
-\subsection{Field Congruence Test (Light vs Radiation Field)}
-Field congruence verifies whether the light field projected by the treatment unit coincides with the actual radiation field delivered to the film. In QA terms, this checks setup fidelity between optical positioning and dose delivery.
+\subsection{Energy and Linear-Energy Transfer (LET) Dependence}
+Because the chemical composition of the RCF active layer closely mimics human tissue and water ($Z_{eff} \approx 6.8$), it exhibits minimal energy dependence for megavoltage (MV) photon and electron beams. In ranges between 100 keV and 18 MeV, the dose response generally varies by less than a few percent. Even at lower kilovoltage energies (brachytherapy or orthovoltage), the energy dependence is considerably milder compared to radiographic film.
+However, radiochromic films do exhibit a Linear-Energy Transfer (LET) dependence. When irradiated by densely ionizing particles such as low-energy protons, alpha particles, or heavy carbon ions, the high local energy deposition along the track core rapidly saturates the local polymerization process. This phenomenon, often referred to as a "quenching effect," results in a decreased dosimetric efficiency and under-response of the film in the Bragg peak region of high-LET ion beams. Hence, rigorous LET-based corrections are necessary when utilizing RCF in hadron therapy dosimetry.
 
-Profiles across field edges are analyzed to locate radiation boundaries (often by 50\% dose level/FWHM for dose maps, or inflection-point approximation for raw images). Differences between light-field marks and radiation boundaries are reported as directional displacements on each semiaxis. Significant disagreement can cause geometric targeting errors and requires machine adjustment.
+\subsection{Dose-Rate Independence}
+A major prerequisite for modern relative dosimeters is the ability to handle the rapidly varying dose rates delivered by VMAT or Flattening Filter Free (FFF) beams. Experimental evidence confirms that the polymerization process in radiochromic films is widely insensitive to the instantaneous dose rate. Variations from conventionally delivered dose rates (e.g., 1 Gy/min) up to the extreme FLASH irradiation rates (e.g., thousands of Gy/s) have proven that the intrinsic RCF solid-state chemistry response remains unaffected by the rate of dose deposition. 
 
-\subsection{Patient-Specific QA with Film}
-For patient-specific QA, measured planar dose on film is compared with TPS-predicted planar dose for the same geometry and depth. The comparison includes visual overlays, profile analysis, dose difference maps, and gamma analysis.
+\subsection{Post-Irradiation OD Growth}
+A hallmark characteristic of radiochromic film involves the temporal dependency of its observable response. Unlike an instantaneous process, the chain-growth polymerization initiated by radiation does not cease the moment the beam is turned off. Instead, the polymer chains continue to propagate within the crystalline lattice, causing the film to progressively darken over time.
+This post-irradiation optical density (OD) growth operates roughly logarithmically with respect to time after the irradiation ceases. The rate of growth is initially rapid within the first 1 to 2 hours, before gradually plateauing. Although the change in OD after 24 hours is exceptionally slow ($<1\%$ over the next few days), it conceptually never fully stops. Therefore, an essential dosimetric protocol is to ensure strict timing consistency: both the calibration films and the patient-specific measurement films MUST be read out (scanned) at the exact same delay following their respective irradiations (typically standardized to 24 hours). 
 
-The 2D gamma index combines dose-difference and distance-to-agreement criteria:
+\section{Readout Systems and Data Acquisition Procedures}
+
+The fundamental signal in radiochromic film dosimetry is extracted via optical transmission—specifically, measuring the amount of light absorbed by the colored polymer chains. The data acquisition process requires converting the film darkness into an Optical Density (OD), mathematically defined as:
 \begin{equation}
-\gamma(\mathbf{r})=\min_{\mathbf{r}_r}\sqrt{\left(\frac{\Delta D(\mathbf{r},\mathbf{r}_r)}{\Delta D_{\mathrm{crit}}}\right)^2+\left(\frac{\Delta r(\mathbf{r},\mathbf{r}_r)}{\Delta r_{\mathrm{crit}}}\right)^2 }.
+    OD = \log_{10} \left( \frac{I_0}{I} \right)
 \end{equation}
-Points with $\gamma \leq 1$ satisfy the acceptance criterion. Common clinical criteria are 3\%/3 mm or 2\%/2 mm with a low-dose threshold (e.g., 10\%). The gamma passing rate is
-\begin{equation}
-    \%\,\mathrm{GP}=\frac{N_{\gamma\leq1}}{N_{\mathrm{eval}}}\times100.
-\end{equation}
+where $I_0$ represents the initial intensity of the light source without the film, and $I$ represents the transmitted or reflected intensity after the light intercepts the film.
+Various devices can act as readout systems, including point-based He-Ne laser densitometers and spectrophotometers. However, for 2D map extraction, high-resolution Color Flatbed Scanners have universally become the golden standard.
 
-High passing rates indicate agreement between planned and delivered dose distributions; low passing rates prompt investigation of setup, TPS modeling, MLC delivery, output, or film workflow.
-
-\subsection{Sources of Uncertainty and Their Control}
-Major uncertainty components in film dosimetry are:
+\subsection{Color Flatbed Scanners}
+Commercial color flatbed document scanners, particularly models explicitly tested for dosimetric integrity such as the Epson Expression 10000XL, 11000XL, and 12000XL, are equipped with a linear array CCD (Charge-Coupled Device) combined with a broadband cold cathode fluorescent or LED light source. 
+When paired with multi-channel dosimetry paradigms (like EBT3 film), flatbed scanners digitize the image by splitting the broad light spectrum into Red, Green, and Blue (RGB) color channels.
 \begin{itemize}
-    \item \textbf{Film related:} lot variability, handling marks, orientation inconsistency, post-irradiation growth.
-    \item \textbf{Irradiation related:} setup reproducibility, phantom alignment, reference-dose uncertainty.
-    \item \textbf{Scanning related:} warm-up instability, LRA, inter-scan variability, film curling, nonuniform contact.
-    \item \textbf{Analysis related:} ROI selection bias, registration error, model fitting uncertainty, inappropriate extrapolation.
+    \item \textbf{Red Channel:} Matches the main absorbance peak of the di-acetylene polymer ($\sim$635 nm) and is highly sensitive for low-dose regions (0 to $\sim$10 Gy).
+    \item \textbf{Green Channel:} Is generally used to extend the dynamic range into higher doses (up to $\sim$40 Gy) as the red channel approaches saturation and becomes less responsive.
+    \item \textbf{Blue Channel:} Frequently utilized not for direct dosimetry, but to mathematically map and correct spatial non-uniformities caused by minor variations in the active layer thickness of the film across its surface.
 \end{itemize}
 
-Control measures include strict orientation marking, fixed post-irradiation scanning time (typically around 24 h), centralized ROIs, repeated scans with first-scan rejection, multichannel calibration, and consistent correction strategy \cite{devic2016aapm,mendez2021radiochromic,radiochromic_tutorials}.
+\subsection{Differences Between Reflection and Transmission Scanning}
 
-\subsection{Clinical Relevance}
-The combined use of calibration-based unknown dose determination, spoke test, field congruence test, and patient-specific QA provides both \textbf{dosimetric} and \textbf{geometric} verification in radiotherapy. Film dosimetry therefore acts as an end-to-end QA tool linking machine performance, treatment planning accuracy, and delivery fidelity, ultimately supporting safer and more accurate patient treatments.
+Scanning protocols utilized in color flatbed densitometry generally operate under two fundamentally structurally distinct methodologies: Transmission scanning and Reflection scanning. Proper understanding of establishing the correct imaging geometry is critical for acquiring faithful dosimetric maps \cite{niroomand2020}.
+
+\subsubsection{Transmission Scanning Mode}
+In transmission scanning, the scanner's primary physical setup relies on dual functionalities typically afforded by a Transparency Unit (TPU). 
+\begin{itemize}
+    \item \textbf{Mechanism:} The light source employed for scanning is situated in the upper lid of the scanner. As the scan progresses, light is transmitted directly downwards, traversing completely through the radiochromic film. The transmitted photons are subsequently captured by the CCD sensor array housed at the bottom scanning bed.
+    \item \textbf{Applications and Advantages:} Transmission scanning is the absolute preferred and standard mode for translucent media such as radiographic and most clinical radiochromic films (e.g., EBT2, EBT3). Because the optical path passes exactly once through the dosimeter, it rigorously obeys the Beer-Lambert law of absorption, allowing for the most direct, artifact-free calculation of the true transmission Optical Density. It inherently provides a vast dynamic range, superior signal-to-noise ratio, and greater overall dosimetric accuracy. 
+\end{itemize}
+
+\subsubsection{Reflection Scanning Mode}
+Conversely, reflection scanning utilizes an entirely different photon path.
+\begin{itemize}
+    \item \textbf{Mechanism:} In reflection mode, both the illumination light source and the CCD detector are located on the same side beneath the scanner glass bed. Light is emitted upwards, passes through the film, hits an opaque reflecting backing material (usually the white opaque document mat inside the scanner lid), and then is reflected back down. The light then passes through the film a second time before returning to the CCD sensor.
+    \item \textbf{Applications and Disadvantages:} For relative dosimetry with EBT films, reflection scanning brings significant inherent degradation. Since light transverses the active polymer layer twice, the system suffers from an accelerated early saturation of the signal, drastically reducing the effective dynamic range. Furthermore, reflection is wildly susceptible to optical disturbances, surface scattering on the protective polyester layers of the RCF, and minute air gaps between the film and scanner glass, collectively translating to high noise levels and compromised quantitative reliability. 
+    While reflection scanning is mandatory for older opaque film models that do not permit light transmission, it is strongly discouraged for modern EBT films used in precision radiotherapy procedures.
+\end{itemize}
+
+\section{Conclusion on Readout Optimization}
+By standardizing the timing of the readout stage—waiting consistently for the fast post-irradiation OD growth phase to stabilize (e.g., 24 hours)—and utilizing transmission mode with a multi-channel capable flatbed scanner, clinical medical physicists can extract highly accurate and intricately patterned planar dose distributions, confirming the geometric and dosimetric safety of highly modulated modern radiotherapy deliveries.

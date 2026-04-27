@@ -1,0 +1,216 @@
+Film Dosimetry
+Date of experiment: 08 January 2026
+Medical Physics Laboratory II
+Name:Souvik Das
+Roll No:241126007
+National Institute of Science Education and Research
+Jatani, Odisha, India
+Date of submission: April 20, 2026
+Contents
+1 Objective 1
+2 Apparatus 1
+3 Theory 1
+3.1 Fundamental Physical Principle . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2
+3.2 Scanner-Based Readout and Image Formation . . . . . . . . . . . . . . . . . . . . . . . . . 2
+3.3 Calibration Theory and Dose Conversion . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2
+3.3.1 Need for Lot-Specific Calibration . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2
+3.3.2 Sensitometric Relationship . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2
+3.3.3 Practical Calibration Sequence . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+3.4 Determination of Unknown Dose . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+3.5 Spoke (Starshot) Test: Geometric QA Principle . . . . . . . . . . . . . . . . . . . . . . . . 3
+3.6 Field Congruence Test (Light vs Radiation Field) . . . . . . . . . . . . . . . . . . . . . . . 3
+3.7 Patient-Specific QA with Film . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+3.8 Sources of Uncertainty and Their Control . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+3.9 Clinical Relevance . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+4 Observation 4
+5 Conclusion 4
+Film Dosimetry
+1 Objective
+To establish a reliable dosimetric calibration for GAFchromicEBT3 film by relating film response
+to known absorbed doses under reference irradiation conditions.
+To determine anunknown absorbed dosefrom irradiated film by converting scanner pixel values
+(or net optical density) into dose using the established calibration curve.
+To perform aspoke (starshot) testusing film for evaluation of radiation isocenter behavior and
+beam-axis convergence as part of machine quality assurance.
+To perform alight and radiation field congruence test(field coincidence test) to verify geo-
+metric agreement between optical field indicators and delivered radiation field.
+To carry outpatient-specific QAby comparing measured planar film dose with treatment plan-
+ning system (TPS) dose using profile comparison andγ-index analysis.
+To understand major sources of uncertainty in film dosimetry (scanner artifacts, film handling,
+post-irradiation growth, lot dependence, and setup reproducibility) and apply practical methods to
+reduce them.
+2 Apparatus
+GAFchromicEBT3 Film
+Teletherapy Unit (Linear Accelerator or Co-60)
+Flatbed Document Scanner (e.g., EPSON Expression 10000–13000XL / equivalent) with 48-bit
+RGB acquisition
+Scanner software with all automatic corrections disabled (color restoration, sharpening, dust re-
+moval, auto-exposure)
+Computer workstation with Radiochromic.com workflow and/or film analysis software (for calibra-
+tion, dose map generation, profiles, andγ-analysis)
+Uncompressed TIFF image format support for archival and analysis
+Water-equivalent slab phantom (solid water) for buildup and backscatter conditions
+Ionization chamber and electrometer (used for reference dose assignment during calibration irradi-
+ation)
+Phantom positioning accessories: ruler, laser alignment, spirit level, and setup marks
+Film handling tools: powder-free gloves, guillotine/cutter, non-metallic marker for orientation
+marks
+Film positioning frame to keep film centered and reproducibly oriented on scanner bed
+Transparent compression sheet (glass/PMMA, 2–4 mm) for flat contact during transmission scan-
+ning
+Fiducial markers (if required) for image registration between measured and planned dose planes
+QA phantoms/fixtures for spoke (starshot) and field congruence tests
+3 Theory
+Radiochromic film dosimetry is widely used in modern radiotherapy because it provides high spatial
+resolution, near water-equivalent response, broad dynamic range, and self-developing behavior without
+wet chemical processing [1, 2]. For small fields, steep dose gradients, MLC-modulated deliveries, and
+geometric QA tests, film remains one of the most informative 2D dosimeters. The practical workflow
+used in this experiment follows recommended procedures from Radiochromic.com tutorials, peer-reviewed
+protocol papers, and the EBT3 product guidance published by Ashland [3, 4, 5, 6].
+Page 1
+Film Dosimetry
+3.1 Fundamental Physical Principle
+GAFchromicEBT3 film consists of an active microcrystalline layer between polyester substrates.
+Ionizing radiation initiates polymerization of sensitive monomers in the active layer, creating color cen-
+ters that increase optical absorbance. The color change is dose-dependent and can be digitized by a
+flatbed scanner. Since EBT3 is nearly tissue equivalent, perturbation of the radiation field is small for
+megavoltage dosimetry [1].
+For EBT3 specifically, the manufacturer describes the film as suitable for fast and highly accurate
+radiotherapy measurements with high-resolution images, while protocol studies recommend standardized
+reflection scanning and consistent film handling to reduce readout error [6, 5].
+The optical density (OD) of a scanned film is
+OD= log10I0
+I
+,(1)
+whereI 0is transmitted light intensity through an unirradiated reference andIis transmitted intensity
+through the exposed film. In practice, net optical density is used:
+netOD = log10PVunexp
+PVexp
+,(2)
+wherePV unexp andPV expare scanner pixel values under fixed scanning conditions.
+3.2 Scanner-Based Readout and Image Formation
+Film response is not measured directly in Gy; instead, scanner pixel values in red, green, and blue
+channels are acquired (typically 48-bit RGB, 16-bit/channel). Accurate dosimetry therefore depends on
+a stable dosimetric chain:
+film lot,
+irradiation geometry,
+scanner model and settings,
+analysis algorithm.
+Important scanner effects include orientation dependence and the lateral response artifact (LRA).
+LRA appears as position-dependent scanner response along the lamp axis and can bias dose if calibration
+regions are not centered or corrected [7]. Hence, protocol-driven scanning is essential: warm-up scans,
+fixed orientation, centered placement, repeated scans (first discarded), and identical acquisition settings
+for calibration and measurement [3, 4, 5].
+3.3 Calibration Theory and Dose Conversion
+3.3.1 Need for Lot-Specific Calibration
+Radiochromic film sensitivity varies by manufacturing lot and changes slowly with storage conditions
+(time, temperature, humidity). Therefore, calibration must be lot-specific and repeated periodically.
+Calibration doses must cover the complete clinical dose range to avoid extrapolation error [3, 1].
+3.3.2 Sensitometric Relationship
+Calibration establishes a mapping
+D=f(PV R, PV G, PV B) orD=f(netOD),(3)
+whereDis absorbed dose. Modern multichannel methods use all RGB channels to separate dose-
+dependent signal from dose-independent perturbations (film thickness variation, scanner nonuniformity).
+Radiochromic.com reports use multigaussian/channel-based modeling and spline sensitometric fitting
+with optional lateral correction [8, 3].
+Page 2
+Film Dosimetry
+3.3.3 Practical Calibration Sequence
+The recommended sequence is:
+1. Cut one sheet into multiple strips while preserving orientation marks.
+2. Irradiate strips to known reference doses, including one unexposed strip (0 Gy).
+3. Choose dose points from low dose to about 120% of maximum expected clinical dose.
+4. Scan strips together at the scan center with fixed geometry.
+5. Assign ROIs with homogeneous dose and fit calibration model.
+Uncertainty in reference dose (usually from ion chamber traceability) propagates directly into film
+dose uncertainty; therefore, careful reference dosimetry is mandatory.
+3.4 Determination of Unknown Dose
+After calibration, the unknown irradiated film is scanned under the same protocol. Pixel values are
+converted to dose point-by-point through the fitted calibration function. If needed, inter-scan correction
+and dose-rescaling options are applied with central unexposed/known-dose reference ROIs [4].
+For any ROI, the mean absorbed dose is
+¯D=1
+NNX
+i=1Di,(4)
+and ROI standard deviation estimates local heterogeneity plus noise:
+σD=vuut1
+N−1NX
+i=1(Di−¯D)2.(5)
+3.5 Spoke (Starshot) Test: Geometric QA Principle
+The spoke or starshot film test evaluates radiation isocenter size and stability. Multiple narrow beams
+are delivered at different gantry/collimator angles to produce a star pattern on film. Ideally, all beam
+axes intersect at a common point; deviations indicate mechanical/radiation misalignment.
+From analyzed spoke lines, the software estimates:
+radiation isocenter coordinates,
+isocenter radius (or diameter),
+displacement relative to fiducial/laser marker.
+A smaller reconstructed isocenter radius indicates better geometric precision of treatment delivery,
+which is critical for IMRT/VMAT and stereotactic techniques.
+3.6 Field Congruence Test (Light vs Radiation Field)
+Field congruence verifies whether the light field projected by the treatment unit coincides with the
+actual radiation field delivered to the film. In QA terms, this checks setup fidelity between optical
+positioning and dose delivery.
+Profiles across field edges are analyzed to locate radiation boundaries (often by 50% dose level/FWHM
+for dose maps, or inflection-point approximation for raw images). Differences between light-field marks
+and radiation boundaries are reported as directional displacements on each semiaxis. Significant dis-
+agreement can cause geometric targeting errors and requires machine adjustment.
+Page 3
+Film Dosimetry
+3.7 Patient-Specific QA with Film
+For patient-specific QA, measured planar dose on film is compared with TPS-predicted planar dose for
+the same geometry and depth. The comparison includes visual overlays, profile analysis, dose difference
+maps, and gamma analysis.
+The 2D gamma index combines dose-difference and distance-to-agreement criteria:
+γ(r) = min
+rrs∆D(r,r r)
+∆Dcrit2
++∆r(r,r r)
+∆rcrit2
+.(6)
+Points withγ≤1 satisfy the acceptance criterion. Common clinical criteria are 3%/3 mm or 2%/2 mm
+with a low-dose threshold (e.g., 10%). The gamma passing rate is
+% GP =Nγ≤1
+Neval×100.(7)
+High passing rates indicate agreement between planned and delivered dose distributions; low passing
+rates prompt investigation of setup, TPS modeling, MLC delivery, output, or film workflow.
+3.8 Sources of Uncertainty and Their Control
+Major uncertainty components in film dosimetry are:
+Film related:lot variability, handling marks, orientation inconsistency, post-irradiation growth.
+Irradiation related:setup reproducibility, phantom alignment, reference-dose uncertainty.
+Scanning related:warm-up instability, LRA, inter-scan variability, film curling, nonuniform con-
+tact.
+Analysis related:ROI selection bias, registration error, model fitting uncertainty, inappropriate
+extrapolation.
+Control measures include strict orientation marking, fixed post-irradiation scanning time (typically
+around 24 h), centralized ROIs, repeated scans with first-scan rejection, multichannel calibration, and
+consistent correction strategy [1, 3, 4].
+3.9 Clinical Relevance
+The combined use of calibration-based unknown dose determination, spoke test, field congruence test,
+and patient-specific QA provides bothdosimetricandgeometricverification in radiotherapy. Film
+dosimetry therefore acts as an end-to-end QA tool linking machine performance, treatment planning
+accuracy, and delivery fidelity, ultimately supporting safer and more accurate patient treatments.
+4 Observation
+5 Conclusion
+A comprehensive understanding of the governing physical principles and stringent Quality Assurance
+protocols ensures optimal clinical outcomes and fundamental radiation safety.
+References
+[1] S. Devicet al., “Aapm task group 235 report: Radiochromic film dosimetry,”Medical Physics, vol. 43,
+no. 10, pp. 5556–5584, 2016.
+[2] E. B. Podgorsak,Radiation Oncology Physics: A Handbook for Teachers and Students. International
+Atomic Energy Agency, 2005.
+[3] I. Mendez, P. Peterlin, R. Hudej, A. Strojnik, and B. Casar, “A protocol for accurate radiochromic
+film dosimetry using radiochromic.com,”Radiology and Oncology, vol. 55, no. 3, pp. 369–378, 2021.
+Page 4
+Film Dosimetry
+[4] Radiochromic.com, “Radiochromic.com tutorials.” https://radiochromic.com/tutorials/tutorials.php,
+2026. Accessed: 2026-04-12.
+[5] P. Papaconstadopoulos, G. Hegyi, J. Seuntjens, and S. Devic, “A protocol for ebt3 radiochromic film
+dosimetry using reflection scanning,”Medical Physics, vol. 41, no. 12, 2014.
+[6] Ashland, “Gafchromicebt3 radiotherapy films.” https://www.ashland.com/products/
+gafchromic-ebt3-film, 2026. Accessed: 2026-04-20.
+[7] D. Lewis and M. F. Chan, “Technical note: On gafchromic ebt-xd film and the lateral response
+artifact,”Medical Physics, vol. 42, no. 1, pp. 643–649, 2015.
+[8] I. Mendez, R. Hudej, P. Peterlin, A. Strojnik, and B. Casar, “Multigaussian method: A new ap-
+proach to mitigating spatial heterogeneities with multichannel radiochromic film dosimetry,”Physics
+in Medicine & Biology, vol. 63, no. 17, p. 175016, 2018.
+Page 5

@@ -1,0 +1,13 @@
+
+This experiment provided a comprehensive familiarization with the operations and workflow of a clinical Treatment Planning System (TPS). Through practical, hands-on experience, the fundamental processes of radiation therapy planning were successfully executed, including the importation of patient CT datasets, delineation of target volumes (PTVs) and organs at risk (OARs), beam configuration, dose calculation, and the final quantitative evaluation of the treatment plans.
+
+Specifically, the formulation and optimization of an Intensity Modulated Radiation Therapy (IMRT) plan using a Simultaneous Integrated Boost (SIB) technique for a Head and Neck case was evaluated. The targets, PTV70 and PTV63, were prescribed 70 Gy and 63 Gy respectively over 30 fractions. By comparing 5-beam, 7-beam, and 9-beam configurations, significant insights into the dosimetric trade-offs of beam multiplicity were gained. 
+
+Quantitative evaluation using Dose Volume Histograms (DVHs) and QUANTEC guidelines verified that all configurations successfully maintained doses to critical structures (spinal cord, brainstem, parotid glands, optic nerves/chiasm, and larynx) within safe clinical tolerances while achieving acceptable target coverage ($D_{98}$). The comparative analysis highlighted that simply increasing the number of beams does not unilaterally improve a plan:
+\begin{itemize}
+    \item The \textbf{7-beam configuration} provided the optimal overarching balance, yielding excellent target coverage while effectively suppressing the maximum dose to the spinal cord.
+    \item The \textbf{5-beam configuration} resulted in the most superior sparing of the parotid glands, making it a viable alternative if prioritizing the reduction of xerostomia risks over other factors.
+    \item The \textbf{9-beam configuration} failed to offer a meaningful clinical advantage, instead leading to an increased low-dose wash to surrounding healthy tissues and slightly higher spinal cord doses.
+\end{itemize}
+
+Ultimately, this exercise distinctly highlighted the intricate optimization challenges inherent to modern radiotherapy. It demonstrated the paramount importance of critical plan evaluation and justified compromise to deliver maximum therapeutic effect while assuring patient safety.

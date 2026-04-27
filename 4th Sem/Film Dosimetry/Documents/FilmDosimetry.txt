@@ -1,0 +1,393 @@
+17.3 Semiconductor Radiation Dosimetry 801
+pair in a semiconductor is only a few electronvolts, while energy to create an ion pair
+in air is an order of magnitude larger at ∼34 eV
+Advantages of semiconductor dosimeters over air-ﬁlled ionization chambers are
+as follows: (i) higher sensitivity per unit cavity volume, (ii) higher spatial resolution,
+(iii) higher mechanical stability and strength. Since diamond dosimeter has several
+advantages over silicon diode dosimeter, one can conclude that in many respectsdiamond dosimeter offers several advantages of ionization chamber; however, it is
+not ready yet for absolute dosimetry.
+17.4 Film Radiation Dosimetry
+Medical ﬁlm radiation dosimetry falls into the group of relative radiation dosimetry
+techniques and comprises two major ﬁlm categories: (i) radiographic ﬁlm and (ii)radiochromic ﬁlm.
+Both types of dosimetric ﬁlm serve the same purpose and give similar results;
+however, the use of radiographic ﬁlm in dosimetry is waning while radiochromic ﬁlm
+is gaining in importance. The main reason for this shift is the signiﬁcant difference
+in ﬁlm processing required by the two ﬁlm types; processing of radiographic ﬁlmrequires access to sophisticated developers and ﬁxers, while radiochromic ﬁlm is
+self-processing and requires no additional ﬁlm processing equipment.
+In the past ﬁlm developers were readily available in clinics and hospitals that were
+using radiographic ﬁlms for diagnostic procedures and they could also be used for
+radiation ﬁlm dosimetry. During the past decade, however, the use of analog radi-
+ographic ﬁlm for diagnostic imaging has been discontinued in the developed worldin favor of digital computerized radiographic techniques. This shift caused the dis-
+appearance of ﬁlm developers from hospitals and clinics and provided a strong eco-
+nomic incentive for the use of radiochromic ﬁlm for medical ﬁlm radiation dosimetry.
+17.4.1 Absorbance and Optical Density
+Film-based radiation dosimetry depends strongly on transmission of light throughprocessed ﬁlm, be it radiographic or radiochromic. The transmission is affected by
+ﬁlm opacity that can be measured in terms of optical density ODwith devices, such as
+ﬁlm densitometer, laser densitometer, automatic ﬁlm scanner, and spectrophotome-
+ter. Similarly to absorbance A
+λof a Fricke solution, discussed in Sect. 16.2.9 and
+measured with a spectrophotometer, optical density ODof ﬁlm depends on absorbed
+dose and is deﬁned as
+OD=logIo
+Ior I=Io10−OD=Ioe−(2.302)OD, (17.20)
+802 17 Relative Radiation Dosimetry
+where
+I0is the initial light intensity emitted from a light source, such as a light emitting
+diode (LED), laser, or white light ﬂuorescent source.
+I is the light intensity transmitted through ﬁlm and measured by a sensor such
+as a photodiode, photomultiplier tube (PMT), or linear charge coupled device
+(CCD).
+For example, if a processed ﬁlm transmits 10% of the incident light beam, then
+I/I0=0.1o r I0/I=10, and the optical density of the ﬁlm is OD=log 10 =1.
+Similarly, an optical ﬁlm density OD=2 corresponds to ﬁlm transmission fraction
+I/I0=exp(−2.302×2)=0.01.
+In clinical practice, optical densities range from less than 1 to over 3. The advan-
+tage of the logarithmic deﬁnition of optical density given in ( 17.20 ) is that it makes
+optical densities additive. Optical density of two layers of ﬁlm or two exposures of
+the same ﬁlm are additive and the total optical density is the sum of two densities(OD
+tot=OD 1+OD 2). A densitometer that has been calibrated by a standard strip
+of ﬁlm containing regions of known optical density can provide a direct reading of
+optical density.
+A graph of optical density ODagainst absorbed dose of a typical dosimetric ﬁlm
+is referred to as the sensitometric curve and is also called characteristic curve of ﬁlmor the H&D sensitometric curve in honor of Ferdinand Hurter and Vero C. Drifﬁeld
+who were the ﬁrst to investigate the relationship. A typical H&D characteristic curve
+for a dosimetric ﬁlm is shown in Fig. 17.17 . The curve has four regions:
+(i) Base + fog at very low doses.
+(ii) Toe in transition region between base and the linear region.
+(iii) Linear region at intermediate doses.
+(iv) Shoulder in the transition from the linear region to saturation.
+(v) Saturation at high doses.
+Note : The dosimetric quantity of interest is usually the net optical density (net OD)
+orOD
+netthat is deﬁned as the measured optical density OD meas less the base optical
+density OD base,o r
+OD net=OD meas−OD base. (17.21)
+General characteristics of radiographic and radiochromic ﬁlm dosimetry:
+1. While ﬁlm is not useful for absolute dosimetry, ﬁlm dosimetry possesses sev-
+eral attributes that make it very useful and practical in special areas of radiation
+dosimetry as well as in acceptance testing, commissioning, and quality assurance
+of high technology equipment used in radiation medicine.
+2. Film has an excellent spatial resolution and is often used to measure 2D dose
+distribution maps, especially in regions of high dose gradient and regions of
+dynamic dose.
+3. Film is especially useful for gaining qualitative data that provide fast general
+information on radiation dose distribution.
+17.4 Film Radiation Dosimetry 803
+Fig. 17.17 A typical H&D characteristic curve for a dosimetric ﬁlm showing ﬁve regions: (i) base
++ fog, (ii) toe, (iii) linear region, (iv) shoulder, and (v) saturation
+17.4.2 Radiographic Film Dosimetry
+Radiographic ﬁlm has been in use for x-ray detection since Wilhelm K. Röntgen
+discovered x-rays in 1895. The discovery of x-rays was translated into hospitals and
+clinics around the world for medical purposes within a few weeks of their discovery
+and x-ray images produced with steady improvements in ﬁlm technology have formed
+the backbone of radiology for more than a century.
+Composition of Radiographic Film
+Modern radiographic ﬁlm is typically about 0.25 mm thick and comprises several
+layers, as shown in Fig. 17.18 (a). The radiographic ﬁlm layers and their functions
+are as follows:
+(i) Film base – made of polyester resin that provides support for active layers of
+ﬁlm.
+(ii) Adhesive layer – binds emulsion to ﬁlm base.
+(iii) Emulsion – active layer of ﬁlm; comprises gelatin and uniformly distributed
+small silver halide crystals.
+(iv) Protective coating – protects the active ﬁlm layer.
+Note : Layers listed above form single sided ﬁlms; to increase sensitivity ﬁlms are
+double sided containing the same layers on each side of the ﬁlm base (in same order
+starting from the ﬁlm base).
+804 17 Relative Radiation Dosimetry
+Fig. 17.18 Transverse section through two typical ﬁlm types used in ﬁlm radiation dosimetry:
+aDouble-sided radiographic ﬁlm with silver halide based active layer and bSingle sided EBT2
+radiochromic ﬁlm with monomeric di-acetylene based active layer
+Emulsion forms the active ﬁlm layer of which silver halide crystals ( ∼95% silver
+bromide AgBr and ∼5% silver iodide AgI) form the most important component.
+The silver halide crystals (also called grains) are ionic crystals composed of silver
+ions Ag+and halogen ions Br−and I−. The microscopic crystals, arranged into a
+lattice structure, are not perfect nor are they chemically pure. Rather, they containimperfections called sensitivity specks that are either naturally occurring (edge dis-
+locations) or are introduced into the crystals through doping (impurities) to increase
+sensitivity. It is estimated that each crystal grain contains about 10
+10atoms and is
+about 1 to 2 µm in diameter.
+Another important imperfection in the AgBr crystal is the so-called Frenkel defect
+that is characterized by silver ions Ag+located interstitially in the lattice with their
+corresponding negatively charged silver ion vacancies. The interstitial Ag+ion is
+extremely mobile through the Ag+Br−ionic lattice and serves as the basis for forming
+the latent image during the exposure of ﬁlm to visible light or ionizing radiation.
+The photographic effect as well as the utility of radiographic ﬁlm in radiation
+dosimetry arises from the lattice defects that occur in imperfect AgBr crystals. These
+lattice defects serve as shallow traps for free electrons that are located in the energyband below the conduction band in the energy gap separating the conduction band
+from the valence band (see Sect. 17.2.1 ).
+Formation of Latent Image in Radiographic Film
+During ﬁlm exposure, ionizing radiation releases energetic free electrons (photoelec-
+trons, Compton electrons, etc.) in the ﬁlm and these electrons through ionization of
+atoms and ions of the ﬁlm components release free electrons into the conduction
+band of the AgBr crystals. Some of the free electrons, while migrating through silverhalide crystals get close to a sensitivity speck and may get trapped into a shallow
+electron trap.
+17.4 Film Radiation Dosimetry 805
+An electron trapped in an electron trap (sensitivity speck) attracts a nearby inter-
+stitial silver ion Ag+from a Frenkel defect and reduces it to neutral Ag0atom
+(Ag++e−→Ag0). If the reduction process is repeated at least another 3 times on
+a given crystal, a latent image that can be made visible through ﬁlm processing is
+formed. The extent to which a given area of ﬁlm is affected by ionizing radiation
+depends on the number of particles (photons or charged particles) incident upon thatarea.
+After exposure to ionizing radiation, radiographic ﬁlm contains a latent image
+that is not visible before the ﬁlm undergoes appropriate chemical processing thatconsists of two steps: (i) ﬁlm development and (ii) ﬁlm ﬁxation.
+Radiographic Film Processing
+During development the silver bromide crystals that have been sufﬁciently affected
+during exposure to radiation (typically 4 hits or more) are converted into opaque black
+silver specks with all Ag
++ions reduced to Ag0atoms and all Br−ions removed. The
+crystals that have not been affected during exposure remain in their original state inthe emulsion. A chemical suitable as ﬁlm developer must, on the one hand, be able
+to donate rapidly electrons to crystals containing a latent image and, on the other
+hand, be much slower in donating electrons to crystals that do not contain a latentimage. The duration of the development process must be carefully timed to prevent
+eventual complete reduction of all silver ions to atomic silver irrespective of whether
+or not they contain latent image.
+During ﬁxation the unaffected AgBr crystals in the emulsion are dissolved leaving
+behind the record of radiation exposure in the form of a corresponding pattern of
+opaque black silver specks distributed over the gelatin. The metallic silver is unaf-fected by the ﬁxer but causes darkening of the developed ﬁlm and the degree of
+darkening depends on radiation exposure of the ﬁlm that can be measured with a
+ﬁlm densitometer.
+17.4.3 General Characteristics of Radiographic Film
+Radiographic ﬁlm has a long and illustrious history dating back to the discovery ofx-rays in 1895. Since then it was used both in the clinic for imaging as well as in
+radiation dosimetry as detector of ionizing radiation.
+Dosimetry based on radiographic ﬁlm consists of the following four steps:
+1. Film manufacture – crystals of silver halide (mainly AgBr) of appropriate size
+and containing a desirable concentration of lattice defects (sensitivity specks) are
+suspended uniformly in gelatin to produce ﬁlm emulsion. The emulsion is boundonto polyester ﬁm base and coated with a protective layer.
+2. Exposure to ionizing radiation (photons, electrons, protons) to create a latent
+image in the active ﬁlm layer.
+3. Radiographic ﬁlm processing consists of three stages: (a) Development of exposed
+ﬁlm to convert the latent image to atomic silver Ag
+0; (b) Fixation of developed
+ﬁlm to dissolve and remove the AgBr remaining on the developed ﬁlm and to
+806 17 Relative Radiation Dosimetry
+harden the gelatin; (c) Washing the ﬁxated ﬁlm in pure water and air-drying the
+ﬁxated ﬁlm.
+4. Measurement of optical ﬁlm density to determine absorbed dose based on mea-
+surement of the ﬁlm H&D sensitometric curve.
+When used in radiation dosimetry, radiographic ﬁlm is characterized by several
+advantages and disadvantages in comparison with other dosimetric techniques. The
+signiﬁcant advantages of radiographic ﬁlm are:
+•Very high spatial resolution limited by the physical size of the light source of the
+densitometer rather than by the ﬁlm itself.
+•Permanent storage of processed image and dosimetric information allowing mul-
+tiple non-destructive readouts.
+•Convenient physical shape of the dosimeter cavity (small thickness and arbitrarily
+large area) and ﬂexibility allowing easy use in radiation ﬁeld mapping and general
+quality assurance measurements of photon and electron beams.
+•Until recently, widespread commercial availability of a variety of radiographic ﬁlm
+types and shapes. The advent of digital radiography has signiﬁcantly curtailed the
+manufacturing of radiographic ﬁlms and severely limited access to radiographicﬁlm developers, so that this feature can no longer be considered an advantage of
+radiographic ﬁlms.
+Some of the notable disadvantages of radiographic ﬁlm are:
+•Radiographic ﬁlm can only be used as a relative dosimetry technique, since the
+response of a radiographic ﬁlm dosimetry system must be calibrated in a known
+radiation ﬁeld before use for measurement of absorbed dose.
+•Radiographic ﬁlm is not tissue equivalent because it contains silver bromide that
+increases its effective atomic number above that of water and tissue.
+•Radiographic ﬁlm exhibits strong energy dependence of ﬁlm response for photons
+with energy below ∼100 keV as a result of the high atomic number of silver
+(Z=47)and predominance of photoelectric effect at low photon energies (see
+Sect. 8.2.3, Fig. 8.5). For example, the relative response per unit of x-ray exposure
+normalized to cobalt-60 γ-rays for a typical radiographic ﬁlm is about 20 times
+higher for 50 keV x-rays and the ratio of mass energy absorption coefﬁcients fortypical radiographic ﬁlm emulsion to water at 50 keV x-rays is ∼100 to 1.
+•Radiographic ﬁlm processing involves wet chemical development and ﬁxation
+that both require strong quality control and meticulous equipment maintenance toobtain results that are in line with standards of radiation dosimetry.
+•Radiographic ﬁlm is sensitive to visible light, so any work involving open ﬁlm
+must be carried out in a dark room.
+17.4 Film Radiation Dosimetry 807
+17.4.4 Radiochromic Film Dosimetry
+Radiochromic dosimetry is a chemical dosimetry technique based on radiochromic
+reactions deﬁned as reactions that are: (i) triggered by ionizing radiation and (ii) resultin a color change in the radiation sensitive medium. The radiochromic dosimetry has
+been developed during 1960s for high dose measurements in the kGy range for
+industrial applications of ionizing radiation.
+As the sensitivity of radiochromic techniques was improved to the level of med-
+ical dosimetry, it became apparent that radiochromic dosimeters could be fashioned
+into the format used for radiographic ﬁlm dosimetry. The goal was to developradiochromic ﬁlm systems with characteristics that match, or improve upon, those
+attributed to radiographic ﬁlm. However, unlike radiographic ﬁlms that are based on
+silver halides, radiochromic ﬁlms would be based on radiochromic reactions produc-
+ing a color change in the irradiated detector that is proportional to the dose absorbed in
+the detector. Hence, measured color change in radiochromic ﬁlm exposed to ionizingradiation would be used for relative radiation dosimetry.
+Radiochromic Film Based on Polymerization of Di-Acetylene
+In the past, many organic materials and several chemical processes were used in
+radiochromic radiation detectors; however, none of these techniques were sensitiveenough for medical applications. This changed during 1980s with the development
+of a new radiochromic detector in the format of radiographic ﬁlm. The active radia-
+tion sensitive medium of the new radiochromic ﬁlm is based on di-acetylene (C
+4H2),
+a highly unsaturated hydrocarbon monomer that contains three single bonds and
+two triple bonds (H−C≡C−C≡C−H). The ﬁlm consists of thin microcrys-
+talline monomeric di-acetylene emulsion coated on a ﬂexible polyester ﬁlm base. Aschematic diagram of a typical radiochromic ﬁlm is given in Fig. 17.18 b for compari-
+son with a typical radiographic ﬁlm shown in Fig. 17.18 a. Pioneers in the development
+of medical radiochromic ﬁlm dosimetry are William McLaughlin, David F. Lewis,and Christopher G. Soares.
+The radiochromic ﬁlm is translucent before irradiation. Under exposure to ioniz-
+ing radiation the di-acetylene monomers undergo progressive chain-growth photo-polymerization. This results in formation of colored polymer chains that grow in
+length and the ﬁlm turns to a shade of blue that becomes darker as the absorbed dose
+increases.
+According to the IUPAC (International Union of Pure and Applied Chemistry),
+polymerization is the process of converting a monomer or a mixture of monomers
+into a polymer and photo-polymerization is chain-growth polymerization initiated
+by visible light, ultraviolet light, or ionizing radiation.
+It is notable that no physical, chemical or thermal processing is required to develop
+or ﬁx the radiochromic ﬁlm image – radiochromic ﬁlm is self-developing; however,
+after exposure to ionizing radiation, polymerization slowly continues for about 24
+hours post-irradiation and then color stability sets in.
+Several companies are involved in production of radiochromic ﬁlms for various
+applications. The majority of these ﬁlms require doses that are much higher than
+808 17 Relative Radiation Dosimetry
+those used in clinical work and the ﬁlms are then used for commercial purpose such
+as food irradiation, medical equipment sterilization, and waste management. The
+best-known medical radiochromic ﬁlm is the GAFchromic EBT2 ﬁlm produced byInternational Specialty Products, Wayne, NJ, USA.
+Absorption Spectrum of Radiochromic Film
+The dosimetric signal in medical radiochromic ﬁlm dosimetry is obtained from the
+color change or ﬁlm darkening that is proportional to the dose absorbed in the ﬁlm
+active layer. The amount of light that is transmitted through (or absorbed in) theﬁlm during the readout procedure depends on the dose of ionizing radiation and the
+wavelength λof the light used in the readout device.
+Each type of radiochromic ﬁlm has its own absorbance spectrum and an example of
+such spectrum is given in Fig. 17.19 for the EBT2 radiochromic ﬁlm in the wavelength
+region from 350 nm to 800 nm. Two absorption curves are shown: one for unexposed
+ﬁlm and one for ﬁlm exposed to 200 cGy of cobalt-60 gamma rays. The curves showthree absorbance peaks: two dosimetric peaks (Peak 2 at 583 nm and Peak 3 at
+635 nm) and one broad non-dosimetric peak (labeled Peak 1) at about 420 nm. The
+non-dosimetric Peak 1 is attributed to the addition of yellow dye to the active ﬁlm
+layer for inhibition of ﬁlm sensitivity to visible and ultraviolet light.
+Measurement of the absorption spectrum of a given radiochromic ﬁlm type is
+important, since it allows optimization of the measured ﬁlm sensitivity during the
+ﬁlm analysis. Generally, the light source of the ﬁlm readout device is selected such
+that it matches as close as possible the absorption maximum of a dosimetry peak ofthe given radiochromic ﬁlm. For example, a helium-neon laser with emission of red
+light at 633 nm has been found a good match for the dosimetry peak at 635 nm of the
+EBT2 ﬁlm.
+Fig. 17.19 Absorbance spectrum (adapted from David F. Lewis, ISP Corporation) for
+GAFchromicTMEBT2 ﬁlm in the wavelength range from 350 nm to 800 nm for: (i) unexposed
+ﬁlm and (ii) ﬁlm exposed to 200 cGy of cobalt-60 gamma rays. Exposed ﬁlm clearly shows two
+radiation induced absorbance peaks (dosimetric peaks), peak 2 at 583 nm and peak 3 at 635 nm. Thenon-dosimetric absorbance peak at ∼420 nm (peak 1) is attributed to the addition of yellow dye into
+the active layer of the radiochromic ﬁlm. The yellow dye signiﬁcantly decreases the ﬁlm sensitivityto ambient ﬂuorescent light; however, the absorbance peak is not of much value for dosimetry
+17.4 Film Radiation Dosimetry 809
+Fig. 17.20 Typical example of an H&D sensitometric curve of EBT2 radiochromic ﬁlm. The plot
+“net OD” against dose would serve as a calibration curve in radiochromic ﬁlm dosimetry using the
+same radiochromic ﬁlm batch, same measuring equipment, and same radiation source
+Calibration of Radiochromic Film
+Since medical ﬁlm dosimetry is a relative dosimetry technique, it is imperative that the
+radiochromic ﬁlm technique be calibrated before use for measurement of unknown
+doses. The calibration procedure consists of the determination of the H&D sensito-
+metric relationship for the radiochromic ﬁlm and must encompass all components ofthe measuring system. Moreover, the calibration must be carried out on the speciﬁc
+radiation source that will be used for measuring unknown doses. The measured H&D
+calibration curve should encompass the dose region of future interest; extrapolationout of the calibration region is not acceptable.
+A typical H&D sensitometric calibration curve for EBT2 radiochromic ﬁlm is
+s h o w ni nF i g . 17.20 with a plot of net ODagainst absorbed dose. The plot would serve
+as the calibration curve for the speciﬁc ﬁlm batch, measuring equipment, and radia-
+tion source. The measured net ODof an unknown dose can be used in conjunction with
+the calibration curve to determine the actual dose delivered to the radiochromic ﬁlm.
+17.4.5 Comparison Between Radiographic and
+Radiochromic Radiation Dosimetry
+Radiographic ﬁlm has for over a century been used in medicine for clinical imaging
+as well as radiation dosimetry. Its use in both areas has been waning during the past
+decade as a result of the advent of digital radiography techniques in clinical x-rayimaging and advances made in radiochromic ﬁlm technology in terms of greater ﬁlm
+sensitivity and decreased cost for use in ﬁlm dosimetry. Clinical use of radiographic
+ﬁlms has essentially disappeared in the developed world in favor of digital imaging
+810 17 Relative Radiation Dosimetry
+T able 17.4 Comparison of characteristics of radiographic ﬁlm dosimetry and radiochromic ﬁlm
+dosimetry
+Characteristics Radiographic ﬁlm Radiochromic ﬁlm
+Radiation sensitive medium Silver halide AgBr (90%) +AgI (10%) Di-acetylene C 4H2monomer
+Radiation induced process Reduction Ag++e−→Ag0Polymerization of di-acetylene
+monomer into polymer
+Post-irradiation ﬁlm processing Dark room Film processing NO
+Darkroom required YES NO
+Film spatial resolution High High
+Water equivalence NO ∼YES
+Signal low-energy dependence Severe Slight
+Dose rate dependence NO NO
+Visible light sensitivity of
+unexposed ﬁlmYES NO
+Ultraviolet light sensitivity ofunexposed ﬁlm YES YES
+Allows direct water immersionduring irradiation NO YES
+techniques. This has caused the disappearance of darkrooms and well-maintained
+ﬁlm processors from hospitals and clinics and severely curtailed the availability ofradiographic ﬁlm dosimetry in radiology and radiotherapy departments.
+It is simply economically prohibitive to maintain a ﬁlm processor in a standard
+medical physics department just for occasional use in ﬁlm dosimetry, especiallyif another technique, such as radiochromic ﬁlm dosimetry that, in addition, fea-
+tures a few other advantages, requires no ﬁlm processing. Evidently, the signiﬁcant
+physical advantages of radiochromic ﬁlms over radiographic ﬁlms, combined witheconomic considerations, have given medical radiochromic ﬁlm dosimetry a clear
+advantage over radiographic ﬁlm dosimetry. Table 17.4 provides a comparison of
+various pertinent characteristics of traditional radiographic ﬁlm dosimetry and the
+novel polymeric radiochromic ﬁlm dosimetry.
+A brief comparison of several important dosimetric parameters for the two known
+ﬁlm radiation dosimetry techniques yields the following results:
+1.Effective atomic number Z
+eff: In contrast to radiographic ﬁlm that relies on dosi-
+metric signal produced in silver halides embedded in active ﬁlm layer, all medical
+radiochromic ﬁlms have effective atomic number Zeffclose to and slightly lower
+than that of water, since their radiation sensitive material is organic and contains
+mainly hydrogen and carbon. For example, Zeffof the EBT2 radiochromic ﬁlm
+is∼6.8 compared to ∼7.5 for water. This means that the active sensor medium
+has a mass collision stopping power similar to that of water and mass energy
+absorption coefﬁcient for photons of energy hvexceeding 100 keV also similar
+to that of water.
+17.4 Film Radiation Dosimetry 811
+2.W ater equivalency . Based on Zeffone may conclude that radiochromic ﬁlm is
+almost water equivalent and its response is essentially independent of energy for
+photons above 100 keV . For photon energies below 100 keV the situation is notas clear: for some radiochromic ﬁlms the response is actually up to 40% below
+that at 1 MeV and for other ﬁlms it is slightly above. However, the low energy
+response of radiochromic ﬁlms is far less pronounced than that of radiographicﬁlms where the over-response at low energies exceeds the response at 1 MeV by
+a factor of one order of magnitude or more.
+3.Dose rate dependence . Similarly to radiographic ﬁlm, radiochromic ﬁlms do not
+exhibit a dependence on dose rate.
+4.Environmental factors , such as ambient temperature and humidity during irradi-
+ation and readout, affect the radiochromic ﬁlm response and have to be strictlycontrolled for best results.
+5.Sensitivity to visible and ultraviolet photons . Radiochromic ﬁlm is notsensitive to
+photons above 300 nm but is affected by ultraviolet light. This means that exposureto incandescent lighting is ﬁne; however, ambient ﬂuorescent light and sunlight
+must be avoided so as not to trigger photo-polymerization with the ultraviolet
+light that would be of non-dosimetric origin.
+6.Post-irradiation processing . In contrast to radiographic ﬁlm, the radiochromic
+ﬁlm requires no post-irradiation processing, no chemicals, and no darkroom.Radiochromic ﬁlm is self-developing through the process of radiation-induced
+polymerization of di-acetylene monomers that starts within a fraction of a second
+after the start of irradiation and stabilizes within about 24 hours post-irradiation.
+7.Cutting and immersion in water . Radiochromic ﬁlm can be cut to desired shape
+at room temperature in ambient light in preparation for use in anthropomorphic
+phantoms. It can also be safely immersed in water.
+8.Polarization effects . New radiochromic ﬁlms exhibit ﬁlm orientation dependent
+polarization effects. Measured optical density may vary as the polarization plane
+of the analyzing light changes with ﬁlm orientation. The effect is most severewhen laser beam is used for readout. Film mounting convention on the readout
+device should be consistent with calibration procedure.
+17.4.6 Main Characteristics of Radiochromic Film
+Radiochromic radiation dosimetry is a relative chemical dosimetry technique that
+relies on radiation induced radiochromic reactions for measurement of absorbed
+dose. These reactions produce in the radiochromic ﬁlm (radiation dosimeter cavity)
+a color change that is proportional to the dose absorbed in the dosimeter and can bemeasured by determining the optical density of the radiochromic ﬁlm with a ﬁlm
+densitometer.
+Radiochromic ﬁlm dosimetry has been known for several decades but has only
+during the past two decades become a serious competitor to radiographic ﬁlm dosime-
+try, largely because of signiﬁcant improvements in radiochromic ﬁlm technology in
+terms of increased ﬁlm sensitivity, improved understanding of the chemistry behind
+812 17 Relative Radiation Dosimetry
+the radiochromic process, and decreased ﬁlm production cost. Radiochromic ﬁlm,
+similarly to radiographic ﬁlm (see Sect. 17.4.3 ), has several features of importance to
+radiation dosimetry, such as high spatial resolution, permanent storage of processedimage allowing multiple non-destructive readouts, and convenient physical shape
+and ﬂexibility of the dosimeter cavity. In addition as discussed in Sect. 17.4.5 ,
+radiochromic ﬁlm, in comparison with radiographic ﬁlm, offers several importantadvantages, such as better water equivalence, insensitivity to visible light, and self-
+development after exposure.
+17.5 Relative Radiation Dosimetry: Summary
+Radiation dosimetry systems comprising a radiation sensitive dosimeter (cavity) and
+a reader are divided into two major categories: absolute and relative. An absolutedosimetry system is deﬁned as a system whose response can be used to infer directly
+the dose absorbed in the dosimeter cavity without any need for calibration of the
+dosimeter signal in a known radiation ﬁeld. A relative dosimetry system, on the otherhand, is a system that requires calibration of its response in a known radiation ﬁeld.
+Three absolute dosimetry systems are known: calorimetric, chemical (Fricke), and
+ionometric and they were discussed in detail in Chap. 16. In contrast, a large variety of
+relative dosimetry systems are known ranging from very useful and practical, through
+mundane, all the way to impractical and of only academic interest. This chapter deals
+with relative dosimetry systems that are of practical interest to medical physics andare used in radiation medicine for calibration of high technology equipment used for
+diagnostic imaging or treatment of disease with ionizing radiation.
+Four categories of relative dosimetry are used in radiation medicine: ionographic,
+luminescence, semiconductor, and ﬁlm. Each of these broad categories is split into
+several subcategories and each of the subcategories can be classiﬁed as either and
+T able 17.5 Four categories of relative radiation dosimetry systems discussed in this chapter
+Category of dosimetry system Dosimeter Mode
+1. Relative Ionometric Dosimetry Parallel-plate ionization chamber A
+Thimble (cylindrical) ionization chamber A
+Area survey meter (ionization chamber) A
+Re-entrant well ionization chamber A
+2. Luminescence Dosimetry Thermoluminescence (TL) P
+Optically stimulated luminescence (OSL) P
+3. Semiconductor Dosimetry Diode (p-n junction) A
+Diamond dosimeter A
+4. Film Dosimetry Radiographic ﬁlm P
+Radiochromic ﬁlm P
+For each category the dosimeters discussed in this chapter as well as their mode of operation (active
+A or passive P) are also presented
