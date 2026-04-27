@@ -463,3 +463,36 @@ The core task of fluence optimization is to determine the set of bixel or spot w
 
 \subsubsection{Visualization}
 Visualization in \texttt{matRad} is primarily handled through its Graphical User Interface (GUI), which can be launched via the \texttt{matRadGUI} command. The GUI automatically detects the current state of the treatment plan in the workspace and displays relevant data, such as patient anatomy and beam geometry. Once the optimization process is complete, the calculated 3D dose distribution is visualized overlaid on the CT data. Users can interactively explore the plan through axial, sagittal, and coronal views, evaluate dose-volume histograms (DVHs), and analyze dose profiles (e.g., longitudinal profiles along the central beam axis) to assess plan quality.
+
+\subsection{Plan Evaluation Metrics}
+
+To quantitatively assess the quality of a generated treatment plan, specific standardized evaluation metrics are calculated from the Dose Volume Histogram (DVH) data. The two most fundamental metrics used to define plan quality in radiotherapy are the Homogeneity Index (HI) and the Conformity Index (CI).
+
+\subsubsection{Homogeneity Index (HI)}
+The Homogeneity Index evaluates the uniformity of the dose distribution within the target volume (PTV). A highly homogeneous plan ensures that the entire tumor receives a uniform dose without significant hot or cold spots. 
+
+According to the International Commission on Radiation Units and Measurements (ICRU) Report 83, the Homogeneity Index is defined as:
+\begin{equation}
+    HI = \frac{D_{2\%} - D_{98\%}}{D_{50\%}}
+\end{equation}
+Where:
+\begin{itemize}
+    \item $D_{2\%}$ represents the maximum dose (hot spot) delivered to 2\% of the target volume.
+    \item $D_{98\%}$ represents the minimum dose (cold spot) delivered to 98\% of the target volume.
+    \item $D_{50\%}$ is the median dose delivered to exactly 50\% of the target volume (often very close to the prescribed dose).
+\end{itemize}
+An ideal HI value is $0$, which implies perfectly homogeneous dose coverage ($D_{2\%} = D_{98\%}$). Larger values signify greater dose heterogeneity (larger differences between the minimum and maximum doses inside the PTV).
+
+\subsubsection{Conformity Index (CI)}
+The Conformity Index is a metric that determines how well the high-dose treatment volume strictly conforms to the exact three-dimensional shape of the target volume (PTV), thereby indicating the degree of normal tissue sparing outside the target.
+
+While there are multiple definitions (such as RTOG or Paddick), the fundamental Conformity Index as defined by the RTOG (Radiation Therapy Oncology Group) is:
+\begin{equation}
+    CI_{\text{RTOG}} = \frac{V_{RI}}{TV}
+\end{equation}
+Where:
+\begin{itemize}
+    \item $V_{RI}$ is the volume of the reference isodose (typically the volume receiving at least 95\% or 100\% of the prescribed dose).
+    \item $TV$ is the actual structural volume of the Target Volume (PTV).
+\end{itemize}
+An ideal CI value is $1.0$, meaning the prescription isodose volume perfectly bounds the target volume. A value $> 1$ indicates that the high-dose region extends into surrounding healthy tissues (over-coverage), while a value $< 1$ indicates that the target is under-covered (some portion of the PTV is receiving less than the prescribed dose).
