@@ -7,6 +7,40 @@ Two principle isotopes of iodine are routinely utilized for uptake measurements:
     \item \textbf{$^{123}\text{I}$:} An electron capture (EC) decaying nuclide with a physical half-life of 13.2 hours. It decays to $^{123}\text{Te}$, emitting a primary gamma ray of 159 keV (83\% abundance). Its absence of particulate radiation translates to a remarkably lower patient radiation dosimetry compared to $^{131}\text{I}$, making it the preferred tracer for purely diagnostic imaging and uptake measurements.
 \end{itemize}
 
+\subsubsection{Cesium-137 ($^{137}$Cs)}
+$^{137}$Cs is a standard calibration source extensively used in nuclear instrumentation. It undergoes $\beta^-$ decay to metastable $^{137m}$Ba, which subsequently emits a gamma photon of 662 keV.
+Key characteristics include:
+\begin{itemize}
+    \item Half-life: approximately 30.1 years
+    \item Main gamma energy: 662 keV
+\end{itemize}
+The monoenergetic gamma emission and long half-life make $^{137}$Cs highly suitable for energy calibration, resolution measurement, and constancy checks of scintillation detectors.
+
+\subsubsection{Europium-152 ($^{152}$Eu)}
+$^{152}$Eu is a multi-energy gamma emitter widely used for linearity and energy calibration of detection systems. It decays via $\beta^-$ and electron capture processes with a half-life of approximately 13.5 years.
+It emits multiple gamma rays across a broad energy spectrum, including:
+\begin{itemize}
+    \item 121 keV, 244 keV, 344 keV, 778 keV, 964 keV, 1408 keV (among others)
+\end{itemize}
+The presence of multiple well-defined gamma peaks makes $^{152}$Eu particularly useful for assessing the linearity of the multichannel analyzer and verifying the accuracy of energy calibration over a wide range.
+
+\subsection{Role of Radionuclides in Quality Assurance}
+Different radionuclides serve distinct purposes in the quality assurance program of a thyroid uptake system:
+\begin{itemize}
+    \item $^{137}$Cs is primarily used for energy calibration, resolution measurement, and constancy testing due to its stable and well-defined gamma emission.
+    \item $^{152}$Eu is used for linearity testing because of its multiple gamma energies spanning a wide range.
+    \item $^{125}$I is useful in low-energy calibration and well detector performance evaluation.
+    \item $^{131}$I is used in actual thyroid uptake measurements due to its physiological uptake by the thyroid gland.
+\end{itemize}
+The combined use of these radionuclides ensures accurate calibration, reliable detector performance, and precise quantification of thyroid uptake measurements.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{"/Users/souvik/Desktop/Lab-Reports/4th Sem/Thyroid uptake/Figures/Theory/Sources.png"}
+    \caption{Sources used for calibration and quality assurance.}
+    \label{fig:sources_qa}
+\end{figure}
+
 \subsection{Thyroid Probe}
 The thyroid probe is a specialized radiation counter predominantly employed to measure the fractional uptake of radioiodine, such as $^{131}\text{I}$ or $^{123}\text{I}$, within the thyroid gland following the oral administration of a radioactive capsule (e.g., $^{131}\text{I}$-NaI or $^{123}\text{I}$-NaI) \cite{saha_nuclear_medicine}. 
 
@@ -26,6 +60,44 @@ While unscattered primary photons are targeted, photons that undergo Compton sca
 \end{figure}
 \subsection{Apparatus and System Architecture}
 The precise derivation of fractional radioiodine uptake requires highly specialized radiometric instrumentation. A typical Thyroid Uptake Measurement Unit (such as the CAPTUS 4000e unit) encompasses a meticulously engineered combination of scintillation detection, complex electronics, geometric shielding, and digital processing units. The overall architectural pipeline maps incident radiation into quantitative count rates within specific energy windows.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{"/Users/souvik/Desktop/Lab-Reports/4th Sem/Thyroid uptake/Figures/Theory/CAPTUS 4000e Unit.png"}
+    \caption{The CAPTUS 4000e Thyroid Uptake System.}
+    \label{fig:captus4000e}
+\end{figure}
+
+The detailed technical specifications of the CAPTUS 4000e system are provided in Table \ref{tab:captus_specs}.
+
+\begin{table}[H]
+    \centering
+    \renewcommand{\arraystretch}{1.3}
+    \caption{Technical Specifications of the CAPTUS 4000e Unit}
+    \label{tab:captus_specs}
+    \begin{tabular}{|l|l|l|l|}
+        \hline
+        \multicolumn{3}{|l|}{\textbf{Specification}} & \textbf{Detailed} \\ \hline
+        \multicolumn{3}{|l|}{Make} & Mirion - Capintec \\ \hline
+        \multicolumn{3}{|l|}{Model} & CAPTUS 4000e \\ \hline
+        Detector & Probe & Detector Material & NaI(Tl) \\ \cline{3-4}
+         &  & Dimension & 2"X2" \\ \cline{3-4}
+         &  & Resolution & $\leq$9.5\% or better for Cs137 \\ \cline{2-4}
+         & Well & Detector Material & NaI(Tl) well-type crystal \\ \cline{3-4}
+         &  & Dimension & 2"X2" \\ \cline{3-4}
+         &  & WELL Diameter & 1.6CM \\ \cline{3-4}
+         &  & WELL Depth & 3.8CM \\ \cline{3-4}
+         &  & Resolution & $\leq$10.0\% or better for Cs137 \\ \cline{3-4}
+         &  & Shielding Material & Lead lined with brass to minimise backscattering \\ \hline
+        MCA & \multicolumn{2}{l|}{Type} & CAP MCA \\ \cline{2-4}
+         & \multicolumn{2}{l|}{Channel} & 1024 \\ \cline{2-4}
+         & \multicolumn{2}{l|}{Maximum Count Rate} & 200000Cps \\ \cline{2-4}
+         & \multicolumn{2}{l|}{ROI's Selection} & Automatic and Manual \\ \hline
+        Operational & \multicolumn{2}{l|}{Temperature Range} & 10$^\circ$C to 30$^\circ$C \\ \cline{2-4}
+        Environment & \multicolumn{2}{l|}{Pressure Range} & 91 to 105 KiloPascal \\ \cline{2-4}
+        Requirement & \multicolumn{2}{l|}{Humidity Range} & Maximum relative humidity $<$ 95\% \\ \hline
+    \end{tabular}
+\end{table}
 
 \subsubsection{Thallium-Activated Sodium Iodide Scintillator [NaI(Tl)]}
 At the core of the measurement probe is the inorganic scintillation crystal, commonly a $2^{\prime\prime} \times 2^{\prime\prime}$ right cylindrical Thallium-activated Sodium Iodide [NaI(Tl)] detector. The intrinsic physical property of a scintillator is its capacity to absorb high-energy incident ionizing radiation (e.g., 364 keV photons) and iteratively dissipate that energy via the emission of secondary photons within the visible electromagnetic spectrum. 
@@ -49,6 +121,13 @@ The probe housing is encased in substantive dense Lead ($\text{Pb}$) shielding t
 
 \subsubsection{Neck Phantoms and Measurement Geometry}
 Quantitative standardized measurements inherently require accounting precisely for tissue attenuation and systemic geometric spread. Standard Lucite neck phantoms (e.g., Biodex Neck Phantoms) structurally synthesize the physical photon attenuation parameters strictly characteristic of human neck tissue structurally mirroring an embedded vocal/tracheal tract. Standard baseline counts are acquired placing a precise calibration source (or identically administered patient capsule formulation) at a universally standardized depth within the lucite phantom. 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{"/Users/souvik/Desktop/Lab-Reports/4th Sem/Thyroid uptake/Figures/Theory/Neck phantom.png"}
+    \caption{A typical Lucite neck phantom used for standardizing measurement geometry and tissue attenuation.}
+    \label{fig:neck_phantom}
+\end{figure}
 \par
 The distance from the anterior surface of the target source to the face of the crystal collimator is strictly fixed, usually at \textbf{25 cm (or 30 cm)} utilizing a fixed spatial pointer rod. The inverse-square law dictates that minor positional translations produce exponentially scaled variances in observed flux rate; thus, anchoring the physical geometry identically across standard-dose measurement and subsequent chronological in-vivo patient measurements is mathematically crucial for RAIU consistency \cite{captus4000e}.
 
