@@ -1,0 +1,135 @@
+\subsection{Mechanical Tests}
+\subsubsection{Gantry Tilt: Accuracy of the tilt Indicator}
+
+Most CT scanners accomplish non-orthogonal scans by tilting the gantry with some angle. If the tilt is not accurate, the gantry may hit the patient for some extreme clinical conditions.
+For the measurement radiochromic film was used.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.3\textwidth]{/Users/souvik/Desktop/Lab-Reports/4th Sem/Quality Assurance of a Diagnostic CT Machine/Figures/Experimental/gantrytilt.jpeg}
+    \caption{Gantry Tilt Measurement using Radiochromic Film}
+    \label{fig:gantry_tilt}
+\end{figure}
+Actual gantry tilt = ±15 degrees
+Measured gantry tilt = 15.8, 15.2 degrees
+Difference = 0.8, 0.2 degrees
+Tolerance: The measured gantry tilt should be within ± 2 degree of the actual gantry tilt.
+So, the measured gantry tilt is within the tolerance limit of ± 2 degree.
+
+\subsection{Radiation Safety Test of Computed Tomography Equip-
+ment}
+\subsubsection{Slice Thickness}
+Slice thickness in the Pro-CT Mini is determined by measuring the length of ramps in the
+geometrical module image. The measured length depends on the slice thickness and an angle
+at which the ramp is inclined.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{/Users/souvik/Desktop/Lab-Reports/4th Sem/Quality Assurance of a Diagnostic CT Machine/Figures/Theory/Slice thickness.png}
+    \caption{Geometry used in the Pro-CT Mini phantom for measurement of slice thickness}
+    \label{fig:slice_thickness}
+\end{figure}
+In the pro-CT mini phantom, ramps are at 45 degree angle so $\tan(45^o) = 1$, hence the measured length of the ramp is equal to the slice thickness.It is taken from this \href{https://www.scribd.com/document/625663053/C-T-Slice-Thickness}{\textbf{ref}}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{/Users/souvik/Desktop/Lab-Reports/4th Sem/Quality Assurance of a Diagnostic CT Machine/Figures/Experimental/slicethickness.jpeg}
+    \caption{Slice Thickness Measurement using Pro-CT Mini Phantom}
+    \label{fig:slice_thickness}
+\end{figure}
+
+Set slice thickness = 5 mm
+Measured slice thickness = 4.3 mm, 4.2 mm, 4.3 mm, 4.5 mm
+Average measured slice thickness = 4.325 mm
+
+AERB Tolerance:
+
+For less than 1 mm : 0.5 
+
+1 mm to 2 mm : ± 50 \%
+
+Above 2 mm : ± 1 mm
+
+So it is under the tolerance limit of ± 1 mm.
+
+\subsubsection{Accuracy of Operating Potential}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{/Users/souvik/Desktop/Lab-Reports/4th Sem/Quality Assurance of a Diagnostic CT Machine/Figures/Experimental/kVp accuracy.png}
+\end{figure}
+
+\subsubsection{Accuracy of Timer}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{/Users/souvik/Desktop/Lab-Reports/4th Sem/Quality Assurance of a Diagnostic CT Machine/Figures/Experimental/TimerAccuracy.png}
+\end{figure}
+\subsubsection{Linearity of Radiation Output}
+Operating potential = 120 kVp
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{/Users/souvik/Desktop/Lab-Reports/4th Sem/Quality Assurance of a Diagnostic CT Machine/Figures/Experimental/Linearity.png}
+\end{figure}
+\subsubsection{Reproducibility of Radiation Output}
+Operating current = 100 mA
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{/Users/souvik/Desktop/Lab-Reports/4th Sem/Quality Assurance of a Diagnostic CT Machine/Figures/Experimental/Reproducibilit.png}
+\end{figure}
+
+\subsubsection{ Radiation Dose Test Measurement of Weighted CT Dose Index
+($CTDI_w$)}
+Operating potential = 120 kVp
+Tickness = 0.5 cm
+Operating current = 200 mA
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{/Users/souvik/Desktop/Lab-Reports/4th Sem/Quality Assurance of a Diagnostic CT Machine/Figures/Experimental/CTDI.png}
+\end{figure}
+Tolerance:
+±20 \% of the quoted value for head phantom and ± 40 \% of the quoted value for body phantom.
+\subsubsection{Low Contrast Resolution}
+Phantom = Pro-CT Mini Phantom
+
+window width = 395, window level = 210
+
+Low Contrast Resolution = 2 mm at 0.5 \% contrast level.
+
+\textbf{Tolerance:}
+2.5 mm at 0.5 \% contrast difference (expected) or 5 mm at 1 \% contrast difference (minimum).
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{/Users/souvik/Desktop/Lab-Reports/4th Sem/Quality Assurance of a Diagnostic CT Machine/Figures/Experimental/Low contrast.jpeg}
+    \caption{Low Contrast Resolution Measurement using Pro-CT Mini Phantom}
+    \label{fig:low_contrast_resolution}
+\end{figure}
+
+The low contrast resolution is 2 mm at 0.5 \% contrast level which is within the tolerance limit
+of 2.5 mm at 0.5 \% contrast difference, hence the low contrast resolution of the CT machine is
+acceptable.
+\subsubsection{High Contrast Resolution}
+Phantom = Pro-CT Mini Phantom
+
+window width = 490, window level = 307
+
+Size of the smallest resolvable bar pattern = 5 lp/cm.
+
+\textbf{Tolerance:}
+At 10 \% contrast difference the size of the bar pattern that could be resolved should be 1.6 mm (3.12 lp/cm), expected high contrast resolution: 0.8 mm ($\approx$ 6.25 lp/cm).
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{/Users/souvik/Desktop/Lab-Reports/4th Sem/Quality Assurance of a Diagnostic CT Machine/Figures/Experimental/High constrast.jpeg}
+    \caption{High Contrast Resolution Measurement using Pro-CT Mini Phantom. Max. resolved line pair pattern for measurement of high contrast resolution is 5 lp/cm.}
+    \label{fig:low_contrast_resolution}
+\end{figure}
+\subsubsection{Radiation Leakage Level from X-ray Tube Housing}
+Operating potential = 140 kVp
+Operating current = 500 mA
+time = 1 sec
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{/Users/souvik/Desktop/Lab-Reports/4th Sem/Quality Assurance of a Diagnostic CT Machine/Figures/Experimental/Leakage.png}
+\end{figure}
+\subsubsection{Radiation Protection Survey of the Installation}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{/Users/souvik/Desktop/Lab-Reports/4th Sem/Quality Assurance of a Diagnostic CT Machine/Figures/Experimental/Survey.png}
+\end{figure}

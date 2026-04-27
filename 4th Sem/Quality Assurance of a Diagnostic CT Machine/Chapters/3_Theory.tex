@@ -95,17 +95,55 @@ The primary objective of these metrics aims exactly mapping standard absorbed do
     \begin{equation}
         CTDI_{100} = \frac{1}{N \cdot w} \int_{-50}^{50} D(z) dz
     \end{equation}
-    \item \textbf{Weighted CTDI ($CTDI_w$):} Captures differences over standard volumetric bodies:
+    \item \textbf{Weighted CTDI ($CTDI_w$):} The weighted CTDI is defined as
     \begin{equation}
-        CTDI_w = \frac{1}{3} CTDI_{100, \text{Center}} + \frac{2}{3} CTDI_{100, \text{Periphery}}
+        CTDI_w = \frac{1}{3} CTDI_{100, \text{center}} + \frac{2}{3} CTDI_{100, \text{periphery}}
     \end{equation}
-    \item \textbf{Volume CTDI ($CTDI_{vol}$):} Scales linearly utilizing standard overlap metrics or Pitch factor ($p$):
+    where the peripheral value is the average of the four measurements taken at the periphery of the CT phantom:
     \begin{equation}
-        CTDI_{vol} = \frac{CTDI_w}{\text{Pitch}}
+        CTDI_{100, \text{periphery}} = \frac{1}{4} (CTDI_{12 \textit{ o'clock}} + CTDI_{3 \textit{ o'clock}} + CTDI_{6 \textit{ o'clock}} + CTDI_{9 \textit{ o'clock}})
     \end{equation}
-    \item \textbf{Dose Length Product (DLP):} Standard metric summing absolutely up along structural axial axes $L$:
+    \item \textbf{Volume CTDI ($CTDI_{vol}$):} For helical CT, the volume CTDI is obtained by correcting for table movement using pitch:
     \begin{equation}
-        \text{DLP} = CTDI_{vol} \times L \quad (\text{mGy}\cdot\text{cm})
+        CTDI_{vol} = \frac{CTDI_w}{\text{pitch}}
+    \end{equation}
+    \item \textbf{Dose Length Product (DLP):} Another useful output quantity is the dose-length product (DLP), which represents the total scanner output over the scanned length:
+    \begin{equation}
+        \text{DLP} = CTDI_{vol} \times \text{scan length}
     \end{equation}
 \end{itemize}
+
+Thus, CT quality assurance involves verification of image quality, geometric accuracy, CT number calibration, and dose indices. These checks ensure that the scanner produces diagnostically reliable images with acceptable radiation output and consistent performance over time.
+
+\subsection{Quality Assurance Equipment and Instrumentation}
+
+A comprehensive quality assurance protocol demands specialized, highly accurate instrumentation to measure both dosimetric output and image quality fidelity. The following key apparatuses are standard in modern CT QA procedures.
+
+\subsubsection{GE Optima CT580W CT Scanner}
+The GE Optima CT580W is a large-bore ($80\text{ cm}$), high-performance 16-slice computed tomography scanner. It is predominantly designed to accommodate patients requiring greater clearance (such as trauma or bariatric cases) and is widely used as a simulation scanner in radiation oncology due to its geometry allowing the inclusion of immobilization devices. Evaluating the geometric and output parameters of this scanner is crucial because any inaccuracy directly influences treatment planning and spatial localization \cite{ge_optima_580w}.
+
+\subsubsection{RTI Piranha Multi-Meter}
+The RTI Piranha is a comprehensive, multi-modal X-ray quality assurance meter designed to assess multiple fundamental physical parameters of the X-ray tube in a single exposure. Connected directly to its proprietary software (Ocean Next), it can instantly capture, analyze, and store data regarding the operating kilovoltage (kVp), exposure time (ms), Half-Value Layer (HVL), total filtration, dose, and dose rate. Its high accuracy in varying radiation fields makes it an essential tool for verifying generator performance and establishing baseline CT output linearity and reproducibility \cite{rti_piranha}.
+\begin{figure}
+    \centering
+    \includegraphics[width=0.4\textwidth]{/Users/souvik/Desktop/Lab-Reports/4th Sem/Quality Assurance of a Diagnostic CT Machine/Figures/Theory/RTI Piranha Multi-Meter.png}
+    \caption{RTI Piranha Multi-Meter for comprehensive X-ray quality assurance measurements.}
+    \label{fig:piranha}
+\end{figure}
+\subsubsection{RTI CT Ionization Chamber (10 cm)}
+The measurement of Computed Tomography Dose Index ($CTDI_{100}$) strictly requires a specialized pencil-type chamber. The RTI CT Ionization Chamber is a robust cylindrical detector with a precise $100\text{ mm}$ active detector length, constructed to fit seamlessly into the conventional acrylic head ($16\text{ cm}$ diameter) and body ($32\text{ cm}$ diameter) dosimetry phantoms. When connected to an electrometer (such as the RTI Piranha or Cobia), the chamber accurately intercepts the scattered and primary X-rays across overlapping slices, enabling accurate dosimetric integral mapping and calculation of $CTDI_w$ and $CTDI_{vol}$ \cite{rti_ct_chamber}.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.4\textwidth]{/Users/souvik/Desktop/Lab-Reports/4th Sem/Quality Assurance of a Diagnostic CT Machine/Figures/Theory/CT Ion Chamber.png}
+    \caption{Key quality assurance equipment:RTI CT Ionization Chamber}
+    \label{fig:qa_equipment}
+\end{figure}
+\subsubsection{Pro-CT MINI Phantom}
+The Pro-CT MINI is a versatile, compact physical phantom meticulously structured for routine and extensive image quality control tests. Constructed homogeneously from a water-equivalent tissue-mimicking material, it features internal structural modules dedicated to testing various fundamental imaging parameters within a single scan. It prominently facilitates the calculation of CT Number (Hounsfield Unit) accuracy for water-equivalence, image uniformity across peripheral and central Regions of Interest (ROI), high-contrast spatial resolution (via integrated line-pair patterns), and low-contrast detectability. The phantom ensures the CT reconstruction algorithms are constantly producing authentic diagnostic details free from artifacts \cite{pro_ct_mini}.
+\begin{figure}
+    \centering
+    \includegraphics[width=0.4\textwidth]{/Users/souvik/Desktop/Lab-Reports/4th Sem/Quality Assurance of a Diagnostic CT Machine/Figures/Theory/Pro-CT MINI Phantom.png}
+    \caption{Pro-CT MINI Phantom for comprehensive image quality testing.}
+    \label{fig:pro_ct_mini}
+\end{figure}
 
